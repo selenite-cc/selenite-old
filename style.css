@@ -13,6 +13,23 @@ html {
     margin: 0 auto;
 }
 
+button {
+  background-color: rgba(83, 141, 175, 0);
+  color: #8daad8;
+  border: 2.5px solid rgba(0,0,0,0);
+  border-radius: 10px;
+padding: 5px 13px;
+  margin-bottom: 6px;
+  transition-duration: 0.45s;
+    font-size: 20px;
+    color: #6983da;
+    font-family: "Share Tech Mono", monospace;
+    text-underline-position: under;
+}
+button:hover {
+  cursor:pointer;
+}
+
   h2 {
     font-size: 42px;
     color: #0073e6;
