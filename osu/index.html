@@ -1,309 +1,318 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<!-- Created with https://packager.turbowarp.org/ -->
+<html>
 <head>
-    <title>Home</title>
-    <meta charset="UTF-8">
-    <link rel=”canonical” href=”https://webosu.online/”/>
-    <meta name="description" content="webosu! is a web port of osu! that can run on almost any PC, with features like usernames and a live scoreboard">
-    <meta name="google-site-verification" content="lLznJ7kC5ONeKPxymEt_ecjm1iz-tDisk8TQcs-60vc">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="img/favicon.png">
-    <link rel="stylesheet" href="css/picnic.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/font.css">
-    <script src="js/launchgame.js"></script>
-    <script src="js/downloader.js"></script>
-    <script src="js/addbeatmaplist.js"></script>
-    <script src="js/settings.js"></script>
-    <script src="js/jsloader.js"></script> 
-    <script src="js/lib/localforage.min.js"></script>
-    <script defer src="/_vercel/insights/script.js"></script>
-    <script async src="https://arc.io/widget.min.js#MfA1gDkn"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- We only include this to explicitly loosen the CSP of various packager environments. It does not provide any security. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: blob:">
+  <title>osu!</title>
+  <style>
+    body {
+      color: #ffffff;
+      font-family: sans-serif;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    :root, body.is-fullscreen {
+      background-color: #000000;
+    }
+    [hidden] {
+      display: none !important;
+    }
+    h1 {
+      font-weight: normal;
+    }
+    a {
+      color: inherit;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    #app, #loading, #error, #launch {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: default;
+      user-select: none;
+      -webkit-user-select: none;
+      background-color: #000000;
+    }
+    #launch {
+      background-color: rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+    }
+    .green-flag {
+      width: 80px;
+      height: 80px;
+      padding: 16px;
+      border-radius: 100%;
+      background: rgba(255, 255, 255, 0.75);
+      border: 3px solid hsla(0, 100%, 100%, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+    #loading {
+      
+    }
+    .progress-bar-outer {
+      border: 1px solid currentColor;
+      height: 10px;
+      width: 200px;
+      max-width: 200px;
+    }
+    .progress-bar-inner {
+      height: 100%;
+      width: 0;
+      background-color: currentColor;
+    }
+    .loading-text, noscript {
+      font-weight: normal;
+      font-size: 36px;
+      margin: 0 0 16px;
+    }
+    .loading-image {
+      margin: 0 0 16px;
+    }
+    #error-message, #error-stack {
+      font-family: monospace;
+      max-width: 600px;
+      white-space: pre-wrap;
+      user-select: text;
+      -webkit-user-select: text;
+    }
+    #error-stack {
+      text-align: left;
+      max-height: 200px;
+      overflow: auto;
+    }
+    .control-button {
+      width: 2rem;
+      height: 2rem;
+      padding: 0.375rem;
+      border-radius: 0.25rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      user-select: none;
+      -webkit-user-select: none;
+      cursor: pointer;
+      border: 0;
+      border-radius: 4px;
+    }
+    .control-button:hover {
+      background: #ff4c4c26;
+    }
+    .control-button.active {
+      background: #ff4c4c59;
+    }
+    .fullscreen-button {
+      background: white !important;
+    }
+    .standalone-fullscreen-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 0 0 0 4px;
+      padding: 4px;
+      cursor: pointer;
+    }
+    .sc-canvas {
+      cursor: auto;
+    }
+    .sc-monitor-root[opcode^="data_"] .sc-monitor-value-color {
+      background-color: #ff8c1a;
+    }
+    .sc-monitor-row-value-outer {
+      background-color: #fc662c;
+    }
+    .sc-monitor-row-value-editing .sc-monitor-row-value-outer {
+      background-color: #e25b27;
+    }
+    
+  </style>
+  <meta name="theme-color" content="#000000">
+  
 </head>
 <body>
-    <!--Game Area-->
-    <div class="game-area" id="game-area" hidden>
-    </div>
-    <div class="pause-menu" id="pause-menu" hidden>
-        <div class="paused-title">Paused</div>
-        <div class="button-list">
-            <div class="pausebutton continue" id="pausebtn-continue">
-                <div class="inner">Continue</div>
-            </div>
-            <div class="pausebutton retry" id="pausebtn-retry">
-                <div class="inner">Retry</div>
-            </div>
-            <div class="pausebutton quit" id="pausebtn-quit">
-                <div class="inner">Quit</div>
-            </div>
-        </div>
-    </div>
-    <!--Nav Bar-->
-    <nav id="main-nav">
-        <div class="nav-link">
-            <a href="index.html" class="brand">webosu!</a>
-            <a href="new.html" class="pseudo button">New</a>
-            <a href="hot.html" class="pseudo button">Popular</a>
-        </div>
-        <div class="nav-search">
-            <form action="search.html">
-                <container id="searchbar" class="searchbar">
-                    <input type="text" name="q" placeholder="Beatmap name or Set ID" />
-                </container>
-            </form>
-        </div>
-        <div class="nav-tool">
-            <a href="local.html" class="pseudo button">Favorites</a>
-            <a href="settings.html" class="pseudo button">Settings</a>
-            <input type="username" id="userreg" placeholder="Username" />
-        </div>
-    </nav>
-    <div class="main-page" id="main-page">
-        <div class="main-content">
-            <div class="announcement">
-                To save the username just type it in the top right & press enter! Join the <a href="https://discord.gg/v7wBtSdYzx">Discord</a> and share your scores!
-            </div>
-            <br>
-            <div class="index-area">
-                <h2>Live plays</h2>
-                <hr/>
-                <table>
-                    <thead>
-                        <tr>
-                            <td>Player</td>
-                            <td>Song</td>
-                            <td>Combo</td>
-                            <td>Score</td>
-                            <td>Acc</td>
-                            <td>Mods</td>
-                            <td>Time</td>
-                        </tr>
-                    </thead>
-                    <tbody id="activity-list">
-                    <!--will be filled in by script-->
-                    </tbody>
-                </table>
-            </div>
-            <div class="index-area">
-                <h2>Popular beatmaps</h2>
-                <a href="hot.html" class="more">See more Popular Beatmaps</a>
-                <hr/>
-                <div class="beatmap-list" id="beatmap-list-hot">
-                <!-- Beatmaps will be here -->
-                </div>
-            </div>
-            <div class="index-area">
-                <h2>Recently Played</h2>
-                <a href="history.html" class="more">See your play history</a>
-                <hr/>
-                <div class="beatmap-list" id="beatmap-list-history">
-                <!-- Beatmaps will be here -->
-                </div>
-            </div>
-            <div class="index-area">
-                <h2>Favorited Beatmaps</h2>
-                <a href="local.html" class="more">See all favorited Beatmaps</a>
-                <hr/>
-                <div class="beatmap-list" id="beatmap-list-liked">
-                <!-- Beatmaps will be here -->
-                </div>
-            </div>
-            <div class="index-area">
-                <h2>Latest Beatmaps</h2>
-                <a href="new.html" class="more">See all latest Beatmaps</a>
-                <hr/>
-                <div class="beatmap-list" id="beatmap-list-new">
-                <!-- Beatmaps will be here -->
-                </div>
-            </div>
-            <div class="index-area">
-                <a onclick="genRandomList()" class="more" style="cursor:pointer;">Get new random Beatmaps</a>
-                <h2>Random Beatmaps<h2>
-                <hr/>
-                <div class="beatmap-list" id="beatmap-list-random">
-                <!-- to be filled in script -->
-                </div>
-            </div>
-            <div class="index-area">
-                <h2>Latest Beatmaps</h2>
-                <a href="new.html" class="more">See all latest Beatmaps</a>
-                <hr/>
-                <div class="beatmap-list" id="beatmap-list">
-                    <div id="ezoic-pub-ad-placeholder-102"> </div>
-                </div>
-            </div>
-            <!--Loader progress-->
-            <div class="statuslines" id="statuslines">
-                <div class="progress" id="script-progress">
-                    Scripts
-                    <div class="lds-dual-ring"></div>
-                </div>
-                <div class="progress" id="skin-progress">
-                    Skin
-                    <div class="lds-dual-ring"></div>
-                </div>
-                <div class="progress" id="sound-progress">
-                    Hitsounds
-                    <div class="lds-dual-ring"></div>
-                </div>
-            </div>
-        </div>    
-        <!--Footer-->
-        <div class="footer">
-            <div class="footer-infos">
-                <span class="footer-info">Join the <a href="https://discord.gg/v7wBtSdYzx">Discord server</a>!</span>
-                <span class="footer-info">Beatmap API: <a href="https://catboy.best/">Mino</a></span>
-                <span class="footer-info">Stable Release: <a href="https://github.com/BlaNKtext/webosu">3.1</a></span>
-            </div>
-        </div>
-        <script>
-        //Make enter work
-        var input = document.getElementById("userreg");
-            input.addEventListener("keypress", function(event) {
-             if (event.key === "Enter") {
-            event.preventDefault();
-            saveUser();
-            }
-        }); 
-        //Store username in localstorage
-        function saveUser( name ) {
-        var player = document.getElementById('userreg').value;
-        document.cookie = 'username=' + player;
-        }
-        // Live scores
-        //Copy paste from livescores.txt to replace.
-        // Recent
-        if (window.localforage) {
-            let listhistory = document.getElementById("beatmap-list-history");
-            localforage.getItem("playhistory1000", function (err, item) {
-                if (err) {
-                    listhistory.innerText = "Failed to load your recently played";
-                    return;
-                }
-                if (item && item.length) {
-                    item = item.reverse();
-                    sid = [];
-                    for (let i = 0; i < item.length; ++i) {
-                        if (item[i].sid)
-                            sid.push(item[i].sid);
-                    }
-                    sid = [...new Set(sid)]; // uniq
-                    for (let i = 0; i < 6 && i < sid.length; ++i){
-                    addBeatmapSid(sid[i], listhistory)
-                    }
-                } else {
-                    listhistory.innerText =
-                        "You haven't played any Beatmaps yet! Click on a Beatmap and select the difficulty to start playing!";
-                    }
-                })
-            }
-        // Get new beatmaps
-        addBeatmapList("https://catboy.best/api/search?amount=6&mode=0",
-            document.getElementById("beatmap-list-new"),
-            function (t) {
-                return (t.modes & 1) != 0;
-            }, 6);
-        // Get random beatmaps
-        function genRandomList() {
-            // Wipe Random List
-            let list = document.getElementById("beatmap-list-random");
-            list.innerHTML = ''
-            // Re-fill Random List
-            let randquery = Math.random().toString(36).replace(/[^a-p]+/g, '').substr(1, 5);
-            addBeatmapList("https://catboy.best/api/search?q=" + randquery + "&amount=6&mode=0", list,
-                function (t) {
-                    while (list.firstChild) list.removeChild(list.firstChild);
-                    return (t.modes & 1) != 0;
-                }, 6);
-        }
-        genRandomList();
-        // Get hot beatmaps
-        addBeatmapList("https://catboy.best/api/search?amount=6&mode=0&query=Top Rated", document.getElementById(
-            "beatmap-list-hot"));
-        // Favorite beatmaps
-        if (window.localforage) {
-            window.localforage.getItem("likedsidset", function (err, val) {
-                if (err) {
-                    document.getElementById("beatmap-list-liked").innerText =
-                        "Failed to load favorites list.";
-                    return;
-                }
-                if (val && val.size) {
-                    let listlike = document.getElementById("beatmap-list-liked");
-                    list = Array.from(val);
-                    for (let i = 0; i < list.length && i < 6; ++i){
-                        addBeatmapSid(list[i], listlike);
-                    }
+  <div id="app"></div>
 
-                } else {
-                    document.getElementById("beatmap-list-liked").innerText =
-                        "You haven't favorited any Beatmaps yet! Click on the heart in the lower right corner of the Beatmap to save it.";
-                }
-            });
-        } else {
-            alert("Oh no, localforage isn't supported on this browser")
-            }
-            //Live Scores is no longer being paid for, the current code is for use on firebase functions.
-        let tbody = document.getElementById("activity-list");
-        function formattime(date) {
-            let m;
-            return date.getHours() + ":" + ((m = date.getMinutes()) < 10 ? ('0' + m) : m);
+  <div id="launch" class="screen" hidden title="Click to start">
+    <div class="green-flag">
+      <svg viewBox="0 0 16.63 17.5" width="42" height="44">
+        <defs><style>.cls-1,.cls-2{fill:#4cbf56;stroke:#45993d;stroke-linecap:round;stroke-linejoin:round;}.cls-2{stroke-width:1.5px;}</style></defs>
+        <path class="cls-1" d="M.75,2A6.44,6.44,0,0,1,8.44,2h0a6.44,6.44,0,0,0,7.69,0V12.4a6.44,6.44,0,0,1-7.69,0h0a6.44,6.44,0,0,0-7.69,0"/>
+        <line class="cls-2" x1="0.75" y1="16.75" x2="0.75" y2="0.75"/>
+      </svg>
+    </div>
+  </div>
+
+  <div id="loading" class="screen">
+    <noscript>Enable JavaScript</noscript>
+    
+    
+    <div class="progress-bar-outer"><div class="progress-bar-inner" id="loading-inner"></div></div>
+  </div>
+
+  <div id="error" class="screen" hidden>
+    <h1>Error</h1>
+    <details>
+      <summary id="error-message"></summary>
+      <p id="error-stack"></p>
+    </details>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const appElement = document.getElementById('app');
+    const launchScreen = document.getElementById('launch');
+    const loadingScreen = document.getElementById('loading');
+    const loadingInner = document.getElementById('loading-inner');
+    const errorScreen = document.getElementById('error');
+    const errorScreenMessage = document.getElementById('error-message');
+    const errorScreenStack = document.getElementById('error-stack');
+
+    const handleError = (error) => {
+      console.error(error);
+      if (!errorScreen.hidden) return;
+      errorScreen.hidden = false;
+      errorScreenMessage.textContent = '' + error;
+      let debug = error && error.stack || 'no stack';
+      debug += '\nUser agent: ' + navigator.userAgent;
+      errorScreenStack.textContent = debug;
+    };
+    const setProgress = (progress) => {
+      if (loadingInner) loadingInner.style.width = progress * 100 + '%';
+    };
+    const interpolate = (a, b, t) => a + t * (b - a);
+
+    try {
+      setProgress(0.1);
+
+      const scaffolding = new Scaffolding.Scaffolding();
+      scaffolding.width = 480;
+      scaffolding.height = 360;
+      scaffolding.resizeMode = "preserve-ratio";
+      scaffolding.editableLists = false;
+      scaffolding.usePackagedRuntime = true;
+      scaffolding.setup();
+      scaffolding.appendTo(appElement);
+
+      const vm = scaffolding.vm;
+      window.scaffolding = scaffolding;
+      window.vm = scaffolding.vm;
+      window.Scratch = {
+        vm,
+        renderer: vm.renderer,
+        audioEngine: vm.runtime.audioEngine,
+        bitmapAdapter: vm.runtime.v2BitmapAdapter,
+        videoProvider: vm.runtime.ioDevices.video.provider
+      };
+
+      scaffolding.setUsername("The Best Website Ever".replace(/#/g, () => Math.floor(Math.random() * 10)));
+      scaffolding.setAccentColor("#ff4c4c");
+
+      ;
+
+      vm.setTurboMode(false);
+      if (vm.setInterpolation) vm.setInterpolation(false);
+      if (vm.setFramerate) vm.setFramerate(240);
+      if (vm.renderer.setUseHighQualityRender) vm.renderer.setUseHighQualityRender(false);
+      if (vm.setRuntimeOptions) vm.setRuntimeOptions({
+        fencing: false,
+        miscLimits: false,
+        maxClones: 9999999999,
+      });
+      if (vm.setCompilerOptions) vm.setCompilerOptions({
+        enabled: true,
+        warpTimer: false
+      });
+
+      if (typeof ScaffoldingAddons !== 'undefined') {
+        ScaffoldingAddons.run(scaffolding, {"gamepad":false,"pointerlock":false,"specialCloudBehaviors":false,"unsafeCloudBehaviors":false,"pause":false});
+      }
+
+      scaffolding.setExtensionSecurityManager({
+        getSandboxMode: 'unsandboxed',
+        canLoadExtensionFromProject: (url) => {
+          handleError(new Error('Missing custom extension: ' + url));
+          return Promise.resolve(false);
         }
-        function showActivity(records) {
-            records = records.reverse();
-            while (tbody.firstChild)
-                tbody.removeChild(tbody.firstChild);
-            for (let i = 0; i < records.length && i < 10; ++i) {
-                let tr = document.createElement("tr");
-                tbody.appendChild(tr);
-                function nexttd(content) {
-                    let td = document.createElement("td");
-                    tr.appendChild(td);
-                    if (!content) return;
-                     if (content.tagName)
-                        td.appendChild(content);
-                    else
-                        td.innerText = content;
-                }
-                let b = ('');
-                let player = document.createElement("span");
-                    player.innerText = records[i].player;
-                    player.classText = records[i].player;
-                nexttd(player);
-                let title = document.createElement("a");
-                    title.innerText = records[i].title + " [" + records[i].version + "]";
-                    title.title = records[i].title + " [" + records[i].version + "]";
-                if (records[i].sid == "undefined")
-                    records[i].sid = undefined;
-                    title.href = "search.html?q=" + (records[i].sid || records[i].title);
-                nexttd(title);
-                nexttd(records[i].combo + "x");
-                nexttd(parseInt(records[i].score).toLocaleString());
-                let acc = document.createElement("span");
-                    acc.innerText = records[i].acc;
-                    acc.className = records[i].grade;
-                    nexttd(acc);
-                    nexttd(records[i].mods);
-                    nexttd(formattime(new Date(parseInt(records[i].time))));
-                }
-            }
-            let b = {
-                player: "",
-                title: "",
-                version: "loading",
-                score: 0,
-                combo: 0,
-                acc: 0
-            };
-            showActivity([b, b, b, b, b, b, b, b, b, b])
-    async function refreshLivescore() {
-            const request = await fetch(`https://livescores.webosu.workers.dev/get`)
-            const data = await request.json()
-            if(request.error) return console.log(request.error)
-                showActivity(data);
-                }
-            refreshLivescore();
-            window.setInterval(refreshLivescore, 5000);
-        </script>
+      });
+      for (const extension of []) {
+        vm.extensionManager.loadExtensionURL(extension);
+      }
+
+    } catch (e) {
+      handleError(e);
+    }
+  </script>
+  
+  
+    <script>
+      const getProjectData = (function() {
+        const storage = scaffolding.storage;
+        storage.onprogress = (total, loaded) => {
+          setProgress(interpolate(0.2, 0.98, loaded / total));
+        };
+        
+        storage.addWebStore(
+          [storage.AssetType.ImageVector, storage.AssetType.ImageBitmap, storage.AssetType.Sound],
+          (asset) => new URL('./assets/' + asset.assetId + '.' + asset.dataFormat, location).href
+        );
+        return () => new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.onload = () => {
+          resolve(xhr.response);
+        };
+        xhr.onerror = () => {
+          if (location.protocol === 'file:') {
+            reject(new Error('Zip environment must be used from a website, not from a file URL.'));
+          } else {
+            reject(new Error('Request to load project data failed.'));
+          }
+        };
+        xhr.onprogress = (e) => {
+          if (e.lengthComputable) {
+            setProgress(interpolate(0.1, 0.2, e.loaded / e.total));
+          }
+        };
+        xhr.responseType = 'arraybuffer';
+        xhr.open('GET', "./assets/project.json");
+        xhr.send();
+      });
+      })();
+    </script>
+  <script>
+    const run = async () => {
+      const projectData = await getProjectData();
+      await scaffolding.loadProject(projectData);
+      setProgress(1);
+      loadingScreen.hidden = true;
+      if (true) {
+        scaffolding.start();
+      } else {
+        launchScreen.hidden = false;
+        launchScreen.addEventListener('click', () => {
+          launchScreen.hidden = true;
+          scaffolding.start();
+        });
+        launchScreen.focus();
+      }
+    };
+    run().catch(handleError);
+  </script>
 </body>
 </html>
