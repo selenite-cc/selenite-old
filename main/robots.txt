@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cools1te.pages.dev/sitemap.xml
