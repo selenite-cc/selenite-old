@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Browse</title>
+    <link rel=”canonical” href=”https://webosu.online/”/>
+    <meta name="description" content="webosu! is a web port of osu! that can run on almost any PC, with features like usernames and a live scoreboard">
+    <link rel="stylesheet" href="css/picnic.min.css">
+    <link rel="stylesheet"href="css/main.css">
+    <link rel="stylesheet"href="css/font.css">
+    <link rel="icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/launchgame.js"></script>
+    <script src="js/downloader.js"></script>
+    <script src="js/addbeatmaplist.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/jsloader.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script async src="https://arc.io/widget.min.js#MfA1gDkn"></script>
+</head>
+<body>
+    <div class="game-area" id="game-area" hidden>
+    </div>
+    <div class="pause-menu" id="pause-menu" hidden>
+        <div class="paused-title">Paused</div>
+        <div class="button-list">
+            <div class="pausebutton continue" id="pausebtn-continue">
+                <div class="inner">Continue</div>
+            </div>
+            <div class="pausebutton retry" id="pausebtn-retry">
+                <div class="inner">Retry</div>
+            </div>
+            <div class="pausebutton quit" id="pausebtn-quit">
+                <div class="inner">Browse</div>
+            </div>
+        </div>
+    </div>
+    <!--Nav Bar-->
+    <nav id="main-nav">
+        <div class="nav-link">
+            <a href="index.html" class="brand">webosu!</a>
+            <a href="new.html" class="pseudo button">New</a>
+            <a href="hot.html" class="pseudo button">Popular</a>
+        </div>
+        <div class="nav-search">
+            <form action="search.html">
+                <container id="searchbar" class="searchbar">
+                    <input type="text" name="q" placeholder="Beatmap name or Set ID" />
+                </container>
+            </form>
+        </div>
+        <div class="nav-tool">
+            <a href="local.html" class="pseudo button">Favorites</a>
+            <a href="settings.html" class="pseudo button">Settings</a>
+            <input type="username" id="userreg" placeholder="Username" />
+        </div>
+    </nav>
+    <div class="main-page" id="main-page">
+        <div class="main-content">
+            <div class="announcement">
+                To save the username just type it in the top right & press enter! Join the <a href="https://discord.gg/v7wBtSdYzx">Discord</a> and share your scores!
+            </div>
+            <br>
+            <div class="sort-nav">
+                <div class="title">Genre</div>
+                <div class="selitem" genre="1">All</div>
+                <div class="selitem" genre="4">Games</div>
+                <div class="selitem" genre="8">Animation</div>
+                <div class="selitem" genre="16">Rock</div>
+                <div class="selitem" genre="32">Popular</div>
+                <div class="selitem" genre="128">Novelty</div>
+                <div class="selitem" genre="1024">Electronic</div>
+                <div class="selitem" genre="2+64+256">Others</div>
+            </div>
+            <div class="sort-nav">
+                <div class="title">Language</div>
+                <div class="selitem" lang="1">All</div>
+                <div class="selitem" lang="32">Instrumental</div>
+                <div class="selitem" lang="4">English</div>
+                <div class="selitem" lang="8">Japanese</div>
+                <div class="selitem" lang="64">Korean</div>
+                <div class="selitem" lang="16">Chinese</div>
+                <div class="selitem" lang="128">French</div>
+                <div class="selitem" lang="256">German</div>
+                <div class="selitem" lang="2+1024">Others</div>
+            </div>
+            <hr>
+            <div class="beatmap-list" id="beatmap-list">
+            <!-- to be filled in script -->
+            </div>
+            <div class="button" style="width:100%; margin-bottom: 10px;" id="btnmore">Load More</div>
+        </div>
+        <!-- <div class="side-panel">to be activated in script</div> -->
+        <div class="statuslines" id="statuslines">
+            <div class="progress" id="script-progress">
+                Scripts
+                <div class="lds-dual-ring"></div>
+            </div>
+            <div class="progress" id="skin-progress">
+                Skin
+                <div class="lds-dual-ring"></div>
+            </div>
+            <div class="progress" id="sound-progress">
+                Hitsounds
+                <div class="lds-dual-ring"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+    //Make enter work
+    var input = document.getElementById("userreg");
+        input.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+        event.preventDefault();
+        saveUser();
+        }
+    }); 
+    //Store username in localstorage
+    function saveUser( name ) {
+    var player = document.getElementById('userreg').value;
+        document.cookie = 'username=' + player;
+        }
+        let btns = document.getElementsByClassName("selitem");
+
+        function search(genre, lang) {
+            // clear list
+            list = document.getElementById("beatmap-list");
+            document.getElementById("btnmore").innerText = "Load More";
+            while (list.firstChild) {
+                list.removeChild(list.firstChild);
+            }
+            addBeatmapList("https://catboy.best/api/search?mode=0");
+            var p = 0
+            document.getElementById("btnmore").onclick = function () {
+                if (typeof (window.list_endid) == "undefined") {
+                    addBeatmapList("https://catboy.best/api/search?mode=0&p=" + p);
+                } else {
+                    if (window.list_endid == 0)
+                        document.getElementById("btnmore").innerText = "There's no more beatmaps to load!";
+                    else
+                        addBeatmapList("https://catboy.best/api/search?mode=0&p=" + p);
+                }
+                p++
+            }
+            // update buttons state
+            for (let i = 0; i < btns.length; ++i) {
+                let g = eval(btns[i].getAttribute("genre"));
+                let l = eval(btns[i].getAttribute("lang"));
+                if (g == genre || l == lang) {
+                    btns[i].classList.add("active");
+                } else {
+                    btns[i].classList.remove("active");
+                }
+            }
+        }
+        let curgenre = 1;
+        let curlang = 1;
+        search(curgenre, curlang);
+        for (let i = 0; i < btns.length; ++i) {
+            btns[i].onclick = function () {
+                let g = eval(btns[i].getAttribute("genre"));
+                let l = eval(btns[i].getAttribute("lang"));
+                if (g) curgenre = g;
+                if (l) curlang = l;
+                search(curgenre, curlang);
+            }
+        }
+    </script>
+</body>
+</html>

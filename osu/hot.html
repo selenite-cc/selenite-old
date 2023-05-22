@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Popular</title>
+    <link rel=”canonical” href=”https://webosu.online/”/>
+    <meta name="description" content="webosu! is a web port of osu! that can run on almost any PC, with features like usernames and a live scoreboard">
+    <link rel="icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/picnic.min.css">
+    <link rel="stylesheet"href="css/main.css">
+    <link rel="stylesheet"href="css/font.css">
+    <script src="js/launchgame.js"></script>
+    <script src="js/downloader.js"></script>
+    <script src="js/addbeatmaplist.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/jsloader.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script async src="https://arc.io/widget.min.js#MfA1gDkn"></script>
+</head>
+<body>
+    <body>
+        <!--Game Area-->
+        <div class="game-area" id="game-area" hidden>
+        </div>
+        <div class="pause-menu" id="pause-menu" hidden>
+            <div class="paused-title">Paused</div>
+            <div class="button-list">
+                <div class="pausebutton continue" id="pausebtn-continue">
+                    <div class="inner">Continue</div>
+                </div>
+                <div class="pausebutton retry" id="pausebtn-retry">
+                    <div class="inner">Retry</div>
+                </div>
+                <div class="pausebutton quit" id="pausebtn-quit">
+                    <div class="inner">Quit</div>
+                </div>
+            </div>
+        </div>
+    <!--Nav Bar-->
+    <nav id="main-nav">
+        <div class="nav-link">
+            <a href="index.html" class="brand">webosu!</a>
+            <a href="new.html" class="pseudo button">New</a>
+            <a href="hot.html" class="pseudo button">Popular</a>
+        </div>
+        <div class="nav-search">
+            <form action="search.html">
+                <container id="searchbar" class="searchbar">
+                    <input type="text" name="q" placeholder="Beatmap name or Set ID" />
+                </container>
+            </form>
+        </div>
+        <div class="nav-tool">
+            <a href="local.html" class="pseudo button">Favorites</a>
+            <a href="settings.html" class="pseudo button">Settings</a>
+            <input type="username" id="userreg" placeholder="Username" />
+        </div>
+    </nav>
+        <div class="main-page" id="main-page">
+            <div class="main-content">
+                <div class="announcement">
+                To save the username just type it in the top right & press enter! Join the <a href="https://discord.gg/v7wBtSdYzx">Discord</a> and share your scores!
+                </div>
+                <br>
+            <div class="beatmap-list" id="beatmap-list">
+                <!-- to be filled in script -->
+            </div>
+            <div class="button" style="width:100%; margin-bottom: 10px;" id="btnmore">Load More</div>
+        </div>
+        <!-- <div class="side-panel">to be activated in script</div> -->
+    </div>
+        <!--Loader progress-->
+        <div class="statuslines" id="statuslines">
+            <div class="progress" id="script-progress">
+                Scripts
+                <div class="lds-dual-ring"></div>
+            </div>
+            <div class="progress" id="skin-progress">
+                Skin
+                <div class="lds-dual-ring"></div>
+            </div>
+            <div class="progress" id="sound-progress">
+                Hitsounds
+                <div class="lds-dual-ring"></div>
+            </div>
+        </div>
+    </div>    
+    <script>
+//Make enter work
+    var input = document.getElementById("userreg");
+        input.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+        event.preventDefault();
+        saveUser();
+        }
+    }); 
+    //Store username in localstorage
+function saveUser( name ) {
+    var player = document.getElementById('userreg').value;
+    document.cookie = 'username=' + player;
+    }
+        addBeatmapList("https://catboy.best/api/search?mode=0&query=Top Rated");
+        var p = 1;
+        document.getElementById("btnmore").onclick = function () {
+            addBeatmapList(`https://catboy.best/api/search?p=${p}&mode=0&query=Top Rated`);
+            p++
+        }
+    </script>
+</body>
+</html>
