@@ -1,23 +1,24 @@
-
-
-<!doctype html>
 <html>
-  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Run 2</title>
-		<style>body{background-color:#000;color:#fff;}</style>
+    <style>html{background-color:#000;}</style>
   </head>
-	  <body>
-			<p>right click the game in order to go into fullscreen and have a better experience</p>
-    	<script>
-    window.RufflePlayer = window.RufflePlayer || {};
-    window.addEventListener("load", (event) => {
+  <body>
+    <div id="ruffle" width="100%" height="100%"></div>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <script>
+      window.RufflePlayer = window.RufflePlayer || {};
+      window.addEventListener("load", (event) => {
         const ruffle = window.RufflePlayer.newest();
         const player = ruffle.createPlayer();
-        const container = document.getElementById("container");
+        const container = document.getElementById("ruffle");
+        player.id = "player";
+        player.style.width = "100%";
+        player.style.height = "100%";
         container.appendChild(player);
         player.load("Run2.swf");
-    });
-</script>
-			<div id="container"></div>
+      });
+    </script>
   </body>
+</html>
