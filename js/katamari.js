@@ -4,6 +4,10 @@ Copyright Alex Leone, David Nufer, David Truong, 2011-03-11. kathack.com
 javascript:var i,s,ss=['http://kathack.com/js/kh.js','http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);
 
 */
+var script = document.createElement('script');
+script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
 var BORDER_STYLE = "1px solid #bbb",
     CSS_TRANSFORM = null,
     CSS_TRANSFORM_ORIGIN = null,
@@ -720,7 +724,17 @@ function whenAllLoaded(gameDiv, popup, stickyNodes) {
     stickyNodes.finalize(jQuery(document).width(), jQuery(document).height());
     jQuery('#loadingp').empty();
     jQuery('<button>Start!</button>').click(function () {
-        var game, ballOpts;
+        var game, bgmusic, ballOpts;
+        if (jQuery('#bgmusicc').attr('checked')) {
+            if (!(bgmusic = document.getElementById('khbgmusic'))) {
+                bgmusic = document.createElement('audio');
+                bgmusic.id = 'khbgmusic';
+                bgmusic.loop = 'loop';
+                bgmusic.src = 'http://kathack.com/js/katamari.mp3';
+                gameDiv.appendChild(bgmusic);
+            }
+            bgmusic.play();
+        }
         ballOpts = {
             color: jQuery('#khcolor').val(),
             VOL_MULT: parseFloat(jQuery('#vol_mult').val()),
@@ -758,8 +772,8 @@ Katamari!</a></h1>\
 <option value="2" selected="selected">Right-Click</option>\
 <option value="-5">Touch</option>\
 </select></b> to control the ball!</p>\
-<div hidden style="opacity:0;"><label>Background Music? \
-<input id="bgmusicc" type="checkbox" hidden/></label></div>\
+<div><label>Background Music? \
+<input id="bgmusicc" type="checkbox" checked="checked" /></label></div>\
 <div style="text-align:right; color:gray;">\
 <label>Katamari Color: <select id="khcolor">\
 <option value="#ff0000" style="background-color:#ff0000;color:#ff0000"> r </option>\
@@ -816,7 +830,6 @@ function main() {
         }, 100);
     }, 0);
 }
-whenAllLoaded(gameDiv, popup, window.khNodes);
 
 if (!window.noMain) {
     main();
