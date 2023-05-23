@@ -1,3 +1,4 @@
+// ty 3kh0 for the code <33333
 function getMainSave() {
   var mainSave = {};
   // List of items in localStorage that should not be saved
