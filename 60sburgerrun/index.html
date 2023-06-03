@@ -83,6 +83,7 @@
         </head>
 	<body> 
 	<script> // my custom code
+	let infjump;
 	document.onkeydown = keydown; 
 
 	function keydown (evt) { 
@@ -99,7 +100,7 @@
         		tim = 0;
 
     		} else if (evt.altKey && evt.key === "q") {
-    			cheat = prompt("dev menu made by egamepass:\n1: level changer\n2. fps changer\n3. time go bye bye\n4. no clip\n5. get picked up")
+    			cheat = prompt("dev menu made by egamepass:\n1: level changer\n2. fps changer\n3. time go bye bye\n4. no clip\n5. get picked up\n6: inf jump\n7: jump height\n8: no ground\n9: walk speed")
     			if(cheat == 1){
         			levl = prompt("set levl (complete level)\nlevl 0 = title\n-9 = game over\n1-6 = levels");
         		} else if(cheat == 2){
@@ -112,16 +113,26 @@
         		} else if(cheat == 4){
         			setInterval(() => {
   					spikes = "";
-				}, 700);
+				}, 100);
         		} else if(cheat == 5){
         			callBus();
+        		} else if(cheat == 6){
+        			infjump = 1;
+        		} else if(cheat == 7){
+        			sprt.jh = prompt("set jump height (negative = up, default is -13)")
+        		} else if(cheat == 8){
+        			plats = "";
+        		} else if(cheat == 9){
+        			sprt.spd = prompt("set speed (default is 4)")
         		} else {
         			alert("idk what u want");
         		}
-        		
-
-    		}
-
+		}
+		document.addEventListener('keydown', event => {
+  			if (event.code === 'Space' && infjump == 1) {
+    				fxPlay(sfx.fxJump); fxPlay(sfx.fxHup); sprt.yy = sprt.jh; sprt.ju = true; sprt.keyDown = null;
+  			}
+			})
 	}
 	</script>
 		<script src="js/main.js"></script>
