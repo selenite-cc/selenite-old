@@ -41,6 +41,7 @@
               setTimeout(function(){
                 if(document.getElementsByTagName("canvas").length) {
                   document.getElementsByTagName("canvas")[0].classList.add("no-select")
+                  document.getElementsByTagName("canvas")[0].fillText("Hello World", canvas.width/2, canvas.height/2);
                 }
               }, 2000);
             </script>
@@ -84,6 +85,9 @@
 	<body> 
 	<script> // my custom code
 	let infjump;
+	let label;
+	let thetime;
+	let timer;
 	document.onkeydown = keydown; 
 
 	function keydown (evt) { 
@@ -127,13 +131,42 @@
         		} else {
         			alert("idk what u want");
         		}
-		}
+		} else if (evt.key === 't') {
+  			setInterval(createText, 70);
+  			timer = 1;
+  		}
 		document.addEventListener('keydown', event => {
   			if (event.code === 'Space' && infjump == 1) {
     				fxPlay(sfx.fxJump); fxPlay(sfx.fxHup); sprt.yy = sprt.jh; sprt.ju = true; sprt.keyDown = null;
   			}
 			})
 	}
+	
+	function createText() {
+	thetime = tim;
+	thetime = Math.round(thetime  / 0.12) / 50;
+	if (!label == "") {
+	label.destroy();
+	}
+	label = this.game.add.text(
+    			screenX, 
+    			screenY, 
+    			'Time: ' + thetime, 
+    				{ font: '15px Arial', 
+      				fill: '#ffffff',
+    			}
+		);
+		label.fixedToCamera = true; // so it will move with camera
+		label.anchor.setTo(0.4, 0);
+	}
+	setInterval(() => {
+  	if (sprt.gameDone === true) {
+    		alert("Your final time was " + thetime + " seconds.");
+        }
+	}, 500);
+
+
+
 	</script>
 		<script src="js/main.js"></script>
 	<script>function fnSendMsg(evt){
