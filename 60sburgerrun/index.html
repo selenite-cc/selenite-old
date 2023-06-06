@@ -41,7 +41,6 @@
               setTimeout(function(){
                 if(document.getElementsByTagName("canvas").length) {
                   document.getElementsByTagName("canvas")[0].classList.add("no-select")
-                  document.getElementsByTagName("canvas")[0].fillText("Hello World", canvas.width/2, canvas.height/2);
                 }
               }, 2000);
             </script>
@@ -137,7 +136,7 @@
   		}
 		document.addEventListener('keydown', event => {
   			if (event.code === 'Space' && infjump == 1) {
-    				fxPlay(sfx.fxJump); fxPlay(sfx.fxHup); sprt.yy = sprt.jh; sprt.ju = true; sprt.keyDown = null;
+				sprt.ju = 0;
   			}
 			})
 	}
@@ -162,7 +161,10 @@
 	setInterval(() => {
   	if (sprt.gameDone === true) {
     		alert("Your final time was " + thetime + " seconds.");
-        }
+    		setTimeout(function () {
+				console.log("finished waiting")
+    		}, 5000);
+	}
 	}, 500);
 
 
