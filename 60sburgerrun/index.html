@@ -14,7 +14,12 @@
 		<script type="text/javascript" src="js/bus.js"></script>
 		<script type="text/javascript" src="js/gameOver.js"></script>
 		<script type="text/javascript">document.ontouchmove = function (e) {e.preventDefault();}</script>
+		
 		<style type="text/css">
+		@font-face {
+    font-family: "font";
+    src: url(font.ttf) format("truetype");
+}
 			body {
 				font-size:34px;
 				padding: 0px;
@@ -131,8 +136,7 @@
         			alert("idk what u want");
         		}
 		} else if (evt.key === 't') {
-  			setInterval(createText, 70);
-  			timer = 1;
+	  		speedrun = 1;
   		}
 		document.addEventListener('keydown', event => {
   			if (event.code === 'Space' && infjump == 1) {
@@ -141,31 +145,21 @@
 			})
 	}
 	
-	function createText() {
+	function initSpeedrunTimer() {
+	var graphics = game.add.graphics(0, 0);
+	graphics.beginFill("#000");
+	graphics.alpha = 0.5;
+	graphics.drawRect(0, 0, 100, 20);
+	graphics.fixedToCamera = true;
+	timer = game.add.text(0,0,"Time: " + thetime, {font: '15px font', fill: '#ffffff'});
+	timer.fixedToCamera = true;
+	}
+	function speedrunTimer() {
 	thetime = tim;
-	thetime = Math.round(thetime  / 0.12) / 50;
-	if (!label == "") {
-	label.destroy();
+	thetime = Math.round(thetime  / 0.0012) / 5000;
+	thetime = thetime.toString();
+	timer.text = "Time: " + thetime;
 	}
-	label = this.game.add.text(
-    			screenX, 
-    			screenY, 
-    			'Time: ' + thetime, 
-    				{ font: '15px Arial', 
-      				fill: '#ffffff',
-    			}
-		);
-		label.fixedToCamera = true; // so it will move with camera
-		label.anchor.setTo(0.4, 0);
-	}
-	setInterval(() => {
-  	if (sprt.gameDone === true) {
-    		alert("Your final time was " + thetime + " seconds.");
-    		setTimeout(function () {
-				console.log("finished waiting")
-    		}, 5000);
-	}
-	}, 500);
 
 
 
