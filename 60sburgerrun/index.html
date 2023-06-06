@@ -95,6 +95,9 @@
 	let gravity = 0.6;
 	let playerspeed = 4;
 	let jumpheight = -13;
+	let input = 0;
+	let inftime;
+	let noclip;
 	document.onkeydown = keydown; 
 
 	function keydown (evt) { 
@@ -117,18 +120,24 @@
         		} else if(cheat == 2){
         			world.time._desiredFps = prompt("what fps u want (default is 60)");
         		} else if(cheat == 3){
+        			inftime = !inftime;
 				setInterval(() => {
+					if(inftime == 1) {
   					tim = 0;
+  					}
 				}, 700);
 
         		} else if(cheat == 4){
+        		noclip = !noclip;
         			setInterval(() => {
+        				if(noclip == 1) {
   					spikes = "";
+  					}
 				}, 100);
         		} else if(cheat == 5){
         			callBus();
         		} else if(cheat == 6){
-        			infjump = 1;
+        			infjump = !infjump;
         		} else if(cheat == 7){
         			gravity = parseFloat(prompt("set gravity (default is 0.6)"));
         		} else if(cheat == 8){
@@ -147,10 +156,19 @@
   		} else if (evt.key === '1' || evt.key === '2' || evt.key === '3' || evt.key === '4' || evt.key === '5' || evt.key === '6' || evt.key === '7' && evt.altKey){
   			levl = evt.key;
   			newState();
-  		}
+  		} else if(evt.key === 'i') {
+  				input = !input;
+  				gotoL1();
+  				tim = 0;
+  			}
 		document.addEventListener('keydown', event => {
   			if ((event.code === 'Space' || event.code === 'ArrowUp') && infjump == 1) {
 				sprt.ju = 0;
+  			}
+			})
+		document.addEventListener('keyup', event => {
+  			if(event.code === 'Space') {
+  				spaceee = 0;
   			}
 			})
 	}
@@ -170,6 +188,45 @@
 	thetime = thetime.toString();
 	timer.text = "Time: " + thetime;
 	}
+	
+  	var spaceinputview = game.add.graphics(0, 0);
+  	var leftinputview = game.add.graphics(0, 0);
+  	var rightinputview = game.add.graphics(0, 0);
+  	var inputviewbg = game.add.graphics(0,0);
+  	
+  	function initInputViewer() {
+  	
+  	if (input == 1) {
+  	inputviewbg = game.add.graphics(0,0);inputviewbg.beginFill("#000");inputviewbg.alpha = 0.7;inputviewbg.drawRect(5, game.camera.height - 55, 65, 45);inputviewbg.fixedToCamera = true;
+  	spaceinputview = game.add.graphics(0, 0);spaceinputview.beginFill(0xffffff);spaceinputview.drawRect(0, 0, 15, 15);spaceinputview.fixedToCamera = true;spaceinputview.cameraOffset.setTo(30, game.camera.height - 50);
+  	leftinputview = game.add.graphics(0, 0);leftinputview.beginFill(0xffffff);leftinputview.drawRect(0, 0, 15, 15);leftinputview.fixedToCamera = true;leftinputview.cameraOffset.setTo(10, game.camera.height - 30);
+  	rightinputview = game.add.graphics(0, 0);rightinputview.beginFill(0xffffff);rightinputview.drawRect(0, 0, 15, 15);rightinputview.fixedToCamera = true;rightinputview.cameraOffset.setTo(50, game.camera.height - 30);
+  	} else {
+  	inputviewbg = game.add.graphics(0,0);inputviewbg.beginFill("#000");inputviewbg.alpha = 0.7;inputviewbg.drawRect(5, game.camera.height - 5000000005, 65, 45);inputviewbg.fixedToCamera = true;
+  	spaceinputview = game.add.graphics(0, 0);spaceinputview.beginFill(0xffffff);spaceinputview.drawRect(0,0, 15, 15);spaceinputview.fixedToCamera = true;spaceinputview.cameraOffset.setTo(30, game.camera.height - 50234234234);
+  	leftinputview = game.add.graphics(0, 0);leftinputview.beginFill(0xffffff);leftinputview.drawRect(0, 0, 15, 15);leftinputview.fixedToCamera = true;leftinputview.cameraOffset.setTo(10, game.camera.height - 301434);
+  	rightinputview = game.add.graphics(0, 0);rightinputview.beginFill(0xffffff);rightinputview.drawRect(0, 0, 15, 15);rightinputview.fixedToCamera = true;rightinputview.cameraOffset.setTo(50, game.camera.height - 3234234324230);
+  	}
+  	}
+  	
+  	function inputViewer() {
+  		if(spaceKey.isDown || cursors.up.isDown) {
+  			spaceinputview.alpha = 1;
+  		} else {
+  			spaceinputview.alpha = 0;
+  		}
+  		
+		if(cursors.left.isDown) {
+  			leftinputview.alpha = 1;
+  		} else {
+  			leftinputview.alpha = 0;
+  		}
+  		if(cursors.right.isDown) {
+  			rightinputview.alpha = 1;
+  		} else {
+  			rightinputview.alpha = 0;
+  		}
+  	}
 
 
 
