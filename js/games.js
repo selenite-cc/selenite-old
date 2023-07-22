@@ -1,7 +1,3 @@
-window.addEventListener("load", loadJson());
-
-function loadJson() {
-    fetch('./games.json')
-    .then((response) => response.json())
-    .then((json) => console.log(json));
-}
+$.getJSON("/games.json", function (data) {
+    console.log(data);
+})
