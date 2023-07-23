@@ -25,9 +25,10 @@
     <meta name="author" content="Website Creator" />
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-	<script src="/js/cookie.js"></script>
-	<script src="/js/games.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script src="./js/cookie.js"></script>
+	<script src="./js/games.js"></script>
+	<script src="./js/search.js"></script>
   </head>
   <body>
 <div class="content">
@@ -35,12 +36,13 @@
 <input class="hiddenUpload" type="file" accept=".save" hidden>
 
 
-    <div class="title"><img src="/favicon.png" style="width:4%;"><h2 style="font-size:50px">e-gamepass</h2></div>
-		<p><a href="/bookmarklets.html">Click here for bookmarklets that you can use even if we get blocked!</a> - <a href="https://forms.gle/iBAbXvEDaYTLuEcdA">Want a game to be added? Suggest here!</a> - <a href="https://github.com/skysthelimitt/e-gamepass">Want to help me develop the website? Click here!</a></p>
+    <div class="title"><img src="./favicon.png" style="width:4%;"><h2 style="font-size:50px">e-gamepass</h2></div>
+		<p><a href="./bookmarklets.html">Click here for bookmarklets that you can use even if we get blocked!</a> - <a href="https://forms.gle/iBAbXvEDaYTLuEcdA">Want a game to be added? Suggest here!</a> - <a href="https://github.com/skysthelimitt/e-gamepass">Want to help me develop the website? Click here!</a></p>
 		<p><a href="javascript:downloadMainSave()">Download Save</a> - <a href="javascript:uploadMainSave()">Upload Save</a></p><br>
-		<p>Welcome to the new and updated e-gamepass!</p>
+		<input type="text" id="gamesearch" placeholder="Type here to search..">
 		<p class="uploadResult" style="font-size:20px"></p>
 		<br>
+		
 		<div id="games"></div>
   </div>
   </body>

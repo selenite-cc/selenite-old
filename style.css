@@ -112,4 +112,23 @@ body {
     background-position: 15% 100%
 }
 }
-  
+
+
+input[type=text] {
+  width: 50%;
+  box-sizing: border-box;
+  font-size: 25px;
+  background-color: rgba(89, 110, 177, 0.274);
+  padding: 0.8% 0.8%;
+  text-align: center;
+  color: white;
+  border: 2px solid #527ac4aa;
+  border-radius: 5px;
+  outline: none;
+  opacity: 50%;
+  transition: opacity .75s ease-in-out;
+}
+
+input[type=text]:focus {
+  opacity: 100%;
+}

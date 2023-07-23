@@ -1,12 +1,37 @@
 [
     {
-        "name": "Testing 1",
+        "name": "this is a new name",
+        "directory": "adofai",
+        "image": "icon.png"
+    },
+    {
+        "name": "Online Minecraft",
+        "directory": "resent-client",
+        "image": "logo.png"
+    },
+    {
+        "name": "lorem ipsum",
+        "directory": "vex2",
+        "image": "icon.png"
+    },
+    {
+        "name": "unique name",
+        "directory": "vex2",
+        "image": "icon.png"
+    },
+    {
+        "name": "new name",
+        "directory": "vex2",
+        "image": "icon.png"
+    },
+    {
+        "name": "name 38",
         "directory": "vex",
         "image": "icon.png"
     },
     {
-        "name": "Testing 2",
-        "directory": "vex2",
+        "name": "amshduijasdhuihasd",
+        "directory": "vex",
         "image": "icon.png"
     }
 ]
