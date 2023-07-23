@@ -1,7 +1,8 @@
 // https://s2.googleusercontent.com/s2/favicons?domain=
 
 function setCloakCookie() {
-    document.cookie = 'tabicon=https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=' + $('#webicon').val() + '&size=32';
+    url = cloakExceptions($('#webicon').val())
+    document.cookie = 'tabicon=https://s2.googleusercontent.com/s2/favicons?domain_url=' + url;
     document.cookie = 'tabname=' + $('#webname').val();
     setCloak();
 }
@@ -64,3 +65,11 @@ function getCookie(cname) {
 document.addEventListener("DOMContentLoaded", function() {
     setCloak();
 });
+
+function cloakExceptions(url) {
+    if (url.includes('harrisonburg.instructure.com') == true) {
+        console.log("success");
+        return "learn.canvas.net";
+    }
+    return url;
+}
