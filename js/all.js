@@ -1,23 +1,3 @@
-// https://s2.googleusercontent.com/s2/favicons?domain=
-
-function setCloakCookie() {
-    url = cloakExceptions($('#webicon').val())
-    document.cookie = 'tabicon=https://s2.googleusercontent.com/s2/favicons?domain_url=' + url;
-    document.cookie = 'tabname=' + $('#webname').val();
-    setCloak();
-}
-
-function clearCloak() {
-    document.cookie = "tabicon=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    document.cookie = "tabname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    var link = document.querySelector("link[rel~='icon']");link.remove();
-    document.title = "Tab Cloak | e-gamepass";
-    link = document.createElement('link');
-    link.rel = 'icon';
-    document.head.appendChild(link);
-    link.href = "/favicon.png";
-}
-
 function setCloak() {
     var tabicon = getCookie("tabicon");
 
@@ -41,11 +21,7 @@ function setCloak() {
     if (tabname) {
         document.title = tabname;
     }
-
-    // 'https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=' + $('#webicon').val() + '&size=32';
-    // 'https://s2.googleusercontent.com/s2/favicons?domain_url=' + $('#webicon').val()
 }
-
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -65,10 +41,3 @@ function getCookie(cname) {
 document.addEventListener("DOMContentLoaded", function() {
     setCloak();
 });
-
-function cloakExceptions(url) {
-    if (url.includes('harrisonburg.instructure.com') == true) {
-        return "learn.canvas.net";
-    }
-    return url;
-}
