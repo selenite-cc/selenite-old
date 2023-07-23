@@ -44,7 +44,16 @@ function downloadMainSave() {
   fakeElement.download = 'your.e-gamepass.save';
   fakeElement.click();
   URL.revokeObjectURL(dataURL);
-  alert("Make sure to keep the file that was just downloaded so you can use it to restore your progress in games later.")
+  Toastify({
+    text: "Download successful! Make sure to not lose this download.",
+    duration: 5000,
+    gravity: "top", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    style: {
+      background: "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
+    },
+    onClick: function(){} // Callback after click
+  }).showToast();
 }
 
 // Function to get the main save data from an uploaded file
@@ -86,7 +95,17 @@ function uploadMainSave() {
       getMainSaveFromUpload(e.target.result);
 
       // Show a success message to the user
-      alert("Upload successful!")
+      Toastify({
+        text: "Upload successful!",
+        duration: 3000,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
       
     };
 
