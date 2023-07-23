@@ -147,3 +147,8 @@ li {
   padding: 8px;
   top: 10px;
 }
+
+p {
+  font-size: 20px;
+  color: #0073e6;
+}

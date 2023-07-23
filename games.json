@@ -1,37 +1,62 @@
 [
-    {
-        "name": "this is a new name AAAAAAAAAA",
-        "directory": "adofai",
-        "image": "icon.png"
-    },
-    {
-        "name": "Online Minecraft",
-        "directory": "resent-client",
-        "image": "logo.png"
-    },
-    {
-        "name": "lorem ipsum",
-        "directory": "vex2",
-        "image": "icon.png"
-    },
-    {
-        "name": "unique name",
-        "directory": "vex2",
-        "image": "icon.png"
-    },
-    {
-        "name": "new name",
-        "directory": "vex2",
-        "image": "icon.png"
-    },
-    {
-        "name": "name 38",
-        "directory": "vex",
-        "image": "icon.png"
-    },
-    {
-        "name": "amshduijasdhuihasd",
-        "directory": "vex",
-        "image": "icon.png"
-    }
-]
+        {
+            "name": "ADOFAI",
+            "directory": "adofai",
+            "image": "icon.png"
+        },
+        {
+            "name": "Online Minecraft",
+            "directory": "resent-client",
+            "image": "logo.png"
+        },
+        {
+            "name": "Offline Minecraft",
+            "directory": "offline-mc",
+            "image": "logo.png"
+        },
+        {
+            "name": "Friday Night Funkin",
+            "directory": "fridaynightfunkin",
+            "image": "fnf-icon.jpg"
+        },
+        {
+            "name": "Worlds Hardest Game",
+            "directory": "hardestgame",
+            "image": "icon.png"
+        },
+        {
+            "name": "GBA Emulator",
+            "directory": "gba",
+            "image": "icon.png"
+        },
+        {
+            "name": "Celeste",
+            "directory": "celeste",
+            "image": "icon.png"
+        },
+        {
+            "name": "Mario",
+            "directory": "mario",
+            "image": "icon.png"
+        },
+        {
+            "name": "60s Burger Run",
+            "directory": "60sburgerrun",
+            "image": "icon.png"
+        },
+        {
+            "name": "Cluster Rush",
+            "directory": "cluster-rush",
+            "image": "icon.jpg"
+        },
+        {
+            "name": "Vex 3",
+            "directory": "vex3",
+            "image": "icon.png"
+        },
+        {
+            "name": "Adventure Capitalist",
+            "directory": "adventure-capitalist",
+            "image": "icon.png"
+        }
+    ]
