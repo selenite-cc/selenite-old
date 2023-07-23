@@ -32,18 +32,22 @@
   </head>
   <body>
 <div class="content">
+  <ul><li><a href="./bookmarklets.html">Bookmarklets</a></li><li><a href="https://forms.gle/iBAbXvEDaYTLuEcdA">Suggestions</a></li><li><a href="https://github.com/skysthelimitt/e-gamepass">Source Code</a></li></ul>
 
-<input class="hiddenUpload" type="file" accept=".save" hidden>
+  <input class="hiddenUpload" type="file" accept=".save" hidden>
 
 
     <div class="title"><img src="./favicon.png" style="width:4%;"><h2 style="font-size:50px">e-gamepass</h2></div>
-		<p><a href="./bookmarklets.html">Click here for bookmarklets that you can use even if we get blocked!</a> - <a href="https://forms.gle/iBAbXvEDaYTLuEcdA">Want a game to be added? Suggest here!</a> - <a href="https://github.com/skysthelimitt/e-gamepass">Want to help me develop the website? Click here!</a></p>
-		<p><a href="javascript:downloadMainSave()">Download Save</a> - <a href="javascript:uploadMainSave()">Upload Save</a></p><br>
-		<input type="text" id="gamesearch" placeholder="Type here to search..">
-		<p class="uploadResult" style="font-size:20px"></p>
+		<button onclick="downloadMainSave()">Download Save</button><button onclick="uploadMainSave()">Upload Save</button>
+    <br>
+		<input type="text" id="gamesearch" placeholder="Type here to search.."> <br>
 		<br>
-		
+		<div class="popup" onclick="myFunction()">
+      <span class="popuptext" id="myPopup">Upload successful!</span>
+    </div>
+
 		<div id="games"></div>
+
   </div>
   </body>
 </html>

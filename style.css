@@ -11,20 +11,23 @@ html {
 }
 
 button {
-  background-color: rgba(83, 141, 175, 0);
+  background-color: rgba(89, 110, 177, 0.5);
   color: #8daad8;
-  border: 2.5px solid rgba(0,0,0,0);
-  border-radius: 10px;
-padding: 5px 13px;
+  border: 2px solid #527ac4bb ;
+  border-radius: 6px;
+  padding: 5px 13px;
   margin-bottom: 6px;
+  margin: 10px;
   transition-duration: 0.45s;
     font-size: 20px;
     color: #6983da;
     font-family: "Share Tech Mono", monospace;
     text-underline-position: under;
+    opacity: 70%;
 }
 button:hover {
   cursor:pointer;
+  opacity: 90%;
 }
 
   h2 {
@@ -34,10 +37,7 @@ button:hover {
   }
   
   
-  p {
-    font-size: 20px;
-    color: #0073e6;
-  }
+
   
 #game {
   width: 10%;
@@ -48,12 +48,12 @@ button:hover {
   margin: 2%;
   transition-duration: 0.5s;
   box-shadow: 0px 0px 5px 5px rgba(83, 118, 235, 0.4);
-
+  height: 100%;
 }
 
 #game:hover {
   background-color: rgba(113, 142, 238, 0.6);
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0px 0px 5px 5px rgba(113, 142, 238, 0.6);
 }
 
@@ -117,18 +117,33 @@ body {
 input[type=text] {
   width: 50%;
   box-sizing: border-box;
-  font-size: 25px;
-  background-color: rgba(89, 110, 177, 0.274);
+  font-size: 20px;
+  background-color: rgba(89, 110, 177, 0.5);
   padding: 0.8% 0.8%;
   text-align: center;
-  color: white;
-  border: 2px solid #527ac4aa;
+  color: rgb(149, 186, 241);
+  border: 2px solid #527ac4bb ;
   border-radius: 5px;
   outline: none;
-  opacity: 50%;
-  transition: opacity .75s ease-in-out;
+  opacity: 70%;
+  transition: opacity .25s ease-in-out;
+  font-family: "Share Tech Mono", monospace;
 }
-
+input[type=text]:hover {
+  opacity: 90%;
+}
 input[type=text]:focus {
   opacity: 100%;
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  padding: 8px;
+  top: 10px;
 }

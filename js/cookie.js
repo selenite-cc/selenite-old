@@ -86,12 +86,8 @@ function uploadMainSave() {
       getMainSaveFromUpload(e.target.result);
 
       // Show a success message to the user
-      var uploadResult = document.querySelector('.uploadResult');
-      uploadResult.innerText = 'Uploaded save!';
-      uploadResult.style.display = 'initial';
-      setTimeout(function () {
-        uploadResult.style.display = 'none';
-      }, 3000);
+      alert("Upload successful!")
+      
     };
 
     reader.readAsText(file);

@@ -7,7 +7,8 @@ $.getJSON("/games.json", function (data) {
                 dir: data[i].directory
             }).append(
                 $('<img>').prop({
-                    src: data[i].directory + "/" + data[i].image
+                    src: data[i].directory + "/" + data[i].image,
+                    alt: data[i].name + " logo"
                 })
             ).append(
                 $('<h1>').text(data[i].name)
