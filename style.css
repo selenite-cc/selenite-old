@@ -104,10 +104,11 @@ a:hover {
   }
 
 body {
-    background: linear-gradient(45deg, rgba(36, 69, 128, 1) 0%, rgb(24, 17, 87) 33%, rgba(36, 69, 128, 1) 66%, rgb(24, 17, 87) 100%);
+    background: repeating-linear-gradient(45deg, rgba(36, 69, 128, 1) 0%, rgb(24, 17, 87) 33%, rgba(36, 69, 128, 1) 66%, rgb(24, 17, 87) 100%);
     background-size: 400% 400%;
+    background-attachment: fixed;
     animation: gradient 30s linear infinite;
-    height: 100%;
+    height: 100vh;
 }
   
 @keyframes gradient {
