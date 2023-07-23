@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function cloakExceptions(url) {
     if (url.includes('harrisonburg.instructure.com') == true) {
-        console.log("success");
         return "learn.canvas.net";
     }
     return url;
