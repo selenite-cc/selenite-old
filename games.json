@@ -343,5 +343,40 @@
             "name": "This Is The Only Level 2",
             "directory": "thisistheonlylevel2",
             "image": "icon.png"
+        },
+        {
+            "name": "Bitlife",
+            "directory": "bitlife",
+            "image": "bitlife.png"
+        },
+        {
+            "name": "Duck Life 1",
+            "directory": "ducklife1",
+            "image": "ducklife1.png"
+        },
+        {
+            "name": "Duck Life 2",
+            "directory": "ducklife2",
+            "image": "ducklife2.png"
+        },
+        {
+            "name": "Duck Life 3",
+            "directory": "ducklife3",
+            "image": "ducklife3.png"
+        },
+        {
+            "name": "ovo",
+            "directory": "ovo",
+            "image": "ovo3.png"
+        },
+        {
+            "name": "There Is No Game",
+            "directory": "thereisnogame",
+            "image": "icon-256.png"
+        },
+        {
+            "name": "Universal Paperclips",
+            "directory": "universal-paperclips",
+            "image": "universal-paperclips.png"
         }
     ]
