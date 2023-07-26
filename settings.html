@@ -19,11 +19,22 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <script src="/js/cloak.js"></script>
+  <script>
+    function setPanicMode() {
+      if(!$("#panic").val().startsWith("https")) {
+        document.cookie = "panicurl=https://" + $("#panic").val();return;
+      }
+        
+      document.cookie = "panicurl=" + $("#panic").val();
+    }
+
+
+  </script>
 
   </head>
   <body>
 <div class="content">
-  <ul><li><a href="./index.html">Home</a></li><li><a href="./bookmarklets.html">Bookmarklets</a></li><li><a href="https://forms.gle/iBAbXvEDaYTLuEcdA">Suggestions</a></li><li><a href="https://github.com/skysthelimitt/e-gamepass">Source Code</a></li><li><a href="./cloak.html">Tab Cloak</a></li></ul>
+  <ul><li><a href="./index.html">Home</a></li><li><a href="./bookmarklets.html">Bookmarklets</a></li><li><a href="https://forms.gle/iBAbXvEDaYTLuEcdA">Suggestions</a></li><li><a href="https://github.com/skysthelimitt/e-gamepass">Source Code</a></li><li><a href="./settings.html">Settings</a></li><li><a id="panicmode">Panic Mode</a></li></ul>
 
   <input class="hiddenUpload" type="file" accept=".save" hidden>
 
@@ -31,12 +42,18 @@
     <div class="title"><img src="./favicon.png" style="width:4%;"><h2 style="font-size:50px">e-gamepass</h2></div>
 		
     <br>
+    <form action="javascript:setPanicMode();">
+      <h3 for="panic">Website URL</h3><br>
+      <input type="text" id="panic" name="panic" placeholder="https://google.com"><br>
+      <input id="panic" class="submit" type="submit" value="Set Panic Mode">
+    </form> 
+    <br>
     <form action="javascript:setCloakCookie();">
         <h3 for="webname">Website Name</h3><br>
         <input type="text" id="webname" name="webname" placeholder="e-gamepass"><br>
         <h3 for="webicon">Website Icon</h3><br>
         <input type="text" id="webicon" name="webicon" placeholder="https://egamepass.pages.dev/"><br><br>
-        <input id="websubmit" type="submit" value="Set Tab Cloak">
+        <input id="websubmit" class="submit" type="submit" value="Set Tab Cloak">
       </form> 
       <button onclick="javascript:clearCloak();">Clear your current tab cloak</button>
 		<br>

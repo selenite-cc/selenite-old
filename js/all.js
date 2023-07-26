@@ -38,6 +38,25 @@ function getCookie(cname) {
     return "";
 }
 
+function panicMode() {
+    if ($("#panicmode").length > 0) {
+        panicurl = getCookie("panicurl")
+        if (panicurl == "") {
+            panicurl = "https://google.com"
+        }
+        $("#panicmode").prop({href: panicurl})
+    }
+    const pressed = [];
+    const secretCode = 'safemode';
+    window.addEventListener('keyup', (e) => { 
+      pressed.push(e.key);
+      pressed.splice(-secretCode.length - 1 , pressed.length - secretCode.length);
+      if (pressed.join('').includes(secretCode)) {
+        window.location.href = panicurl;
+      }
+    });
+}
 document.addEventListener("DOMContentLoaded", function() {
     setCloak();
+    panicMode();
 });

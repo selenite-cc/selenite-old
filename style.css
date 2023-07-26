@@ -189,7 +189,7 @@ h3 {
   color: #8daad8;
 }
 
-#websubmit {
+.submit {
   background-color: rgba(89, 110, 177, 0.5);
   color: #8daad8;
   border: 2px solid #527ac4bb ;
@@ -204,7 +204,7 @@ h3 {
     text-underline-position: under;
     opacity: 70%;
 }
-#websubmit:hover {
+.submit:hover {
   cursor:pointer;
   opacity: 90%;
 }
