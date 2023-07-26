@@ -378,5 +378,10 @@
             "name": "Universal Paperclips",
             "directory": "universal-paperclips",
             "image": "universal-paperclips.png"
+        },
+        {
+            "name": "Windows 11",
+            "directory": "win11",
+            "image": "favicon.png"
         }
     ]
