@@ -1,4 +1,5 @@
 $.getJSON("/games.json", function (data) {
+    $("#gamesearch").prop({placeholder: "Click here to search through our " + data.length + " games!"});
     data.sort(dynamicSort("name"));
     for (let i = 0; i < data.length; i++) {
         $('#games').append(
