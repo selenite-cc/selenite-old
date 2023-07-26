@@ -9,6 +9,17 @@ function setCloakCookie() {
     url = cloakExceptions($('#webicon').val())
     document.cookie = 'tabicon=https://s2.googleusercontent.com/s2/favicons?domain_url=' + url;
     document.cookie = 'tabname=' + $('#webname').val();
+    Toastify({
+        text: 'Tab cloak saved!',
+        duration: 3000,
+        gravity: "top", // `top` or `bottom`
+        position: "left", // `left`, `center` or `right`
+        style: {
+          background: "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
+          width: "25%",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
     setCloak();
 }
 
