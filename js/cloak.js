@@ -11,12 +11,11 @@ function setCloakCookie() {
     document.cookie = 'tabname=' + $('#webname').val();
     Toastify({
         text: 'Tab cloak saved!',
-        duration: 3000,
+        duration: 2000,
         gravity: "top", // `top` or `bottom`
-        position: "left", // `left`, `center` or `right`
+        position: "center", // `left`, `center` or `right`
         style: {
-          background: "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
-          width: "25%",
+          background: "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)"
         },
         onClick: function(){} // Callback after click
       }).showToast();
