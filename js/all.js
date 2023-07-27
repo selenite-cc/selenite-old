@@ -1,3 +1,4 @@
+
 function setCloak() {
     var tabicon = getCookie("tabicon");
 
@@ -39,11 +40,12 @@ function getCookie(cname) {
 }
 
 function panicMode() {
+  panicurl = getCookie("panicurl")
+  if (panicurl == "") {
+      panicurl = "https://google.com"
+  }
     if ($("#panicmode").length > 0) {
-        panicurl = getCookie("panicurl")
-        if (panicurl == "") {
-            panicurl = "https://google.com"
-        }
+
         $("#panicmode").prop({href: panicurl})
     }
     const pressed = [];
@@ -57,6 +59,12 @@ function panicMode() {
     });
 }
 document.addEventListener("DOMContentLoaded", function() {
+    let jquery_loader = document.createElement('script');
+    jquery_loader.setAttribute('src','https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js');
+    jquery_loader.async = false;
+    document.body.appendChild(jquery_loader);
+    window.addEventListener('load', function() {
+      panicMode();
+    })
     setCloak();
-    panicMode();
 });
