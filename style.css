@@ -58,6 +58,7 @@ button:hover {
 }
 
 #game h1 {
+  float: right;
   font-size: 0.85em;
   color: rgb(149, 186, 241)
 }

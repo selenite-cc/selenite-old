@@ -17,6 +17,7 @@ $.getJSON("/games.json", function (data) {
             )
         );
     }
+    $("#games #message").remove();
 });
 
 $(document).ready(function() {
