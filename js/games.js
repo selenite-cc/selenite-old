@@ -61,20 +61,48 @@ $(document).ready(function() {
                 $element = $(this).clone();
                 $('#pinnedgames').append($element);
                 $("#pinnedmessage").hide();
-            } else {
-                $(event.target).removeAttr("id");
-                $thisdiv = '#' + $(this).attr("id")
-                starred = Cookies.get("starred")
-                starred = JSON.parse(starred);
-                ourindex = starred.indexOf($(this).attr("id"));
-                starred.splice(ourindex, 1);
-                Cookies.set("starred", JSON.stringify(starred));
-                $("#pinnedgames " + $thisdiv).remove();
-                if($('#pinnedgames').is(':empty')) {
-                    $("#pinnedmessage").show();
+                temp = $('#pinnedgames')[0].childNodes;
+                pinnedarray = [...temp]
+
+                pinnedarray.sort(dynamicSort("id"));
+                $("#pinnedgames").empty();
+                for (let i = 0; i < pinnedarray.length; i++) {
+                    pinnedarraynodes = pinnedarray[i].childNodes;
+                    pinnedarraynodes = [...pinnedarraynodes]
+                    let $element = $('<div>').prop({
+                        class: 'game',
+                        style: 'cursor: pointer;',
+                        id: pinnedarray[i].id
+                    }).append(
+                        $('<img>').prop({
+                            src: pinnedarraynodes[0].src,
+                            alt: pinnedarraynodes[0].alt
+                        })
+                    ).append(
+                        $('<h1>').text(pinnedarraynodes[1].innerHTML)
+                    ).append(
+                        $("<mat-icon>").prop({
+                            class: 'material-symbols-rounded',
+                            id: 'starred'
+                        }).text("star")
+                    );
+                    $('#pinnedgames').append($element);
                 }
-                $($thisdiv + " #starred").removeAttr("id");
-            }
+                } else {
+                    $(event.target).removeAttr("id");
+                    $thisdiv = '#' + $(this).attr("id")
+                    $thisdiv = $thisdiv.replace(".", "\\.");
+                    starred = Cookies.get("starred")
+                    starred = JSON.parse(starred);
+                    ourindex = starred.indexOf($(this).attr("id"));
+                    starred.splice(ourindex, 1);
+                    Cookies.set("starred", JSON.stringify(starred));
+                    $("#pinnedgames " + $thisdiv).remove();
+                    if($('#pinnedgames').is(':empty')) {
+                        $("#pinnedmessage").show();
+                    }
+                    $($thisdiv + " #starred").removeAttr("id");
+                }
         } else {
             redirectGame($(this).attr("id"));
         }
