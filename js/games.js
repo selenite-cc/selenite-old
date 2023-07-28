@@ -11,7 +11,6 @@ $.getJSON("/games.json", function (data) {
     $("#gamesearch").prop({placeholder: "Click here to search through our " + data.length + " games!"});
     data.sort(dynamicSort("name"));
     for (let i = 0; i < data.length; i++) {
-        console.log("Loop iteration:", i);
         let $element = $('<div>').prop({
             class: 'game',
             style: 'cursor: pointer;',
@@ -34,7 +33,7 @@ $.getJSON("/games.json", function (data) {
             let $pinnedelement = $element.clone();
             $('#pinnedgames').append($pinnedelement);
             if($("#pinnedgames #message")) {
-                $("#pinnedgames #message").hide();
+                $("#pinnedmessage").hide();
             }
            
         }
@@ -61,17 +60,18 @@ $(document).ready(function() {
                 Cookies.set("starred", JSON.stringify(starred));
                 $element = $(this).clone();
                 $('#pinnedgames').append($element);
-                $("#pinnedgames #message").hide();
+                $("#pinnedmessage").hide();
             } else {
                 $(event.target).removeAttr("id");
                 $thisdiv = '#' + $(this).attr("id")
                 starred = Cookies.get("starred")
                 starred = JSON.parse(starred);
-                starred.pop(starred.indexOf($(this).attr("dir")), starred.indexOf($(this).attr("dir")));
+                ourindex = starred.indexOf($(this).attr("id"));
+                starred.splice(ourindex, 1);
                 Cookies.set("starred", JSON.stringify(starred));
                 $("#pinnedgames " + $thisdiv).remove();
-                if(!$("#pinnedgames div") == "") {
-                    $("#pinnedgames #message").show();
+                if($('#pinnedgames').is(':empty')) {
+                    $("#pinnedmessage").show();
                 }
                 $($thisdiv + " #starred").removeAttr("id");
             }
