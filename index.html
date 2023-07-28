@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+
 <script src="/js/all.js"></script>
+<script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
@@ -51,7 +56,12 @@
     <p id="gamecounter"></p>
 		<input type="text" id="gamesearch" placeholder="Type here to search.."> <br>
 		<br>
+    <div id="pinnedgames">
+      <h2>Pinned Games</h2>
+      <p id="message">Looks like you haven't pinned any games, click the star icon next to any game in order to pin them up here!</p>
+    </div>
 		<div id="games">
+      <h2>All Games</h2>
       <p id="message">Please wait for the games to load.. If you see this for more than a second, try reloading and reporting a <a href="https://forms.gle/j75WUn6UhdqsRZgf7">bug report</a>.</p>
     </div>
 
