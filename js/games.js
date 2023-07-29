@@ -8,6 +8,7 @@ $.getJSON("/games.json", function (data) {
   console.log(starredgames);
   $("#gamesearch").prop({ placeholder: "Click here to search through our " + data.length + " games!" });
   data.sort(dynamicSort("name"));
+  gamelist = data;
   for (let i = 0; i < data.length; i++) {
     let $element = $("<div>")
       .prop({
@@ -134,4 +135,23 @@ function dynamicSort(property) {
       return a[property].localeCompare(b[property]);
     }
   };
+}
+
+function selectRandomGame() {
+  randomgame = Math.floor(Math.random() * gamelist.length - 1);
+  Toastify({
+    text: 'You will be redirected to ' + gamelist[randomgame].name + ' in 3 seconds',
+    duration: 3000,
+    gravity: "top", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    style: {
+      background: "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
+      width: "25%",
+    },
+    onClick: function () {}, // Callback after click
+  }).showToast();
+  setTimeout(() => {
+    redirectGame(gamelist[randomgame].directory);s
+  }, 3000);
+  
 }
