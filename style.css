@@ -1,45 +1,42 @@
 html {
-    text-align: center;
-    align-content: center;
-    font-family: "Share Tech Mono", monospace;
-    padding: 0;
-  }
+  text-align: center;
+  align-content: center;
+  font-family: "Share Tech Mono", monospace;
+  padding: 0;
+}
 
 .content {
   animation: fadeIn 5s;
-  width:90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 button {
   background-color: rgba(89, 110, 177, 0.5);
   color: #8daad8;
-  border: 2px solid #527ac4bb ;
+  border: 2px solid #527ac4bb;
   border-radius: 6px;
   padding: 5px 13px;
   margin-bottom: 6px;
   margin: 10px;
   transition-duration: 0.45s;
-    font-size: 20px;
-    color: #6983da;
-    font-family: "Share Tech Mono", monospace;
-    text-underline-position: under;
-    opacity: 70%;
+  font-size: 20px;
+  color: #6983da;
+  font-family: "Share Tech Mono", monospace;
+  text-underline-position: under;
+  opacity: 70%;
 }
 button:hover {
-  cursor:pointer;
+  cursor: pointer;
   opacity: 90%;
 }
 
-  h2 {
-    font-size: 42px;
-    color: #0073e6;
-    margin-top: 3%;
-  }
-  
-  
+h2 {
+  font-size: 42px;
+  color: #0073e6;
+  margin-top: 3%;
+}
 
-  
 .game {
   width: 13%;
   display: inline-block;
@@ -61,7 +58,7 @@ button:hover {
 .game h1 {
   float: right;
   font-size: 0.85em;
-  color: rgb(149, 186, 241)
+  color: rgb(149, 186, 241);
 }
 .game img {
   width: 100%;
@@ -80,50 +77,64 @@ a {
 a:hover {
   color: #b0c2fa;
 }
-  
+
 .bookmarklet {
   font-size: 25px;
 }
-
 
 .title {
   display: flex;
   align-items: center;
   justify-content: center;
- }
+}
 
-  @keyframes fadeIn {
-    0% {opacity: 0;}
-    20% {opacity: 40;}
-    80% {opacity: 90;}
-    90% {opacity: 92;}
-    100% {opacity: 100;}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  @keyframes fadeInPadding {
-    0% {padding-left: 0%;padding-right: 0%;}
-    100% {padding-left: 5%;padding-right: 5%;}
+  20% {
+    opacity: 40;
   }
+  80% {
+    opacity: 90;
+  }
+  90% {
+    opacity: 92;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes fadeInPadding {
+  0% {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  100% {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
 
 body {
-    background: repeating-linear-gradient(45deg, rgba(36, 69, 128, 1) 0%, rgb(24, 17, 87) 33%, rgba(36, 69, 128, 1) 66%, rgb(24, 17, 87) 100%);
-    background-size: 400% 400%;
-    background-attachment: fixed;
-    animation: gradient 30s linear infinite;
-    height: 100vh;
+  background: repeating-linear-gradient(45deg, rgba(36, 69, 128, 1) 0%, rgb(24, 17, 87) 33%, rgba(36, 69, 128, 1) 66%, rgb(24, 17, 87) 100%);
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  animation: gradient 30s linear infinite;
+  height: 100vh;
 }
-  
+
 @keyframes gradient {
   0% {
-    background-position: 100% 0%
-}
-100% {
-    background-position: 15% 100%
-}
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 15% 100%;
+  }
 }
 
-
-input[type=text] {
+input[type="text"] {
   margin-top: 15px;
   width: 50%;
   box-sizing: border-box;
@@ -132,25 +143,25 @@ input[type=text] {
   padding: 0.8% 0.8%;
   text-align: center;
   color: rgb(149, 186, 241);
-  border: 2px solid #527ac4bb ;
+  border: 2px solid #527ac4bb;
   border-radius: 5px;
   outline: none;
   opacity: 70%;
-  transition: opacity .25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
   font-family: "Share Tech Mono", monospace;
 }
-input[type=text]:hover {
+input[type="text"]:hover {
   opacity: 80%;
 }
-input[type=text]:focus {
+input[type="text"]:focus {
   opacity: 100%;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(149, 186, 241);
   opacity: 0.6; /* Firefox */
 }
-
 
 ul {
   list-style-type: none;
@@ -176,14 +187,13 @@ p {
   padding: 0.8% 0.8%;
   text-align: center;
   color: rgb(149, 186, 241);
-  border: 2px solid #527ac4bb ;
+  border: 2px solid #527ac4bb;
   border-radius: 5px;
   outline: none;
   opacity: 70%;
-  transition: opacity .25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
   font-family: "Share Tech Mono", monospace;
 }
-
 
 h3 {
   font-size: 20px;
@@ -194,20 +204,20 @@ h3 {
 .submit {
   background-color: rgba(89, 110, 177, 0.5);
   color: #8daad8;
-  border: 2px solid #527ac4bb ;
+  border: 2px solid #527ac4bb;
   border-radius: 6px;
   padding: 5px 13px;
   margin-bottom: 6px;
   margin: 10px;
   transition-duration: 0.45s;
-    font-size: 20px;
-    color: #6983da;
-    font-family: "Share Tech Mono", monospace;
-    text-underline-position: under;
-    opacity: 70%;
+  font-size: 20px;
+  color: #6983da;
+  font-family: "Share Tech Mono", monospace;
+  text-underline-position: under;
+  opacity: 70%;
 }
 .submit:hover {
-  cursor:pointer;
+  cursor: pointer;
   opacity: 90%;
 }
 
@@ -216,17 +226,9 @@ h3 {
   color: white;
   font-size: 1.9em;
   transition-duration: 0.75s;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 #starred {
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
 }

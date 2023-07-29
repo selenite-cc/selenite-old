@@ -2,7 +2,7 @@
 function getMainSave() {
   var mainSave = {};
   // List of items in localStorage that should not be saved
-  var localStorageDontSave = ['tabicon', 'tabname'];
+  var localStorageDontSave = ["tabicon", "tabname"];
 
   // Convert localStorage to an array of key-value pairs and remove the items that should not be saved
   localStorageSave = Object.entries(localStorage);
@@ -28,7 +28,7 @@ function getMainSave() {
   mainSave = btoa(JSON.stringify(mainSave));
 
   // Encrypt the mainSave data using AES encryption with the key 'save'
-  mainSave = CryptoJS.AES.encrypt(mainSave, 'egamepass').toString();
+  mainSave = CryptoJS.AES.encrypt(mainSave, "egamepass").toString();
 
   // Return the encrypted mainSave data
   return mainSave;
@@ -39,9 +39,9 @@ function downloadMainSave() {
   var data = new Blob([getMainSave()]);
   var dataURL = URL.createObjectURL(data);
 
-  var fakeElement = document.createElement('a');
+  var fakeElement = document.createElement("a");
   fakeElement.href = dataURL;
-  fakeElement.download = 'your.e-gamepass.save';
+  fakeElement.download = "your.e-gamepass.save";
   fakeElement.click();
   URL.revokeObjectURL(dataURL);
   Toastify({
@@ -52,14 +52,14 @@ function downloadMainSave() {
     style: {
       background: "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
     },
-    onClick: function(){} // Callback after click
+    onClick: function () {}, // Callback after click
   }).showToast();
 }
 
 // Function to get the main save data from an uploaded file
 function getMainSaveFromUpload(data) {
   // Decrypt the uploaded data using AES decryption with the key 'save'
-  data = CryptoJS.AES.decrypt(data, 'egamepass').toString(CryptoJS.enc.Utf8);
+  data = CryptoJS.AES.decrypt(data, "egamepass").toString(CryptoJS.enc.Utf8);
 
   // Parse the decrypted data as JSON
   var mainSave = JSON.parse(atob(data));
@@ -77,11 +77,11 @@ function getMainSaveFromUpload(data) {
 
 // Function to handle the file upload
 function uploadMainSave() {
-  var hiddenUpload = document.querySelector('.hiddenUpload');
+  var hiddenUpload = document.querySelector(".hiddenUpload");
   hiddenUpload.click();
 
   // Listen for the change event on the file input element
-  hiddenUpload.addEventListener('change', function (e) {
+  hiddenUpload.addEventListener("change", function (e) {
     var files = e.target.files;
     var file = files[0];
     if (!file) {
@@ -104,9 +104,8 @@ function uploadMainSave() {
         style: {
           background: "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
         },
-        onClick: function(){} // Callback after click
+        onClick: function () {}, // Callback after click
       }).showToast();
-      
     };
 
     reader.readAsText(file);
