@@ -22,5 +22,6 @@ function setTheme(themename) {
     r.style.setProperty('--game-color', loadedthemes[themename]["--game-color"]); 
     r.style.setProperty('--bg-1', loadedthemes[themename]["--bg-1"]); 
     r.style.setProperty('--bg-2', loadedthemes[themename]["--bg-2"]); 
+    r.style.setProperty('--invert-logo', loadedthemes[themename]["--invert-logo"]); 
     Cookies.set("theme", themename);
 }
