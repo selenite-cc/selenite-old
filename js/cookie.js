@@ -41,7 +41,7 @@ function downloadMainSave() {
 
   var fakeElement = document.createElement("a");
   fakeElement.href = dataURL;
-  fakeElement.download = "your.e-gamepass.save";
+  fakeElement.download = "your.Selenite.save";
   fakeElement.click();
   URL.revokeObjectURL(dataURL);
   Toastify({
@@ -50,7 +50,9 @@ function downloadMainSave() {
     gravity: "top", // `top` or `bottom`
     position: "center", // `left`, `center` or `right`
     style: {
-      background: "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
+      background: "linear-gradient(var(--bg-1), var(--bg-2))",
+      width: "25%",
+      boxShadow: "0px 0px 5px 5px var(--input-bg-color)",
     },
     onClick: function () {}, // Callback after click
   }).showToast();
@@ -102,7 +104,9 @@ function uploadMainSave() {
         position: "center", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-          background: "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
+          background: "linear-gradient(var(--bg-1), var(--bg-2))",
+          width: "25%",
+          boxShadow: "0px 0px 5px 5px var(--input-bg-color)",
         },
         onClick: function () {}, // Callback after click
       }).showToast();

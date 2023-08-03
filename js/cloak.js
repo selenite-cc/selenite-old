@@ -15,7 +15,9 @@ function setCloakCookie() {
     gravity: "top", // `top` or `bottom`
     position: "center", // `left`, `center` or `right`
     style: {
-      background: "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
+      background: "linear-gradient(var(--bg-1), var(--bg-2))",
+      width: "25%",
+      boxShadow: "0px 0px 5px 5px var(--input-bg-color)",
     },
     onClick: function () {}, // Callback after click
   }).showToast();
@@ -27,7 +29,7 @@ function clearCloak() {
   document.cookie = "tabname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   var link = document.querySelector("link[rel~='icon']");
   link.remove();
-  document.title = "Tab Cloak | e-gamepass";
+  document.title = "Tab Cloak | Selenite";
   link = document.createElement("link");
   link.rel = "icon";
   document.head.appendChild(link);

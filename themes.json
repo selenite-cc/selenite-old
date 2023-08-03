@@ -1,0 +1,22 @@
+{
+    "selenite": {
+        "--input-bg-color": "#74747488",
+        "--main-text-color": "#dadada",
+        "--p-text-color": "#a1a1a1",
+        "--border-color": "#979797bb",
+        "--star-color": "#ffffff",
+        "--game-color": "#5e5e5e66",
+        "--bg-1": "#0c0c0c",
+        "--bg-2": "#030303"
+    },
+    "theme2": {
+        "--input-bg-color": "#ffffff",
+        "--main-text-color": "#ffffff",
+        "--p-text-color": "#ffffff",
+        "--border-color": "#ffffff",
+        "--star-color": "#ffffff",
+        "--game-color": "#ffffff",
+        "--bg-1": "#ffffff",
+        "--bg-2": "#ffffff"
+    }
+}

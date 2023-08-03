@@ -4,28 +4,34 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <script src="/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="./js/themes.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/particles/particles.min.js"></script>
+    <script src="./js/particles/app.js"></script>
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
     </style>
-    <link rel="stylesheet" href="/style.css" />
-    <title>e-gamepass</title>
-    <link rel="icon" href="/favicon.png" />
+    
+    <title>Selenite</title>
+    <link rel="icon" href="/favicon.ico" />
     <meta name="keywords" content="front-end web developer, unblocked, games, google sites, unblocked games mom, ublocked, code, coding, programmer, development, javascript, jquery, bootstrap, sass, less, git, gaming, internet, website, best, site, cool, free games" />
-    <meta property="og:title" content="Welcome to e-gamepass." />
-    <meta property="og:site_name" content="https://e-gamepass.pages.dev" />
-    <meta property="og:description" content="Welcome to the one and only option for unblocked games. Welcome to e-gamepass." />
-    <meta name="description" content="Welcome to the one and only option for unblocked games. Welcome to e-gamepass." />
+    <meta property="og:title" content="Welcome to Selenite." />
+    <meta property="og:site_name" content="https://Selenite.pages.dev" />
+    <meta property="og:description" content="Welcome to the one and only option for unblocked games. Welcome to Selenite." />
+    <meta name="description" content="Welcome to the one and only option for unblocked games. Welcome to Selenite." />
     <meta name="author" content="Website Creator" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    
     <script src="./js/cookie.js"></script>
     <script src="./js/games.js"></script>
     <script src="./js/search.js"></script>
+    
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         Toastify({
@@ -34,8 +40,9 @@
           gravity: "top", // `top` or `bottom`
           position: "left", // `left`, `center` or `right`
           style: {
-            background: "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
+            background: "linear-gradient(var(--bg-1), var(--bg-2))",
             width: "25%",
+            boxShadow: "0px 0px 5px 5px var(--input-bg-color)",
           },
           onClick: function () {}, // Callback after click
         }).showToast();
@@ -43,12 +50,13 @@
     </script>
   </head>
   <body>
+    <div id="particles-js"></div>
     <div class="content">
       <ul>
         <li><a href="./index.html">Home</a></li>
         <li><a href="./bookmarklets.html">Bookmarklets</a></li>
         <li><a href="https://forms.gle/iBAbXvEDaYTLuEcdA">Suggestions</a></li>
-        <li><a href="https://github.com/skysthelimitt/e-gamepass">Source Code</a></li>
+        <li><a href="https://github.com/skysthelimitt/Selenite">Source Code</a></li>
         <li><a href="./settings.html">Settings</a></li>
         <li><a id="panicmode">Panic Mode</a></li>
       </ul>
@@ -56,8 +64,8 @@
       <input class="hiddenUpload" type="file" accept=".save" hidden />
 
       <div class="title">
-        <img src="./favicon.png" style="width: 4%" />
-        <h2 style="font-size: 50px">e-gamepass</h2>
+        <img src="./new.svg" style="width: 4%;padding-right: 1%" />
+        <h2 style="font-size: 70px">selenite</h2>
       </div>
       <a href="javascript:downloadMainSave()">Download Save</a><a href="javascript:uploadMainSave()">Upload Save</a>
       <br />
@@ -68,7 +76,7 @@
       <br />
       <h2>Pinned Games</h2>
       <div id="pinnedgames"></div>
-      <p id="pinnedmessage">Looks like you haven't pinned any games, click the star icon next to any game in order to pin them up here! Your pinned games will also save in your save backups!</p>
+      <p id="pinnedmessage">It looks like you haven't pinned any games, click the star icon next to any game in order to pin them up here! Your pinned games will also save in your save backups!</p>
       <div id="games">
         <h2>All Games</h2>
         <p id="message">Please wait for the games to load.. If you see this for more than a second, try reloading and reporting a <a href="https://forms.gle/j75WUn6UhdqsRZgf7">bug report</a>.</p>

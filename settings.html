@@ -8,19 +8,23 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script>
     <link rel="stylesheet" href="/style.css" />
-    <title>Tab Cloak | e-gamepass</title>
+    <script src="./js/themes.js"></script>
+    <title>Tab Cloak | Selenite</title>
     <link rel="shortcut icon" href="/favicon.png" />
     <meta name="keywords" content="front-end web developer, unblocked, games, google sites, unblocked games mom, ublocked, code, coding, programmer, development, javascript, jquery, bootstrap, sass, less, git, gaming, internet, website, best, site, cool, free games" />
-    <meta property="og:title" content="Welcome to e-gamepass." />
-    <meta property="og:site_name" content="https://e-gamepass.pages.dev" />
-    <meta property="og:description" content="Welcome to the one and only option for unblocked games. Welcome to e-gamepass." />
-    <meta name="description" content="Welcome to the one and only option for unblocked games. Welcome to e-gamepass." />
+    <meta property="og:title" content="Welcome to Selenite." />
+    <meta property="og:site_name" content="https://Selenite.pages.dev" />
+    <meta property="og:description" content="Welcome to the one and only option for unblocked games. Welcome to Selenite." />
+    <meta name="description" content="Welcome to the one and only option for unblocked games. Welcome to Selenite." />
     <meta name="author" content="Website Creator" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="/js/cloak.js"></script>
+    <script src="./js/particles/particles.min.js"></script>
+    <script src="./js/particles/app.js"></script>
     <script>
       function setPanicMode() {
         if (!$("#panic").val().startsWith("https")) {
@@ -43,12 +47,13 @@
     </script>
   </head>
   <body>
+    <div id="particles-js"></div>
     <div class="content">
       <ul>
         <li><a href="./index.html">Home</a></li>
         <li><a href="./bookmarklets.html">Bookmarklets</a></li>
         <li><a href="https://forms.gle/iBAbXvEDaYTLuEcdA">Suggestions</a></li>
-        <li><a href="https://github.com/skysthelimitt/e-gamepass">Source Code</a></li>
+        <li><a href="https://github.com/skysthelimitt/Selenite">Source Code</a></li>
         <li><a href="./settings.html">Settings</a></li>
         <li><a id="panicmode">Panic Mode</a></li>
       </ul>
@@ -56,10 +61,25 @@
       <input class="hiddenUpload" type="file" accept=".save" hidden />
 
       <div class="title">
-        <img src="./favicon.png" style="width: 4%" />
-        <h2 style="font-size: 50px">e-gamepass</h2>
+        <img src="./favicon.png" style="width: 4%;padding-right:1%;" />
+        <h2 style="font-size: 70px">selenite</h2>
       </div>
 
+      <br />
+      <form action="javascript:setCloakCookie();">
+        <h3 for="webname">Website Name</h3>
+        <br />
+        <input type="text" id="webname" name="webname" placeholder="Selenite" /><br />
+        <h3 for="webicon">Website Icon</h3>
+        <br />
+        <input type="text" id="webicon" name="webicon" placeholder="https://selenite.pages.dev/" /><br /><br />
+        <input id="websubmit" class="submit" type="submit" value="Set Tab Cloak" />
+      </form>
+      <button onclick="javascript:clearCloak();">Clear your current tab cloak</button>
+      <br />
+      <h3>Themes</h3>
+      <button onclick="setTheme('selenite')" style="background-color:#74747488;color:#dadada;border: 2px solid #979797bb;">Selenite</button>
+      <button onclick="setTheme('theme2')" style="background-color:#ffffff;color:#ffffff;border: 2px solid #ffffff;">Theme 2</button>
       <br />
       <form action="javascript:setPanicMode();">
         <h3 for="panic">Website URL</h3>
@@ -67,20 +87,8 @@
         <input type="text" id="panic" name="panic" placeholder="https://google.com" /><br />
         <input id="panic" class="submit" type="submit" value="Set Panic Mode" />
       </form>
-      <br />
-      <form action="javascript:setCloakCookie();">
-        <h3 for="webname">Website Name</h3>
-        <br />
-        <input type="text" id="webname" name="webname" placeholder="e-gamepass" /><br />
-        <h3 for="webicon">Website Icon</h3>
-        <br />
-        <input type="text" id="webicon" name="webicon" placeholder="https://egamepass.pages.dev/" /><br /><br />
-        <input id="websubmit" class="submit" type="submit" value="Set Tab Cloak" />
-      </form>
-      <button onclick="javascript:clearCloak();">Clear your current tab cloak</button>
-      <br />
 
-      <div id="games"></div>
+
     </div>
   </body>
 </html>
