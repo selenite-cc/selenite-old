@@ -1,16 +1,3 @@
-:root {
-  --input-bg-color: #74747488;
-  --main-text-color: #dadada;
-  --p-text-color: #a1a1a1;
-  --border-color: #979797bb;
-  --star-color: #ffffff;
-  --game-color: #5e5e5e66;
-  --bg-1: #0c0c0c;
-  --bg-2: #030303;
-  --invert-logo: 0;
-}
-
-
 html {
   text-align: center;
   align-content: center;
