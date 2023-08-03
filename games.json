@@ -1,347 +1,387 @@
 [
-        {
-            "name": "ADOFAI",
-            "directory": "adofai",
-            "image": "icon.png"
-        },
-        {
-            "name": "Online Minecraft",
-            "directory": "resent-client",
-            "image": "logo.png"
-        },
-        {
-            "name": "Offline Minecraft",
-            "directory": "offline-mc",
-            "image": "logo.png"
-        },
-        {
-            "name": "Friday Night Funkin",
-            "directory": "fridaynightfunkin",
-            "image": "fnf-icon.jpg"
-        },
-        {
-            "name": "Worlds Hardest Game",
-            "directory": "hardestgame",
-            "image": "icon.png"
-        },
-        {
-            "name": "GBA Emulator",
-            "directory": "gba",
-            "image": "icon.png"
-        },
-        {
-            "name": "Celeste",
-            "directory": "celeste",
-            "image": "icon.png"
-        },
-        {
-            "name": "Mario",
-            "directory": "mario",
-            "image": "icon.png"
-        },
-        {
-            "name": "60s Burger Run",
-            "directory": "60sburgerrun",
-            "image": "icon.png"
-        },
-        {
-            "name": "Cluster Rush",
-            "directory": "cluster-rush",
-            "image": "icon.jpg"
-        },
-        {
-            "name": "Vex 3",
-            "directory": "vex3",
-            "image": "icon.png"
-        },
-        {
-            "name": "Adventure Capitalist",
-            "directory": "adventure-capitalist",
-            "image": "icon.png"
-        },
-        {
-            "name": "Bloons TD 3",
-            "directory": "btd3",
-            "image": "icon.png"
-        },
-        {
-            "name": "Avalanche",
-            "directory": "avalanche",
-            "image": "icon.png"
-        },
-        {
-            "name": "Slope",
-            "directory": "slope",
-            "image": "slope4.jpeg"
-        },
-        {
-            "name": "Cell Machine",
-            "directory": "cell-machine",
-            "image": "img/icon.png"
-        },
-        {
-            "name": "Run 2",
-            "directory": "run2",
-            "image": "icon.jpg"
-        },
-        {
-            "name": "Vex 5",
-            "directory": "vex5",
-            "image": "icon.png"
-        },
-        {
-            "name": "Vex 4",
-            "directory": "vex4",
-            "image": "vex4.png"
-        },
-        {
-            "name": "Vex 2",
-            "directory": "vex2",
-            "image": "icon.png"
-        },
-        {
-            "name": "Crossy Road",
-            "directory": "crossyroad",
-            "image": "chicken.png"
-        },
-        {
-            "name": "Wall Smash",
-            "directory": "wallsmash",
-            "image": "icon.png"
-        },
-        {
-            "name": "Death Run 3D",
-            "directory": "death-run-3d",
-            "image": "img/death.png"
-        },
-        {
-            "name": "Gun Mayhem 2",
-            "directory": "gunmayhem2",
-            "image": "icon.png"
-        },
-        {
-            "name": "CircloO",
-            "directory": "circloo",
-            "image": "icon.png"
-        },
-        {
-            "name": "Vex",
-            "directory": "vex",
-            "image": "icon.png"
-        },
-        {
-            "name": "Stack",
-            "directory": "stack",
-            "image": "icon.png"
-        },
-        {
-            "name": "xx142-b2.exe",
-            "directory": "xx142-b2.exe",
-            "image": "icon.png"
-        },
-        {
-            "name": "paper.io",
-            "directory": "paperio",
-            "image": "icon.png"
-        },
-        {
-            "name": "Chibi Knight",
-            "directory": "chibiknight",
-            "image": "icon.png"
-        },
-        {
-            "name": "1v1.lol",
-            "directory": "1v1lol",
-            "image": "splash.png"
-        },
-        {
-            "name": "Dino",
-            "directory": "dino",
-            "image": "icon.png"
-        },
-        {
-            "name": "Turbowarp Packager",
-            "directory": "turbowarp",
-            "image": "icon.png"
-        },
-        {
-            "name": "Tetris",
-            "directory": "tetris",
-            "image": "icon.png"
-        },
-        {
-            "name": "Geometry Dash",
-            "directory": "gd",
-            "image": "icon.png"
-        },
-        {
-            "name": "Sand Game",
-            "directory": "sand",
-            "image": "icon.png"
-        },
-        {
-            "name": "Dante",
-            "directory": "dante",
-            "image": "icon.png"
-        },
-        {
-            "name": "Wordle",
-            "directory": "wordle",
-            "image": "icon.png"
-        },
-        {
-            "name": "Offline Paradise",
-            "directory": "offlineparadise",
-            "image": "icon.png"
-        },
-        {
-            "name": "2048",
-            "directory": "2048",
-            "image": "icon.png"
-        },
-        {
-            "name": "Doodle Jump",
-            "directory": "doodlejump",
-            "image": "icon.png"
-        },
-        {
-            "name": "Weave Silk",
-            "directory": "weavesilk",
-            "image": "icon.png"
-        },
-        {
-            "name": "Super Meat Boy",
-            "directory": "supermeatboy",
-            "image": "icon.png"
-        },
-        {
-            "name": "Vex 6",
-            "directory": "vex6",
-            "image": "icon.png"
-        },
-        {
-            "name": "WebGL Fluid Sim",
-            "directory": "fluidsim",
-            "image": "icon.png"
-        },
-        {
-            "name": "Basketball Stars",
-            "directory": "basketball-stars",
-            "image": "icon.png"
-        },
-        {
-            "name": "osu!",
-            "directory": "osu",
-            "image": "icon.png"
-        },
-        {
-            "name": "Cookie Clicker",
-            "directory": "cookieclicker",
-            "image": "img/perfectCookie.png"
-        },
-        {
-            "name": "Superhot",
-            "directory": "superhot",
-            "image": "icon.png"
-        },
-        {
-            "name": "Super Mario 64",
-            "directory": "sm64",
-            "image": "icon.png"
-        },
-        {
-            "name": "Gun Mayhem Redux",
-            "directory": "gunmayhemredux",
-            "image": "icon.png"
-        },
-        {
-            "name": "I Wanna Be Thy Copy",
-            "directory": "iwbtc",
-            "image": "icon.png"
-        },
-        {
-            "name": "HexGL",
-            "directory": "hexgl",
-            "image": "icon_128.png"
-        },
-        {
-            "name": "Champion Island",
-            "directory": "championisland",
-            "image": "icon.png"
-        },
-        {
-            "name": "Learn to Fly",
-            "directory": "ltf",
-            "image": "icon.png"
-        },
-        {
-            "name": "Turbowarp Editor",
-            "directory": "turbowarp-editor",
-            "image": "icon.png"
-        },
-        {
-            "name": "Wordle Bot",
-            "directory": "wordlebot",
-            "image": "icon.png"
-        },
-        {
-            "name": "Cut The Rope",
-            "directory": "ctr",
-            "image": "icon.png"
-        },
-        {
-            "name": "Chess",
-            "directory": "chess",
-            "image": "icon.png"
-        },
-        {
-            "name": "Flappy Bird",
-            "directory": "flappybird",
-            "image": "icon.png"
-        },
-        {
-            "name": "Lows Adventures 2",
-            "directory": "lowsadventures2",
-            "image": "icon.png"
-        },
-        {
-            "name": "Drift Boss",
-            "directory": "drift-boss",
-            "image": "icon.png"
-        },
-        {
-            "name": "Fireboy Watergirl",
-            "directory": "fireboywatergirl",
-            "image": "icon.png"
-        },
-        {
-            "name": "Gun Mayhem",
-            "directory": "gunmayhem",
-            "image": "icon.png"
-        },
-        {
-            "name": "Duck Life 4",
-            "directory": "ducklife4",
-            "image": "icon.png"
-        },
-        {
-            "name": "Achievement Unlocked",
-            "directory": "achieveunlocked",
-            "image": "icon.png"
-        },
-        {
-            "name": "Achievement Unlocked 2",
-            "directory": "achieveunlocked2",
-            "image": "icon.png"
-        },
-        {
-            "name": "This Is The Only Level",
-            "directory": "thisistheonlylevel",
-            "image": "logo.png"
-        },
-        {
-            "name": "This Is The Only Level 2",
-            "directory": "thisistheonlylevel2",
-            "image": "icon.png"
-        }
-    ]
+  {
+    "name": "ADOFAI",
+    "directory": "adofai",
+    "image": "icon.png"
+  },
+  {
+    "name": "Online Minecraft",
+    "directory": "resent-client",
+    "image": "logo.png"
+  },
+  {
+    "name": "Offline Minecraft",
+    "directory": "offline-mc",
+    "image": "logo.png"
+  },
+  {
+    "name": "Friday Night Funkin",
+    "directory": "fridaynightfunkin",
+    "image": "fnf-icon.jpg"
+  },
+  {
+    "name": "Worlds Hardest Game",
+    "directory": "hardestgame",
+    "image": "icon.png"
+  },
+  {
+    "name": "GBA Emulator",
+    "directory": "gba",
+    "image": "icon.png"
+  },
+  {
+    "name": "Celeste",
+    "directory": "celeste",
+    "image": "icon.png"
+  },
+  {
+    "name": "Mario",
+    "directory": "mario",
+    "image": "icon.png"
+  },
+  {
+    "name": "60s Burger Run",
+    "directory": "60sburgerrun",
+    "image": "icon.png"
+  },
+  {
+    "name": "Cluster Rush",
+    "directory": "cluster-rush",
+    "image": "icon.jpg"
+  },
+  {
+    "name": "Vex 3",
+    "directory": "vex3",
+    "image": "icon.png"
+  },
+  {
+    "name": "Adventure Capitalist",
+    "directory": "adventure-capitalist",
+    "image": "icon.png"
+  },
+  {
+    "name": "Bloons TD 3",
+    "directory": "btd3",
+    "image": "icon.png"
+  },
+  {
+    "name": "Avalanche",
+    "directory": "avalanche",
+    "image": "icon.png"
+  },
+  {
+    "name": "Slope",
+    "directory": "slope",
+    "image": "slope4.jpeg"
+  },
+  {
+    "name": "Cell Machine",
+    "directory": "cell-machine",
+    "image": "img/icon.png"
+  },
+  {
+    "name": "Run 2",
+    "directory": "run2",
+    "image": "icon.jpg"
+  },
+  {
+    "name": "Vex 5",
+    "directory": "vex5",
+    "image": "icon.png"
+  },
+  {
+    "name": "Vex 4",
+    "directory": "vex4",
+    "image": "vex4.png"
+  },
+  {
+    "name": "Vex 2",
+    "directory": "vex2",
+    "image": "icon.png"
+  },
+  {
+    "name": "Crossy Road",
+    "directory": "crossyroad",
+    "image": "chicken.png"
+  },
+  {
+    "name": "Wall Smash",
+    "directory": "wallsmash",
+    "image": "icon.png"
+  },
+  {
+    "name": "Death Run 3D",
+    "directory": "death-run-3d",
+    "image": "img/death.png"
+  },
+  {
+    "name": "Gun Mayhem 2",
+    "directory": "gunmayhem2",
+    "image": "icon.png"
+  },
+  {
+    "name": "CircloO",
+    "directory": "circloo",
+    "image": "icon.png"
+  },
+  {
+    "name": "Vex",
+    "directory": "vex",
+    "image": "icon.png"
+  },
+  {
+    "name": "Stack",
+    "directory": "stack",
+    "image": "icon.png"
+  },
+  {
+    "name": "xx142-b2.exe",
+    "directory": "xx142-b2.exe",
+    "image": "icon.png"
+  },
+  {
+    "name": "paper.io",
+    "directory": "paperio",
+    "image": "icon.png"
+  },
+  {
+    "name": "Chibi Knight",
+    "directory": "chibiknight",
+    "image": "icon.png"
+  },
+  {
+    "name": "1v1.lol",
+    "directory": "1v1lol",
+    "image": "splash.png"
+  },
+  {
+    "name": "Dino",
+    "directory": "dino",
+    "image": "icon.png"
+  },
+  {
+    "name": "Turbowarp Packager",
+    "directory": "turbowarp",
+    "image": "icon.png"
+  },
+  {
+    "name": "Tetris",
+    "directory": "tetris",
+    "image": "icon.png"
+  },
+  {
+    "name": "Geometry Dash",
+    "directory": "gd",
+    "image": "icon.png"
+  },
+  {
+    "name": "Sand Game",
+    "directory": "sand",
+    "image": "icon.png"
+  },
+  {
+    "name": "Dante",
+    "directory": "dante",
+    "image": "icon.png"
+  },
+  {
+    "name": "Wordle",
+    "directory": "wordle",
+    "image": "icon.png"
+  },
+  {
+    "name": "Offline Paradise",
+    "directory": "offlineparadise",
+    "image": "icon.png"
+  },
+  {
+    "name": "2048",
+    "directory": "2048",
+    "image": "icon.png"
+  },
+  {
+    "name": "Doodle Jump",
+    "directory": "doodlejump",
+    "image": "icon.png"
+  },
+  {
+    "name": "Weave Silk",
+    "directory": "weavesilk",
+    "image": "icon.png"
+  },
+  {
+    "name": "Super Meat Boy",
+    "directory": "supermeatboy",
+    "image": "icon.png"
+  },
+  {
+    "name": "Vex 6",
+    "directory": "vex6",
+    "image": "icon.png"
+  },
+  {
+    "name": "WebGL Fluid Sim",
+    "directory": "fluidsim",
+    "image": "icon.png"
+  },
+  {
+    "name": "Basketball Stars",
+    "directory": "basketball-stars",
+    "image": "icon.png"
+  },
+  {
+    "name": "osu!",
+    "directory": "osu",
+    "image": "icon.png"
+  },
+  {
+    "name": "Cookie Clicker",
+    "directory": "cookieclicker",
+    "image": "img/perfectCookie.png"
+  },
+  {
+    "name": "Superhot",
+    "directory": "superhot",
+    "image": "icon.png"
+  },
+  {
+    "name": "Super Mario 64",
+    "directory": "sm64",
+    "image": "icon.png"
+  },
+  {
+    "name": "Gun Mayhem Redux",
+    "directory": "gunmayhemredux",
+    "image": "icon.png"
+  },
+  {
+    "name": "I Wanna Be Thy Copy",
+    "directory": "iwbtc",
+    "image": "icon.png"
+  },
+  {
+    "name": "HexGL",
+    "directory": "hexgl",
+    "image": "icon_128.png"
+  },
+  {
+    "name": "Champion Island",
+    "directory": "championisland",
+    "image": "icon.png"
+  },
+  {
+    "name": "Learn to Fly",
+    "directory": "ltf",
+    "image": "icon.png"
+  },
+  {
+    "name": "Turbowarp Editor",
+    "directory": "turbowarp-editor",
+    "image": "icon.png"
+  },
+  {
+    "name": "Wordle Bot",
+    "directory": "wordlebot",
+    "image": "icon.png"
+  },
+  {
+    "name": "Cut The Rope",
+    "directory": "ctr",
+    "image": "icon.png"
+  },
+  {
+    "name": "Chess",
+    "directory": "chess",
+    "image": "icon.png"
+  },
+  {
+    "name": "Flappy Bird",
+    "directory": "flappybird",
+    "image": "icon.png"
+  },
+  {
+    "name": "Lows Adventures 2",
+    "directory": "lowsadventures2",
+    "image": "icon.png"
+  },
+  {
+    "name": "Drift Boss",
+    "directory": "drift-boss",
+    "image": "icon.png"
+  },
+  {
+    "name": "Fireboy Watergirl",
+    "directory": "fireboywatergirl",
+    "image": "icon.png"
+  },
+  {
+    "name": "Gun Mayhem",
+    "directory": "gunmayhem",
+    "image": "icon.png"
+  },
+  {
+    "name": "Duck Life 4",
+    "directory": "ducklife4",
+    "image": "icon.png"
+  },
+  {
+    "name": "Achievement Unlocked",
+    "directory": "achieveunlocked",
+    "image": "icon.png"
+  },
+  {
+    "name": "Achievement Unlocked 2",
+    "directory": "achieveunlocked2",
+    "image": "icon.png"
+  },
+  {
+    "name": "This Is The Only Level",
+    "directory": "thisistheonlylevel",
+    "image": "logo.png"
+  },
+  {
+    "name": "This Is The Only Level 2",
+    "directory": "thisistheonlylevel2",
+    "image": "icon.png"
+  },
+  {
+    "name": "Bitlife",
+    "directory": "bitlife",
+    "image": "bitlife.png"
+  },
+  {
+    "name": "Duck Life 1",
+    "directory": "ducklife1",
+    "image": "ducklife1.png"
+  },
+  {
+    "name": "Duck Life 2",
+    "directory": "ducklife2",
+    "image": "ducklife2.png"
+  },
+  {
+    "name": "Duck Life 3",
+    "directory": "ducklife3",
+    "image": "ducklife3.png"
+  },
+  {
+    "name": "ovo",
+    "directory": "ovo",
+    "image": "ovo3.png"
+  },
+  {
+    "name": "There Is No Game",
+    "directory": "thereisnogame",
+    "image": "icon-256.png"
+  },
+  {
+    "name": "Universal Paperclips",
+    "directory": "universal-paperclips",
+    "image": "universal-paperclips.png"
+  },
+  {
+    "name": "Windows 11",
+    "directory": "win11",
+    "image": "favicon.png"
+  }
+]

@@ -1,0 +1,35 @@
+{
+    "selenite": {
+        "--input-bg-color": "#74747488",
+        "--main-text-color": "#dadada",
+        "--p-text-color": "#a1a1a1",
+        "--border-color": "#979797bb",
+        "--star-color": "#ffffff",
+        "--game-color": "#5e5e5e66",
+        "--bg-1": "#0c0c0c",
+        "--bg-2": "#030303",
+        "--invert-logo": "0"
+    },
+    "lightmode": {
+        "--input-bg-color": "#aaaaaa88",
+        "--main-text-color": "#555555",
+        "--p-text-color": "#a1a1a1",
+        "--border-color": "#5a5a5abb",
+        "--star-color": "#000000",
+        "--game-color": "#5e5e5e66",
+        "--bg-1": "#dcdcdc",
+        "--bg-2": "#d3d3d3",
+        "--invert-logo": "1"
+    },
+    "egamepass": {
+        "--input-bg-color": "#596eb188",
+        "--main-text-color": "#95baf1",
+        "--p-text-color": "#8daad8",
+        "--border-color": "#527ac4bb",
+        "--star-color": "#ffffff",
+        "--game-color": "#5376eb66",
+        "--bg-1": "#244580",
+        "--bg-2": "#181157",
+        "--invert-logo": "0"
+    }
+}

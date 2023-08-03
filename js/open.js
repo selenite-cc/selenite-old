@@ -18,4 +18,4 @@ document.getElementById("create").onclick = function () {
   iframe.allow = "fullscreen";
   iframe.src = url.value;
   win.document.body.appendChild(iframe);
-}
+};
