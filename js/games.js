@@ -6,7 +6,9 @@ $.getJSON("/games.json", function (data) {
     starredgames = JSON.parse(starredgames);
   }
   console.log(starredgames);
-  $("#gamesearch").prop({ placeholder: "Click here to search through our " + data.length + " games!" });
+  $("#gamesearch").prop({
+    placeholder: "Click here to search through our " + data.length + " games!",
+  });
   data.sort(dynamicSort("name"));
   gamelist = data;
   for (let i = 0; i < data.length; i++) {
@@ -24,15 +26,16 @@ $.getJSON("/games.json", function (data) {
       )
       .append($("<h1>").text(data[i].name))
       .append(
-        $("<mat-icon>")
-          .prop({
-            class: "material-symbols-rounded",
-          })
-          .text("star")
+        $("<img>").prop({
+          src: "img/star.svg",
+          alt: "star",
+          class: "star",
+        })
       );
 
     if (starredgames.includes(data[i].directory)) {
-      $element.find("mat-icon").attr("id", "starred");
+      $element.find("img.star").attr("id", "starred");
+      $element.find("img.star").attr("src", "img/star-fill.svg");
       let $pinnedelement = $element.clone();
       $("#pinnedgames").append($pinnedelement);
       if ($("#pinnedgames #message")) {
@@ -48,9 +51,10 @@ $.getJSON("/games.json", function (data) {
 $(document).ready(function () {
   let starred;
   $(document).on("click", ".game", function (event) {
-    if ($(event.target).is("mat-icon")) {
+    if ($(event.target).is("img.star")) {
       if (!$(event.target).attr("id")) {
         $(event.target).prop({ id: "starred" });
+        $(event.target).prop({ src: "img/star-fill.svg" });
         starred = Cookies.get("starred");
         if (starred) {
           starred = JSON.parse(starred);
@@ -84,17 +88,18 @@ $(document).ready(function () {
             )
             .append($("<h1>").text(pinnedarraynodes[1].innerHTML))
             .append(
-              $("<mat-icon>")
-                .prop({
-                  class: "material-symbols-rounded",
-                  id: "starred",
-                })
-                .text("star")
+              $("<img>").prop({
+                src: "img/star-fill.svg",
+                alt: "star",
+                class: "star",
+                id: "starred",
+              })
             );
           $("#pinnedgames").append($element);
         }
       } else {
         $(event.target).removeAttr("id");
+        $(event.target).attr("src", "img/star.svg");
         $thisdiv = "#" + $(this).attr("id");
         $thisdiv = $thisdiv.replace(".", "\\.");
         starred = Cookies.get("starred");
@@ -106,13 +111,14 @@ $(document).ready(function () {
         if ($("#pinnedgames").is(":empty")) {
           $("#pinnedmessage").show();
         }
+        $($thisdiv + " #starred").attr("src", "img/star.svg");
         $($thisdiv + " #starred").removeAttr("id");
       }
     } else {
       redirectGame($(this).attr("id"));
     }
   });
-  $(document).on("click", "#game span", function (event) {
+  $(document).on("click", "#game img .star", function (event) {
     $(this).prop({ class: "material-symbols-outlined fill" });
   });
 });
@@ -140,18 +146,22 @@ function dynamicSort(property) {
 function selectRandomGame() {
   randomgame = Math.floor(Math.random() * gamelist.length - 1);
   Toastify({
-    text: 'You will be redirected to ' + gamelist[randomgame].name + ' in 3 seconds',
+    text:
+      "You will be redirected to " +
+      gamelist[randomgame].name +
+      " in 3 seconds",
     duration: 3000,
     gravity: "top", // `top` or `bottom`
     position: "center", // `left`, `center` or `right`
     style: {
-      background: "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
+      background:
+        "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
       width: "25%",
     },
     onClick: function () {}, // Callback after click
   }).showToast();
   setTimeout(() => {
-    redirectGame(gamelist[randomgame].directory);s
+    redirectGame(gamelist[randomgame].directory);
+    s;
   }, 3000);
-  
 }
