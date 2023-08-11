@@ -1,6 +1,5 @@
 function setCloak() {
   var tabicon = getCookie("tabicon");
-
   if (tabicon) {
     var link = document.querySelector("link[rel~='icon']");
     if (link) {
@@ -21,6 +20,7 @@ function setCloak() {
   if (tabname) {
     document.title = tabname;
   }
+  panicMode();
 }
 function getCookie(cname) {
   let name = cname + "=";
@@ -43,9 +43,6 @@ function panicMode() {
   if (panicurl == "") {
     panicurl = "https://google.com";
   }
-  if ($("#panicmode").length > 0) {
-    $("#panicmode").prop({ href: panicurl });
-  }
   const pressed = [];
   const secretCode = "safemode";
   window.addEventListener("keyup", (e) => {
@@ -56,13 +53,29 @@ function panicMode() {
     }
   });
 }
-document.addEventListener("DOMContentLoaded", function () {
-  let jquery_loader = document.createElement("script");
-  jquery_loader.setAttribute("src", "https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js");
-  jquery_loader.async = false;
-  document.body.appendChild(jquery_loader);
-  window.addEventListener("load", function () {
-    panicMode();
-  });
+
+window.onload = function() {
   setCloak();
+  if (!window.jQuery) {
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js';
+    head.appendChild(script);
+  }
+}
+
+defer(function () {
+  panicMode();
 });
+
+
+function defer(method) {
+  if (window.jQuery) {
+    console.log("jquery found.");
+    panicMode();
+  } else {
+    setTimeout(function() { defer(method) }, 50);
+    console.log("jquery not found, adding jquery.");
+  }
+}
