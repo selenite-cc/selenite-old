@@ -383,5 +383,20 @@
     "name": "Windows 11",
     "directory": "win11",
     "image": "favicon.png"
+  },
+  {
+    "name": "Learn to Fly 2",
+    "directory": "ltf2",
+    "image": "logo.jpg"
+  },
+  {
+    "name": "Worlds Hardest Game 2",
+    "directory": "worldhardestgame2",
+    "image": "the-worlds-hardest-game-2.jpg"
+  },
+  {
+    "name": "Vex 7",
+    "directory": "vex7",
+    "image": "icon.jpeg"
   }
 ]
