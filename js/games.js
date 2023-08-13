@@ -22,6 +22,7 @@ $.getJSON("/games.json", function (data) {
         $("<img>").prop({
           src: data[i].directory + "/" + data[i].image,
           alt: data[i].name + " logo",
+          onerror: "failedImg($(this));",
         })
       )
       .append($("<h1>").text(data[i].name))
@@ -41,6 +42,7 @@ $.getJSON("/games.json", function (data) {
       if ($("#pinnedgames #message")) {
         $("#pinnedmessage").hide();
       }
+      $element.addEventListener("error", imageNotFound);
     }
 
     $("#games").append($element);
@@ -84,6 +86,7 @@ $(document).ready(function () {
               $("<img>").prop({
                 src: pinnedarraynodes[0].src,
                 alt: pinnedarraynodes[0].alt,
+                class: "gameicon"
               })
             )
             .append($("<h1>").text(pinnedarraynodes[1].innerHTML))
