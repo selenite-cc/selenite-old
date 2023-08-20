@@ -2,7 +2,7 @@
 function getMainSave() {
   var mainSave = {};
   // List of items in localStorage that should not be saved
-  var localStorageDontSave = ["tabicon", "tabname"];
+  var localStorageDontSave = ["sdsadawdasdasd"];
 
   // Convert localStorage to an array of key-value pairs and remove the items that should not be saved
   localStorageSave = Object.entries(localStorage);
@@ -41,7 +41,7 @@ function downloadMainSave() {
 
   var fakeElement = document.createElement("a");
   fakeElement.href = dataURL;
-  fakeElement.download = "your.Selenite.save";
+  fakeElement.download = "your.selenite.save";
   fakeElement.click();
   URL.revokeObjectURL(dataURL);
   Toastify({
