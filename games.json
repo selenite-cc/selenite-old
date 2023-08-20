@@ -383,5 +383,70 @@
     "name": "Windows 11",
     "directory": "win11",
     "image": "favicon.png"
+  },
+  {
+    "name": "Learn to Fly 2",
+    "directory": "ltf2",
+    "image": "logo.jpg"
+  },
+  {
+    "name": "Worlds Hardest Game 2",
+    "directory": "worldhardestgame2",
+    "image": "the-worlds-hardest-game-2.jpg"
+  },
+  {
+    "name": "Vex 7",
+    "directory": "vex7",
+    "image": "icon.jpeg"
+  },
+  {
+    "name": "Slope Ball",
+    "directory": "slope-ball",
+    "image": "icon.jpg"
+  },
+  {
+    "name": "Slope 2",
+    "directory": "slope2",
+    "image": "slope-2-logo.png"
+  },
+  {
+    "name": "Learn to Fly Idle",
+    "directory": "ltfidle",
+    "image": "icon.jpg"
+  },
+  {
+    "name": "Red Ball 4",
+    "directory": "redball4",
+    "image": "redball4.webp"
+  },
+  {
+    "name": "Red Ball 4 Vol 3",
+    "directory": "redball4vol3",
+    "image": "redball4vol3.webp"
+  },
+  {
+    "name": "Red Ball 4 Vol 2",
+    "directory": "redball4vol2",
+    "image": "redball4vol2.webp"
+  },
+  {
+    "name": "Red Ball 3",
+    "directory": "redball3",
+    "image": "redball3.png"
+  },
+  {
+    "name": "Snake",
+    "directory": "snake",
+    "image": "snake.png"
+  },
+  {
+    "name": "Pacman",
+    "directory": "pacman",
+    "image": "icon.png"
+  },
+  {
+    "name": "Color Switch",
+    "directory": "colorswitch",
+    "image": "colorswitch.png"
   }
 ]

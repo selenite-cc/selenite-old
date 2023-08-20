@@ -5,13 +5,14 @@ html {
   padding: 0;
   margin: 0;
 }
-
 .content {
   animation: fadeIn 5s;
   width: 90%;
   margin: 0 auto;
 }
-
+* {
+  z-index: 1;
+}
 button {
   background-color: var(--input-bg-color);
   color: var(--main-text-color);
@@ -118,7 +119,13 @@ a:hover {
 }
 
 body {
-  background: repeating-linear-gradient(45deg, var(--bg-1) 0%, var(--bg-2) 33%, var(--bg-1) 66%, var(--bg-2) 100%);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--bg-1) 0%,
+    var(--bg-2) 33%,
+    var(--bg-1) 66%,
+    var(--bg-2) 100%
+  );
   background-size: 400% 400%;
   background-attachment: fixed;
   animation: gradient 30s linear infinite;
@@ -219,19 +226,20 @@ h3 {
   opacity: 90%;
 }
 
-.material-symbols-rounded {
+img.star {
   float: left;
-  color: var(--star-color);
-  font-size: 1.9em;
+  filter: invert(var(--invert-logo, 0));
+  width: 20%;
   transition-duration: 0.75s;
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-}
-
-#starred {
-  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 #random {
   padding: 0.8% 0.8%;
 }
-#particles-js{ position:fixed; width: 100%; height: 100%; background-position: 50% 50%; z-index: -187755;}
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  z-index: -127321;
+}
