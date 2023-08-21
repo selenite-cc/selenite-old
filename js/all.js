@@ -56,6 +56,11 @@ function panicMode() {
 
 window.onload = function() {
   setCloak();
+  var head = document.getElementsByTagName('head')[0];
+  var gads = document.createElement('script');
+  gads.type = 'text/javascript';
+  gads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3415518411898563';
+  head.appendChild(script);
   if (!window.jQuery) {
     var head = document.getElementsByTagName('head')[0];
     var script = document.createElement('script');
