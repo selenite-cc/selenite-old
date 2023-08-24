@@ -19,9 +19,9 @@ window.addEventListener("error", function (event) {
       alert(
         "Error: Image failed to load." +
         "\nFull Image URL: " + event.target.src +
-        '\nPlease copy this error message and click "Report a Bug" or go to https://forms.gle/j75WUn6UhdqsRZgf7'
+        '\nPlease take a screenshot WITH THIS ERROR VISIBLE and click "Report a Bug" or go to https://forms.gle/j75WUn6UhdqsRZgf7'
       )
-      event.target.src = "favicon.png";
+      event.target.src = "/favicon.png";
     } else {
       alert (
         "Error: " + event.message +
@@ -29,7 +29,7 @@ window.addEventListener("error", function (event) {
         "\nLine: " + event.lineno +
         "\nColumn: " + event.colno +
         "\nStackTrace: " + event.error +
-        '\nPlease copy this error message and click "Report a Bug" or go to https://forms.gle/j75WUn6UhdqsRZgf7'
+        '\nPlease take a screenshot WITH THIS ERROR VISIBLE and click "Report a Bug" or go to https://forms.gle/j75WUn6UhdqsRZgf7'
       );
     }
   }, true);
