@@ -2,7 +2,7 @@
 function getMainSave() {
   var mainSave = {};
   // List of items in localStorage that should not be saved
-  var localStorageDontSave = ["sdsadawdasdasd"];
+  var localStorageDontSave = ["supportalert"];
 
   // Convert localStorage to an array of key-value pairs and remove the items that should not be saved
   localStorageSave = Object.entries(localStorage);

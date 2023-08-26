@@ -158,13 +158,13 @@ function selectRandomGame() {
     position: "center", // `left`, `center` or `right`
     style: {
       background:
-        "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
+      "linear-gradient(var(--bg-1), var(--bg-2))",
+      boxShadow: "0px 0px 5px 5px var(--input-bg-color)",
       width: "25%",
     },
     onClick: function () {}, // Callback after click
   }).showToast();
   setTimeout(() => {
     redirectGame(gamelist[randomgame].directory);
-    s;
   }, 3000);
 }
