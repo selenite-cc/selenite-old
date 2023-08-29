@@ -63,12 +63,20 @@ window.onload = function() {
     script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js';
     head.appendChild(script);
   }
+  const gscript = document.createElement("script");
+  gscript.setAttribute("async", "");
+  gscript.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=G-XVTVBR1D5V");
+  const ingscript = document.createElement("script");
+  ingscript.innerHTML = `window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-98DP5VKS42');`;
+  document.head.append(gscript, ingscript);
 }
 
 defer(function () {
   panicMode();
 });
-
 
 function defer(method) {
   if (window.jQuery) {
