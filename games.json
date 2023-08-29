@@ -448,5 +448,15 @@
     "name": "Color Switch",
     "directory": "colorswitch",
     "image": "colorswitch.png"
+  },
+  {
+    "name": "Halloween 2016",
+    "directory": "halloween2016",
+    "image": "logo.png"
+  },
+  {
+    "name": "Game Maker Doodle",
+    "directory": "gamemaker",
+    "image": "images.jpeg"
   }
 ]

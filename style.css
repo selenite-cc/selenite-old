@@ -180,6 +180,10 @@ li {
   top: 10px;
 }
 
+#footer {
+  font-size: 10px;
+}
+
 p {
   font-size: 20px;
   color: var(--p-text-color);
