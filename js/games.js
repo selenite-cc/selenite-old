@@ -42,7 +42,6 @@ $.getJSON("/games.json", function (data) {
       if ($("#pinnedgames #message")) {
         $("#pinnedmessage").hide();
       }
-      $element.addEventListener("error", imageNotFound);
     }
 
     $("#games").append($element);
