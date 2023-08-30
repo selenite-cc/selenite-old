@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf8">
+    <title>August 2023 Scratch Maintenance - TurboWarp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        margin: 0;
+        border-top: 4px solid #ff4c4c;
+        padding: 0 4px;
+      }
+      main {
+        max-width: 600px;
+        margin: auto;
+      }
+      .quote {
+        padding: 12px 20px;
+        border: 1px solid #ccc;
+        background-color: #f7f7f7;
+      }
+      .quote p {
+        font-weight: bold;
+        margin: 0;
+      }
+      .quote ul {
+        margin: 0.5rem 0 0 0;
+        padding: 0 0 0 1.2rem;
+      }
+      h2 {
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>August 2023 Scratch Maintenance</h1>
+      <p>The Scratch Team <a href="https://scratch.mit.edu/discuss/topic/702112/">announced</a> that Scratch may be temporarily down for maintenance in the near future:</p>
+      <div class="quote">
+        <p>ScratchCat wrote:</p>
+        <ul>
+          <li>August 11 at 8 PM ET - August 13 at 1159 PM ET: scratch.mit.edu will be in maintenance mode during portions of this weekend, and you may not be able to access Scratch. If you want to use Scratch during this time, make sure to download the Scratch App to your device.</li>
+          <li>August 18, 8 PM ET - August 20, 1159 ET: Translation extension blocks, Text-To-Speech extension blocks, and access to projects and assets will be temporarily unavailable during portions of the weekend. The rest of the site should be working normally during this time.</li>
+          <li>August 25, 8 PM ET - August 27, 1159 ET: The Backpack tool, Cloud Data, and thumbnail updates will be temporarily unavailable during portions of the weekend. The rest of the site should be working normally during this time.</li>
+        </ul>
+      </div>
+
+      <p>Parts of this maintenance will impact TurboWarp and other tools that use the Scratch API. <s>We're assuming this maintenance is mostly internal stuff and that there won't be significant outwards changes.</s></p>
+
+      <!-- https://crt.sh/?q=scratch.org -->
+      <p><b>Update:</b> Based on public logs, we speculate that Scratch could make larger changes than we initially anticipated. We are already preparing if they do (which seems unlikely), but it could result in parts of TurboWarp being unavailable for longer than originally anticipated.</p>
+
+      <h2>What won't be affected</h2>
+      <p>All of the TurboWarp websites will be up. You will still be able to load projects saved to your computer using the <a href="https://turbowarp.org/editor">website</a>, <a href="https://desktop.turbowarp.org/">desktop app</a>, or <a href="https://forkphorus.github.io/">packager</a>. Packaged projects will still load. TurboWarp's backpack and restore points will be unaffected. Our cloud variable server should still work, and almost all custom extensions will not be affected.</p>
+
+      <h2>August 11 at 8 PM ET &ndash; August 13 at 11:59 PM ET</h2>
+      <p>Loading projects from the Scratch website <b>may not</b> work. (Forum post is a bit vague)</p>
+
+      <h2>August 18 at 8 PM ET &ndash; August 20 at 11:59 PM ET</h2>
+      <p>Loading projects from the Scratch website <b>may not</b> work anywhere. Translate blocks, text-to-speech blocks, and extensions that use the Scratch API <b>may not</b> work in any project. (We cache translate requests, so some common translations may still work)</p>
+
+      <h2>August 25 at 8 PM ET &ndash; August 27 at 11:59 PM ET</h2>
+      <p>No effect anticipated.</p>
+
+      <h2>If Scratch does make significant changes</h2>
+      <p>It will take a bit longer, but we will get everything working again shortly.</p>
+    </main>
+  </body>
+</html>

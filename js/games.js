@@ -13,16 +13,17 @@ $.getJSON("/games.json", function (data) {
   gamelist = data;
   for (let i = 0; i < data.length; i++) {
     let $element = $("<div>")
-      .prop({
+      .attr({
         class: "game",
         style: "cursor: pointer;",
         id: data[i].directory,
+        recommended: data[i].recommended
       })
+      .data("recommended", data[i].recommended)
       .append(
         $("<img>").prop({
           src: data[i].directory + "/" + data[i].image,
           alt: data[i].name + " logo",
-          onerror: "failedImg($(this));",
         })
       )
       .append($("<h1>").text(data[i].name))
@@ -85,7 +86,7 @@ $(document).ready(function () {
               $("<img>").prop({
                 src: pinnedarraynodes[0].src,
                 alt: pinnedarraynodes[0].alt,
-                class: "gameicon"
+                class: "gameicon",
               })
             )
             .append($("<h1>").text(pinnedarraynodes[1].innerHTML))
@@ -156,8 +157,7 @@ function selectRandomGame() {
     gravity: "top", // `top` or `bottom`
     position: "center", // `left`, `center` or `right`
     style: {
-      background:
-      "linear-gradient(var(--bg-1), var(--bg-2))",
+      background: "linear-gradient(var(--bg-1), var(--bg-2))",
       boxShadow: "0px 0px 5px 5px var(--input-bg-color)",
       width: "25%",
     },
@@ -166,4 +166,23 @@ function selectRandomGame() {
   setTimeout(() => {
     redirectGame(gamelist[randomgame].directory);
   }, 3000);
+}
+
+let viewrecommended = 0;
+function recommendedGames() {
+  if(viewrecommended == 0) {
+    $("#games .game").hide();
+    $("#games .game").each(function () {
+      if ($(this).attr("recommended")) {
+        $(this).show();
+      }
+    });
+    $("#recommend").text("Click to view all games again!");
+    viewrecommended = 1;
+  } else {
+    $("#games .game").hide();
+    $("#games .game").show();
+    viewrecommended = 0;
+    $("#recommend").text("Click to view recommended games!");
+  }
 }

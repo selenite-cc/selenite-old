@@ -2,7 +2,8 @@
   {
     "name": "ADOFAI",
     "directory": "adofai",
-    "image": "icon.png"
+    "image": "icon.png",
+    "recommended": "1"
   },
   {
     "name": "Online Minecraft",
@@ -12,12 +13,14 @@
   {
     "name": "Offline Minecraft",
     "directory": "offline-mc",
-    "image": "logo.png"
+    "image": "logo.png",
+    "recommended": "1"
   },
   {
     "name": "Friday Night Funkin",
     "directory": "fridaynightfunkin",
-    "image": "fnf-icon.jpg"
+    "image": "fnf-icon.jpg",
+    "recommended": "1"
   },
   {
     "name": "Worlds Hardest Game",
@@ -27,12 +30,14 @@
   {
     "name": "GBA Emulator",
     "directory": "gba",
-    "image": "icon.png"
+    "image": "icon.png",
+    "recommended": "1"
   },
   {
     "name": "Celeste",
     "directory": "celeste",
-    "image": "icon.png"
+    "image": "icon.png",
+    "recommended": "1"
   },
   {
     "name": "Mario",
@@ -247,7 +252,8 @@
   {
     "name": "Super Mario 64",
     "directory": "sm64",
-    "image": "icon.png"
+    "image": "icon.png",
+    "recommended": "1"
   },
   {
     "name": "Gun Mayhem Redux",
@@ -272,11 +278,6 @@
   {
     "name": "Learn to Fly",
     "directory": "ltf",
-    "image": "icon.png"
-  },
-  {
-    "name": "Turbowarp Editor",
-    "directory": "turbowarp-editor",
     "image": "icon.png"
   },
   {
@@ -377,12 +378,14 @@
   {
     "name": "Universal Paperclips",
     "directory": "universal-paperclips",
-    "image": "universal-paperclips.png"
+    "image": "universal-paperclips.png",
+    "recommended": "1"
   },
   {
     "name": "Windows 11",
     "directory": "win11",
-    "image": "favicon.png"
+    "image": "favicon.png",
+    "recommended": "1"
   },
   {
     "name": "Learn to Fly 2",
@@ -457,6 +460,7 @@
   {
     "name": "Game Maker Doodle",
     "directory": "gamemaker",
-    "image": "images.jpeg"
+    "image": "images.jpeg",
+    "recommended": "1"
   }
 ]
