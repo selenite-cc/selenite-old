@@ -462,5 +462,40 @@
     "directory": "gamemaker",
     "image": "images.jpeg",
     "recommended": "1"
+  },
+  {
+    "name": "The Impossible Game",
+    "directory": "impossiblegame",
+    "image": "images.jpeg"
+  },
+  {
+    "name": "Papas Freezeria",
+    "directory": "papasfreezeria",
+    "image": "images.jpeg"
+  },
+  {
+    "name": "Papas Pizzaria",
+    "directory": "papaspizzaria",
+    "image": "images.jpeg"
+  },
+  {
+    "name": "Idle Breakout",
+    "directory": "idlebreakout",
+    "image": "images.jpeg"
+  },
+  {
+    "name": "Stickman Hook",
+    "directory": "stickman-hook",
+    "image": "images.jpeg"
+  },
+  {
+    "name": "Drift Hunters",
+    "directory": "drifthunters",
+    "image": "icon.png"
+  },
+  {
+    "name": "Rocket League",
+    "directory": "rocketleague",
+    "image": "icon.png"
   }
 ]
