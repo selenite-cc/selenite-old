@@ -532,5 +532,40 @@
     "name": "FNAF",
     "directory": "fnaf",
     "image": "splash.jpeg"
+  },
+  {
+    "name": "Burrito Bison",
+    "directory": "burritobison",
+    "image": "Build/logo.png"
+  },
+  {
+    "name": "Cut The Rope Holday",
+    "directory": "ctr-holiday",
+    "image": "Holiday_Gift.webp"
+  },
+  {
+    "name": "Helix Jump",
+    "directory": "helixjump",
+    "image": "gameIcon.png"
+  },
+  {
+    "name": "Clicker Heroes",
+    "directory": "clickerheroes",
+    "image": "clicker-heroes.png"
+  },
+  {
+    "name": "Jetpack Joyride",
+    "directory": "jetpackjoyride",
+    "image": "logo.jpeg"
+  },
+  {
+    "name": "Fruit Ninja",
+    "directory": "fruitninja",
+    "image": "FruitNinjaTeaser.jpg"
+  },
+  {
+    "name": "Smash Karts",
+    "directory": "smashkarts",
+    "image": "9c9e529b14731be871b07b89660bbc2a.png"
   }
 ]
