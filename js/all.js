@@ -56,7 +56,7 @@ function panicMode() {
 
 window.onload = function() {
   setCloak();
-  if (!window.jQuery) {
+  if (!$) {
     var head = document.getElementsByTagName('head')[0];
     var script = document.createElement('script');
     script.type = 'text/javascript';

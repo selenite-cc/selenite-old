@@ -466,7 +466,7 @@
   {
     "name": "The Impossible Game",
     "directory": "impossiblegame",
-    "image": "images.jpeg"
+    "image": "image.jpg"
   },
   {
     "name": "Papas Freezeria",
@@ -474,19 +474,19 @@
     "image": "images.jpeg"
   },
   {
-    "name": "Papas Pizzaria",
-    "directory": "papaspizzaria",
+    "name": "Papas Pizzeria",
+    "directory": "papaspizzeria",
     "image": "images.jpeg"
   },
   {
     "name": "Idle Breakout",
     "directory": "idlebreakout",
-    "image": "images.jpeg"
+    "image": "image.png"
   },
   {
     "name": "Stickman Hook",
     "directory": "stickman-hook",
-    "image": "images.jpeg"
+    "image": "icon.jpg"
   },
   {
     "name": "Drift Hunters",
@@ -496,6 +496,41 @@
   {
     "name": "Rocket League",
     "directory": "rocketleague",
-    "image": "icon.png"
+    "image": "splash.png"
+  },
+  {
+    "name": "Little Alchemy",
+    "directory": "littlealchemy",
+    "image": "images/192-alpha.png"
+  },
+  {
+    "name": "Retro Bowl",
+    "directory": "retrobowl",
+    "image": "img/icon.jpg"
+  },
+  {
+    "name": "Tunnel Rush",
+    "directory": "tunnelrush",
+    "image": "tunnel.jpg"
+  },
+  {
+    "name": "Moto X3M",
+    "directory": "motox3m",
+    "image": "splash.jpg"
+  },
+  {
+    "name": "Moto X3M Winter",
+    "directory": "motox3m-winter",
+    "image": "download.jpeg"
+  },
+  {
+    "name": "Moto X3M Pool Party",
+    "directory": "motox3m-pool",
+    "image": "splash.jpg"
+  },
+  {
+    "name": "FNAF",
+    "directory": "fnaf",
+    "image": "splash.jpeg"
   }
 ]

@@ -1,7 +1,7 @@
 {
 "companyName": "Destruction Crew",
 "productName": "Rocket Soccer",
-"dataUrl": "RSD%201.1.0rc4.data.unityweb",
+"dataUrl": "https://raw.githack.com/supremegmes/supremegmes.github.io/main/games/rocketSoccer/RSD%201.1.0rc4.data.unityweb",
 "wasmCodeUrl": "RSD%201.1.0rc4.wasm.code.unityweb",
 "wasmFrameworkUrl": "RSD%201.1.0rc4.wasm.framework.unityweb",
 "TOTAL_MEMORY": 268435456,
