@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#games .game").hide();
     var txt = $("#gamesearch").val();
     $("#games .game").each(function () {
-      if ($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1) {
+      if (($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1) || ($(this).attr("id").toUpperCase().indexOf(txt.toUpperCase()) != -1)) {
         $(this).show();
       }
     });

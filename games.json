@@ -1,6 +1,6 @@
 [
   {
-    "name": "ADOFAI",
+    "name": "A Dance of Fire and Ice",
     "directory": "adofai",
     "image": "icon.png",
     "recommended": "1"
@@ -529,7 +529,7 @@
     "image": "splash.jpg"
   },
   {
-    "name": "FNAF",
+    "name": "Five Nights at Freddy's",
     "directory": "fnaf",
     "image": "splash.jpeg"
   },
