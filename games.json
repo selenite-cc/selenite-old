@@ -1,8 +1,9 @@
 [
   {
-    "name": "ADOFAI",
+    "name": "A Dance of Fire and Ice",
     "directory": "adofai",
-    "image": "icon.png"
+    "image": "icon.png",
+    "recommended": "1"
   },
   {
     "name": "Online Minecraft",
@@ -12,12 +13,14 @@
   {
     "name": "Offline Minecraft",
     "directory": "offline-mc",
-    "image": "logo.png"
+    "image": "logo.png",
+    "recommended": "1"
   },
   {
     "name": "Friday Night Funkin",
     "directory": "fridaynightfunkin",
-    "image": "fnf-icon.jpg"
+    "image": "fnf-icon.jpg",
+    "recommended": "1"
   },
   {
     "name": "Worlds Hardest Game",
@@ -27,12 +30,14 @@
   {
     "name": "GBA Emulator",
     "directory": "gba",
-    "image": "icon.png"
+    "image": "icon.png",
+    "recommended": "1"
   },
   {
     "name": "Celeste",
     "directory": "celeste",
-    "image": "icon.png"
+    "image": "icon.png",
+    "recommended": "1"
   },
   {
     "name": "Mario",
@@ -247,7 +252,8 @@
   {
     "name": "Super Mario 64",
     "directory": "sm64",
-    "image": "icon.png"
+    "image": "icon.png",
+    "recommended": "1"
   },
   {
     "name": "Gun Mayhem Redux",
@@ -272,11 +278,6 @@
   {
     "name": "Learn to Fly",
     "directory": "ltf",
-    "image": "icon.png"
-  },
-  {
-    "name": "Turbowarp Editor",
-    "directory": "turbowarp-editor",
     "image": "icon.png"
   },
   {
@@ -377,12 +378,14 @@
   {
     "name": "Universal Paperclips",
     "directory": "universal-paperclips",
-    "image": "universal-paperclips.png"
+    "image": "universal-paperclips.png",
+    "recommended": "1"
   },
   {
     "name": "Windows 11",
     "directory": "win11",
-    "image": "favicon.png"
+    "image": "favicon.png",
+    "recommended": "1"
   },
   {
     "name": "Learn to Fly 2",
@@ -457,6 +460,112 @@
   {
     "name": "Game Maker Doodle",
     "directory": "gamemaker",
+    "image": "images.jpeg",
+    "recommended": "1"
+  },
+  {
+    "name": "The Impossible Game",
+    "directory": "impossiblegame",
+    "image": "image.jpg"
+  },
+  {
+    "name": "Papas Freezeria",
+    "directory": "papasfreezeria",
     "image": "images.jpeg"
+  },
+  {
+    "name": "Papas Pizzeria",
+    "directory": "papaspizzeria",
+    "image": "images.jpeg"
+  },
+  {
+    "name": "Idle Breakout",
+    "directory": "idlebreakout",
+    "image": "image.png"
+  },
+  {
+    "name": "Stickman Hook",
+    "directory": "stickman-hook",
+    "image": "icon.jpg"
+  },
+  {
+    "name": "Drift Hunters",
+    "directory": "drifthunters",
+    "image": "icon.png"
+  },
+  {
+    "name": "Rocket League",
+    "directory": "rocketleague",
+    "image": "splash.png"
+  },
+  {
+    "name": "Little Alchemy",
+    "directory": "littlealchemy",
+    "image": "images/192-alpha.png"
+  },
+  {
+    "name": "Retro Bowl",
+    "directory": "retrobowl",
+    "image": "img/icon.jpg"
+  },
+  {
+    "name": "Tunnel Rush",
+    "directory": "tunnelrush",
+    "image": "tunnel.jpg"
+  },
+  {
+    "name": "Moto X3M",
+    "directory": "motox3m",
+    "image": "splash.jpg"
+  },
+  {
+    "name": "Moto X3M Winter",
+    "directory": "motox3m-winter",
+    "image": "download.jpeg"
+  },
+  {
+    "name": "Moto X3M Pool Party",
+    "directory": "motox3m-pool",
+    "image": "splash.jpg"
+  },
+  {
+    "name": "Five Nights at Freddy's",
+    "directory": "fnaf",
+    "image": "splash.jpeg"
+  },
+  {
+    "name": "Burrito Bison",
+    "directory": "burritobison",
+    "image": "Build/logo.png"
+  },
+  {
+    "name": "Cut The Rope Holday",
+    "directory": "ctr-holiday",
+    "image": "Holiday_Gift.webp"
+  },
+  {
+    "name": "Helix Jump",
+    "directory": "helixjump",
+    "image": "gameIcon.png"
+  },
+  {
+    "name": "Clicker Heroes",
+    "directory": "clickerheroes",
+    "image": "clicker-heroes.png"
+  },
+  {
+    "name": "Jetpack Joyride",
+    "directory": "jetpackjoyride",
+    "image": "logo.jpeg"
+  },
+  {
+    "name": "Fruit Ninja",
+    "directory": "fruitninja",
+    "image": "FruitNinjaTeaser.jpg"
+  },
+  {
+    "name": "Tron",
+    "directory": "tron",
+    "image": "icon.png"
   }
 ]

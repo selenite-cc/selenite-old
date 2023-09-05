@@ -22,6 +22,11 @@ function setCloak() {
   }
   panicMode();
 }
+if (getCookie("debugging") == 1) {
+  const debugscript = document.createElement("script");
+  debugscript.setAttribute("src", "/js/debug.js");
+  document.head.append(debugscript);
+}
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
@@ -45,24 +50,29 @@ function panicMode() {
   }
   const pressed = [];
   const secretCode = "safemode";
+  const debugCode = "debugplz"
   window.addEventListener("keyup", (e) => {
     pressed.push(e.key);
     pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
     if (pressed.join("").includes(secretCode)) {
       window.location.href = panicurl;
+    } else if (pressed.join("").includes(debugCode)) {
+      if (getCookie("debugging") == 1) {
+        document.cookie = "debugging=0;";
+        alert("debugging off!")
+      } else {
+        document.cookie = "debugging=1"; 
+        alert("debugging on!")
+      }
     }
   });
 }
-
+const head = document.getElementsByTagName('head')[0];
 window.onload = function() {
   setCloak();
-  if (!window.jQuery) {
-    var head = document.getElementsByTagName('head')[0];
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js';
-    head.appendChild(script);
-  }
+    var jquery = document.createElement('script');
+    jquery.type = 'text/javascript';
+    jquery.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js';
   const gscript = document.createElement("script");
   gscript.setAttribute("async", "");
   gscript.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=G-XVTVBR1D5V");
@@ -71,7 +81,7 @@ window.onload = function() {
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-98DP5VKS42');`;
-  document.head.append(gscript, ingscript);
+  document.head.append(gscript, ingscript, jquery);
 }
 
 defer(function () {
