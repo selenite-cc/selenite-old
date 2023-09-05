@@ -28,8 +28,8 @@
     <!-- initialize my stuff -->
     <script src="/js/themes.js"></script>
     <script src="/js/all.js"></script>
-    <script src="/js/cloak.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/cookie.js"></script>
     <link rel="stylesheet" href="/style.css" />
 
     <!-- seo + other things -->
@@ -42,30 +42,11 @@
     <meta name="description" content="Welcome to the one and only option for unblocked games. Welcome to Selenite."/>
     <meta name="author" content="Website Creator" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-    <script>
-      function setPanicMode() {
-        if (!$("#panic").val().startsWith("https")) {
-          document.cookie = "panicurl=https://" + $("#panic").val();
-          return;
-        }
-
-        document.cookie = "panicurl=" + $("#panic").val();
-        Toastify({
-          text: "Panic mode saved!",
-          duration: 2000,
-          gravity: "top", // `top` or `bottom`
-          position: "center", // `left`, `center` or `right`
-          style: {
-            background: "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
-          },
-          onClick: function () {}, // Callback after click
-        }).showToast();
-      }
-    </script>
   </head>
   <body style="display: none">
     <div class="content">
+
+      <input class="hiddenUpload" type="file" accept=".save" hidden />
       <ul>
         <li><a href="/index.html">Home</a></li>
         <li><a href="/bookmarklets.html">Bookmarklets</a></li>
@@ -76,36 +57,15 @@
         <li><a href="/support.html">Support Selenite!</a></li>
       </ul>
 
-      <input class="hiddenUpload" type="file" accept=".save" hidden />
-
-      <div class="title">
-        <img src="/new.svg" style="width: 4%; padding-right: 1%; filter: invert(var(--invert-logo, 0))" />
-        <h2 style="font-size: 70px">selenite</h2>
-      </div>
-
-      <br />
-      <form action="javascript:setCloakCookie();">
-        <h3 for="webname">Website Name</h3>
-        <br />
-        <input type="text" id="webname" name="webname" placeholder="Selenite" /><br />
-        <h3 for="webicon">Website Icon</h3>
-        <br />
-        <input type="text" id="webicon" name="webicon" placeholder="https://selenite.pages.dev/" /><br /><br />
-        <input id="websubmit" class="submit" type="submit" value="Set Tab Cloak" />
-      </form>
-      <button onclick="javascript:clearCloak();">Clear your current tab cloak</button>
-      <br />
-      <h3>Themes</h3>
-      <button onclick="setTheme('selenite')" style="background-color: #747474; color: #dadada; border: 2px solid #979797">Selenite</button>
-      <button onclick="setTheme('lightmode')" style="background-color: #aaaaaa; color: #dddddd; border: 2px solid #999999">Selenite - Blinding Edition</button>
-      <button onclick="setTheme('egamepass')" style="background-color: #596eb1; color: #95baf1; border: 2px solid #5586e0">e-gamepass</button>
-      <br />
-      <form action="javascript:setPanicMode();">
-        <h3 for="panic">Website URL</h3>
-        <br />
-        <input type="text" id="panic" name="panic" placeholder="https://google.com" /><br />
-        <input id="panic" class="submit" type="submit" value="Set Panic Mode" />
-      </form>
+      <h2>Welcome!</h2>
+      <h3>Thank you for considering Selenite! Scroll down to view how to transfer game data from some of your favorite websites!</h3>
+      <br>
+      <h2>3kh0</h2>
+      <p>Use the "Download Save" tool available on 3kh0, and click on the button below to import your data.</p>
+      <button onclick="javascript:uploadMainSave('save');">Import Save</button>
+      <br>
+      <h2>Other Websites</h2>
+      <p>Use our <a href="javascript:var s = document.createElement('script');document.body.appendChild(s);s.src='https://cdn.jsdelivr.net/gh/skysthelimitt/selenite/js/savedownload.min.js';void(0);">Download Save Utility</a> to download your save from any website, as long as you can use bookmarklets!</p>
       <div id="footer">
         <ul>
           <li><a href="https://github.com/skysthelimitt/Selenite">Source Code</a></li>

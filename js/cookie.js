@@ -59,10 +59,14 @@ function downloadMainSave() {
 }
 
 // Function to get the main save data from an uploaded file
-function getMainSaveFromUpload(data) {
-  // Decrypt the uploaded data using AES decryption with the key 'save'
-  data = CryptoJS.AES.decrypt(data, "egamepass").toString(CryptoJS.enc.Utf8);
-
+function getMainSaveFromUpload(data, key) {
+  if(key) {
+    data = CryptoJS.AES.decrypt(data, key).toString(CryptoJS.enc.Utf8);
+  } else {
+    data = CryptoJS.AES.decrypt(data, "egamepass").toString(CryptoJS.enc.Utf8);
+  }
+  
+  console.log(data);
   // Parse the decrypted data as JSON
   var mainSave = JSON.parse(atob(data));
   var mainLocalStorageSave = JSON.parse(atob(mainSave.localStorage));
@@ -78,7 +82,7 @@ function getMainSaveFromUpload(data) {
 }
 
 // Function to handle the file upload
-function uploadMainSave() {
+function uploadMainSave(key) {
   var hiddenUpload = document.querySelector(".hiddenUpload");
   hiddenUpload.click();
 
@@ -94,7 +98,12 @@ function uploadMainSave() {
     var reader = new FileReader();
 
     reader.onload = function (e) {
-      getMainSaveFromUpload(e.target.result);
+      if(key) {
+        getMainSaveFromUpload(e.target.result, key);
+      } else {
+        getMainSaveFromUpload(e.target.result);
+      }
+      
 
       // Show a success message to the user
       Toastify({
