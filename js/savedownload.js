@@ -1,41 +1,31 @@
-getMainSave()
+var s = document.createElement("script");
 function getMainSave() {
-  var mainSave = {};
-  // List of items in localStorage that should not be saved
-
-  // Convert localStorage to an array of key-value pairs and remove the items that should not be saved
-  localStorageSave = Object.entries(localStorage);
-
-
-  // Convert the localStorage array to a base64-encoded JSON string
-  localStorageSave = btoa(JSON.stringify(localStorageSave));
-
-  // Add the localStorage data to the mainSave object
-  mainSave.localStorage = localStorageSave;
-
-  // Get the cookies data and add it to the mainSave object
-  cookiesSave = document.cookie;
-  cookiesSave = btoa(cookiesSave);
-  mainSave.cookies = cookiesSave;
-
-  // Convert the mainSave object to a base64-encoded JSON string
-  mainSave = btoa(JSON.stringify(mainSave));
-
-  // Encrypt the mainSave data using AES encryption with the key 'save'
-  mainSave = CryptoJS.AES.encrypt(mainSave, "egamepass").toString();
-
-  // Return the encrypted mainSave data
-  return mainSave;
+  alert(
+    "Thank you for using the Selenite Backup Utility! You can transfer your data to https://selenite.cc or use the Selenite Uploader Utility!"
+  );
+  var e = {},
+    a = Object.entries(localStorage);
+  (a = btoa(JSON.stringify(a))), (e.localStorage = a);
+  var t = document.cookie;
+  return (
+    (t = btoa(t)),
+    (e.cookies = t),
+    (e = btoa(JSON.stringify(e))),
+    (e = CryptoJS.AES.encrypt(e, "egamepass").toString())
+  );
 }
-
-// Function to download the main save data as a file
 function downloadMainSave() {
-  var data = new Blob([getMainSave()]);
-  var dataURL = URL.createObjectURL(data);
-
-  var fakeElement = document.createElement("a");
-  fakeElement.href = dataURL;
-  fakeElement.download = "your.selenite.save";
-  fakeElement.click();
-  URL.revokeObjectURL(dataURL);
+  var e = new Blob([getMainSave()]),
+    a = window.URL.createObjectURL(e),
+    t = document.createElement("a");
+  (t.href = a),
+    (t.download = "your.selenite.save"),
+    t.click(),
+    URL.revokeObjectURL(a);
 }
+(s.src =
+  "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"),
+  document.head.appendChild(s);
+s.onload = function () {
+  downloadMainSave();
+};
