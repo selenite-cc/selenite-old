@@ -4,6 +4,11 @@ function check() {
     clearInterval(interval);
     const body = document.querySelector("body");
     body.style.removeProperty("display");
+    if(Math.random() > 0.97) {
+      if(confirm("Want to help Selenite? Try out the new UI and give feedback! Click OK to go to the new UI or click Cancel to ignore.") == true){
+        window.location.href = "https://ui-test.selenite.pages.dev";
+      }
+    } 
   }
   if ($("#panicmode").length > 0) {
     $("#panicmode").prop({ href: panicurl });
