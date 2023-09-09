@@ -3,52 +3,18 @@
   <head>
     <!-- initialize theme vars
     https://coolors.co/10002b-240046-3c096c-5a189a-7b2cbf-9d4edd-c77dff-e0aaff -->
-    <style>
-      :root {
-        --input-bg-color: #00000000;
-        --main-text-color: #00000000;
-        --p-text-color: #00000000;
-        --border-color: #00000000;
-        --star-color: #00000000;
-        --game-color: #00000000;
-        --bg-1: #00000000;
-        --bg-2: #00000000;
-        --invert-logo: 0;
-      }
-    </style>
 
     <!-- initialize externals -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3415518411898563"
-      crossorigin="anonymous"
-    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script>
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
-    />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/toastify-js"
-    ></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
-    </style>
 
     <!-- initialize my stuff -->
     <script src="/js/themes.js"></script>
     <script src="/js/all.js"></script>
-    <script src="/js/cookie.js"></script>
     <script src="/js/games.js"></script>
     <script src="/js/search.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/randomquote.js"></script>
     <link rel="stylesheet" href="/style.css" />
 
     <!-- seo + other things -->
@@ -81,55 +47,48 @@
       <a href="/bookmarklets.html">Bookmarklets</a>
       <a href="https://forms.gle/iBAbXvEDaYTLuEcdA">Suggestions</a>
       <a href="/settings.html">Settings</a>
-      <a href="https://forms.gle/j75WUn6UhdqsRZgf7">Report a Bug</a>
+      <a href="https://forms.gle/j75WUn6UhdqsRZgf7">Bug Report</a>
       <a href="https://discord.gg/7jyufnwJNf">Discord</a>
-      <a href="/support.html">Support Selenite!</a>
+      <a href="/support.html">Support</a>
     </header>
 
-    <input class="hiddenUpload" type="file" accept=".save" hidden />
+    <main>
+      <input class="hiddenUpload" type="file" accept=".save" hidden />
 
-    <h1 class="title">selenite</h1>
 
-    <a href="javascript:downloadMainSave()">Download Save</a>
-    <a href="javascript:uploadMainSave()">Upload Save</a>
+      <input type="text" id="gamesearch" placeholder="Type here to search.." />
+      <div class="samerow">
+        <button onclick="downloadMainSave()">Download Save</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button onclick="uploadMainSave()">Upload Save</button>
+      </div>
+      <div class="samerow">
+        <button id="random" onclick="selectRandomGame()">
+          Play a random game!
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="recommend" onclick="recommendedGames()">
+          Click to view recommended games!
+        </button>
+      </div>
 
-    <br />
+      <h2>Pinned Games</h2>
+      <div id="pinned">
+        <p id="message">pin some games for things to show up here!</p>
+      </div>
+      
 
-    <input type="text" id="gamesearch" placeholder="Type here to search.." />
-    <button id="random" onclick="selectRandomGame()">Play random game!</button>
-    <br />
-    <button id="recommend" onclick="recommendedGames()">
-      Click to view recommended games!
-    </button>
-
-    <br />
-    <br />
-
-    <h2>Pinned Games</h2>
-    <div id="pinnedgames"></div>
-    <p id="pinnedmessage">
-      It looks like you haven't pinned any games, click the star icon next to
-      any game in order to pin them up here! Your pinned games will also save in
-      your save backups!
-    </p>
-
-    <div id="games">
       <h2>All Games</h2>
-      <p id="message">
-        Please wait for the games to load.. If you see this for more than a
-        second, try reloading, and if you keep seeing this message,
-        <a href="https://forms.gle/j75WUn6UhdqsRZgf7">report a bug</a>.
-      </p>
-    </div>
+      <div id="games">
+        <p id="message">games loading..</p>
+      </div>
+
+    </main>
 
     <footer>
-      <ul>
-        <li>
-          <a href="https://github.com/skysthelimitt/Selenite">Source Code</a>
-        </li>
-        <li><a id="panicmode">Panic Mode</a></li>
-        <li><a href="/transfer.html">Transfer your data</a></li>
-      </ul>
+      <a href="https://github.com/skysthelimitt/Selenite">Source Code</a>
+      <a id="panicmode">Panic Mode</a>
+      <a href="/transfer.html">Transfer your data</a>
     </footer>
   </body>
 </html>

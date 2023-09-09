@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <script src="/js/all.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="X2IQhDCXYOzS3VVvN1dlf4-8spKGnTgug0gH_tOqfBM" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link href='bot.css' rel='stylesheet'>
+	<link rel = "stylesheet" type = "text/css" href = "wordl.css">
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    <script type = "text/javascript" src = "word_lists/allwords.js"></script>
+    <script type = "text/javascript" src = "word_lists/commonwords.js"></script>
+    <script type = "text/javascript" src = "word_lists/officialanswers.js"></script>
+    <script type = "text/javascript" src = "word_lists/officialguesses.js"></script>    
+    <script type = "text/javascript" src = "word_lists/rankings.js"></script>
+    
+    <script type = "text/javascript" src = "js/setup.js"></script>
+    <script type = "text/javascript" src = "js/class.js"></script>
+    <script type = "text/javascript" src = "js/main.js"></script>
+    <script type = "text/javascript" src = "js/bot.js"></script>
+    <script type = "text/javascript" src = "js/general.js"></script>
+	<title>WordleBot</title>
+</head>
+<body>
+    <div id="container">
+        <div id="top-of-screen">
+            <h1 id = 'title'></h1>
+            <button class="header-button test" onclick="setupTest();"><i class='gg-bot'></i></button>
+            <button class = "header-button open settings" onclick="createSettingsPage();"><i class="fa fa-gear"></i></button>
+            <button class="header-button open info" onclick="createInfoPage();"><i class='fa fa-info-circle'></i></button>
+            <!-- <button id="wordlebot" onclick="testStartingWords();">Run bot</button> -->
+        </div>
+
+        <div class="info screen"></div>
+
+        <div class="settings screen">
+            <button class="settings close"></button>
+            <h3 class = 'mini-header'>Choose Your Wordlength</h3>
+            <p class="description">We don't have to stick with 5 letters.</p>
+            <p> 
+                Show me the best 
+                <select name="word-length" id="word-length"></select>
+                letter words
+            </p>
+            <p>for a maximum of <select name="max-guesses" id="max-guesses"></select>
+                guesses.
+            </p>
+
+            <h3 class="mini-header">Choose Your Answers</h3>
+            <p class="description">Tell me what words you'd like to be considered as potential answers.</p>
+            <div>
+                <input type="checkbox" class="wordbank" id = 'restricted'>
+                <label for="restricted">Most Likely Answers</label>
+                <p class="description">The only words I'll consider as answers are those that are on the official answer list for Wordle, or some of its variants.</p>
+
+                <input type="checkbox" class="wordbank" id = 'complete'>
+                <label for="complete">All Possible Answers</label><br>
+                <p class="description">I'll consider all reasonable words as possible solutions.</p>
+            </div>
+            
+            <h3 class="mini-header">Choose Your Bot</h3>
+            <p class="description">Which game are we playing? I can play several.</p>
+                <p>
+                    Show me the best words for 
+                    <select name="bot-type" id="bot-type">
+                        <option value="Wordle" class = "Wordle">Wordle</option>
+                        <option value="Antiwordle" class = "Antiwordle">Antiwordle</option>
+                        <option value="Xordle" class = "Xordle">Xordle</option>
+                        <option value="Fibble" class = "Fibble">Fibble</option> 
+                        <option value="Warmle" class = "Warmle">Warmle</option> 
+                        <option value="Hardle" class = "Hardle">Hardle</option> 
+                        <option value="Woodle" class = "Woodle">Woodle/Word500</option> 
+                        <option value="W-Peaks" class = "W-Peaks">Wordle Peaks</option> 
+                        <option value="Thirdle" class = "Thirdle">Thirdle</option> 
+                        <option value="Dordle" class = "Dordle">Dordle</option> 
+                        <option value="Quordle" class = "Quordle">Quordle</option> 
+                        <option value="Octordle" class = "Octordle">Octordle</option> 
+                    </select>
+                </p>
+                <p class="extra-settings"></p>
+        </div>
+
+        <div id="guesses">
+            <button id="refresh" onclick="resetPage();"><i class='fa fa-refresh'></i></button>
+            <input type="text" id = "word-entered">
+            <span id="hints" class = 'empty'>
+            </span>
+            <div id="next-previous-buttons"></div>
+        </div>
+
+        <div id="suggestions">
+            <h2 class="possibilities total"></h2>
+            <h3 class="possibilities separated"></h3>
+            <h3 class="mini-title"></h3>
+        </div>
+    </div>
+
+</body>
+</html>

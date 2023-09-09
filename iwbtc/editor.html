@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta charset="utf-8"> 
+<title>I Wanna Be Thy Copy</title>
+
+<script src="editor.js"></script>
+<script src="storage.js"></script>
+<script src="keyboard.js"></script>
+<script src="renderer.js"></script>
+<script src="audio.js"></script>
+<script src="util.js"></script>
+<script src="game_objects.js"></script>
+<script src="bitmap.js"></script>
+<script src="engine.js"></script>
+<script src="schnosm.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+<div id="wrapper">
+    <canvas id="canvas">
+        <p>Your browser doesn't support canvas.</p>
+    </canvas>
+    <noscript>Your browser needs JavaScript to run this game.</noscript>
+    <textarea id="editor"></textarea>
+    <hr>
+    <input type="checkbox" id="show_invisibles"> Show invisible elements
+    <input type="checkbox" id="autoreload"> Auto reload
+    <button id="save">save</button>
+    <pre id="debug"></pre>
+    <pre id="coords"></pre>
+    <pre id="fps"></pre>
+    <pre id="warn"></pre>
+    <div id="keys">
+        <span class="link_like" id="change_left">Left Arrow - Move left</span><br>
+        <span class="link_like" id="change_right">Right Arrow - Move right</span><br>
+        <span class="link_like" id="change_jump">Space - Jump</span><br>
+        <span class="link_like" id="change_shoot">T - Shoot</span><br>
+        <span class="link_like" id="change_restart">R - Restart</span><br>
+        <span class="link_like" id="change_mute">M - Mute sound</span>
+    </div>
+    <br>
+    <span class="link_like" id="mute_button">mute (key: <code>M</code>)</span>
+    <div style="display: none" id="press_key_msg">
+        Press key to change, or escape to abort.
+    </div>
+    <span class="link_like" id="reset_keys">Click here to reset keys</span><br>
+    <br>
+    <span class="link_like" id="reset_save">Start again from the first level</span><br>
+</div>

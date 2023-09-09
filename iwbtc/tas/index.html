@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<meta charset="utf-8"> 
+<title>I Wanna Be Thy Copy TAS Tool</title>
+<script src="/js/all.js"></script>
+<script src="iwbtc-all.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+<div id="wrapper">
+    <center>
+        <h1>I Wanna Be Thy Copy TAS Tool v0.3b (Github Page Version)</h1>
+        <h3>Thy Copy : Thy Game</h3>
+        <div style="text-align: left; float: left; margin-left: 100px">
+            <span class="link_like" id="reset_save">Back to level 1 &amp; delete save</span>
+        </div>
+        <div style="text-align: right; margin-right: 100px;">
+            <span class="link_like" id="mute_button">mute (key: <code>M</code>)</span>
+        </div>
+        <canvas id="canvas">
+            <p>Your browser doesn't support canvas.</p>
+        </canvas>
+		<textarea name="keyoutput" id="keyoutputid" rows="20" cols="60">
+		</textarea>
+		
+		 <button onclick="cta('S');">Replay</button> 
+		 <!--<button onclick="cta('P');">Pause</button> -->
+    </center>
+    <noscript>Your browser needs JavaScript to run this game.</noscript>
+    <hr>
+    <pre id="debug"></pre>
+    <pre id="warn"></pre>
+	<p id="tas_info">tas_info</p>
+	<br>
+    Default keys (click to change):<br>
+    <div id="keys">
+        <table>
+            <tr><td>
+                <span class="link_like" id="change_advance">F - Advance Frame</span><br>
+            </td><td>
+                <span class="link_like" id="change_left">Left Arrow - Move left</span><br>
+            </td><td>
+                <span class="link_like" id="change_jump">Space - Jump</span><br>
+            </td><td>
+                <span class="link_like" id="change_restart">R - Restart</span><br>
+            </td></tr>
+            <tr><td>
+                <span class="link_like" id="change_right">Right Arrow - Move right</span><br>
+            </td><td>
+                <span class="link_like" id="change_shoot">T - Shoot</span><br>
+            </td><td>
+                <span class="link_like" id="change_mute">M - Mute sound</span>
+            </td></tr>
+        </table>
+    </div>
+    <br>
+    <div style="display: none" id="press_key_msg">
+        Press key to change, or escape to abort.
+    </div>
+    <span class="link_like" id="reset_keys">Click here to reset keys</span><br>
+    <br>
+
+
+    <br><br>
+    IWBTG was originally created by <a href=http://kayin.pyoko.org/>Kayin</a>, who shall 
+    be worshipped for creating <a href=http://kayin.pyoko.org/iwbtg/>the best game ever</a>. <br>
+    Also props to Ellipsis and sam136 from the IWBTG forum for ripping 
+    the music and images from the original game.
+    <br>
+    <br>
+	This is a modification of <a href=http://copy.sh/iwbtc>http://copy.sh/iw</a> used to create tool-assisted speedruns of iwbtc. 
+	<br>
+	<br>
+    Source code available on <a href=https://github.com/copy/iwbtc>github</a>.
+</div>
+
