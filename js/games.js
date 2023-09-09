@@ -39,7 +39,7 @@ $.getJSON("/games.json", function (data) {
       $element.find("img.star").attr("src", "img/star-fill.svg");
       let $pinnedelement = $element.clone();
       $("#pinned").append($pinnedelement);
-      if ($("#pinned #message")) {
+      if ($("#pinnedmessage")) {
         $("#pinnedmessage").hide();
       }
     }
@@ -66,10 +66,9 @@ $(document).ready(function () {
         Cookies.set("starred", JSON.stringify(starred));
         $element = $(this).clone();
         $("#pinned").append($element);
-        $("#pinned").hide();
+        $("#pinnedmessage").hide();
         temp = $("#pinned")[0].childNodes;
         pinnedarray = [...temp];
-
         pinnedarray.sort(dynamicSort("id"));
         $("#pinned").empty();
         for (let i = 0; i < pinnedarray.length; i++) {
@@ -134,7 +133,6 @@ function dynamicSort(property) {
     sortOrder = -1;
     property = property.substr(1);
   }
-
   return function (a, b) {
     if (sortOrder == -1) {
       return b[property].localeCompare(a[property]);

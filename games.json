@@ -7,7 +7,7 @@
   },
   {
     "name": "Online Minecraft",
-    "directory": "resent-client",
+    "directory": "online-mc",
     "image": "logo.png"
   },
   {
@@ -24,7 +24,7 @@
   },
   {
     "name": "Worlds Hardest Game",
-    "directory": "hardestgame",
+    "directory": "worldshardestgame",
     "image": "icon.png"
   },
   {
@@ -165,7 +165,7 @@
     "image": "icon.png"
   },
   {
-    "name": "Turbowarp Packager",
+    "name": "Turbowarp",
     "directory": "turbowarp",
     "image": "icon.png"
   },
@@ -176,7 +176,7 @@
   },
   {
     "name": "Geometry Dash",
-    "directory": "gd",
+    "directory": "geometrydash",
     "image": "icon.png"
   },
   {
@@ -251,7 +251,7 @@
   },
   {
     "name": "Super Mario 64",
-    "directory": "sm64",
+    "directory": "supermario64",
     "image": "icon.png",
     "recommended": "1"
   },
@@ -277,7 +277,7 @@
   },
   {
     "name": "Learn to Fly",
-    "directory": "ltf",
+    "directory": "learntofly",
     "image": "icon.png"
   },
   {
@@ -287,7 +287,7 @@
   },
   {
     "name": "Cut The Rope",
-    "directory": "ctr",
+    "directory": "cuttherope",
     "image": "icon.png"
   },
   {
@@ -389,7 +389,7 @@
   },
   {
     "name": "Learn to Fly 2",
-    "directory": "ltf2",
+    "directory": "learntofly2",
     "image": "logo.jpg"
   },
   {
@@ -414,7 +414,7 @@
   },
   {
     "name": "Learn to Fly Idle",
-    "directory": "ltfidle",
+    "directory": "learntoflyidle",
     "image": "icon.jpg"
   },
   {
@@ -465,7 +465,7 @@
   },
   {
     "name": "The Impossible Game",
-    "directory": "impossiblegame",
+    "directory": "theimpossiblegame",
     "image": "image.jpg"
   },
   {
@@ -540,7 +540,7 @@
   },
   {
     "name": "Cut The Rope Holday",
-    "directory": "ctr-holiday",
+    "directory": "cuttherope-holiday",
     "image": "Holiday_Gift.webp"
   },
   {

@@ -64,7 +64,6 @@ header a:hover {
 }
 main {
   animation: 1.25s ease-in-out 0s 1 loadInAnimation;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   display: flex;
@@ -74,7 +73,15 @@ main {
   margin: auto;
   margin-top: 4rem;
 }
-h1, h2, h3, p, a {
+main#main.noscroll {
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
   margin: 0;
   padding: 0;
 }
@@ -98,8 +105,8 @@ h3 {
 
 button {
   cursor: pointer;
-  background-color: #5A189A;
-  border-color: #3C096C;
+  background-color: #5a189a;
+  border-color: #3c096c;
   border-width: 5px;
   border-radius: 10px;
   border-style: solid;
@@ -113,7 +120,7 @@ button {
 
 button:hover {
   border-color: #240046;
-  background-color: #3C096C;
+  background-color: #3c096c;
 }
 
 img {
@@ -171,9 +178,12 @@ img.star {
 
 #noscroll {
   overflow-y: hidden;
+  justify-content: center;
 }
 
-#games {
+#games,
+#pinned {
+  width: 100%;
   justify-content: center;
 }
 
@@ -183,7 +193,7 @@ a {
 
 input[type="text"] {
   width: 50%;
-  background-color: #3C096C;
+  background-color: #3c096c;
   color: white;
   box-sizing: border-box;
   font-size: 20px;
@@ -192,7 +202,22 @@ input[type="text"] {
   border-radius: 5px;
   outline: none;
   margin: 10px;
-  border: 2px solid #5A189A;
+  border: 2px solid #5a189a;
   border-radius: 5px;
   transition: opacity 0.25s ease-in-out;
+}
+
+.bookmarkletdiv {
+  width: 30%;
+  background-color: #240046;
+  box-shadow: 0px 0px 5px 5px #240046;
+  padding: 5px;
+  margin: 15px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.bookmarkletdiv a {
+  font-size: 30px;
+  color: white;
 }
