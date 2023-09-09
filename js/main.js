@@ -32,7 +32,7 @@ window.addEventListener(
         "Error: Image failed to load." +
           "\nFull Image URL: " +
           event.target.src +
-          '\nPlease take a screenshot WITH THIS ERROR VISIBLE and click "Report a Bug" or go to https://forms.gle/j75WUn6UhdqsRZgf7'
+          '\nClick FEEDBACK. This is a beta build of Selenite.'
       );
       event.target.src = "/favicon.png";
     } else {
@@ -47,7 +47,7 @@ window.addEventListener(
           event.colno +
           "\nStackTrace: " +
           event.error +
-          '\nPlease take a screenshot WITH THIS ERROR VISIBLE and click "Report a Bug" or go to https://forms.gle/j75WUn6UhdqsRZgf7'
+          '\nClick FEEDBACK. This is a beta build of Selenite.'
       );
     }
   },
@@ -55,10 +55,10 @@ window.addEventListener(
 );
 
 function checkAlert() {
-  if (!Cookies.get("supportalert")) {
+  if (!Cookies.get("betaalert")) {
     alert(
-      'Welcome to Selenite!\nTransferring from another website? Add "/transfer" to the end of the URL to see how to transfer your game data!\nI\'m a single developer that works on this website, so I would appreciate your support! You can pay on Patreon by clicking the "Support" button, which will have private links for all subscribers to use!\nPlease share this website with anyone you know, so this website can expand even more!\nGo to bookmarklets and then add "Selenite Minified" to your bookmarks :) \nJoin the Discord for the latest updates and newest links!\nI don\'t want to be annoying, so you won\'t see this message for another month (at least on this website) :)'
-    );
-    Cookies.set("supportalert", true, { expires: 31 });
+      "PLEASE READ.\nThank you for beta testing the new ui! Send feedback at the feedback link in the header. Any issues? Suggestions? Don't use the suggestions form. Please. Just use the Feedback form. It's made specifically for the beta. DM '@skysthelimit.dev' on discord if you need to say something immediately. Also DM me on discord if you beta tested, might give something a little special, like a private site link?\nThank you for supporting Selenite. Any and all feedback is greatly appreciated."
+      );
+    Cookies.set("betaalert", true, { expires: 1 });
   }
 }
