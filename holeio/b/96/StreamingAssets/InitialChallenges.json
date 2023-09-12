@@ -1,0 +1,995 @@
+[
+    {
+        "Key": "InitialChallenges",
+        "Value": {
+            "entries": [
+                {
+                    "Key": "EAT_30_HORSES_FARM",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_30_HORSES_FARM": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 30,
+                                        "id": null,
+                                        "description": "EAT_30_HORSES_FARM",
+                                        "reward": 5,
+                                        "objectType": "HORSE",
+                                        "level": "Farm"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_15_TRACTORS_INDUSTRIAL",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_15_TRACTORS_INDUSTRIAL": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 15,
+                                        "id": null,
+                                        "description": "EAT_15_TRACTORS_INDUSTRIAL",
+                                        "reward": 10,
+                                        "objectType": "TRACTOR",
+                                        "level": "Industrial"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "BATTLE_1_PLACE_3_TIMES",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "BATTLE_1_PLACE_3_TIMES": {
+                                "FirstPlaceGameModeType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "BATTLE_1_PLACE_3_TIMES",
+                                        "reward": 10,
+                                        "gameMode": "BATTLE_ROYALE"
+                                    },
+                                    "$type": "FirstPlaceGameModeType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_50_CARS_CITY",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_50_CARS_CITY": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 50,
+                                        "id": null,
+                                        "description": "EAT_50_CARS_CITY",
+                                        "reward": 5,
+                                        "objectType": "CAR",
+                                        "level": "City"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_CITY",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_CITY": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_CITY",
+                                        "reward": 5,
+                                        "level": "City"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_20_TRAFFIC_LIGHTS_CITY",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_20_TRAFFIC_LIGHTS_CITY": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 20,
+                                        "id": null,
+                                        "description": "EAT_20_TRAFFIC_LIGHTS_CITY",
+                                        "reward": 10,
+                                        "objectType": "TRAFFIC_LIGHT",
+                                        "level": "City"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "SCORE_2000_CLASSIC",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "SCORE_2000_CLASSIC": {
+                                "ClassicGameModeType": {
+                                    "_data": {
+                                        "id": null,
+                                        "description": "SCORE_2000_CLASSIC",
+                                        "reward": 10,
+                                        "count": 1,
+                                        "score": 2000
+                                    },
+                                    "$type": "ClassicGameModeType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_KNIGHTS",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_KNIGHTS": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_KNIGHTS",
+                                        "reward": 5,
+                                        "level": "Knights"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_30_BAMBOO_JAPAN",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_30_BAMBOO_JAPAN": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 30,
+                                        "id": null,
+                                        "description": "EAT_30_BAMBOO_JAPAN",
+                                        "reward": 5,
+                                        "objectType": "BAMBOO",
+                                        "level": "Japan"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "BEST_IN_TEAMS",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "BEST_IN_TEAMS": {
+                                "BestInTeamType": {
+                                    "_data": {
+                                        "id": null,
+                                        "description": "BEST_IN_TEAMS",
+                                        "reward": 5,
+                                        "count": 1
+                                    },
+                                    "$type": "BestInTeamType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_250_OBJECTS_SIZE_1",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_250_OBJECTS_SIZE_1": {
+                                "EatSpecificSizeObjectsType": {
+                                    "_data": {
+                                        "count": 250,
+                                        "id": null,
+                                        "description": "EAT_250_OBJECTS_SIZE_1",
+                                        "reward": 20,
+                                        "points": 1
+                                    },
+                                    "$type": "EatSpecificSizeObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_WESTERN",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_WESTERN": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_WESTERN",
+                                        "reward": 5,
+                                        "level": "Western"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_100_TREES",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_100_TREES": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 100,
+                                        "id": null,
+                                        "description": "EAT_100_TREES",
+                                        "reward": 10,
+                                        "objectType": "TREE_HALF_POINTS,TREE,SAKURA,BAMBOO,PALM,TREE_WITH_FRUITS,ALL_TREES",
+                                        "level": "ANY"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_JAPAN",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_JAPAN": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_JAPAN",
+                                        "reward": 5,
+                                        "level": "Japan"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "TEAMS_1_PLACE_3_TIMES",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "TEAMS_1_PLACE_3_TIMES": {
+                                "FirstPlaceGameModeType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "TEAMS_1_PLACE_3_TIMES",
+                                        "reward": 10,
+                                        "gameMode": "TEAMS"
+                                    },
+                                    "$type": "FirstPlaceGameModeType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_25_SAKURA_JAPAN",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_25_SAKURA_JAPAN": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 25,
+                                        "id": null,
+                                        "description": "EAT_25_SAKURA_JAPAN",
+                                        "reward": 5,
+                                        "objectType": "SAKURA",
+                                        "level": "Japan"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_100_HUMAN",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_100_HUMAN": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 100,
+                                        "id": null,
+                                        "description": "EAT_100_HUMAN",
+                                        "reward": 10,
+                                        "objectType": "HUMAN,POLICEMAN,ANDROID,ALL_HUMAN",
+                                        "level": "ANY"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_SCIFI",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_SCIFI": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_SCIFI",
+                                        "reward": 5,
+                                        "level": "SciFi"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_25_CHICKEN_CARTOON",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_25_CHICKEN_CARTOON": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 25,
+                                        "id": null,
+                                        "description": "EAT_25_CHICKEN_CARTOON",
+                                        "reward": 5,
+                                        "objectType": "CHICKEN",
+                                        "level": "CartoonTown"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_PIRATES",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_PIRATES": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_PIRATES",
+                                        "reward": 5,
+                                        "level": "Pirates"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_75_BUILDINGS",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_75_BUILDINGS": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 75,
+                                        "id": null,
+                                        "description": "EAT_75_BUILDINGS",
+                                        "reward": 5,
+                                        "objectType": "BUILDING",
+                                        "level": "ANY"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_APOCCITY",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_APOCCITY": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_APOCCITY",
+                                        "reward": 5,
+                                        "level": "ApocCity"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_25_PALMS_PIRATES",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_25_PALMS_PIRATES": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 25,
+                                        "id": null,
+                                        "description": "EAT_25_PALMS_PIRATES",
+                                        "reward": 5,
+                                        "objectType": "PALM",
+                                        "level": "Pirates"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_YELLOW_POLES_CITY",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_YELLOW_POLES_CITY": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 50,
+                                        "id": null,
+                                        "description": "EAT_YELLOW_POLES_CITY",
+                                        "reward": 5,
+                                        "objectType": "YELLOW_POLE",
+                                        "level": "City"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_20_TENTS_KNIGHTS",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_20_TENTS_KNIGHTS": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 20,
+                                        "id": null,
+                                        "description": "EAT_20_TENTS_KNIGHTS",
+                                        "reward": 5,
+                                        "objectType": "TENT",
+                                        "level": "Knights"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_FARM",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_FARM": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_FARM",
+                                        "reward": 5,
+                                        "level": "Farm"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_15_TRACTORS_FARM",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_15_TRACTORS_FARM": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 15,
+                                        "id": null,
+                                        "description": "EAT_15_TRACTORS_FARM",
+                                        "reward": 5,
+                                        "objectType": "TRACTOR",
+                                        "level": "Farm"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_20_TRAINS_INDUSTRIAL",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_20_TRAINS_INDUSTRIAL": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 20,
+                                        "id": null,
+                                        "description": "EAT_20_TRAINS_INDUSTRIAL",
+                                        "reward": 5,
+                                        "objectType": "TRAIN",
+                                        "level": "Industrial"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_CARTOON_TOWN",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_CARTOON_TOWN": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_CARTOON_TOWN",
+                                        "reward": 5,
+                                        "level": "CartoonTown"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_80_BARRELS_INDUSTRIAL",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_80_BARRELS_INDUSTRIAL": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 80,
+                                        "id": null,
+                                        "description": "EAT_80_BARRELS_INDUSTRIAL",
+                                        "reward": 5,
+                                        "objectType": "BARREL",
+                                        "level": "Industrial"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_CACTI_WILD_WEST",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_CACTI_WILD_WEST": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 50,
+                                        "id": null,
+                                        "description": "EAT_CACTI_WILD_WEST",
+                                        "reward": 5,
+                                        "objectType": "CACTOO",
+                                        "level": "Western"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_VIKINGS",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_VIKINGS": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_VIKINGS",
+                                        "reward": 5,
+                                        "level": "Vikings"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_HORSES_WILD_WEST",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_HORSES_WILD_WEST": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 40,
+                                        "id": null,
+                                        "description": "EAT_HORSES_WILD_WEST",
+                                        "reward": 5,
+                                        "objectType": "HORSE",
+                                        "level": "Western"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_DRAKKARS_VIKINGS",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_DRAKKARS_VIKINGS": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 30,
+                                        "id": null,
+                                        "description": "EAT_DRAKKARS_VIKINGS",
+                                        "reward": 5,
+                                        "objectType": "DRAKKAR",
+                                        "level": "Vikings"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_FIRE_BARRELS_APOCCITY",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_FIRE_BARRELS_APOCCITY": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 10,
+                                        "id": null,
+                                        "description": "EAT_FIRE_BARRELS_APOCCITY",
+                                        "reward": 5,
+                                        "objectType": "BARREL_WITH_FIRE",
+                                        "level": "ApocCity"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_TRAFFIC_CONES_CITY",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_TRAFFIC_CONES_CITY": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 25,
+                                        "id": null,
+                                        "description": "EAT_TRAFFIC_CONES_CITY",
+                                        "reward": 5,
+                                        "objectType": "TRAFFIC_CONE",
+                                        "level": "City"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_INDUSTRIAL",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_INDUSTRIAL": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_INDUSTRIAL",
+                                        "reward": 5,
+                                        "level": "Industrial"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_200_BUILDINGS_CANDY",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_200_BUILDINGS_CANDY": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 200,
+                                        "id": null,
+                                        "description": "EAT_200_BUILDINGS_CANDY",
+                                        "reward": 5,
+                                        "objectType": "BUILDING",
+                                        "level": "Candy"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_MILITARY",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_MILITARY": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_MILITARY",
+                                        "reward": 5,
+                                        "level": "Military"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_300_BOXES_MARS",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_300_BOXES_MARS": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 300,
+                                        "id": null,
+                                        "description": "EAT_300_BOXES_MARS",
+                                        "reward": 5,
+                                        "objectType": "BOX",
+                                        "level": "Mars"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_STREETRACING",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_STREETRACING": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_STREETRACING",
+                                        "reward": 5,
+                                        "level": "StreetRacingPort"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_50_PALMS_MILITARY",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_50_PALMS_MILITARY": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 50,
+                                        "id": null,
+                                        "description": "EAT_50_PALMS_MILITARY",
+                                        "reward": 5,
+                                        "objectType": "PALM",
+                                        "level": "Military"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_FANTASY",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_FANTASY": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_FANTASY",
+                                        "reward": 5,
+                                        "level": "Fantasy"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_1000_TRAFFIC_CONES_STREETRACING",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_1000_TRAFFIC_CONES_STREETRACING": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 1000,
+                                        "id": null,
+                                        "description": "EAT_1000_TRAFFIC_CONES_STREETRACING",
+                                        "reward": 5,
+                                        "objectType": "TRAFFIC_CONE",
+                                        "level": "StreetRacingPort"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_MARS",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_MARS": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_MARS",
+                                        "reward": 5,
+                                        "level": "Mars"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_100_BARRELS_MILITARY",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_100_BARRELS_MILITARY": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 100,
+                                        "id": null,
+                                        "description": "EAT_100_BARRELS_MILITARY",
+                                        "reward": 5,
+                                        "objectType": "BARREL",
+                                        "level": "Military"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "PLAY_LEVEL_CANDY",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "PLAY_LEVEL_CANDY": {
+                                "PlaySpecificLevelType": {
+                                    "_data": {
+                                        "count": 3,
+                                        "id": null,
+                                        "description": "PLAY_LEVEL_CANDY",
+                                        "reward": 5,
+                                        "level": "Candy"
+                                    },
+                                    "$type": "PlaySpecificLevelType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "EAT_300_BOXES_FANTASY",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "EAT_300_BOXES_FANTASY": {
+                                "EatSpecificObjectsType": {
+                                    "_data": {
+                                        "count": 300,
+                                        "id": null,
+                                        "description": "EAT_300_BOXES_FANTASY",
+                                        "reward": 5,
+                                        "objectType": "BOX",
+                                        "level": "Fantasy"
+                                    },
+                                    "$type": "EatSpecificObjectsType"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+]

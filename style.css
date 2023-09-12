@@ -72,6 +72,7 @@ main {
   flex-wrap: wrap;
   margin: auto;
   margin-top: 4rem;
+  width: 90%;
 }
 main#main.noscroll {
   justify-content: center;
@@ -102,8 +103,12 @@ h2 {
 h3 {
   font-size: 20px;
 }
+p, a {
+  font-size: 16px;
+  color: white;
+}
 
-button {
+button, input#websubmit.submit, input[type=submit]#panic {
   cursor: pointer;
   background-color: #5a189a;
   border-color: #3c096c;
@@ -112,20 +117,22 @@ button {
   border-style: solid;
   padding: 10px;
   color: white;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
   transition-duration: 0.5s;
   margin: 10px;
 }
 
-button:hover {
+button:hover, input#websubmit.submit:hover, input[type=submit]#panic:hover {
   border-color: #240046;
   background-color: #3c096c;
+  transform: scale(1.07);
 }
 
 img {
   width: 100%;
   aspect-ratio: auto;
+  user-select: none;
 }
 
 .img-container a {
@@ -149,9 +156,16 @@ img {
   width: 15%;
   border-radius: 20px;
   display: inline-block;
-  background-color: black;
+  background-color: #240046;
   margin: 15px;
   cursor: pointer;
+  box-shadow: 0px 0px 5px 5px #240046;
+}
+
+.game:hover {
+  transform: scale(1.1);
+  background-color: #2f005a;
+  box-shadow: 0px 0px 5px 5px #2f005a;
 }
 
 .game h1 {
@@ -188,7 +202,7 @@ img.star {
 }
 
 a {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 input[type="text"] {
@@ -205,6 +219,11 @@ input[type="text"] {
   border: 2px solid #5a189a;
   border-radius: 5px;
   transition: opacity 0.25s ease-in-out;
+  opacity: 70%;
+  transition-duration: 0.5s;
+}
+input[type=text]:hover {
+  opacity: 100%;
 }
 
 .bookmarkletdiv {
@@ -220,4 +239,8 @@ input[type="text"] {
 .bookmarkletdiv a {
   font-size: 30px;
   color: white;
+}
+
+form {
+  width: 100%;
 }

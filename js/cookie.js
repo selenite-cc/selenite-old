@@ -44,18 +44,6 @@ function downloadMainSave() {
   fakeElement.download = "your.selenite.save";
   fakeElement.click();
   URL.revokeObjectURL(dataURL);
-  Toastify({
-    text: "Download successful! Make sure to not lose this download.",
-    duration: 5000,
-    gravity: "top", // `top` or `bottom`
-    position: "center", // `left`, `center` or `right`
-    style: {
-      background: "linear-gradient(var(--bg-1), var(--bg-2))",
-      width: "25%",
-      boxShadow: "0px 0px 5px 5px var(--input-bg-color)",
-    },
-    onClick: function () {}, // Callback after click
-  }).showToast();
 }
 
 // Function to get the main save data from an uploaded file
@@ -65,8 +53,6 @@ function getMainSaveFromUpload(data, key) {
   } else {
     data = CryptoJS.AES.decrypt(data, "egamepass").toString(CryptoJS.enc.Utf8);
   }
-  
-  console.log(data);
   // Parse the decrypted data as JSON
   var mainSave = JSON.parse(atob(data));
   var mainLocalStorageSave = JSON.parse(atob(mainSave.localStorage));
@@ -103,22 +89,10 @@ function uploadMainSave(key) {
       } else {
         getMainSaveFromUpload(e.target.result);
       }
-      
-
-      // Show a success message to the user
-      Toastify({
-        text: "Upload successful!",
-        duration: 3000,
-        gravity: "top", // `top` or `bottom`
-        position: "center", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-          background: "linear-gradient(var(--bg-1), var(--bg-2))",
-          width: "25%",
-          boxShadow: "0px 0px 5px 5px var(--input-bg-color)",
-        },
-        onClick: function () {}, // Callback after click
-      }).showToast();
+      $("#upload").text("Upload Successful!")
+      setTimeout(function() {
+        $("#upload").text("Upload Save")
+      }, 3000)
     };
 
     reader.readAsText(file);

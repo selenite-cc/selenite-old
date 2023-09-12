@@ -62,3 +62,16 @@ function checkAlert() {
     Cookies.set("betaalert", true, { expires: 1 });
   }
 }
+function setPanicMode() {
+  if (!$("#panic").val().startsWith("https")) {
+    document.cookie = "panicurl=https://" + $("#panic").val();
+    return;
+  }
+
+  document.cookie = "panicurl=" + $("#panic").val();
+}
+
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text);
+  alert("Copied text!");
+} 

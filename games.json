@@ -567,5 +567,10 @@
     "name": "Tron",
     "directory": "tron",
     "image": "icon.png"
+  },
+  {
+    "name": "Thirty Dollar Website",
+    "directory": "thirtydollarwebsite",
+    "image": "assets/🗿.png"
   }
 ]

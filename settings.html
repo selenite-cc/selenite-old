@@ -1,89 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- initialize theme vars -->
-    <style>
-      :root {
-        --input-bg-color: #00000000;
-        --main-text-color: #00000000;
-        --p-text-color: #00000000;
-        --border-color: #00000000;
-        --star-color: #00000000;
-        --game-color: #00000000;
-        --bg-1: #00000000;
-        --bg-2: #00000000;
-        --invert-logo: 0;
-      }
-    </style>
+    <!-- initialize theme vars
+    https://coolors.co/10002b-240046-3c096c-5a189a-7b2cbf-9d4edd-c77dff-e0aaff -->
 
     <!-- initialize externals -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3415518411898563" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <style>@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");</style>
+
 
     <!-- initialize my stuff -->
     <script src="/js/themes.js"></script>
     <script src="/js/all.js"></script>
-    <script src="/js/cloak.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/randomquote.js"></script>
     <link rel="stylesheet" href="/style.css" />
 
     <!-- seo + other things -->
-    <title>Selenite</title>
+    <title>Settings | Selenite</title>
     <link rel="icon" href="/favicon.ico" />
-    <meta name="keywords" content="front-end web developer, unblocked, games, google sites, unblocked games mom, ublocked, code, coding, programmer, development, javascript, jquery, bootstrap, sass, less, git, gaming, internet, website, best, site, cool, free games"/>
+    <meta
+      name="keywords"
+      content="front-end web developer, unblocked, games, google sites, unblocked games mom, ublocked, code, coding, programmer, development, javascript, jquery, bootstrap, sass, less, git, gaming, internet, website, best, site, cool, free games"
+    />
     <meta property="og:title" content="Welcome to Selenite." />
     <meta property="og:site_name" content="https://Selenite.pages.dev" />
-    <meta property="og:description" content="Welcome to the one and only option for unblocked games. Welcome to Selenite."/>
-    <meta name="description" content="Welcome to the one and only option for unblocked games. Welcome to Selenite."/>
+    <meta
+      property="og:description"
+      content="Welcome to the one and only option for unblocked games. Welcome to Selenite."
+    />
+    <meta
+      name="description"
+      content="Welcome to the one and only option for unblocked games. Welcome to Selenite."
+    />
     <meta name="author" content="Website Creator" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <script>
-      function setPanicMode() {
-        if (!$("#panic").val().startsWith("https")) {
-          document.cookie = "panicurl=https://" + $("#panic").val();
-          return;
-        }
-
-        document.cookie = "panicurl=" + $("#panic").val();
-        Toastify({
-          text: "Panic mode saved!",
-          duration: 2000,
-          gravity: "top", // `top` or `bottom`
-          position: "center", // `left`, `center` or `right`
-          style: {
-            background: "linear-gradient(42deg, rgba(36, 69, 128, 1) 100%, rgb(24, 17, 87) 0%)",
-          },
-          onClick: function () {}, // Callback after click
-        }).showToast();
-      }
-    </script>
+    <!-- toastify -->
+    <script></script>
   </head>
-  <body style="display: none">
-    <div class="content">
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/bookmarklets.html">Bookmarklets</a></li>
-        <li><a href="https://forms.gle/iBAbXvEDaYTLuEcdA">Suggestions</a></li>
-        <li><a href="/settings.html">Settings</a></li>
-        <li><a href="https://forms.gle/j75WUn6UhdqsRZgf7">Report a Bug</a></li>
-        <li><a href="https://discord.gg/7jyufnwJNf">Discord</a></li>
-        <li><a href="/support.html">Support Selenite!</a></li>
-      </ul>
 
-      <input class="hiddenUpload" type="file" accept=".save" hidden />
+  <body>
+    <header>
+      <a href="/index.html">Home</a>
+      <a href="/bookmarklets.html">Bookmarklets</a>
+      <a href="https://forms.gle/iBAbXvEDaYTLuEcdA">Suggestions</a>
+      <a href="/settings.html">Settings</a>
+      <a href="https://forms.gle/U2oB2KwvJi4wPGF59">Feedback</a>
+      <a href="https://discord.gg/7jyufnwJNf">Discord</a>
+      <a href="/support.html">Support</a>
+    </header>
 
-      <div class="title">
-        <img src="/new.svg" style="width: 4%; padding-right: 1%; filter: invert(var(--invert-logo, 0))" />
-        <h2 style="font-size: 70px">selenite</h2>
-      </div>
-
-      <br />
+    <main>
+      <h1>Settings</h1>
       <form action="javascript:setCloakCookie();">
         <h3 for="webname">Website Name</h3>
         <br />
@@ -106,13 +75,14 @@
         <input type="text" id="panic" name="panic" placeholder="https://google.com" /><br />
         <input id="panic" class="submit" type="submit" value="Set Panic Mode" />
       </form>
-      <div id="footer">
-        <ul>
-          <li><a href="https://github.com/skysthelimitt/Selenite">Source Code</a></li>
-          <li><a id="panicmode">Panic Mode</a></li>
-          <li><a href="/transfer.html">Transfer your data</a></li>
-        </ul>
-      </div>
-    </div>
+    </main>
+
+    <footer>
+      <a href="https://github.com/skysthelimitt/Selenite">Source Code</a>
+      <a id="panicmode">Panic Mode</a>
+      <a href="/transfer.html">Transfer your data</a>
+    </footer>
   </body>
 </html>
+
+

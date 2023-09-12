@@ -143,25 +143,7 @@ function dynamicSort(property) {
 }
 
 function selectRandomGame() {
-  randomgame = Math.floor(Math.random() * gamelist.length - 1);
-  Toastify({
-    text:
-      "You will be redirected to " +
-      gamelist[randomgame].name +
-      " in 3 seconds",
-    duration: 3000,
-    gravity: "top", // `top` or `bottom`
-    position: "center", // `left`, `center` or `right`
-    style: {
-      background: "linear-gradient(var(--bg-1), var(--bg-2))",
-      boxShadow: "0px 0px 5px 5px var(--input-bg-color)",
-      width: "25%",
-    },
-    onClick: function () {}, // Callback after click
-  }).showToast();
-  setTimeout(() => {
-    redirectGame(gamelist[randomgame].directory);
-  }, 3000);
+  redirectGame(gamelist[Math.floor(Math.random() * gamelist.length - 1)].directory);
 }
 
 let viewrecommended = 0;

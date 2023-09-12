@@ -7,18 +7,18 @@
     <!-- initialize externals -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <!-- initialize my stuff -->
     <script src="/js/themes.js"></script>
     <script src="/js/all.js"></script>
     <script src="/js/games.js"></script>
     <script src="/js/search.js"></script>
     <script src="/js/main.js"></script>
-    <script src="/js/randomquote.js"></script>
+    <script src="/js/cookie.js"></script>
     <link rel="stylesheet" href="/style.css" />
 
     <!-- seo + other things -->
-    <title>Selenite</title>
+    <title>Projects | Selenite</title>
     <link rel="icon" href="/favicon.ico" />
     <meta
       name="keywords"
@@ -59,14 +59,12 @@
       <input type="text" id="gamesearch" placeholder="Type here to search.." />
       <div class="samerow">
         <button onclick="downloadMainSave()">Download Save</button>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button onclick="uploadMainSave()">Upload Save</button>
+        <button id="upload" onclick="uploadMainSave()">Upload Save</button>
       </div>
       <div class="samerow">
         <button id="random" onclick="selectRandomGame()">
           Play a random game!
         </button>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <button id="recommend" onclick="recommendedGames()">
           Click to view recommended games!
         </button>
