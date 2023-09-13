@@ -572,5 +572,10 @@
     "name": "Thirty Dollar Website",
     "directory": "thirtydollarwebsite",
     "image": "assets/🗿.png"
+  },
+  {
+    "name": "n-gon",
+    "directory": "ngon",
+    "image": "favicon.ico"
   }
 ]

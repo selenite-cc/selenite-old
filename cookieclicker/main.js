@@ -16029,12 +16029,10 @@ Game.Launch=function()
 		
 		Game.ModMenu=function()
 		{
-			Game.modURL = ["https://klattmose.github.io/CookieClicker/KlattmoseUtilities.js?v=2.16"]
+			Game.modURL = ["mods/CookieMonster.js", "mods/BlackHoleInverter.js"]
 			Game.Prompt('<id ModMenu><h3>'+loc("Select a mod!")+'</h3><div class="block">'+loc("Here are a list of mods built into Selenite's Cookie Clicker. If you're curious about a mod, just look it up.")+'</div>' + 
-			Game.WritePrefButton('mod0','mod',loc("Mod Menu"),loc("Mod Menu"),'Game.LoadMod(Game.modURL[0]);')+'<br>'+
-			Game.WritePrefButton('mod1','mod1',loc("Mod Menu"),loc("Mod Menu"),'Game.ModMenu();')+'<br>'+
-			Game.WritePrefButton('mod2','mod2',loc("Mod Menu"),loc("Mod Menu"),'Game.ModMenu();')+'<br>'+
-			Game.WritePrefButton('mod3','mod3',loc("Mod Menu"),loc("Mod Menu"),'Game.ModMenu();')+'<br>'
+			Game.WritePrefButton('mod0','mod0',loc("Cookie Monster"),loc("Cookie Monster"),'Game.LoadMod(Game.modURL[0]);')+'<label>('+loc("Displays very useful data about your game")+')</label><br>'+'<br>'+
+			Game.WritePrefButton('mod1','mod1',loc("Black Hole Inverter"),loc("Black Hole Inverter"),'Game.LoadMod(Game.modURL[1]);')+'<label>('+loc("New building and achievements")+')</label><br>'+'<br>'
 		,[loc("All done!")
 		]);//prompt('Copy this text and keep it somewhere safe!',Game.WriteSave(1));
 		}
