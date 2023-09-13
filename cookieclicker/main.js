@@ -6621,6 +6621,8 @@ Game.Launch=function()
 							'<br>'+
 							(App?Game.WritePrefButton('bgMusic','bgMusicButton',loc("Music in background")+ON,loc("Music in background")+OFF,'')+'<label>('+loc("music will keep playing even when the game window isn't focused")+')</label><br>':'')+
 							(App?Game.WritePrefButton('fullscreen','fullscreenButton',loc("Fullscreen")+ON,loc("Fullscreen")+OFF,'Game.ToggleFullscreen();')+'<br>':'')+
+							Game.WritePrefButton('cheat','cheatToggle',loc("Cheat menu")+ON,loc("Cheat menu")+OFF,'Game.OpenSesame();')+'<label>('+loc("enable the cheat menu that you usually get by adding saysopensesame to your name, only way to turn it off is by refreshing :D")+')</label><br>'+
+							Game.WritePrefButton('mod','modMenu',loc("Mod Menu"),loc("Mod Menu"),'Game.ModMenu();')+'<label>('+loc("wip, will be a menu to add a bunch of mods")+')</label><br>'+
 							Game.WritePrefButton('fancy','fancyButton',loc("Fancy graphics")+ON,loc("Fancy graphics")+OFF,'Game.ToggleFancy();')+'<label>('+loc("visual improvements; disabling may improve performance")+')</label><br>'+
 							Game.WritePrefButton('filters','filtersButton',loc("CSS filters")+ON,loc("CSS filters")+OFF,'Game.ToggleFilters();')+'<label>('+(EN?'cutting-edge visual improvements; disabling may improve performance':loc("visual improvements; disabling may improve performance"))+')</label><br>'+
 							Game.WritePrefButton('particles','particlesButton',loc("Particles")+ON,loc("Particles")+OFF)+(EN?'<label>(cookies falling down, etc; disabling may improve performance)</label>':'')+'<br>'+
@@ -16025,7 +16027,17 @@ Game.Launch=function()
 			Game.Achievements['Cheated cookies taste awful'].won=1;
 		}
 		
-		
+		Game.ModMenu=function()
+		{
+			Game.modURL = ["https://klattmose.github.io/CookieClicker/KlattmoseUtilities.js?v=2.16"]
+			Game.Prompt('<id ModMenu><h3>'+loc("Select a mod!")+'</h3><div class="block">'+loc("Here are a list of mods built into Selenite's Cookie Clicker. If you're curious about a mod, just look it up.")+'</div>' + 
+			Game.WritePrefButton('mod0','mod',loc("Mod Menu"),loc("Mod Menu"),'Game.LoadMod(Game.modURL[0]);')+'<br>'+
+			Game.WritePrefButton('mod1','mod1',loc("Mod Menu"),loc("Mod Menu"),'Game.ModMenu();')+'<br>'+
+			Game.WritePrefButton('mod2','mod2',loc("Mod Menu"),loc("Mod Menu"),'Game.ModMenu();')+'<br>'+
+			Game.WritePrefButton('mod3','mod3',loc("Mod Menu"),loc("Mod Menu"),'Game.ModMenu();')+'<br>'
+		,[loc("All done!")
+		]);//prompt('Copy this text and keep it somewhere safe!',Game.WriteSave(1));
+		}
 		Game.loadAscendCalibrator=function()
 		{
 			Game.loadAscendCalibrator=0;
