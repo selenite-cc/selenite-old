@@ -1,0 +1,22 @@
+body[theme=main] {
+    --inputbg: #3c096c;
+    --inputborder: #5a189a;
+    --uibg: #240046;
+    --textcolor: #fff;
+    --bg: #10002b;
+}
+
+body[theme=testing] {
+    --inputbg: #ffffff;
+    --inputborder: #312341;
+    --uibg: #abcdef;
+    --textcolor: #fff;
+    --bg: #545555;
+}
+body[theme=egamepass] {
+    --inputbg: #ffffff;
+    --inputborder: #312341;
+    --uibg: #abcdef;
+    --textcolor: #fff;
+    --bg: #545555;
+}

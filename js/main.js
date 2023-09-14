@@ -20,6 +20,11 @@ function check() {
 }
 
 window.onload = function () {
+  if (localStorage.getItem("theme")) {
+    document.body.setAttribute("theme", localStorage.getItem("theme"))
+  } else {
+    document.body.setAttribute("theme", "main")
+  }
   checkAlert();
   interval = setInterval(check, 50);
 };
@@ -57,7 +62,7 @@ window.addEventListener(
 function checkAlert() {
   if (!Cookies.get("betaalert")) {
     alert(
-      "PLEASE READ.\nThank you for beta testing the new ui! Send feedback at the feedback link in the header. Any issues? Suggestions? Don't use the suggestions form. Please. Just use the Feedback form. It's made specifically for the beta. DM '@skysthelimit.dev' on discord if you need to say something immediately. Also DM me on discord if you beta tested, might give something a little special, like a private site link?\nThank you for supporting Selenite. Any and all feedback is greatly appreciated."
+      "PLEASE READ.\nYour data from the main page will NOT transfer unless you use the Download and Upload Save feature.\nThank you for beta testing the new ui! Send feedback at the feedback link in the header. Don't use the suggestions form. DM '@skysthelimit.dev' on discord if you need to say something immediately. Also DM me on discord if you beta tested, might give something a little special to y'all.\nThank you for supporting Selenite. Any and all feedback is greatly appreciated."
       );
     Cookies.set("betaalert", true, { expires: 1 });
   }
@@ -74,4 +79,9 @@ function setPanicMode() {
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text);
   alert("Copied text!");
-} 
+}
+
+function setTheme(theme) {
+  localStorage.setItem('theme', theme);
+  document.body.setAttribute("theme", theme);
+}

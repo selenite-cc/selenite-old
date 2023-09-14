@@ -7,6 +7,7 @@
     opacity: 100;
   }
 }
+
 * {
   outline: none;
   border: none;
@@ -19,13 +20,13 @@ body {
   font-family: "Baloo Da 2", cursive;
   margin: 0;
   padding: 0;
-  background-color: #10002b;
-  color: #fff;
+  background-color: var(--bg);
+  color: var(--textcolor);
 }
 header,
 footer {
-  background-color: #240046;
-  color: #fff;
+  background-color: var(--uibg);
+  color: var(--textcolor);
   display: flex;
   padding: 0.7rem;
   width: 100%;
@@ -35,7 +36,7 @@ footer {
 header {
   top: 0;
   position: fixed;
-  box-shadow: 0 5px 10px #240046;
+  box-shadow: 0 5px 10px var(--uibg);
 }
 footer.noscroll {
   position: fixed;
@@ -43,7 +44,7 @@ footer.noscroll {
 }
 footer {
   bottom: 0;
-  box-shadow: 0 -5px 10px #240046;
+  box-shadow: 0 -5px 10px var(--uibg);
 }
 footer a,
 footer a:visited,
@@ -51,7 +52,7 @@ header a,
 header a:visited {
   text-align: center;
   font-weight: 700;
-  color: #fff;
+  color: var(--textcolor);
   text-decoration: none;
   margin-right: 2rem;
   margin-left: 1rem;
@@ -60,7 +61,7 @@ header a:visited {
 
 footer a:hover,
 header a:hover {
-  text-shadow: 2px 2px 6px white;
+  text-shadow: 2px 2px 6px var(--textcolor);
 }
 main {
   animation: 1.25s ease-in-out 0s 1 loadInAnimation;
@@ -105,18 +106,18 @@ h3 {
 }
 p, a {
   font-size: 16px;
-  color: white;
+  color: var(--textcolor);
 }
 
 button, input#websubmit.submit, input[type=submit]#panic {
   cursor: pointer;
-  background-color: #5a189a;
-  border-color: #3c096c;
+  background-color: var(--inputbg);
+  border-color: var(--inputborder);
   border-width: 5px;
   border-radius: 10px;
   border-style: solid;
   padding: 10px;
-  color: white;
+  color: var(--textcolor);
   margin-left: 20px;
   margin-right: 20px;
   transition-duration: 0.5s;
@@ -124,8 +125,7 @@ button, input#websubmit.submit, input[type=submit]#panic {
 }
 
 button:hover, input#websubmit.submit:hover, input[type=submit]#panic:hover {
-  border-color: #240046;
-  background-color: #3c096c;
+  filter: brightness(80%);
   transform: scale(1.07);
 }
 
@@ -156,16 +156,16 @@ img {
   width: 15%;
   border-radius: 20px;
   display: inline-block;
-  background-color: #240046;
+  background-color: var(--uibg);
   margin: 15px;
   cursor: pointer;
-  box-shadow: 0px 0px 5px 5px #240046;
+  box-shadow: 0px 0px 5px 5px var(--uibg);
 }
 
 .game:hover {
   transform: scale(1.1);
-  background-color: #2f005a;
-  box-shadow: 0px 0px 5px 5px #2f005a;
+  filter: brightness(85%);
+  box-shadow: 0px 0px 5px 5px var(--uibg);
 }
 
 .game h1 {
@@ -207,8 +207,8 @@ a {
 
 input[type="text"] {
   width: 50%;
-  background-color: #3c096c;
-  color: white;
+  background-color: var(--inputbg);
+  color: var(--textcolor);
   box-sizing: border-box;
   font-size: 20px;
   padding: 0.8% 0.8%;
@@ -216,20 +216,20 @@ input[type="text"] {
   border-radius: 5px;
   outline: none;
   margin: 10px;
-  border: 2px solid #5a189a;
+  border: 2px solid var(--inputborder);
   border-radius: 5px;
   transition: opacity 0.25s ease-in-out;
-  opacity: 70%;
+  opacity: 100%;
   transition-duration: 0.5s;
 }
 input[type=text]:hover {
-  opacity: 100%;
+  opacity: 80%;
 }
 
 .bookmarkletdiv {
   width: 30%;
-  background-color: #240046;
-  box-shadow: 0px 0px 5px 5px #240046;
+  background-color: var(--uibg);
+  box-shadow: 0px 0px 5px 5px var(--uibg);
   padding: 5px;
   margin: 15px;
   border-radius: 10px;
@@ -238,7 +238,7 @@ input[type=text]:hover {
 
 .bookmarkletdiv a {
   font-size: 30px;
-  color: white;
+  color: var(--textcolor);
 }
 
 form {
