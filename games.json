@@ -577,5 +577,10 @@
     "name": "n-gon",
     "directory": "ngon",
     "image": "favicon.ico"
+  },
+  {
+    "name": "Subway Surfers",
+    "directory": "subway-surfers-ny",
+    "image": "NewYorkIcon.png"
   }
 ]
