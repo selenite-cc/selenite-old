@@ -9,6 +9,7 @@
 }
 
 * {
+  transition-duration: 0.5s;
   outline: none;
   border: none;
   box-sizing: border-box;
@@ -56,7 +57,6 @@ header a:visited {
   text-decoration: none;
   margin-right: 2rem;
   margin-left: 1rem;
-  transition-duration: 0.5s;
 }
 
 footer a:hover,
@@ -120,7 +120,6 @@ button, input#websubmit.submit, input[type=submit]#panic {
   color: var(--textcolor);
   margin-left: 20px;
   margin-right: 20px;
-  transition-duration: 0.5s;
   margin: 10px;
 }
 
@@ -152,7 +151,6 @@ img {
 }
 
 .game {
-  transition-duration: 0.5s;
   width: 15%;
   border-radius: 20px;
   display: inline-block;
@@ -220,7 +218,6 @@ input[type="text"] {
   border-radius: 5px;
   transition: opacity 0.25s ease-in-out;
   opacity: 100%;
-  transition-duration: 0.5s;
 }
 input[type=text]:hover {
   opacity: 80%;
@@ -243,4 +240,7 @@ input[type=text]:hover {
 
 form {
   width: 100%;
+}
+.samerow.themebtns {
+  width: 70%;
 }

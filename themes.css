@@ -1,3 +1,10 @@
+body {
+    --inputbg: #000000;
+    --inputborder: #000000;
+    --uibg: #000000;
+    --textcolor: #000;
+    --bg: #000000;
+}
 body[theme=main] {
     --inputbg: #3c096c;
     --inputborder: #5a189a;
@@ -5,18 +12,31 @@ body[theme=main] {
     --textcolor: #fff;
     --bg: #10002b;
 }
-
-body[theme=testing] {
-    --inputbg: #ffffff;
-    --inputborder: #312341;
-    --uibg: #abcdef;
+body[theme=light] {
+    --inputbg: #bbbbbb;
+    --inputborder: #e6e6e6;
+    --uibg: #b3b3b3;
+    --textcolor: #1a1a1a;
+    --bg: #c5c5c5;
+}
+body[theme=dark] {
+    --inputbg: #333333;
+    --inputborder: #444444;
+    --uibg: #242424;
     --textcolor: #fff;
-    --bg: #545555;
+    --bg: #0c0c0c;
 }
 body[theme=egamepass] {
-    --inputbg: #ffffff;
-    --inputborder: #312341;
-    --uibg: #abcdef;
-    --textcolor: #fff;
-    --bg: #545555;
+    --inputbg: #4f6ed1;
+    --inputborder: #5586e0;
+    --uibg: #185494;
+    --textcolor: #a7d3ff;
+    --bg: #16416f;
+}
+body[theme=cools1te] {
+    --inputbg: #a134dc;
+    --inputborder: #b153e3;
+    --uibg: #ab28cf;
+    --textcolor: #d3a4fa;
+    --bg: #8e14af;
 }

@@ -13,9 +13,9 @@
     <script src="/js/themes.js"></script>
     <script src="/js/all.js"></script>
     <script src="/js/main.js"></script>
-    <script src="/js/randomquote.js"></script>
-    <link rel="stylesheet" href="/style.css" />
 <link rel="stylesheet" href="/themes.css" />
+<link rel="stylesheet" href="/style.css" />
+
 
     <!-- seo + other things -->
     <title>Settings | Selenite</title>
@@ -64,10 +64,13 @@
       <button onclick="javascript:clearCloak();">Clear your current tab cloak</button>
       <br />
       <h3>Themes</h3>
-      <button onclick="setTheme('main')" style="background-color: #3c096c; color: #fff; border: 2px solid #5a189a">Selenite</button>
-      <button onclick="setTheme('light')" style="background-color: #aaaaaa; color: #dddddd; border: 2px solid #999999">Selenite - Blinding Edition</button>
-      <button onclick="setTheme('egamepass')" style="background-color: #596eb1; color: #95baf1; border: 2px solid #5586e0">e-gamepass</button>
-      <button onclick="setTheme('cools1te')" style="background-color: #596eb1; color: #95baf1; border: 2px solid #5586e0">cools1te</button>
+      <div class="samerow themebtns">
+        <button onclick="setTheme('main')" style="background-color: #3c096c; color: #fff; border: 5px solid #5a189a">Selenite</button>
+        <button onclick="setTheme('light')" style="background-color: #bbbbbb; color: #1a1a1a; border: 5px solid #e6e6e6">Selenite - Light Mode</button>
+        <button onclick="setTheme('dark')" style="background-color: #333333; color: #fff; border: 5px solid #444444">Selenite - Dark Mode</button>
+        <button onclick="setTheme('egamepass')" style="background-color: #596eb1; color: #cbe0ff; border: 5px solid #5586e0">e-gamepass</button>
+        <button onclick="setTheme('cools1te')" style="background-color: #a134dc; color: #d3a4fa; border: 5px solid #b153e3">cools1te</button>
+      </div>
       <br />
       <form action="javascript:setPanicMode();">
         <h3 for="panic">Website URL</h3>

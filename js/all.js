@@ -67,6 +67,7 @@ function panicMode() {
     }
   });
 }
+
 const head = document.getElementsByTagName('head')[0];
 window.onload = function() {
   setCloak();
