@@ -16,9 +16,9 @@
   align-content: center;
   text-align: center;
   font-family: "Baloo Da 2", cursive;
+  color: var(--textcolor);
 }
 body {
-  font-family: "Baloo Da 2", cursive;
   margin: 0;
   padding: 0;
   background-color: var(--bg);
@@ -27,7 +27,6 @@ body {
 header,
 footer {
   background-color: var(--uibg);
-  color: var(--textcolor);
   display: flex;
   padding: 0.7rem;
   width: 100%;
@@ -53,7 +52,6 @@ header a,
 header a:visited {
   text-align: center;
   font-weight: 700;
-  color: var(--textcolor);
   text-decoration: none;
   margin-right: 2rem;
   margin-left: 1rem;
@@ -106,7 +104,6 @@ h3 {
 }
 p, a {
   font-size: 16px;
-  color: var(--textcolor);
 }
 
 button, input#websubmit.submit, input[type=submit]#panic {
@@ -117,7 +114,6 @@ button, input#websubmit.submit, input[type=submit]#panic {
   border-radius: 10px;
   border-style: solid;
   padding: 10px;
-  color: var(--textcolor);
   margin-left: 20px;
   margin-right: 20px;
   margin: 10px;
@@ -206,7 +202,6 @@ a {
 input[type="text"] {
   width: 50%;
   background-color: var(--inputbg);
-  color: var(--textcolor);
   box-sizing: border-box;
   font-size: 20px;
   padding: 0.8% 0.8%;
@@ -235,7 +230,6 @@ input[type=text]:hover {
 
 .bookmarkletdiv a {
   font-size: 30px;
-  color: var(--textcolor);
 }
 
 form {
