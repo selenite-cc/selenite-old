@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
 @keyframes loadInAnimation {
   0% {
     opacity: 0;
@@ -15,7 +15,7 @@
   box-sizing: border-box;
   align-content: center;
   text-align: center;
-  font-family: "Baloo Da 2", cursive;
+  font-family: 'Prompt', sans-serif;
   color: var(--textcolor);
 }
 body {
