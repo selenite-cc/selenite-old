@@ -582,10 +582,5 @@
     "name": "Subway Surfers",
     "directory": "subway-surfers-ny",
     "image": "NewYorkIcon.png"
-  },
-  {
-    "name": "Celeste Mods",
-    "directory": "celestemods",
-    "image": "icon.png"
   }
 ]
