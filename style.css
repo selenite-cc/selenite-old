@@ -113,7 +113,7 @@ button, input#websubmit.submit, input[type=submit]#panic {
   border-width: 5px;
   border-radius: 10px;
   border-style: solid;
-  padding: 10px;
+  padding: 7px;
   margin-left: 20px;
   margin-right: 20px;
   margin: 10px;
@@ -237,4 +237,15 @@ form {
 }
 .samerow.themebtns {
   width: 70%;
+}
+
+select {
+  border-radius: 5px;
+  background-color: var(--inputbg);
+  border-color: var(--inputborder);
+  border-width: 5px;
+  border-radius: 10px;
+  border-style: solid;
+  padding: 0.5% 0.5%;
+  margin: 0.25%;
 }

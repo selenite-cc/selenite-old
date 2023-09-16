@@ -13,6 +13,7 @@
     <script src="/js/themes.js"></script>
     <script src="/js/all.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/cloaks.js"></script>
 <link rel="stylesheet" href="/themes.css" />
 <link rel="stylesheet" href="/style.css" />
 
@@ -53,12 +54,18 @@
     <main>
       <h1>Settings</h1>
       <form action="javascript:setCloakCookie();">
-        <h3 for="webname">Website Name</h3>
-        <br />
+        <h3>Website Name</h3>
         <input type="text" id="webname" name="webname" placeholder="Selenite" /><br />
-        <h3 for="webicon">Website Icon</h3>
-        <br />
-        <input type="text" id="webicon" name="webicon" placeholder="https://selenite.pages.dev/" /><br /><br />
+        <h3>Website Icon</h3>
+        <input type="text" id="webicon" name="webicon" placeholder="https://selenite.pages.dev/" /><br />
+        <h3>Or select a preset:</h3>
+        <select id="presetCloaks">
+          <option value="google">Google</option>
+          <option value="canvas">Canvas</option>
+          <option value="desmos">Desmos</option>
+          <option value="drive">Google Drive</option>
+          <option value="classroom">Google Classroom</option>
+        </select><br />
         <input id="websubmit" class="submit" type="submit" value="Set Tab Cloak" />
       </form>
       <button onclick="javascript:clearCloak();">Clear your current tab cloak</button>
@@ -74,7 +81,6 @@
       <br />
       <form action="javascript:setPanicMode();">
         <h3 for="panic">Website URL</h3>
-        <br />
         <input type="text" id="panic" name="panic" placeholder="https://google.com" /><br />
         <input id="panic" class="submit" type="submit" value="Set Panic Mode" />
       </form>

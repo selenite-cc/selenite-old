@@ -1,0 +1,17 @@
+{
+    "google": [
+        "Google", "https://google.com/favicon.ico"
+    ],
+    "canvas": [
+        "Dashboard", "https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico"
+    ],
+    "desmos": [
+        "Desmos | Graphing Calculator", "https://www.desmos.com/assets/img/apps/graphing/favicon.ico"
+    ],
+    "drive": [
+        "My Drive - Google Drive", "https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png"
+    ],
+    "classroom": [
+        "Home", "https://ssl.gstatic.com/classroom/ic_product_classroom_144.png"
+    ]
+}
