@@ -15,21 +15,20 @@ function check() {
 
 window.onload = function () {
   if (localStorage.getItem("theme")) {
-    document.body.setAttribute("theme", localStorage.getItem("theme"))
+    document.body.setAttribute("theme", localStorage.getItem("theme"));
   } else {
-    document.body.setAttribute("theme", "main")
+    document.body.setAttribute("theme", "main");
   }
-  loadCloaks();
   checkAlert();
   check();
 };
 
 function checkAlert() {
-  if (!Cookies.get("betaalert")) {
+  if (!Cookies.get("supportalert")) {
     alert(
-      "PLEASE READ.\nYour data from the main page will NOT transfer unless you use the Download and Upload Save feature.\nWanna add a quote? Go to the feedback form.\nThank you for beta testing the new ui! Send feedback at the feedback link in the header. Don't use the suggestions form. DM '@skysthelimit.dev' on discord if you need to say something immediately. Also DM me on discord if you beta tested, might give something a little special to y'all.\nThank you for supporting Selenite. Any and all feedback is greatly appreciated."
-      );
-    Cookies.set("betaalert", true, { expires: 1 });
+      'Welcome to Selenite!\nTransferring from another website? Add "/transfer" to the end of the URL to see how to transfer your game data!\nI\'m a single developer that works on this website, so I would appreciate your support! You can pay on Patreon by clicking the "Support" button, which will have private links for all subscribers to use!\nPlease share this website with anyone you know, so this website can expand even more!\nGo to bookmarklets and then add "Selenite Minified" to your bookmarks :) \nJoin the Discord for the latest updates and newest links!\nI don\'t want to be annoying, so you won\'t see this message for another month (at least on this website) :)'
+    );
+    Cookies.set("supportalert", true, { expires: 31 });
   }
 }
 function setPanicMode() {
@@ -47,7 +46,7 @@ function copyToClipboard(text) {
 }
 
 function setTheme(theme) {
-  localStorage.setItem('theme', theme);
+  localStorage.setItem("theme", theme);
   document.body.setAttribute("theme", theme);
 }
 function setPanicMode() {

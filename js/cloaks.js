@@ -46,3 +46,6 @@ function loadCloaks() {
     );
   };
 }
+window.onload = function () {
+  loadCloaks();
+}
