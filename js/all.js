@@ -67,12 +67,12 @@ function panicMode() {
     }
   });
 }
+
 const head = document.getElementsByTagName('head')[0];
 window.onload = function() {
   setCloak();
-    var jquery = document.createElement('script');
-    jquery.type = 'text/javascript';
-    jquery.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js';
+  var jquery = document.createElement('script');
+  jquery.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js';
   const gscript = document.createElement("script");
   gscript.setAttribute("async", "");
   gscript.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=G-XVTVBR1D5V");
@@ -94,6 +94,5 @@ function defer(method) {
     panicMode();
   } else {
     setTimeout(function() { defer(method) }, 50);
-    console.log("jquery not found, adding jquery.");
   }
 }

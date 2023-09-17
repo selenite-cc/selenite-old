@@ -1,249 +1,251 @@
-html {
-  text-align: center;
-  align-content: center;
-  font-family: "Share Tech Mono", monospace;
-  padding: 0;
-  margin: 0;
-}
-.content {
-  animation: fadeIn 5s;
-  width: 90%;
-  margin: 0 auto;
-}
-* {
-  z-index: 1;
-}
-button {
-  background-color: var(--input-bg-color);
-  color: var(--main-text-color);
-  border: 2px solid var(--border-color);
-  border-radius: 6px;
-  padding: 5px 13px;
-  margin-bottom: 6px;
-  margin: 10px;
-  transition-duration: 0.45s;
-  font-size: 20px;
-  color: var(--main-text-color);
-  font-family: "Share Tech Mono", monospace;
-  text-underline-position: under;
-  opacity: 70%;
-}
-button:hover {
-  cursor: pointer;
-  opacity: 90%;
-}
-
-h2 {
-  font-size: 42px;
-  color: var(--main-text-color);
-  margin-top: 3%;
-}
-
-.game {
-  width: 13%;
-  display: inline-block;
-  background-color: var(--game-color);
-  padding: 1%;
-  border-radius: 10%;
-  margin: 2%;
-  transition-duration: 0.5s;
-  box-shadow: 0px 0px 5px 5px var(--game-color);
-  height: 100%;
-}
-
-.game:hover {
-  transform: scale(1.05);
-  filter: brightness(120%);
-}
-
-.game h1 {
-  float: right;
-  font-size: 0.85em;
-  color: var(--main-text-color);
-}
-.game img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10%;
-  aspect-ratio: 1/1;
-}
-
-a {
-  font-size: 20px;
-  color: var(--main-text-color);
-  margin: 10px;
-  transition-duration: 0.5s;
-}
-
-a:hover {
-  filter: brightness(150%);
-}
-
-.bookmarklet {
-  font-size: 25px;
-}
-
-.title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@keyframes fadeIn {
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+@keyframes loadInAnimation {
   0% {
     opacity: 0;
-  }
-  20% {
-    opacity: 40;
-  }
-  80% {
-    opacity: 90;
-  }
-  90% {
-    opacity: 92;
   }
   100% {
     opacity: 100;
   }
 }
 
-@keyframes fadeInPadding {
-  0% {
-    padding-left: 0%;
-    padding-right: 0%;
-  }
-  100% {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-}
-
-body {
-  background: repeating-linear-gradient(
-    45deg,
-    var(--bg-1) 0%,
-    var(--bg-2) 33%,
-    var(--bg-1) 66%,
-    var(--bg-2) 100%
-  );
-  background-size: 400% 400%;
-  background-attachment: fixed;
-  animation: gradient 30s linear infinite;
-  height: 100vh;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 100% 0%;
-  }
-  100% {
-    background-position: 15% 100%;
-  }
-}
-
-input[type="text"] {
-  width: 50%;
-  box-sizing: border-box;
-  font-size: 20px;
-  background-color: var(--input-bg-color);
-  padding: 0.8% 0.8%;
-  text-align: center;
-  color: var(--main-text-color);
-  border: 2px solid var(--border-color);
-  border-radius: 5px;
+* {
+  transition-duration: 0.5s;
   outline: none;
-  opacity: 70%;
-  transition: opacity 0.25s ease-in-out;
-  font-family: "Share Tech Mono", monospace;
+  border: none;
+  box-sizing: border-box;
+  align-content: center;
+  text-align: center;
+  font-family: 'Prompt', sans-serif;
+  color: var(--textcolor);
 }
-input[type="text"]:hover {
-  opacity: 80%;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--textcolor);
 }
-input[type="text"]:focus {
-  opacity: 100%;
+header,
+footer {
+  background-color: var(--uibg);
+  display: flex;
+  padding: 0.7rem;
+  width: 100%;
+  z-index: 1;
+  justify-content: center;
+}
+header {
+  top: 0;
+  position: fixed;
+  box-shadow: 0 5px 10px var(--uibg);
+}
+footer.noscroll {
+  position: fixed;
+  overflow: hidden;
+}
+footer {
+  bottom: 0;
+  box-shadow: 0 -5px 10px var(--uibg);
+}
+footer a,
+footer a:visited,
+header a,
+header a:visited {
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: 2rem;
+  margin-left: 1rem;
 }
 
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: var(--main-text-color);
-  opacity: 0.6; /* Firefox */
+footer a:hover,
+header a:hover {
+  text-shadow: 2px 2px 6px var(--textcolor);
+}
+main {
+  animation: 1.25s ease-in-out 0s 1 loadInAnimation;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  min-height: calc(100vh - (2 * 0.7rem));
+  gap: 0;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 4rem;
+  width: 90%;
+}
+main#main.noscroll {
+  justify-content: center;
 }
 
-ul {
-  list-style-type: none;
+h1,
+h2,
+h3,
+p,
+a {
+  margin: 0;
   padding: 0;
 }
 
-li {
-  display: inline;
-  padding: 8px;
-  top: 10px;
+.samerow {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+h1 {
+  font-size: 60px;
 }
 
-#footer {
-  font-size: 10px;
+h2 {
+  font-size: 40px;
 }
-
-p {
-  font-size: 20px;
-  color: var(--p-text-color);
-}
-
-#webname #webicon {
-  width: 20%;
-  box-sizing: border-box;
-  font-size: 20px;
-  background-color: var(--input-bg-color);
-  padding: 0.8% 0.8%;
-  text-align: center;
-  color: var(--main-text-color);
-  border: 2px solid var(--border-color);
-  border-radius: 5px;
-  outline: none;
-  opacity: 70%;
-  transition: opacity 0.25s ease-in-out;
-  font-family: "Share Tech Mono", monospace;
-}
-
 h3 {
   font-size: 20px;
-  color: var(--main-text-color);
+}
+p, a {
+  font-size: 16px;
 }
 
-.submit {
-  background-color: var(--input-bg-color);
-  color: var(--main-text-color);
-  border: 2px solid var(--border-color);
-  border-radius: 6px;
-  padding: 5px 13px;
-  margin-bottom: 6px;
-  margin: 10px;
-  transition-duration: 0.45s;
-  font-size: 20px;
-  color: var(--main-text-color);
-  font-family: "Share Tech Mono", monospace;
-  text-underline-position: under;
-  opacity: 70%;
-}
-.submit:hover {
+button, input#websubmit.submit, input[type=submit]#panic {
   cursor: pointer;
-  opacity: 90%;
+  background-color: var(--inputbg);
+  border-color: var(--inputborder);
+  border-width: 5px;
+  border-radius: 10px;
+  border-style: solid;
+  padding: 7px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin: 10px;
+}
+
+button:hover, input#websubmit.submit:hover, input[type=submit]#panic:hover {
+  filter: brightness(80%);
+  transform: scale(1.07);
+}
+
+img {
+  width: 100%;
+  aspect-ratio: auto;
+  user-select: none;
+}
+
+.img-container a {
+  width: 100%;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  flex-wrap: wrap;
+  width: 6%;
+  aspect-ratio: 1 / 1;
+  margin: 2%;
+}
+
+.game {
+  width: 15%;
+  border-radius: 20px;
+  display: inline-block;
+  background-color: var(--uibg);
+  margin: 15px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 5px var(--uibg);
+}
+
+.game:hover {
+  transform: scale(1.1);
+  filter: brightness(85%);
+  box-shadow: 0px 0px 5px 5px var(--uibg);
+}
+
+.game h1 {
+  font-size: 13px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.game img {
+  width: 100%;
+  border-radius: 20px;
+  aspect-ratio: 1 / 1;
 }
 
 img.star {
   float: left;
-  filter: invert(var(--invert-logo, 0));
-  width: 20%;
-  transition-duration: 0.75s;
+  width: 10%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 10px;
 }
 
-#random {
-  padding: 0.8% 0.8%;
+#noscroll {
+  overflow-y: hidden;
+  justify-content: center;
 }
-#particles-js {
-  position: fixed;
+
+#games,
+#pinned {
   width: 100%;
-  height: 100%;
-  background-position: 50% 50%;
-  z-index: -127321;
+  justify-content: center;
+}
+
+a {
+  font-size: 16px;
+}
+
+input[type="text"] {
+  width: 50%;
+  background-color: var(--inputbg);
+  box-sizing: border-box;
+  font-size: 20px;
+  padding: 0.8% 0.8%;
+  text-align: center;
+  border-radius: 5px;
+  outline: none;
+  margin: 10px;
+  border: 2px solid var(--inputborder);
+  border-radius: 5px;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 100%;
+}
+input[type=text]:hover {
+  opacity: 80%;
+}
+
+.bookmarkletdiv {
+  width: 30%;
+  background-color: var(--uibg);
+  box-shadow: 0px 0px 5px 5px var(--uibg);
+  padding: 5px;
+  margin: 15px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.bookmarkletdiv a {
+  font-size: 30px;
+}
+
+form {
+  width: 100%;
+}
+.samerow.themebtns {
+  width: 70%;
+}
+
+select {
+  border-radius: 5px;
+  background-color: var(--inputbg);
+  border-color: var(--inputborder);
+  border-width: 5px;
+  border-radius: 10px;
+  border-style: solid;
+  padding: 0.5% 0.5%;
+  margin: 0.25%;
 }
