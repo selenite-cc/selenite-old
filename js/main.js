@@ -24,36 +24,6 @@ window.onload = function () {
   check();
 };
 
-window.addEventListener(
-  "error",
-  function (event) {
-    if (event.target instanceof HTMLImageElement) {
-      alert(
-        "Error: Image failed to load." +
-          "\nFull Image URL: " +
-          event.target.src +
-          '\nClick FEEDBACK. This is a beta build of Selenite.'
-      );
-      event.target.src = "/favicon.png";
-    } else {
-      alert(
-        "Error: " +
-          event.message +
-          "\nScript: " +
-          event.filename +
-          "\nLine: " +
-          event.lineno +
-          "\nColumn: " +
-          event.colno +
-          "\nStackTrace: " +
-          event.error +
-          '\nClick FEEDBACK. This is a beta build of Selenite.'
-      );
-    }
-  },
-  true
-);
-
 function checkAlert() {
   if (!Cookies.get("betaalert")) {
     alert(
