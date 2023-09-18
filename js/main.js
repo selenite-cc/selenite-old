@@ -13,7 +13,7 @@ function check() {
   }
 }
 
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function() {
   if (localStorage.getItem("theme")) {
     document.body.setAttribute("theme", localStorage.getItem("theme"));
   } else {
@@ -21,7 +21,7 @@ window.onload = function () {
   }
   checkAlert();
   check();
-};
+});
 
 function checkAlert() {
   if (!Cookies.get("supportalert")) {

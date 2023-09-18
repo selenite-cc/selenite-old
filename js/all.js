@@ -69,7 +69,7 @@ function panicMode() {
 }
 
 const head = document.getElementsByTagName('head')[0];
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
   setCloak();
   var jquery = document.createElement('script');
   jquery.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js';
@@ -82,7 +82,7 @@ window.onload = function() {
         gtag('js', new Date());
         gtag('config', 'G-98DP5VKS42');`;
   document.head.append(gscript, ingscript, jquery);
-}
+}, false);
 
 defer(function () {
   panicMode();

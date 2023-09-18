@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+      let url;
+      getCDN();
+      async function getCDN() {
+        $.getJSON(
+          "https://raw.githubusercontent.com/skysthelimitt/selenite-optimized/main/links.json",
+          async function (data) {
+            cdnurls = data["urls"];
+            for (let i = 0; i < cdnurls.length; i++) {
+              var check = await fetch(cdnurls[i] + "/README.md");
+              var checktext = await check.text();
+              if (checktext.startsWith("## Selenite")) {
+                console.log("CDN Found: " + cdnurls[i]);
+                url = cdnurls[i];
+                createBlank();
+                break;
+              } else {
+                console.log("CDN Blocked: " + cdnurls[i]);
+              }
+            }
+            if (!url) {
+              alert(
+                "looks like none of the cdns are available, please check again later."
+              );
+            }
+          }
+        );
+      }
+      function createBlank() {
+        win = window.open();
+        win.document.body.style.margin = "0";
+        win.document.body.style.height = "100vh";
+        var iframe = win.document.createElement("iframe");
+        iframe.style.border = "none";
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.margin = "0";
+        iframe.referrerpolicy = "no-referrer";
+        iframe.allow = "fullscreen";
+        iframe.src = url;
+        win.document.body.appendChild(iframe);
+      }
+    </script>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        text-align: center;
+        align-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>looking for url..</h1>
+  </body>
+</html>
