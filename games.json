@@ -582,5 +582,15 @@
     "name": "Subway Surfers",
     "directory": "subway-surfers-ny",
     "image": "NewYorkIcon.png"
+  },
+  {
+    "name": "Madalin Cars",
+    "directory": "madalincars",
+    "image": "icon.png"
+  },
+  {
+    "name": "Run 3",
+    "directory": "run3",
+    "image": "icon.jpeg"
   }
 ]

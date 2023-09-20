@@ -42,21 +42,23 @@ function getCookie(cname) {
   }
   return "";
 }
-
+let listofchars;
 function panicMode() {
   panicurl = getCookie("panicurl");
   if (panicurl == "") {
     panicurl = "https://google.com";
   }
-  const pressed = [];
   const secretCode = "safemode";
   const debugCode = "debugplz"
-  window.addEventListener("keyup", (e) => {
-    pressed.push(e.key);
-    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
-    if (pressed.join("").includes(secretCode)) {
+  document.onkeydown = function (e) {
+    listofchars = listofchars + e.key;
+    if(listofchars.length > 20) {
+        listofchars = listofchars.substring(e.key.length);
+    }
+    if(listofchars.includes(secretCode)) {
       window.location.href = panicurl;
-    } else if (pressed.join("").includes(debugCode)) {
+      listofchars = "";
+    } else if (listofchars.includes(debugCode)){
       if (getCookie("debugging") == 1) {
         document.cookie = "debugging=0;";
         alert("debugging off!")
@@ -64,8 +66,9 @@ function panicMode() {
         document.cookie = "debugging=1"; 
         alert("debugging on!")
       }
+      listofchars = "";
     }
-  });
+};
 }
 
 const head = document.getElementsByTagName('head')[0];

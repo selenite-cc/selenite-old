@@ -46,6 +46,6 @@ function loadCloaks() {
     );
   };
 }
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function() {
   loadCloaks();
-}
+})

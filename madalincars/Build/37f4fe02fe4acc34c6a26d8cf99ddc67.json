@@ -1,0 +1,14 @@
+{
+"companyName": "Madalin Games",
+"productName": "Madalin Cars Multiplayer",
+"dataUrl": "https://rawcdn.githack.com/xlegends/Game-Hub-Lite/main/madalin-cars-multiplayer/Build/7d7b82eb5e1c0ce8feedf2e1323e904d.unityweb",
+"asmCodeUrl": "9b295d23076674c38dbcfccd30746d6a.unityweb",
+"asmMemoryUrl": "4d451a766092c974a014877a34ad2f00.unityweb",
+"asmFrameworkUrl": "cf0bec62445ad7dcdbd3523e8a04bab6.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "9b73f40afab0eb426aedf849aafe662e.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF"
+}
