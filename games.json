@@ -609,5 +609,10 @@
     "name": "Super Smash Flash",
     "directory": "supersmashflash",
     "image": "ssf.jpg"
+  },
+  {
+    "name": "Stickman Climb",
+    "directory": "stickmanclimb",
+    "image": "icon.avif"
   }
 ]

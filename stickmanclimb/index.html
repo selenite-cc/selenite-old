@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html><head><script src='/js/all.js'></script>
+    
+    <title>Stickman Climb</title>
+ 
+      
+    
+    
+</head><body dir="ltr"><script src="bundle.js"></script><script src="sdk1-6.js"></script><script src="playcanvas-stable.min.js"></script><script src="__settings__.js"></script>
+    <script src="__modules__.js"></script>
+    <script src="__start__.js"></script>
+    <script src="__loading__.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('keydown', ev => {
+            if (['ArrowDown', 'ArrowUp', ' '].includes(ev.key)) {
+                ev.preventDefault();
+            }
+        });
+        window.addEventListener('wheel', ev => ev.preventDefault(), {
+            passive: false
+        });
+    </script>
+</body></html>
