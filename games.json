@@ -486,7 +486,8 @@
   {
     "name": "Stickman Hook",
     "directory": "stickman-hook",
-    "image": "icon.jpg"
+    "image": "icon.jpg",
+    "recommended": "1"
   },
   {
     "name": "Drift Hunters",
@@ -496,7 +497,8 @@
   {
     "name": "Rocket League",
     "directory": "rocketleague",
-    "image": "splash.png"
+    "image": "splash.png",
+    "recommended": "1"
   },
   {
     "name": "Little Alchemy",
@@ -592,5 +594,20 @@
     "name": "Run 3",
     "directory": "run3",
     "image": "icon.jpeg"
+  },
+  {
+    "name": "Dragon Ball Devolution",
+    "directory": "dragonballdevolution",
+    "image": "images.jpeg"
+  },
+  {
+    "name": "Run",
+    "directory": "run",
+    "image": "icon.jpeg"
+  },
+  {
+    "name": "Super Smash Flash",
+    "directory": "supersmashflash",
+    "image": "ssf.jpg"
   }
 ]
