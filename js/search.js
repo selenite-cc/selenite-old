@@ -1,7 +1,12 @@
 $(document).ready(function () {
   $("#gamesearch").on("input propertychange paste", function () {
-    $("#games .game").hide();
     var txt = $("#gamesearch").val();
+    if(txt == "") {
+      $("#games .suggest").show();
+    } else {
+      $("#games .suggest").hide();
+    }
+    $("#games .game").hide();
     $("#games .game").each(function () {
       if (($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1) || ($(this).attr("id").toUpperCase().indexOf(txt.toUpperCase()) != -1)) {
         $(this).show();
