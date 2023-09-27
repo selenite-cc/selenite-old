@@ -109,17 +109,21 @@ function defer(method) {
 }
 let announce;
 let read = 0;
-checkannouncements();
-setInterval(() => {
-  if (read == 0) {
-    checkannouncements();
-  }
-}, 60000);
+
+  checkannouncements();
+  // checkblock();
+  setInterval(() => {
+    // checkblock();
+    if (read == 0) {
+      checkannouncements();
+      
+    }
+  }, 10000);
 
 async function checkannouncements() {
   if (!read) {
-    let url = "https://raw.githubusercontent.com/skysthelimitt/selenitestore/main/announcements.json?e=" + Math.floor(Math.random() * 100**5);
-    let headers = {'Cache-Control': 'max-age=60'}
+    let url = "https://raw.githubusercontent.com/skysthelimitt/selenitestore/main/announcements.json?e=" + Math.floor(Math.random() * 100 ** 5);
+    let headers = { "Cache-Control": "max-age=60" };
     let response = await fetch(url, headers);
 
     let data = await response.json(); // read response body and parse as JSON
@@ -131,7 +135,6 @@ async function checkannouncements() {
     }
   }
 }
-
 
 function getMainSave() {
   var mainSave = {};
@@ -159,4 +162,43 @@ function downloadMainSave() {
   fakeElement.download = "your.selenite.save";
   fakeElement.click();
   URL.revokeObjectURL(dataURL);
+}
+
+async function checkblock() {
+  let url = "/README.md?e=" + Math.floor(Math.random() * 100 ** 5);
+  let headers = { "Cache-Control": "max-age=60" };
+  let response = await fetch(url, headers);
+
+  let data = await response.text();
+  if (!data.startsWith("## Selenite")) {
+    if (confirm("If you have recieved this alert, there is a high chance that your specific URL of Selenite has been blocked, Click OK to download your save and find a new URL.")) {
+      downloadMainSave();
+      url = "https://raw.githubusercontent.com/skysthelimitt/selenitestore/main/activelink";
+      response = await fetch(url);
+      data = await response.text();
+
+      url = data + "/README.md";
+      response = await fetch(url);
+      readme = await response.text();
+      if (readme.startsWith("## Selenite")) {
+        window.location.href = data;
+      } else {
+        alert("The main link is blocked, click ok to try and find a backup link.");
+        url = "https://raw.githubusercontent.com/skysthelimitt/selenitestore/main/links.json";
+        response = await fetch(url);
+        data = await response.json();
+        console.log(data);
+        for (let i = 0; i < data["urls"].length; i++) {
+          var check = await fetch(data["urls"][i] + "/README.md");
+          var checktext = await check.text();
+          if (checktext.startsWith("## Selenite")) {
+            window.location.href = checktext;
+          } else {
+            console.log("CDN Blocked: " + data["urls"][i]);
+          }
+        }
+        alert("all cdns are blocked, join the discord at https://discord.gg/7jyufnwJNf and ping @skysthelimit.dev");
+      }
+    }
+  }
 }

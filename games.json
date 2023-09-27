@@ -619,5 +619,45 @@
     "name": "Getaway Shooter",
     "directory": "getawayshooter",
     "image": "Untitled.jpeg"
+  },
+  {
+    "name": "Riddle School",
+    "directory": "riddleschool",
+    "image": "RiddleSchool2.png"
+  },
+  {
+    "name": "Riddle School 2",
+    "directory": "riddleschool2",
+    "image": "icon.png"
+  },
+  {
+    "name": "Riddle School 3",
+    "directory": "riddleschool3",
+    "image": "riddle-school-3.webp"
+  },
+  {
+    "name": "Riddle School 4",
+    "directory": "riddleschool4",
+    "image": "Untitled.jpeg"
+  },
+  {
+    "name": "Riddle School 5",
+    "directory": "riddleschool5",
+    "image": "Untitled.jpeg"
+  },
+  {
+    "name": "Riddle Transfer",
+    "directory": "riddleschooltransfer",
+    "image": "Untitled.jpeg"
+  },
+  {
+    "name": "Riddle Transfer 2",
+    "directory": "riddleschooltransfer2",
+    "image": "aUntitled.jpeg"
+  },
+  {
+    "name": "Zombocalypse",
+    "directory": "zombocalypse",
+    "image": "zombocalypse-2.webp"
   }
 ]
