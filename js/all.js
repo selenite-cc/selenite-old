@@ -109,6 +109,7 @@ function defer(method) {
 }
 let announce;
 let read = 0;
+checkannouncements();
 setInterval(() => {
   if (read == 0) {
     checkannouncements();
