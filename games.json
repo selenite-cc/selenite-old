@@ -614,5 +614,10 @@
     "name": "Stickman Climb",
     "directory": "stickmanclimb",
     "image": "icon.avif"
+  },
+  {
+    "name": "Getaway Shooter",
+    "directory": "getawayshooter",
+    "image": "Untitled.jpeg"
   }
 ]

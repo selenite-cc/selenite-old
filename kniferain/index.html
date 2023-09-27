@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Knife Rain</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+	<link rel="manifest" href="appmanifest.json">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" sizes="128x128" href="icon-128.png">
+	<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png">
+	<link rel="icon" type="image/png" href="icon-256.png">
+
+<link rel="stylesheet" href="style.css">
+
+	<script>
+	    // Package-ID
+	    window.famobi_gameID = "kniferain";
+	    window.famobi_gameJS = ['js/all.js',
+	        "common.js?ignore",
+	       	"scripts/supportcheck.js?ignore",
+	       	"scripts/offlineclient.js?ignore",
+	       	"scripts/main.js?ignore",
+	       	"scripts/register-sw.js?ignore",
+	        function(){
+	            // do nothing, be happy
+	        }
+	    ];
+
+	    (function (document, url, fgJS, firstJS) {
+	            fgJS = document.createElement('script');
+	            firstJS = document.getElementsByTagName('script')[0];
+	            fgJS.src = url + encodeURIComponent(document.location.href);
+	            firstJS.parentNode.insertBefore(fgJS, firstJS);
+	    })(document, 'v1.js?e=');
+	</script>
+
+</head>
+<body>
+<div id="fb-root"></div>
+	<script src=></script>
+	<noscript>
+		<div id="notSupportedWrap">
+			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
+			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+			<p class="notSupportedMessage">This game was made in Construct 3, an <a href="https://www.construct.net/en">online game editor</a>.</p>
+		</div>
+	</noscript>
+</body>
+</html>
