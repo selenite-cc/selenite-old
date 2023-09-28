@@ -659,5 +659,10 @@
     "name": "Zombocalypse",
     "directory": "zombocalypse",
     "image": "zombocalypse-2.webp"
+  },
+  {
+    "name": "Papas Burgeria",
+    "directory": "papasburgeria",
+    "image": "images.jpeg"
   }
 ]
