@@ -214,8 +214,6 @@ Licensed under the MIT License (view LICENSE.md for more information)
 
     <!-- Fix links while hosting locally -->
     <script>
-        var url = document.location.hostname;
-        if (url == "localhost" || url == "127.0.0.1") {
             // Locally hosted; change urls from /player to /player.html
             var elems = document.getElementsByClassName("playerLink");
             for (var i = 0; i < elems.length; i++) {
@@ -223,7 +221,6 @@ Licensed under the MIT License (view LICENSE.md for more information)
                 console.log("[LINKFIX] Fixed \"" + elem.innerHTML + "\"");
                 elem.href = elem.href.replace("player#", "player.html#");
             };
-        };
     </script>
 
     <!-- Run particles -->
