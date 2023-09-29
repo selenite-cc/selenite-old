@@ -664,5 +664,15 @@
     "name": "Papas Burgeria",
     "directory": "papasburgeria",
     "image": "images.jpeg"
+  },
+  {
+    "name": "Duck Life 5",
+    "directory": "ducklife5",
+    "image": "ducklife5.png"
+  },
+  {
+    "name": "Duck Life 6",
+    "directory": "ducklife6",
+    "image": "ducklife5.png"
   }
 ]
