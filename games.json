@@ -1,6 +1,6 @@
 [
   {
-    "name": "A Dance of Fire and Ice",
+    "name": "A Dance of Fire & Ice",
     "directory": "adofai",
     "image": "icon.png",
     "recommended": "1"
@@ -65,7 +65,7 @@
     "image": "icon.png"
   },
   {
-    "name": "Bloons TD 3",
+    "name": "Bloons Tower Defense 3",
     "directory": "btd3",
     "image": "icon.png"
   },
@@ -311,7 +311,7 @@
     "image": "icon.png"
   },
   {
-    "name": "Fireboy Watergirl",
+    "name": "Fireboy & Watergirl 1",
     "directory": "fireboywatergirl",
     "image": "icon.png"
   },
@@ -699,5 +699,35 @@
     "name": "Five Nights at Freddy's 4",
     "directory": "fnaf4",
     "image": "project/splash.webp"
+  },
+  {
+    "name": "Temple Run 2",
+    "directory": "templerun2",
+    "image": "img/icons/icon-128x128.png"
+  },
+  {
+    "name": "Happy Wheels",
+    "directory": "happywheels",
+    "image": "Untitled.jpeg"
+  },
+  {
+    "name": "Fireboy & Watergirl 2",
+    "directory": "fireboywatergirl2",
+    "image": "Untitled.jpeg"
+  },
+  {
+    "name": "Fireboy & Watergirl 3",
+    "directory": "fireboywatergirl3",
+    "image": "icon.png"
+  },
+  {
+    "name": "Fireboy & Watergirl 4",
+    "directory": "fireboywatergirl4",
+    "image": "300.jpg"
+  },
+  {
+    "name": "Rise Higher",
+    "directory": "risehigher",
+    "image": "media/graphics/promo/Icons/128x128.png"
   }
 ]

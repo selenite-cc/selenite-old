@@ -118,7 +118,7 @@ let read = 0;
       checkannouncements();
       
     }
-  }, 10000);
+  }, 150000);
 
 async function checkannouncements() {
   if (!read) {
@@ -197,7 +197,7 @@ async function checkblock() {
             console.log("CDN Blocked: " + data["urls"][i]);
           }
         }
-        alert("all cdns are blocked, join the discord at https://discord.gg/7jyufnwJNf and ping @skysthelimit.dev");
+        alert("all links are blocked, join the discord at https://discord.gg/7jyufnwJNf and ping @skysthelimit.dev");
       }
     }
   }
