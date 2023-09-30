@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<!-- Created with https://packager.turbowarp.org/ -->
 <html>
 <head>
-  <script src="/js/all.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <!-- We only include this to explicitly loosen the CSP of various packager environments. It does not provide any security. -->
-  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: blob:">
-  <title>Five Nights at Freddy&apos;s Remastered V1.1</title>
+  <title>FNAF</title>
   <style>
     body {
       color: #ffffff;
@@ -66,7 +61,10 @@
       box-sizing: border-box;
     }
     #loading {
-      
+      background-image: url('among');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
     }
     .progress-bar-outer {
       border: 1px solid currentColor;
@@ -133,18 +131,17 @@
       cursor: auto;
     }
     .sc-monitor-root[data-opcode^="data_"] .sc-monitor-value-color {
-      background-color: #ff8c1a;
+      background-color: #353535;
     }
     .sc-monitor-row-value-outer {
-      background-color: #fc662c;
+      background-color: #353535;
     }
     .sc-monitor-row-value-editing .sc-monitor-row-value-outer {
-      background-color: #e25b27;
+      background-color: #1b1b1b;
     }
     
   </style>
   <meta name="theme-color" content="#000000">
-  
 </head>
 <body>
   <div id="app"></div>
@@ -163,7 +160,7 @@
     <noscript>Enable JavaScript</noscript>
     
     
-    
+    <div class="progress-bar-outer"><div class="progress-bar-inner" id="loading-inner"></div></div>
   </div>
 
   <div id="error" class="screen" hidden>
@@ -204,7 +201,7 @@
       const scaffolding = new Scaffolding.Scaffolding();
       scaffolding.width = 480;
       scaffolding.height = 360;
-      scaffolding.resizeMode = "preserve-ratio";
+      scaffolding.resizeMode = "stretch";
       scaffolding.editableLists = false;
       scaffolding.usePackagedRuntime = true;
       scaffolding.setup();
@@ -224,16 +221,16 @@
       scaffolding.setUsername("player####".replace(/#/g, () => Math.floor(Math.random() * 10)));
       scaffolding.setAccentColor("#ff4c4c");
 
-      scaffolding.addCloudProvider(new Scaffolding.Cloud.WebSocketProvider(["wss://clouddata.turbowarp.org","wss://clouddata.turbowarp.xyz"], "p4-@Five Nights at Freddy's Remastered V1.1 .sb3"));
+      scaffolding.addCloudProvider(new Scaffolding.Cloud.WebSocketProvider(["wss://clouddata.turbowarp.org","wss://clouddata.turbowarp.xyz"], "871001058"));
 
       vm.setTurboMode(false);
-      if (vm.setInterpolation) vm.setInterpolation(true);
+      if (vm.setInterpolation) vm.setInterpolation(false);
       if (vm.setFramerate) vm.setFramerate(30);
       if (vm.renderer.setUseHighQualityRender) vm.renderer.setUseHighQualityRender(true);
       if (vm.setRuntimeOptions) vm.setRuntimeOptions({
-        fencing: false,
-        miscLimits: false,
-        maxClones: 9999999999,
+        fencing: true,
+        miscLimits: true,
+        maxClones: 300,
       });
       if (vm.setCompilerOptions) vm.setCompilerOptions({
         enabled: true,
@@ -246,8 +243,11 @@
       }
 
       scaffolding.setExtensionSecurityManager({
-        getSandboxMode: () => 'unsandboxed',
-        canLoadExtensionFromProject: () => true
+        getSandboxMode: 'unsandboxed',
+        canLoadExtensionFromProject: (url) => {
+          handleError(new Error('Missing custom extension: ' + url));
+          return Promise.resolve(false);
+        }
       });
       for (const extension of []) {
         vm.extensionManager.loadExtensionURL(extension);
@@ -267,12 +267,7 @@
         };
         
         storage.addWebStore(
-          [
-            storage.AssetType.ImageVector,
-            storage.AssetType.ImageBitmap,
-            storage.AssetType.Sound,
-            storage.AssetType.Font
-          ].filter(i => i),
+          [storage.AssetType.ImageVector, storage.AssetType.ImageBitmap, storage.AssetType.Sound],
           (asset) => new URL('./assets/' + asset.assetId + '.' + asset.dataFormat, location).href
         );
         return () => new Promise((resolve, reject) => {

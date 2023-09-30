@@ -533,7 +533,7 @@
   {
     "name": "Five Nights at Freddy's",
     "directory": "fnaf",
-    "image": "splash.jpeg"
+    "image": "splash.jpg"
   },
   {
     "name": "Burrito Bison",
@@ -674,5 +674,30 @@
     "name": "Duck Life 6",
     "directory": "ducklife6",
     "image": "ducklife5.png"
+  },
+  {
+    "name": "webretro",
+    "directory": "webretro",
+    "image": "assets/icons/icon204.png"
+  },
+  {
+    "name": "osu!mania",
+    "directory": "osumania",
+    "image": "mania.jpg"
+  },
+  {
+    "name": "Five Nights at Freddy's 2",
+    "directory": "fnaf2",
+    "image": "project/splash.webp"
+  },
+  {
+    "name": "Five Nights at Freddy's 3",
+    "directory": "fnaf3",
+    "image": "project/splash.webp"
+  },
+  {
+    "name": "Five Nights at Freddy's 4",
+    "directory": "fnaf4",
+    "image": "project/splash.webp"
   }
 ]
