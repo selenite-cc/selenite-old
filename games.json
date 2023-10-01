@@ -729,5 +729,10 @@
     "name": "Rise Higher",
     "directory": "risehigher",
     "image": "media/graphics/promo/Icons/128x128.png"
+  },
+  {
+    "name": "Hextris",
+    "directory": "hextris",
+    "image": "images/icons/apple-touch-152.png"
   }
 ]
