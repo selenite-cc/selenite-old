@@ -734,5 +734,10 @@
     "name": "Hextris",
     "directory": "hextris",
     "image": "images/icons/apple-touch-152.png"
+  },
+  {
+    "name": "Sprinter",
+    "directory": "sprinter",
+    "image": "icon.jpeg"
   }
 ]
