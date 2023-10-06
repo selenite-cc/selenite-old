@@ -19,16 +19,20 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     document.body.setAttribute("theme", "main");
   }
-  checkAlert();
   check();
+  checkAlert();
 });
 
 function checkAlert() {
   if (!Cookies.get("supportalert")) {
-    alert(
-      'Welcome to Selenite!\nTransferring from another website? Add "/transfer" to the end of the URL to see how to transfer your game data!\nI\'m a single developer that works on this website, so I would appreciate your support! You can pay on Patreon by clicking the "Support" button, which will have private links for all subscribers to use!\nPlease share this website with anyone you know, so this website can expand even more!\nGo to bookmarklets and then add "Selenite Minified" to your bookmarks :) \nJoin the Discord for the latest updates and newest links!\nI don\'t want to be annoying, so you won\'t see this message for another month (at least on this website) :)'
-    );
-    Cookies.set("supportalert", true, { expires: 31 });
+    const dialog = document.querySelector('.dialog-width');
+    const openButton = dialog.nextElementSibling;
+    const closeButton = dialog.querySelector('sl-button[slot="footer"]');
+    setTimeout(() => {
+      dialog.show();
+    }, 250)
+    closeButton.addEventListener('click', () => dialog.hide());
+    Cookies.set("supportalert", true, { expires: 60 });
   }
 }
 function setPanicMode() {

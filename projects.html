@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="sl-theme-dark" lang="en">
   <head>
     <!-- initialize theme vars
     https://coolors.co/10002b-240046-3c096c-5a189a-7b2cbf-9d4edd-c77dff-e0aaff -->
@@ -8,8 +8,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3415518411898563"
-     crossorigin="anonymous"></script>
+    
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.9.0/cdn/themes/dark.css" />
+     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.9.0/cdn/shoelace-autoloader.js"></script>
     <!-- initialize my stuff -->
     <script src="/js/themes.js"></script>
     <script src="/js/all.js"></script>
@@ -41,9 +42,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
     <!-- toastify -->
-    <script></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+          const container = document.querySelector("alerts");
+          const safemodealert = container.querySelector(`sl-alert.safemodeinfo`);
+          if (Math.random() < 0.25) {
+            safemodealert.toast();
+          }
+        }, 500);
+      });
+    </script>
   </head>
-
+  <alerts>
+    <sl-alert class="safemodeinfo" variant="primary" duration="6000" closable>
+      <sl-icon slot="icon" name="info-circle"></sl-icon>
+      <strong>Pro Tip:</strong><br />
+      Type "safemode" while in any game to go to Google. Go to settings to change this.
+    </sl-alert>
+  </alerts>
   <body>
     <header>
       <a href="/index.html">Home</a>
@@ -52,9 +69,18 @@
       <a href="/settings.html">Settings</a>
       <a href="/support.html">Support</a>
       <a href="/blank.html">Open Blank</a>
+      <a href="/about.html">About</a>
       
     </header>
+    <gameframe>
+      <div id="header">
+        <sl-icon-button name="arrow-left-circle" label="Go back"></sl-icon-button>
+        <h3 id="gametitle">Celeste</h3>
+      </div>
+      <iframe src="celeste/index.html">
 
+      </iframe>
+    </gameframe>
     <main>
       <input class="hiddenUpload" type="file" accept=".save" hidden />
 
@@ -80,7 +106,7 @@
 
       <h2>All Games</h2>
       <div id="games">
-        <a href="https://forms.gle/iBAbXvEDaYTLuEcdA"><div class="suggest"><img src="img/addlink.svg" alt="Add Game logo" style="filter: invert(1);"><h1>Suggest a game!</h1></div></a>
+        <a href="/suggest.html"><div class="suggest"><img src="img/addlink.svg" alt="Add Game logo" style="filter: invert(1);"><h1>Suggest a game!</h1></div></a>
         <p id="message">games loading..</p>
       </div>
 
@@ -90,10 +116,10 @@
       <a href="https://github.com/skysthelimitt/Selenite">Source Code</a>
       <a id="panicmode">Panic Mode</a>
       <a href="/transfer.html">Transfer your data</a>
-      <a href="https://forms.gle/HZwdTiZYeJApTahv5">Report a Bug</a>
+      <a href="/suggest.html">Bug Reports</a>
       <a href="https://discord.gg/7jyufnwJNf">Discord</a>
-      <a href="https://forms.gle/iBAbXvEDaYTLuEcdA">Suggestions</a>
-      <a id="contact.html">Contact</a>
+      <a href="/suggest.html">Suggestions</a>
+      <a href="/contact.html">Contact</a>
     </footer>
   </body>
 </html>

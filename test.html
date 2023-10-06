@@ -7,20 +7,22 @@
     <!-- initialize externals -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.9.0/cdn/themes/dark.css" />
      <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.9.0/cdn/shoelace-autoloader.js"></script>
-
-
     <!-- initialize my stuff -->
     <script src="/js/themes.js"></script>
     <script src="/js/all.js"></script>
+    <script src="/js/games.js"></script>
+    <script src="/js/search.js"></script>
     <script src="/js/main.js"></script>
-    <link rel="stylesheet" href="/themes.css" />
+    <script src="/js/cookie.js"></script>
     <link rel="stylesheet" href="/style.css" />
+<link rel="stylesheet" href="/themes.css" />
 
     <!-- seo + other things -->
-    <title>Support | Selenite</title>
+    <title>Projects | Selenite</title>
     <link rel="icon" href="/favicon.ico" />
     <meta
       name="keywords"
@@ -38,9 +40,17 @@
     />
     <meta name="author" content="Website Creator" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-  </head>
 
-  <body id="noscroll">
+
+  </head>
+  <alerts>
+    <sl-alert class="safemodeinfo" variant="primary" duration="6000" closable>
+      <sl-icon slot="icon" name="info-circle"></sl-icon>
+      <strong>Pro Tip:</strong><br />
+      Type "safemode" while in any game to go to Google. Go to settings to change this.
+    </sl-alert>
+  </alerts>
+  <body>
     <header>
       <a href="/index.html">Home</a>
       <a href="/bookmarklets.html">Bookmarklets</a>
@@ -51,18 +61,20 @@
       <a href="/about.html">About</a>
       
     </header>
-
-    <main id="main" class="noscroll">
-      <h1>support selenite</h1>
-      <p>i dont make anything off of this website, so anything would be greatly appreciated!</p>
+    <main>
+    <gameframe>
       <div class="samerow">
-        <div class="img-container">
-          <a href="https://patreon.com/selenitecc"><img src="img/Digital-Patreon-Logo_White.png"></a>
-        </div>
+        <sl-icon-button name="arrow-left-circle" label="Go back"></sl-icon-button>
+        <h3 id="gametitle">Celeste</h3>
       </div>
+      <iframe src="celeste/index.html">
+
+      </iframe>
+    </gameframe>
+    
     </main>
 
-    <footer class="noscroll">
+    <footer>
       <a href="https://github.com/skysthelimitt/Selenite">Source Code</a>
       <a id="panicmode">Panic Mode</a>
       <a href="/transfer.html">Transfer your data</a>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="sl-theme-dark" lang="en">
   <head>
     <!-- initialize theme vars
     https://coolors.co/10002b-240046-3c096c-5a189a-7b2cbf-9d4edd-c77dff-e0aaff -->
@@ -7,8 +7,10 @@
     <!-- initialize externals -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js "></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3415518411898563"
-     crossorigin="anonymous"></script>
+    
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.9.0/cdn/themes/dark.css" />
+     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.9.0/cdn/shoelace-autoloader.js"></script>
+
 
 
     <!-- initialize my stuff -->
@@ -16,8 +18,8 @@
     <script src="/js/all.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/randomquote.js"></script>
-<link rel="stylesheet" href="/themes.css" />
-<link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/themes.css" />
+    <link rel="stylesheet" href="/style.css" />
 
 
     <!-- seo + other things -->
@@ -41,9 +43,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
     <!-- toastify -->
-    <script></script>
+    <script>
+      </script>
   </head>
-
+  <alerts>
+    <sl-dialog label="Welcome to Selenite!" class="dialog-width" style="--width: 60vw;">
+      Thank you for choosing Selenite! You will be able to play over 140 high quality games, and we have many tools to make your experience better.
+      <br>
+      Wanting to transfer your data from another website? Try the transfer utility in the footer!
+      <br>
+      Want to support the development of Selenite? Join the <a href="https://discord.gg/7jyufnwJNf">Discord</a> and support us on <a href="https://patreon.com/selenitecc">Patreon</a>!
+      <br>
+      Learn more about Selenite at the about page in the header!
+      <br>
+      Try out the Selenite Minified bookmarklet in the bookmarklets page!
+      <br>
+      Have a great day!
+      <sl-button slot="footer" variant="neutral">Close</sl-button>
+    </sl-dialog>
+  </alerts>
   <body id="noscroll">
     <header>
       <a href="/index.html">Home</a>
@@ -52,6 +70,7 @@
       <a href="/settings.html">Settings</a>
       <a href="/support.html">Support</a>
       <a href="/blank.html">Open Blank</a>
+      <a href="/about.html">About</a>
     </header>
     <main id="main" class="noscroll">
       <h1>selenite.</h1>
@@ -73,10 +92,10 @@
       <a href="https://github.com/skysthelimitt/Selenite">Source Code</a>
       <a id="panicmode">Panic Mode</a>
       <a href="/transfer.html">Transfer your data</a>
-      <a href="https://forms.gle/HZwdTiZYeJApTahv5">Report a Bug</a>
+      <a href="/suggest.html">Bug Reports</a>
       <a href="https://discord.gg/7jyufnwJNf">Discord</a>
-      <a href="https://forms.gle/iBAbXvEDaYTLuEcdA">Suggestions</a>
-      <a id="contact.html">Contact</a>
+      <a href="/suggest.html">Suggestions</a>
+      <a href="/contact.html">Contact</a>
     </footer>
     
   </body>

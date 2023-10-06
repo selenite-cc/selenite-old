@@ -251,3 +251,26 @@ select {
   padding: 0.5% 0.5%;
   margin: 0.25%;
 }
+
+gameframe {
+  width: 100vw;
+  height: 90vh;
+}
+gameframe iframe {
+  width: 100%;
+  height: 100%;
+}
+
+gameframe.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+sl-icon-button {
+  font-size: 2rem;
+  padding-right: 5px;
+}
+
+h3#gametitle {
+  font-size: 2rem;
+}
