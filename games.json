@@ -739,5 +739,20 @@
     "name": "Sprinter",
     "directory": "sprinter",
     "image": "icon.jpeg"
+  },
+  {
+    "name": "Amazing Rope Police",
+    "directory": "amazing-rope-police",
+    "image": "splash.jpeg"
+  },
+  {
+    "name": "Ruffle",
+    "directory": "ruffle",
+    "image": "favicon-180.png"
+  },
+  {
+    "name": "emulatorJS",
+    "directory": "emulatorjs",
+    "image": "logo.png"
   }
 ]
