@@ -22,8 +22,8 @@
         // connect to canvas
         var Module = {
             TOTAL_MEMORY: 201326592,
-            filePackagePrefixURL: "https://raw.githubusercontent.com/EmulatorOS/gfile/main/adcap/Release/",
-            memoryInitializerPrefixURL: "https://rawcdn.githack.com/EmulatorOS/gfile/main/adcap/Release/",
+            filePackagePrefixURL: "https://rawcdn.githack.com/EmulatorOS/gfile/a353d35ac44f2c72439d6d765636765f0fd9b0f0/adcap/Release/",
+            memoryInitializerPrefixURL: "https://rawcdn.githack.com/EmulatorOS/gfile/a353d35ac44f2c72439d6d765636765f0fd9b0f0/adcap/Release/",
             preRun: [],
             postRun: [],
             print: (function() {
@@ -62,16 +62,16 @@
         };
         Module.setStatus('Downloading (0.0/1)');
     </script>
-    <script src="https://rawcdn.githack.com/EmulatorOS/gfile/main/adcap/Release/UnityConfig.js"></script>
-    <script src="https://rawcdn.githack.com/EmulatorOS/gfile/main/adcap/Release/fileloader.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/EmulatorOS/gfile@main/adcap/Release/UnityConfig.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/EmulatorOS/gfile@main/adcap/Release/fileloader.js"></script>
     <script>
         if (!(!Math.fround)) {
             var script = document.createElement('script');
-            script.src = "https://rawcdn.githack.com/EmulatorOS/gfile/main/adcap/Release/webgl.js";
+            script.src = "https://rawcdn.githack.com/EmulatorOS/gfile/a353d35ac44f2c72439d6d765636765f0fd9b0f0/adcap/Release/webgl.js";
             document.body.appendChild(script);
         } else {
             var codeXHR = new XMLHttpRequest();
-            codeXHR.open('GET', 'https://rawcdn.githack.com/EmulatorOS/gfile/main/adcap/Release/webgl.js', true);
+            codeXHR.open('GET', 'https://rawcdn.githack.com/EmulatorOS/gfile/a353d35ac44f2c72439d6d765636765f0fd9b0f0/adcap/Release/webgl.js', true);
             codeXHR.onload = function() {
                 var code = codeXHR.responseText;
                 if (!Math.fround) {
