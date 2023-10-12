@@ -754,5 +754,30 @@
     "name": "emulatorJS",
     "directory": "emulatorjs",
     "image": "logo.png"
+  },
+  {
+    "name": "Geometry Rash",
+    "directory": "geometryrash",
+    "image": "icon-114.png"
+  },
+  {
+    "name": "Bloons Tower Defense",
+    "directory": "btd",
+    "image": "logo.webp"
+  },
+  {
+    "name": "Bloons Tower Defense 2",
+    "directory": "btd2",
+    "image": "logo.webp"
+  },
+  {
+    "name": "Bloons Tower Defense 4",
+    "directory": "btd4",
+    "image": "logo.jpg"
+  },
+  {
+    "name": "1 on 1 Soccer",
+    "directory": "1on1soccer",
+    "image": "logo.jpg"
   }
 ]
