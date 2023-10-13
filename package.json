@@ -1,0 +1,28 @@
+{
+  "name": "selenite",
+  "version": "1.0.0",
+  "description": "Unblocked games site",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "build": "echo no building"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skysthelimitt/selenite.git"
+  },
+  "keywords": [
+    "static",
+    "template",
+    "codesandbox"
+  ],
+  "author": "Ives van Hoorne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skysthelimitt/selenite/issues"
+  },
+  "homepage": "https://github.com/skysthelimitt/selenite",
+  "devDependencies": {
+    "serve": "^11.2.0"
+  }
+}
