@@ -1,0 +1,14 @@
+{
+    "companyName": "Mofunzone",
+    "productName": "Duck Life: Space",
+    "dataUrl": "data.unityweb",
+    "asmCodeUrl": "code.unityweb",
+    "asmMemoryUrl": "WebGL5MP-MEMORY.unityweb",
+    "asmFrameworkUrl": "framework.unityweb",
+    "TOTAL_MEMORY": 536870912,
+    "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+    "webglContextAttributes": {"preserveDrawingBuffer": false},
+    "splashScreenStyle": "Dark",
+    "backgroundColor": "#231F20",
+    "cacheControl": {"dataUrl": "must-revalidate"}
+    }

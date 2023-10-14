@@ -14,7 +14,7 @@ function setCloakCookie(name, url) {
   console.log(name + url);
   if (!(url == null)) {
     document.cookie =
-      "tabicon=" + url;
+      "tabicon=" + url + "";
     document.cookie = "tabname=" + name;
     setCloak();
   } else {
@@ -40,6 +40,8 @@ function clearCloak() {
 function loadCloaks() {
   var presetCloaks = document.getElementById("presetCloaks");
   presetCloaks.onchange = (event) => {
+    console.log(event.target.value);
+    console.log(cloaklist[event.target.value]);
     setCloakCookie(
       cloaklist[event.target.value][0],
       cloaklist[event.target.value][1]
