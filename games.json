@@ -776,6 +776,21 @@
     "image": "logo.jpg"
   },
   {
+    "name": "Bloons Tower Defense 6",
+    "directory": "btd6",
+    "image": "uwu.png"
+  },
+  {
+    "name": "Bloons Tower Defense 5",
+    "directory": "btd5",
+    "image": "wogo.png"
+  },
+  {
+    "name": "Last Horizon",
+    "directory": "lasthorizon",
+    "image": "wogo owo.jpg"
+  },
+  {
     "name": "1 on 1 Soccer",
     "directory": "1on1soccer",
     "image": "logo.jpg"

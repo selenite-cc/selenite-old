@@ -2,34 +2,6 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
-      let url;
-      getCDN();
-      async function getCDN() {
-        $.getJSON(
-          "https://raw.githubusercontent.com/skysthelimitt/selenite-optimized/main/links.json",
-          async function (data) {
-            cdnurls = data["urls"];
-            for (let i = 0; i < cdnurls.length; i++) {
-              var check = await fetch(cdnurls[i] + "/README.md");
-              var checktext = await check.text();
-              if (checktext.startsWith("## Selenite")) {
-                console.log("CDN Found: " + cdnurls[i]);
-                url = cdnurls[i];
-                createBlank();
-                window.location.href = "https://google.com"
-                break;
-              } else {
-                console.log("CDN Blocked: " + cdnurls[i]);
-              }
-            }
-            if (!url) {
-              alert(
-                "looks like none of the cdns are available, please check again later."
-              );
-            }
-          }
-        );
-      }
       function createBlank() {
         win = window.open();
         win.document.body.style.margin = "0";
@@ -41,9 +13,10 @@
         iframe.style.margin = "0";
         iframe.referrerpolicy = "no-referrer";
         iframe.allow = "fullscreen";
-        iframe.src = url;
+        iframe.src = location.origin;
         win.document.body.appendChild(iframe);
       }
+      createBlank();
     </script>
     <style>
       body {
@@ -55,6 +28,5 @@
     </style>
   </head>
   <body>
-    <h1>looking for url..</h1>
   </body>
 </html>
