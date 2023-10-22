@@ -794,5 +794,20 @@
     "name": "1 on 1 Soccer",
     "directory": "1on1soccer",
     "image": "logo.jpg"
+  },
+  {
+    "name": "Among Us",
+    "directory": "amongus",
+    "image": "amgojs]_.png"
+  },
+  {
+    "name": "Bad Piggies",
+    "directory": "badpiggies",
+    "image": "badpiggies.png"
+  },
+  {
+    "name": "Sandtrix",
+    "directory": "sandtrix",
+    "image": "assets/sprites/appicon.png"
   }
 ]
