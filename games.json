@@ -809,5 +809,25 @@
     "name": "Sandtrix",
     "directory": "sandtrix",
     "image": "assets/sprites/appicon.png"
+  },
+  {
+    "name": "Blood Tournament",
+    "directory": "bloodtournament",
+    "image": "blood-tournament.jpg"
+  },
+  {
+    "name": "Gold Digger FRVR",
+    "directory": "golddiggerfrvr",
+    "image": "images.jpeg"
+  },
+  {
+    "name": "Retro Bowl College",
+    "directory": "retrobowlcollege",
+    "image": "unnamed.png"
+  },
+  {
+    "name": "We Become What We Behold",
+    "directory": "wbwwb",
+    "image": "wbwwb.webp"
   }
 ]

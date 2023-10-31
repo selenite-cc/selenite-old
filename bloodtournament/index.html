@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Blood Tournament</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script src="/js/all.js"></script>
+    <style>
+        #unityContainer {
+            width: 80vw;
+            aspect-ratio: 18 / 10;
+        }
+        body {
+            width: 100%;
+            display: flex;
+  justify-content: center;
+  align-items: center;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/load.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="unityContainer"></div>
+    </div>
+  </body>
+</html>
