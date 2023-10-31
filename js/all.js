@@ -75,9 +75,18 @@ const head = document.getElementsByTagName("head")[0];
 document.addEventListener(
   "DOMContentLoaded",
   function () {
+    if (window.jQuery) {
+      console.log("jquery found");
+      panicMode();
+    } else {
+      var jquery = document.createElement("script");
+      jquery.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js";
+      document.head.append(jquery);
+      jquery.addEventListener("load", function () {
+        panicMode();
+      });
+    }
     setCloak();
-    var jquery = document.createElement("script");
-    jquery.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js";
     const gscript = document.createElement("script");
     gscript.setAttribute("async", "");
     gscript.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=G-XVTVBR1D5V");
@@ -88,37 +97,22 @@ document.addEventListener(
         gtag('config', 'G-98DP5VKS42');`;
     const cryptojs = document.createElement("script");
     cryptojs.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js");
-    document.head.append(gscript, ingscript, jquery, cryptojs);
+    document.head.append(gscript, ingscript, cryptojs);
   },
   false
 );
 
-defer(function () {
-  panicMode();
-});
-
-function defer(method) {
-  if (window.jQuery) {
-    console.log("jquery found.");
-    panicMode();
-  } else {
-    setTimeout(function () {
-      defer(method);
-    }, 50);
-  }
-}
 let announce;
 let read = 0;
 
-  checkannouncements();
+checkannouncements();
+// checkblock();
+setInterval(() => {
   // checkblock();
-  setInterval(() => {
-    // checkblock();
-    if (read == 0) {
-      checkannouncements();
-      
-    }
-  }, 150000);
+  if (read == 0) {
+    checkannouncements();
+  }
+}, 150000);
 
 async function checkannouncements() {
   if (!read) {
