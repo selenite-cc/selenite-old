@@ -829,5 +829,15 @@
     "name": "We Become What We Behold",
     "directory": "wbwwb",
     "image": "wbwwb.webp"
+  },
+  {
+    "name": "Nut Simulator",
+    "directory": "nutsim",
+    "image": "images/icon.png"
+  },
+  {
+    "name": "Pokemon",
+    "directory": "pokemon",
+    "image": "logo.jpg"
   }
 ]
