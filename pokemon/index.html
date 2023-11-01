@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <style>
+        @font-face {
+            font-family: pokemon;
+            src: url(font.ttf);
+        }
+        body {
+            background-color: lightblue;
+            user-select: none;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            font-family:pokemon, Arial, Helvetica, sans-serif;
+            display: table;
+            margin: 0 auto;
+            background-color: white;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        li {
+            font-size: 30px;
+            margin: 10px;
+            padding-left: 50px;
+        }
+
+        li:hover {
+            background-image: url(arrow.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            image-rendering: pixelated;
+            
+        }
+        .pixel-borders {
+  padding: 15px 20px;
+  background-color: #fff;
+}
+
+
+
+
+.pixel-borders--2 {
+  border-style: solid;
+  border-width: 4px;
+  border-color: #5697cc;
+  border-image-slice: 4;
+  border-image-width: 2;
+  border-image-outset: 0;
+  border-image-source: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12'><path d='M2 2h2v2H2zM4 0h2v2H4zM10 4h2v2h-2zM0 4h2v2H0zM6 0h2v2H6zM8 2h2v2H8zM8 8h2v2H8zM6 10h2v2H6zM0 6h2v2H0zM10 6h2v2h-2zM4 10h2v2H4zM2 8h2v2H2z' fill='%233c5aa6' /></svg>");
+}
+
+@supports (border-image-source: none) {
+  .pixel-borders--2 {
+    border-radius: 20px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <ul class="pixel-borders pixel-borders--2">
+        <a href="blue/index.html"><li>Blue</li></a>
+        <a href="crystal/index.html"><li>Crystal</li></a>
+        <a href="emerald/index.html"><li>Emerald</li></a>
+        <a href="firered/index.html"><li>FireRed</li></a>
+        <a href="gold/index.html"><li>Gold</li></a>
+        <a href="leafgreen/index.html"><li>LeafGreen</li></a>
+        <a href="red/index.html"><li>Red</li></a>
+        <a href="ruby/index.html"><li>Ruby</li></a>
+        <a href="sapphire/index.html"><li>Sapphire</li></a>
+        <a href="silver/index.html"><li>Silver</li></a>
+        <a href="yellow/index.html"><li>Yellow</li></a>
+    </ul>
+</body>
+</html>
