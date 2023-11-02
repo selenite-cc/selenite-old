@@ -35,6 +35,7 @@
     
     if (('undefined' != typeof EJS_DEBUG_XX && true === EJS_DEBUG_XX)) {
         await loadScript('emulator.js');
+        await loadScript('controls.js');
         await loadScript('nipplejs.js');
         await loadScript('shaders.js');
         await loadScript('storage.js');
@@ -44,6 +45,7 @@
         await loadStyle('emulator.css');
     } else {
         await loadScript('emulator.min.js');
+        await loadScript('controls.js');
         await loadStyle('emulator.min.css');
         
     }
