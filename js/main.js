@@ -14,11 +14,31 @@ function check() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  if (localStorage.getItem("theme")) {
-    document.body.setAttribute("theme", localStorage.getItem("theme"));
+  const iconSetting = document.querySelector("input#discordIcon");
+  if(localStorage.getItem("theme")) {
+    localStorage.setItem("selenite.theme", localStorage.getItem("theme"));
+    localStorage.removeItem("theme");
+  }
+  if (localStorage.getItem("selenite.theme")) {
+    document.body.setAttribute("theme", localStorage.getItem("selenite.theme"));
   } else {
     document.body.setAttribute("theme", "main");
   }
+  if(document.querySelector("widgetbot-crate")) {
+    if(localStorage.getItem("selenite.discordIcon") == "true") {
+      const widget = document.querySelector("widgetbot-crate");
+      widget.setAttribute("style", "display:none");
+    }
+  }
+  if(document.querySelector("input#discordIcon")) {
+    if(localStorage.getItem("selenite.discordIcon") == "true") {
+      iconSetting.checked = true;
+    }
+    iconSetting.addEventListener("click", () => {
+      localStorage.setItem("selenite.discordIcon", iconSetting.checked)
+    });
+  }
+
   check();
   checkAlert();
 });
@@ -29,6 +49,7 @@ function checkAlert() {
     const openButton = dialog.nextElementSibling;
     const closeButton = dialog.querySelector('sl-button[slot="footer"]');
     setTimeout(() => {
+      dialog.removeAttribute("display");
       dialog.show();
     }, 250)
     closeButton.addEventListener('click', () => dialog.hide());
@@ -50,7 +71,7 @@ function copyToClipboard(text) {
 }
 
 function setTheme(theme) {
-  localStorage.setItem("theme", theme);
+  localStorage.setItem("selenite.theme", theme);
   document.body.setAttribute("theme", theme);
 }
 function setPanicMode() {
@@ -59,4 +80,8 @@ function setPanicMode() {
     return;
   }
   document.cookie = "panicurl=" + $("#panic").val();
+}
+function customTheme() {
+  const customMenu = document.querySelector('#customMenu');
+  customMenu.removeAttribute("display");
 }

@@ -21,8 +21,12 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--bg);
+  background: var(--bg);
   color: var(--textcolor);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 header,
 footer {
@@ -78,16 +82,16 @@ main {
 main#main.noscroll {
   justify-content: center;
 }
-
 h1,
 h2,
 h3,
 p,
-a {
+a,
+label {
   margin: 0;
   padding: 0;
+  text-shadow: var(--shadow);
 }
-
 .samerow {
   display: flex;
   justify-content: center;
@@ -273,4 +277,15 @@ sl-icon-button {
 
 h3#gametitle {
   font-size: 2rem;
+}
+
+.img-credits {
+  height: 40vh;
+  width: auto;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.555)
+}
+
+label {
+  font-size: 20px;
+  padding-left: 5px;
 }

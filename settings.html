@@ -63,7 +63,7 @@
         <h3>Website Name</h3>
         <input type="text" id="webname" name="webname" placeholder="Selenite" /><br />
         <h3>Website Icon</h3>
-        <input type="text" id="webicon" name="webicon" placeholder="https://selenite.pages.dev/" /><br />
+        <input type="text" id="webicon" name="webicon" placeholder="https://selenite.cc/" /><br />
         <h3>Or select a preset:</h3>
         <select id="presetCloaks">
           <option value="google">Google</option>
@@ -77,13 +77,25 @@
       </form>
       <button onclick="javascript:clearCloak();">Clear your current tab cloak</button>
       <br />
+      <div class="samerow">
+      <input type="checkbox" id="discordIcon" name="discordIcon">
+      <label for="discordIcon">Disable Discord Icon</label><br>
+      </div>
       <h3>Themes</h3>
       <div class="samerow themebtns">
-        <button onclick="setTheme('main')" style="background-color: #3c096c; color: #fff; border: 5px solid #5a189a">Selenite</button>
-        <button onclick="setTheme('light')" style="background-color: #bbbbbb; color: #1a1a1a; border: 5px solid #e6e6e6">Light Mode</button>
-        <button onclick="setTheme('dark')" style="background-color: #333333; color: #fff; border: 5px solid #444444">Dark Mode</button>
+        <button onclick="setTheme('main')" style="background-color: #3c096c; color: #fff; border: 5px solid #5a189a">selenite</button>
+        <button onclick="setTheme('light')" style="background-color: #bbbbbb; color: #1a1a1a; border: 5px solid #e6e6e6">light mode</button>
+        <button onclick="setTheme('dark')" style="background-color: #333333; color: #fff; border: 5px solid #444444">dark mode</button>
         <button onclick="setTheme('egamepass')" style="background-color: #596eb1; color: #cbe0ff; border: 5px solid #5586e0">e-gamepass</button>
         <button onclick="setTheme('cools1te')" style="background-color: #a134dc; color: #d3a4fa; border: 5px solid #b153e3">cools1te</button>
+        <button onclick="setTheme('sunset')" style="background-color: #537294; color: #fff; border: 5px solid #30719c">sunset</button>
+        <button onclick="setTheme('mountains')" style="background-color: #d37f7f; color: #fff; border: 5px solid #e28a8a">mountains</button>
+        <!-- <button onclick="customTheme()">custom</button>
+        one day ill add this.. maybe -->
+      </div>
+      <div id="customMenu" style="display: none;">
+        <p>Input Background Colors</p>
+        <input type="color" id="inputbg" value="var(--uibg)" />
       </div>
       <br />
       <form action="javascript:setPanicMode();">

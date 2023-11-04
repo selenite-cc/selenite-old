@@ -40,3 +40,21 @@ body[theme=cools1te] {
     --textcolor: #d3a4fa;
     --bg: #8e14af;
 }
+body[theme=sunset] {
+    --inputbg: #537294;
+    --inputborder: #30719c;
+    --uibg: #2a7491;
+    --textcolor: #fff;
+    --bg: url("themebgs/sunset_theme.jpg"), rgb(59, 67, 78);
+    /* https://wallhaven.cc/w/jxl3qp */
+    --shadow: 0px 0px 2px #a5dcf5;
+}
+body[theme=mountains] {
+    --inputbg: #d37f7f;
+    --inputborder: #e28a8a;
+    --uibg: #d38493;
+    --textcolor: #fff;
+    --bg: url("themebgs/mountains_theme.jpg"), #bf7483;
+    /* https://wallhaven.cc/w/l82kpr */
+    --shadow: 0px 0px 3px #88726c;
+}
