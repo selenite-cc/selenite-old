@@ -839,5 +839,15 @@
     "name": "Pokemon",
     "directory": "pokemon",
     "image": "logo.jpg"
+  },
+  {
+    "name": "Super Smash Bros",
+    "directory": "supersmashbros",
+    "image": "logo.jpg"
+  },
+  {
+    "name": "Skibidi 1 v 100",
+    "directory": "skibiditoilet",
+    "image": "logo.png"
   }
 ]
