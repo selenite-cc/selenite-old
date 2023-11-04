@@ -116,7 +116,7 @@ button, input#websubmit.submit, input[type=submit]#panic {
   cursor: pointer;
   background-color: var(--inputbg);
   border-color: var(--inputborder);
-  border-width: 5px;
+  border-width: 3px;
   border-radius: 10px;
   border-style: solid;
   padding: 7px;
@@ -134,6 +134,7 @@ img {
   width: 100%;
   aspect-ratio: auto;
   user-select: none;
+  filter: drop-shadow(var(--shadow))
 }
 
 .img-container a {
