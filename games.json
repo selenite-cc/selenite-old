@@ -849,5 +849,10 @@
     "name": "Skibidi 1 v 100",
     "directory": "skibiditoilet",
     "image": "logo.png"
+  },
+  {
+    "name": "Drive Mad",
+    "directory": "drivemad",
+    "image": "icons/icon-128.png"
   }
 ]
