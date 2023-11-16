@@ -56,8 +56,14 @@
         setTimeout(() => {
           const container = document.querySelector("alerts");
           const safemodealert = container.querySelector(`sl-alert.safemodeinfo`);
-          if (Math.random() < 0.25) {
+          const tooltip = document.querySelector('.manual-tooltip');
+          if (Math.random() < 0.33) {
             safemodealert.toast();
+          } else if(Math.random() < 0.5) {
+            tooltip.open = !tooltip.open;
+            setTimeout(() => {
+              tooltip.open = !tooltip.open;
+            }, 5000)
           }
         }, 500);
       });
@@ -87,7 +93,9 @@
 
       <input type="text" id="gamesearch" placeholder="Type here to search.." />
       <div class="samerow">
-        <button onclick="downloadMainSave()">Download Save</button>
+        <sl-tooltip content="Remember to download your save, so you don't lose your progress." trigger="manual" class="manual-tooltip">
+          <button onclick="downloadMainSave()">Download Save</button>
+        </sl-tooltip>
         <button id="upload" onclick="uploadMainSave()">Upload Save</button>
       </div>
       <div class="samerow">

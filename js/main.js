@@ -15,6 +15,7 @@ function check() {
 
 document.addEventListener('DOMContentLoaded', function() {
   const iconSetting = document.querySelector("input#discordIcon");
+  const blockClose = document.querySelector("input#blockClose");
   if(localStorage.getItem("theme")) {
     localStorage.setItem("selenite.theme", localStorage.getItem("theme"));
     localStorage.removeItem("theme");
@@ -36,6 +37,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     iconSetting.addEventListener("click", () => {
       localStorage.setItem("selenite.discordIcon", iconSetting.checked)
+    });
+  }
+  if(document.querySelector("input#blockClose")) {
+    if(localStorage.getItem("selenite.blockClose") == "true") {
+      blockClose.checked = true;
+    }
+    blockClose.addEventListener("click", () => {
+      localStorage.setItem("selenite.blockClose", blockClose.checked)
+    });
+  }
+  if(document.querySelector("input#tabDisguise")) {
+    if(localStorage.getItem("selenite.tabDisguise") == "true") {
+      tabDisguise.checked = true;
+    }
+    tabDisguise.addEventListener("click", () => {
+      localStorage.setItem("selenite.tabDisguise", tabDisguise.checked)
     });
   }
 
@@ -85,3 +102,6 @@ function customTheme() {
   const customMenu = document.querySelector('#customMenu');
   customMenu.removeAttribute("display");
 }
+  if(location.hostname.includes(".vercel.app") && (location.hostname.includes("selenite-beta") || location.hostname.includes("space-lovers") || location.hostname.includes("school-education"))) {
+    alert("IMPORTANT:\nVercel links will be taken offline eventually. Please move to a new link. You can find these in the Discord at discord.gg/7jyufnwJNf, or you can try a few of the ones listed\nselenite.cc\nselenite.pages.dev\nselenite.skysthelimit.dev\nall-about-science.onrender.com")
+  }

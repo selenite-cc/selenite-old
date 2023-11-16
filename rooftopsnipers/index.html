@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rooftop Snipers</title>
+    <script src="/js/all.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="UnityProgress.js"></script>
+    <script src="UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "rooftop-snipers.json", {
+        onProgress: UnityProgress,
+        Module: {
+          onRuntimeInitialized: function () {
+            UnityProgress(gameInstance, "complete");
+          },
+        },
+      });
+    </script>
+    <script src="scr.js"></script>
+  </head>
+  <body>
+    <div class="webgl-content"><div id="gameContainer" style="width: 100vw; height: 100vh"></div></div>
+  </body>
+</html>

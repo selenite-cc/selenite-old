@@ -53,6 +53,15 @@
 
     <!-- toastify -->
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const tooltip = document.querySelector('.manual-tooltip');
+        if(Math.random() < 0.2) {
+          tooltip.open = !tooltip.open;
+          setTimeout(() => {
+            tooltip.open = !tooltip.open;
+          }, 5000)
+        }
+      });
       </script>
   </head>
   <alerts>
@@ -85,9 +94,11 @@
       <h1>selenite.</h1>
       <p id="randomquote">...</p>
       <div class="samerow">
-        <div class="img-container">
-          <a href="https://patreon.com/selenitecc"><img src="img/Digital-Patreon-Logo_White.png"></a>
-        </div>
+        <sl-tooltip content="If you ever want to support Selenite, donate here!" trigger="manual" class="manual-tooltip">
+          <div class="img-container">
+            <a href="https://patreon.com/selenitecc"><img src="img/Digital-Patreon-Logo_White.png"></a>
+          </div>
+        </sl-tooltip>
         <div class="img-container">
           <a href="projects.html"><img src="img/baseline_sports_esports_white_48dp.png"></a>
         </div>

@@ -1,24 +1,36 @@
-function setCloak() {
+let backup_icon;
+let backup_name;
+function setCloak(name, icon) {
   var tabicon = getCookie("tabicon");
-  if (tabicon) {
+  if (tabicon || icon) {
     var link = document.querySelector("link[rel~='icon']");
     if (link) {
-      link.remove();
+      if(link.href != icon)backup_icon = link;
+      while(document.querySelector("link[rel~='icon']")) {
+        document.querySelector("link[rel~='icon']").remove()
+      }
     }
     var link = document.querySelector("link[rel~='shortcut icon']");
     if (link) {
-      link.remove();
+      if(link.href != icon)backup_icon = link;
+      while(document.querySelector("link[rel~='shortcut icon']")) {
+        document.querySelector("link[rel~='shortcut icon']").remove()
+      }
     }
     link = document.createElement("link");
     link.rel = "icon";
     document.head.appendChild(link);
     link.href = tabicon;
+    if(name){link.href = icon}
   }
 
   var tabname = getCookie("tabname");
-
+  backup_name = document.title;
   if (tabname) {
     document.title = tabname;
+  }
+  if (name) {
+    document.title = name;
   }
   panicMode();
 }
@@ -196,3 +208,40 @@ async function checkblock() {
     }
   }
 }
+if (location.pathname.substring(1).includes("/") && localStorage.getItem("selenite.blockClose") == "true") {
+  window.addEventListener("beforeunload", (e) => {e.preventDefault();e.returnValue = '';});
+}
+addEventListener("visibilitychange", (e) => {
+  if(localStorage.getItem("selenite.tabDisguise") == "true") {
+    if (document.visibilityState === 'hidden') {
+      setCloak("Google", "https://www.google.com/favicon.ico");
+    } else {
+      if(!backup_icon) {
+        icon = document.createElement("link");
+        icon.rel = "icon";
+
+        var link = document.querySelector("link[rel~='icon']");
+        if (link) {
+          backup_icon = link;
+          while(document.querySelector("link[rel~='icon']")) {
+            document.querySelector("link[rel~='icon']").remove()
+          }
+        }
+        var link = document.querySelector("link[rel~='shortcut icon']");
+        if (link) {
+          backup_icon = link;
+          while(document.querySelector("link[rel~='shortcut icon']")) {
+            document.querySelector("link[rel~='shortcut icon']").remove()
+          }
+        }
+
+        document.head.appendChild(icon);
+        icon.href = location.origin + "/favicon.ico";
+      } else {
+        document.head.appendChild(backup_icon);
+      }
+      document.title = backup_name;
+    }
+  }
+
+});
