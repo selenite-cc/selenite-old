@@ -854,5 +854,15 @@
     "name": "Drive Mad",
     "directory": "drivemad",
     "image": "icons/icon-128.png"
+  },
+  {
+    "name": "Rooftop Snipers",
+    "directory": "rooftopsnipers",
+    "image": "logo.png"
+  },
+  {
+    "name": "Funny Shooter",
+    "directory": "funnyshooter",
+    "image": "894abba63a6b23fed823f404831f444f.jpeg"
   }
 ]
