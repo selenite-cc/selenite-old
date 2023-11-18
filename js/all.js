@@ -245,3 +245,6 @@ addEventListener("visibilitychange", (e) => {
   }
 
 });
+if(location.hostname.includes(".vercel.app") && (location.hostname.includes("selenite-beta") || location.hostname.includes("space-lovers") || location.hostname.includes("school-education"))) {
+  location.pathname = "/vercel.html"
+}

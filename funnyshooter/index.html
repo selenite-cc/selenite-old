@@ -1,38 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Funny Shooter 2</title>
-    <script src="/js/all.js"></script>
-	<script>alert("broken rn, sry")</script>
-    <meta name="robots" content="noindex,nofollow" />
-    <script>
-      window.config = {
-        loader: "unity-2020",
-        debug: false,
-        maxRatio: 16 / 9,
-        minRatio: 9 / 16,
-
-        title: "Funny Shooter 2",
-        thumbnail: "894abba63a6b23fed823f404831f444f.jpeg",
-        numScreenshots: 4,
-
-        unityVersion: "2020.3.37f1",
-        unityWebglBuildUrl: "",
-
-        fileSize: 33,
-        cachedDecompressedFileSizes: {
-          "https://raw.githubusercontent.com/funnyshooter/funnyshooter.github.io/main/file/Build/FunnyShooter2_Poki.data.unityweb": 29010101,
-          "FunnyShooter2_Poki.framework.js.unityweb": 74477,
-          "FunnyShooter2_Poki.loader.js": 110821,
-          "FunnyShooter2_Poki.wasm.unityweb": 4670173,
-        },
-        metadata: { poki_template_version: 1, background_color: "#FFFFFF", background_filename: "FunnyShooter2_Poki.jpg", code_filename: "FunnyShooter2_Poki.wasm.unityweb", company_name: "GoGoMan", data_filename: "https://raw.githubusercontent.com/funnyshooter/funnyshooter.github.io/main/file/Build/FunnyShooter2_Poki.data.unityweb", decompression_fallback: "Brotli", development_player: "false", framework_filename: "FunnyShooter2_Poki.framework.js.unityweb", height: "600", loader_filename: "FunnyShooter2_Poki.loader.js", product_name: "Funny Shooter 2", product_version: "1.0.1", splash_screen_style: "Dark", total_memory: "268435456", unity_version: "2020.3.37f1", use_data_caching: "true", use_threads: "false", use_wasm: "true", use_webgl_1_0: "true", use_webgl_2_0: "true", width: "960" },
-      };
-    </script>
-    <!-- will be copied to the resulting head //-->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Funny Shooter</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
   </head>
+  <body class="dark">
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas"></canvas>
+    </div>
+    <div id="loading-cover" style="display:none;">
+      <div id="unity-loading-bar">
+        <div id="unity-logo"><img src="logo.png"></div>
+        <div id="unity-progress-bar-empty" style="display: none;">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+        <div class="spinner"></div>
+      </div>
+    </div>
+    <div id="unity-fullscreen-button" style="display: none;"></div>
+    <script>
+      const hideFullScreenButton = "1";
+      const buildUrl = "Build";
+      const loaderUrl = buildUrl + "/FunnyShooter_GD.loader.js";
+      const config = {
+        dataUrl: buildUrl + "/FunnyShooter_GD.data.unityweb",
+        frameworkUrl: buildUrl + "/FunnyShooter_GD.framework.js.unityweb",
+        codeUrl: buildUrl + "/FunnyShooter_GD.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "GoGoMan",
+        productName: "Funny Shooter",
+        productVersion: "0.1",
+      };
 
-  <body></body>
+      const container = document.querySelector("#unity-container");
+      const canvas = document.querySelector("#unity-canvas");
+      const loadingCover = document.querySelector("#loading-cover");
+      const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
+      const progressBarFull = document.querySelector("#unity-progress-bar-full");
+      const fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      const spinner = document.querySelector('.spinner');
+
+      const canFullscreen = (function() {
+        for (const key of [
+            'exitFullscreen',
+            'webkitExitFullscreen',
+            'webkitCancelFullScreen',
+            'mozCancelFullScreen',
+            'msExitFullscreen',
+          ]) {
+          if (key in document) {
+            return true;
+          }
+        }
+        return false;
+      }());
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        container.className = "unity-mobile";
+        config.devicePixelRatio = 1;
+      }
+      canvas.style.background = "url('" + buildUrl + "/FunnyShooter_GD.jpg.unityweb') center / cover";
+      loadingCover.style.display = "";
+
+      const script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          spinner.style.display = "none";
+          progressBarEmpty.style.display = "";
+          progressBarFull.style.width = `${100 * progress}%`;
+        }).then((unityInstance) => {
+          loadingCover.style.display = "none";
+          if (canFullscreen) {
+            if (!hideFullScreenButton) {
+              fullscreenButton.style.display = "";
+            }
+            fullscreenButton.onclick = () => {
+              unityInstance.SetFullscreen(1);
+            };
+          }
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
 </html>
