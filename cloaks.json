@@ -16,5 +16,17 @@
     ],
     "newtab": [
         "New Tab", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABRklEQVR42mKgOqjq75ds7510YNL0uV9nAGqniqwKYiCIHIIjcAK22BGQLRdgBWvc3fnWk/FJhrkPO1xPgGvqPfLfJMHhT1yqurvS48bPaJhjD2efgidnVwa2yv59xecvEvi0UWCXq9t0ItfP2MMZ7nwIpkA8F1n8uLxZHM6yrBH7FIl2gFXDHYsErkn2hyKLHtcKrFntk58uVQJ+kSdQnmjhID4cwLLa8+K0BXsfNWCqBOsFdo2Yldv43DBrkxd30cjnNyYBhK0SQGkI9pG4Mu40D5b374DRCAyhHqXVfTmOwivivMkJxBz5wnHCtBfGgNFC+ChWKWRf3hsQIlyEoIv4IYEo5wkgtBLRekY9DE4Uin4Keae6hydGnljPmE8kRcCine6827AMsJ1IuW9ibnlQpXLBCR/WC875m2BP+VSu3c/0m+8V08OBngc0pxcAAAAASUVORK5CYII="
+    ],
+    "docs": [
+        "Google Docs", "https://ssl.gstatic.com/docs/documents/images/kix-favicon-2023q4.ico"
+    ],
+    "edpuzzle": [
+        "Edpuzzle", "https://edpuzzle.imgix.net/favicons/favicon-32.png"
+    ],
+    "khan": [
+        "Dashboard | Khan Academy", "https://cdn.kastatic.org/images/favicon.ico?logo"
+    ],
+    "quizlet": [
+        "Your Sets", "https://assets.quizlet.com/a/j/dist/app/i/logo/2021/q-twilight.e27821d9baad165.png"
     ]
 }
