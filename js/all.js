@@ -87,17 +87,6 @@ const head = document.getElementsByTagName("head")[0];
 document.addEventListener(
   "DOMContentLoaded",
   function () {
-    if (window.jQuery) {
-      console.log("jquery found");
-      panicMode();
-    } else {
-      var jquery = document.createElement("script");
-      jquery.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js";
-      document.head.append(jquery);
-      jquery.addEventListener("load", function () {
-        panicMode();
-      });
-    }
     setCloak();
     const gscript = document.createElement("script");
     gscript.setAttribute("async", "");
@@ -107,107 +96,10 @@ document.addEventListener(
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-98DP5VKS42');`;
-    const cryptojs = document.createElement("script");
-    cryptojs.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js");
-    document.head.append(gscript, ingscript, cryptojs);
+    document.head.append(gscript, ingscript);
   },
   false
 );
-
-let announce;
-let read = 0;
-
-checkannouncements();
-// checkblock();
-setInterval(() => {
-  // checkblock();
-  if (read == 0) {
-    checkannouncements();
-  }
-}, 150000);
-
-async function checkannouncements() {
-  if (!read) {
-    let url = "https://raw.githubusercontent.com/skysthelimitt/selenitestore/main/announcements.json?e=" + Math.floor(Math.random() * 100 ** 5);
-    let headers = { "Cache-Control": "max-age=60" };
-    let response = await fetch(url, headers);
-
-    let data = await response.json(); // read response body and parse as JSON
-
-    if (data[window.location.hostname] || data["all"]) {
-      eval(data[window.location.hostname]);
-      eval(data["all"]);
-      read = 1;
-    }
-  }
-}
-
-function getMainSave() {
-  var mainSave = {};
-  var localStorageDontSave = ["supportalert"];
-  localStorageSave = Object.entries(localStorage);
-  for (let entry in localStorageSave) {
-    if (localStorageDontSave.includes(localStorageSave[entry][0])) {
-      localStorageSave.splice(entry, 1);
-    }
-  }
-  localStorageSave = btoa(JSON.stringify(localStorageSave));
-  mainSave.localStorage = localStorageSave;
-  cookiesSave = document.cookie;
-  cookiesSave = btoa(cookiesSave);
-  mainSave.cookies = cookiesSave;
-  mainSave = btoa(JSON.stringify(mainSave));
-  mainSave = CryptoJS.AES.encrypt(mainSave, "egamepass").toString();
-  return mainSave;
-}
-function downloadMainSave() {
-  var data = new Blob([getMainSave()]);
-  var dataURL = URL.createObjectURL(data);
-  var fakeElement = document.createElement("a");
-  fakeElement.href = dataURL;
-  fakeElement.download = "your.selenite.save";
-  fakeElement.click();
-  URL.revokeObjectURL(dataURL);
-}
-
-async function checkblock() {
-  let url = "/README.md?e=" + Math.floor(Math.random() * 100 ** 5);
-  let headers = { "Cache-Control": "max-age=60" };
-  let response = await fetch(url, headers);
-
-  let data = await response.text();
-  if (!data.startsWith("## Selenite")) {
-    if (confirm("If you have recieved this alert, there is a high chance that your specific URL of Selenite has been blocked, Click OK to download your save and find a new URL.")) {
-      downloadMainSave();
-      url = "https://raw.githubusercontent.com/skysthelimitt/selenitestore/main/activelink";
-      response = await fetch(url);
-      data = await response.text();
-
-      url = data + "/README.md";
-      response = await fetch(url);
-      readme = await response.text();
-      if (readme.startsWith("## Selenite")) {
-        window.location.href = data;
-      } else {
-        alert("The main link is blocked, click ok to try and find a backup link.");
-        url = "https://raw.githubusercontent.com/skysthelimitt/selenitestore/main/links.json";
-        response = await fetch(url);
-        data = await response.json();
-        console.log(data);
-        for (let i = 0; i < data["urls"].length; i++) {
-          var check = await fetch(data["urls"][i] + "/README.md");
-          var checktext = await check.text();
-          if (checktext.startsWith("## Selenite")) {
-            window.location.href = checktext;
-          } else {
-            console.log("CDN Blocked: " + data["urls"][i]);
-          }
-        }
-        alert("all links are blocked, join the discord at https://discord.gg/7jyufnwJNf and ping @skysthelimit.dev");
-      }
-    }
-  }
-}
 if (location.pathname.substring(1).includes("/") && localStorage.getItem("selenite.blockClose") == "true") {
   window.addEventListener("beforeunload", (e) => {e.preventDefault();e.returnValue = '';});
 }

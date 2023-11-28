@@ -14,7 +14,6 @@
 
 
     <!-- initialize my stuff -->
-    <script src="/js/themes.js"></script>
     <script src="/js/all.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/randomquote.js"></script>
@@ -26,7 +25,7 @@
     <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
       new Crate({
           server: '1148719137238040606', // Selenite
-          channel: '1164203315068932156' // #commands
+          channel: '1173731814196645909' // #commands
       })
     </script>
 
@@ -48,21 +47,8 @@
       name="description"
       content="Welcome to the one and only option for unblocked games. Welcome to Selenite."
     />
-    <meta name="author" content="Website Creator" />
+    <meta name="author" content="selenite-cc" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-    <!-- toastify -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const tooltip = document.querySelector('.manual-tooltip');
-        if(Math.random() < 0.2) {
-          tooltip.open = !tooltip.open;
-          setTimeout(() => {
-            tooltip.open = !tooltip.open;
-          }, 5000)
-        }
-      });
-      </script>
   </head>
   <alerts>
     <sl-dialog label="Welcome to Selenite!" class="dialog-width" style="--width: 60vw;display:none;">
@@ -94,11 +80,9 @@
       <h1>selenite.</h1>
       <p id="randomquote">...</p>
       <div class="samerow">
-        <sl-tooltip content="If you ever want to support Selenite, donate here!" trigger="manual" class="manual-tooltip">
-          <div class="img-container">
-            <a href="https://patreon.com/selenitecc"><img src="img/Digital-Patreon-Logo_White.png"></a>
-          </div>
-        </sl-tooltip>
+        <div class="img-container">
+          <a href="https://patreon.com/selenitecc"><img src="img/Digital-Patreon-Logo_White.png"></a>
+        </div>
         <div class="img-container">
           <a href="projects.html"><img src="img/baseline_sports_esports_white_48dp.png"></a>
         </div>

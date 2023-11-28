@@ -224,6 +224,10 @@ input[type="text"] {
 input[type=text]:hover {
   opacity: 80%;
 }
+::placeholder {
+  color: var(--textcolor);
+  opacity: 0.4; /* Firefox */
+}
 
 .bookmarkletdiv {
   width: 30%;
@@ -289,4 +293,7 @@ h3#gametitle {
 label {
   font-size: 20px;
   padding-left: 5px;
+}
+.avatar {
+  margin: 5px;
 }

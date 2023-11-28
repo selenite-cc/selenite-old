@@ -1947,3 +1947,12 @@ toggleAudio();
 document.getElementById('menuButton').disabled = true;
 document.getElementById('menuButton2').disabled = true;
 document.getElementById('menuButton3').disabled = true;
+
+function Upload() {
+	localStorage.setItem("save", atob(prompt("Paste your save data.")));
+	Load();
+}
+function Download() {
+	navigator.clipboard.writeText(btoa(localStorage.getItem("save")));
+	alert("Copied to clipboard.")
+}

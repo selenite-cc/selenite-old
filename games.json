@@ -864,5 +864,20 @@
     "name": "Funny Shooter",
     "directory": "funnyshooter",
     "image": "icon.jpeg"
+  },
+  {
+    "name": "Monkey Mart",
+    "directory": "monkeymart",
+    "image": "unnamed.png"
+  },
+  {
+    "name": "Factory Balls",
+    "directory": "factoryballs",
+    "image": "fac.png"
+  },
+  {
+    "name": "Factory Balls Forever",
+    "directory": "factoryballsforever",
+    "image": "fac.png"
   }
 ]

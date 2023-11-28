@@ -63,6 +63,7 @@
 
     <script>
       function fnSendMsg(evt) {
+        console.log(evt.key);
         window.parent.postMessage("keypress-from-game", "*");
       }
       document.body.addEventListener("click", function (event) {
@@ -72,10 +73,28 @@
         fnSendMsg(event);
       });
       document.addEventListener("keydown", function (e) {
-        fnSendMsg(event);
+        fnSendMsg(e);
+        if(e.key == "ArrowDown" || e.key == "s") {
+          keydown.down = true;
+        } else if(e.key == "ArrowUp" || e.key == "w") {
+          keydown.up = true;
+        } else if(e.key == "ArrowLeft" || e.key == "a") {
+          keydown.left = true;
+        } else if(e.key == "ArrowRight" || e.key == "d") {
+          keydown.right = true;
+        }
       });
       document.addEventListener("keyup", function (e) {
-        fnSendMsg(event);
+        fnSendMsg(e);
+        if(e.key == "ArrowDown" || e.key == "s") {
+          keydown.down = false;
+        } else if(e.key == "ArrowUp" || e.key == "w") {
+          keydown.up = false;
+        } else if(e.key == "ArrowLeft" || e.key == "a") {
+          keydown.left = false;
+        } else if(e.key == "ArrowRight" || e.key == "d") {
+          keydown.right = false;
+        }
       });
     </script>
   </body>
