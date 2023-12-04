@@ -879,5 +879,60 @@
     "name": "Factory Balls Forever",
     "directory": "factoryballsforever",
     "image": "fac.png"
+  },
+  {
+    "name": "Funny Shooter 2",
+    "directory": "funnyshooter2",
+    "image": "894abba63a6b23fed823f404831f444f.jpeg"
+  },
+  {
+    "name": "Bad Time Simulator",
+    "directory": "badtimesimulator",
+    "image": "icon-114.png"
+  },
+  {
+    "name": "Commodore 64 Clicker",
+    "directory": "commodoreclicker",
+    "image": "test.jpg"
+  },
+  {
+    "name": "Stickman Boost",
+    "directory": "stickmanboost",
+    "image": "base/img1.jpg"
+  },
+  {
+    "name": "Stickman Golf",
+    "directory": "stickmangolf",
+    "image": "gold.png"
+  },
+  {
+    "name": "Basket Bros",
+    "directory": "basketbros",
+    "image": "thumb.jpg"
+  },
+  {
+    "name": "justfall.lol",
+    "directory": "justfalllol",
+    "image": "unnamed.png"
+  },
+  {
+    "name": "Doge Miner",
+    "directory": "dogeminer",
+    "image": "img/dogeminer_300x300.png"
+  },
+  {
+    "name": "Soccer Random",
+    "directory": "soccerrandom",
+    "image": "test.png"
+  },
+  {
+    "name": "Basket Random",
+    "directory": "basketrandom",
+    "image": "test.png"
+  },
+  {
+    "name": "Boxing Random",
+    "directory": "boxingrandom",
+    "image": "512x512.jpg"
   }
 ]

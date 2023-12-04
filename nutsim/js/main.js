@@ -1755,6 +1755,7 @@ function UpdateDamage(){
 }
 
 function CheckMobile(){
+	/*
 	var ratio = window.innerWidth / window.innerHeight;
 	if(ratio < 0.745 && page == "index.html"){
 		window.location.href = "mobile.html";
@@ -1762,7 +1763,9 @@ function CheckMobile(){
 		window.location.href = "index.html";
 	} else if (ratio < 0.745 && page == ""){
 		window.location.href = "mobile.html";
+		
 	}
+	*/
 }
 
 function Gamble(level){

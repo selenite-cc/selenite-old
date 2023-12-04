@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+ <head>
+  <title>Commodore Clicker</title>
+  <script src="/js/all.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.powertip-yellow.css">
+  <script data-main="js/main" src="js/thirdparty/require.js"></script>
+ </head>
+ <body>
+  <div class="head">
+   <h1><a href="http://c64clicker.com">Commodore Clicker</a></h1>
+   <div id="about">
+    <p><strong>Render the screen of a Commodore 64</strong> pixel by pixel, and unleash the graphical prowess of the greatest computer of the 80s!</p>
+    <p>Purchase oscillators to kick-start the computer's clock, using the pixels you've built up; buy upgrades to power up your clicking, and to start special graphical effects.</p>
+    <em>This is not a full simulation of a C64. Not yet, anyways.</em>
+   </div>
+  </div>
+  <div class="topbar">
+   <div class="joystick">
+    <div id="joy_up">U</div>
+    <div id="joy_left">L</div>
+    <div id="joy_right">R</div>
+    <div id="joy_down">D</div>
+    <div id="joy_fire">Fire</div>
+   </div>
+   <div id="bank">&nbsp;</div>
+   <div id="cps">&nbsp;</div>
+   <div id="click">Reticulating splines...</div>
+  </div>
+  <div class="content">
+   <div class="sidebar">
+    <div class="items">
+     <ul class="tabs">
+      <li rel="units">Oscillators</li>
+      <li rel="upgrades">Upgrades</li>
+      <li rel="options">Options</li>
+     </ul>
+     <div class="itemlists">
+      <ul class="units">
+      </ul>
+      <ul class="upgrades">
+      </ul>
+      <ul class="options">
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="screen">
+    <canvas id="screen" width="504" height="312"></canvas>
+    <div class="cursor_x"></div>
+    <div class="cursor_y"></div>
+    <div class="disk hidden">
+     <div class="disk_drive">1541 Disk Drive</div>
+     <select id="disk_files"></select>
+     <div id="disk_power"></div>
+     <div class="disk_bar"><span id="disk_progress"></span></div>
+    </div>
+    <ul class="status">
+     <li>Frame: <span id="curframe"></span>, raster: <span id="curraster"></span></li>
+     <li>Clock speed: <span id="clock"></span></li>
+     <li>Rendering: <span id="curperiod"></span></li>
+    </ul>
+    <div id="reset">Hard Reset</div>
+   </div>
+  </div>
+  <div class="foot">
+   Developed by <a href="http://imrannazar.com/">Imran Nazar</a>, 2014. Now on <a href="https://github.com/Two9A/c64clicker">GitHub</a>.
+  </div>
+ </body>
+</html>

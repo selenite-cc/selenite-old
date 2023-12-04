@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+body {
+    background: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.head {
+    margin: 15px 0;
+}
+
+.head h1 {
+    margin: 0 auto;
+    width: 776px;
+    height: 90px;
+    background: url(/img/cclicker.png) no-repeat top left;
+    text-indent: -9999px;
+    font-size: 1px;
+}
+
+.head h1 a {
+    text-decoration: none;
+    text-indent: -9999px;
+    display: block;
+    width: 776px;
+    height: 90px;
+}
+
+#about {
+    display: none;
+}
+
+.content {
+    clear: both;
+    margin: 0 auto;
+    width: 840px;
+}
+
+.screen {
+    width: 504px;
+    padding-top: 36px;
+    position: relative;
+}
+
+#screen {
+    width: 504px;
+    height: 312px;
+    padding: 1px;
+    border: 5px solid #c8ad7f;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.status {
+    list-style: none inside;
+    margin: 10px 0;
+    color: #bbb;
+}
+
+.status span {
+    font-weight: bold;
+}
+
+.cursor_x {
+    height: 8px;
+    width: 1px;
+    position: absolute;
+    top: 28px;
+    left: 6px;
+    background: #c8ad7f;
+}
+
+.cursor_y {
+    width: 8px;
+    height: 1px;
+    position: absolute;
+    top: 42px;
+    left: -8px;
+    background: #c8ad7f;
+}
+
+.sidebar {
+    float: right;
+    width: 320px;
+}
+
+.topbar {
+    width: 840px;
+    margin: 0 auto;
+}
+
+.joystick {
+    float: right;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-top: 10px;
+}
+.joystick.hidden {
+    display: none;
+}
+
+.joystick .active {
+    background: #c8ad7f;
+    color: black;
+    font-weight: bold;
+}
+
+#joy_left, #joy_right {
+    position: absolute;
+    top: 35px;
+    height: 20px;
+    padding: 5px;
+    line-height: 20px;
+    border: 2px solid #c8ad7f;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#joy_left {
+    left: 0;
+    width: 55px;
+    border-right: 0;
+}
+#joy_right {
+    right: 0;
+    width: 53px;
+    text-align: right;
+    border-left: 0;
+}
+
+#joy_up, #joy_down {
+    position: absolute;
+    left: 35px;
+    width: 20px;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid #c8ad7f;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#joy_up {
+    top: 0;
+    border-bottom: 0;
+    height: 55px;
+}
+#joy_down {
+    bottom: 0;
+    height: 53px;
+    line-height: 90px;
+    border-top: 0;
+}
+
+#joy_fire {
+    display: none;
+}
+
+#bank {
+    text-align: center;
+    font-size: 30px;
+}
+
+#cps {
+    text-align: center;
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+#click {
+    text-align: center;
+    font-size: 26px;
+    width: 250px;
+    background: #5d594f;
+    border-radius: 13px 13px 13px 13px;
+    margin: 10px 360px 10px 230px;
+    padding: 12px;
+    cursor: pointer;
+}
+.joystick.hidden ~ #click {
+    margin: 10px auto;
+}
+
+#reset {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.tabs {
+    list-style: none inside;
+    padding-top: 10px;
+}
+
+.tabs li {
+    background: #5d594f;
+    color: white;
+    padding: 8px;
+    border-radius: 8px 8px 0 0;
+    display: inline;
+    cursor: pointer;
+}
+
+.tabs li.active {
+    background: #c8ad7f;
+    color: black;
+}
+
+.itemlists {
+    border: 5px solid #c8ad7f;
+    border-radius: 0 0 5px 5px;
+    padding: 5px;
+    margin-top: 7px;
+    height: 305px;
+    overflow: auto;
+}
+
+.itemlists ul {
+    list-style: none inside;
+}
+
+.itemlists li {
+    background: #444;
+    border: 5px solid #5d594f;
+    border-radius: 8px 8px 8px 8px;
+    color: #999;
+    padding: 8px;
+    margin: 8px;
+    cursor: pointer;
+    display: none;
+}
+
+.itemlists li.active {
+    display: block;
+}
+
+.itemlists li.available {
+    background: #bbb;
+    border-color: #c8ad7f;
+    color: #000;
+}
+
+.itemlists li span {
+    display: block;
+}
+
+.foot {
+    clear: both;
+    text-align: center;
+    padding-top: 2em;
+    color: #bbb;
+}
+
+a {
+    color: #ddd;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+body.quarterscreen .content {
+    width: 966px;
+}
+body.quarterscreen .screen {
+    width: 630px;
+}
+body.quarterscreen #screen {
+    width: 630px;
+    height: 390px;
+}
+body.quarterscreen .itemlists {
+    height: 383px;
+}
+body.quarterscreen .disk {
+    width: 622px;
+}
+
+.disk {
+    width: 496px;
+    border: 5px solid #c8ad7f;
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px;
+    line-height: 25px;
+}
+.disk.hidden {
+    display: none;
+}
+.disk .disk_drive {
+    font-weight: bold;
+    float: left;
+    padding-bottom: 4px;
+}
+.disk #disk_files {
+    margin-left: 10px;
+}
+.disk #disk_power {
+    width: 20px;
+    height: 25px;
+    background: #300;
+    float: right;
+}
+.disk #disk_power.disk_on {
+    background: #c33;
+}
+.disk .disk_bar {
+    clear: both;
+    height: 25px;
+    width: 100%;
+    border: 1px solid #c8ad7f;
+}
+.disk #disk_progress {
+    background: #c8ad7f;
+    display: block;
+    height: 25px;
+}
