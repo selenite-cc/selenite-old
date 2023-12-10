@@ -944,5 +944,20 @@
     "name": "hole.io",
     "directory": "holeio",
     "image": "feature800x470.png"
+  },
+  {
+    "name": "Time Shooter",
+    "directory": "timeshooter1",
+    "image": "logo.png"
+  },
+  {
+    "name": "Time Shooter 2",
+    "directory": "timeshooter2",
+    "image": "ts2.jpg"
+  },
+  {
+    "name": "Time Shooter 3",
+    "directory": "timeshooter3",
+    "image": "logo.png"
   }
 ]

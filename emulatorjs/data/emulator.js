@@ -239,16 +239,6 @@ class EmulatorJS {
         })
     }
     checkForUpdates() {
-        fetch('https://raw.githack.com/EmulatorJS/EmulatorJS/main/data/version.json').then(response => {
-            if (response.ok) {
-                response.text().then(body => {
-                    let version = JSON.parse(body);
-                    if (this.ejs_num_version < version.current_version) {
-                        console.log('Using emulatorjs version ' + this.ejs_num_version + ' but the newest version is ' + version.current_version + '\nopen https://github.com/EmulatorJS/EmulatorJS to update');
-                    }
-                })
-            }
-        })
     }
     constructor(element, config) {
         this.ejs_version = "4.0.8";
