@@ -62,7 +62,7 @@
   {
     "name": "Adventure Capitalist",
     "directory": "adventure-capitalist",
-    "image": "icon.png"
+    "image": "logo.webp"
   },
   {
     "name": "Bloons Tower Defense 3",
@@ -497,7 +497,7 @@
   {
     "name": "Rocket League",
     "directory": "rocketleague",
-    "image": "splash.png",
+    "image": "splash.webp",
     "recommended": "1"
   },
   {
@@ -934,5 +934,15 @@
     "name": "Boxing Random",
     "directory": "boxingrandom",
     "image": "512x512.jpg"
+  },
+  {
+    "name": "Funny Mad Racing",
+    "directory": "funnymadracing",
+    "image": "logo.webp"
+  },
+  {
+    "name": "hole.io",
+    "directory": "holeio",
+    "image": "feature800x470.png"
   }
 ]
