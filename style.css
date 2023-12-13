@@ -63,9 +63,27 @@ header a:visited {
   margin-left: 1rem;
 }
 
-footer a:hover,
-header a:hover {
+footer a:hover {
   text-shadow: 2px 2px 6px var(--textcolor);
+}
+header a {
+  transition:0.3s;
+ 
+}
+header a:hover {
+  background-color: var(--navbar);
+    padding:10px;
+  border-radius:10px;
+}
+body {
+  /*
+    --text-color: #ffffff;
+    --background: #f3a683;
+  */
+    --navbar: var(--bg);
+      /*
+    --accent: #ff9a8b;
+      */
 }
 main {
   animation: 1.25s ease-in-out 0s 1 loadInAnimation;
