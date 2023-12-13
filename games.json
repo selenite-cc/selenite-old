@@ -959,5 +959,10 @@
     "name": "Time Shooter 3",
     "directory": "timeshooter3",
     "image": "logo.png"
+  },
+  {
+    "name": "Townscaper",
+    "directory": "townscaper",
+    "image": "icon.png"
   }
 ]
