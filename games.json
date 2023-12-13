@@ -964,5 +964,70 @@
     "name": "Townscaper",
     "directory": "townscaper",
     "image": "icon.png"
+  },
+  {
+    "name": "Bad Ice Cream",
+    "directory": "badicecream",
+    "image": "bad-ice-cream.png"
+  },
+  {
+    "name": "Bad Ice Cream 2",
+    "directory": "badicecream2",
+    "image": "bad-ice-cream-2.png"
+  },
+  {
+    "name": "Bad Ice Cream 3",
+    "directory": "badicecream3",
+    "image": "bad-ice-cream-3.png"
+  },
+  {
+    "name": "Bob the Robber 2",
+    "directory": "bobtherobber2",
+    "image": "icon.png"
+  },
+  {
+    "name": "Boxing Physics 2",
+    "directory": "boxingphysics2",
+    "image": "icon.png"
+  },
+  {
+    "name": "Burger and Frights",
+    "directory": "burgerandfrights",
+    "image": "icon.png"
+  },
+  {
+    "name": "Flippy Fish",
+    "directory": "flippyfish",
+    "image": "icon.png"
+  },
+  {
+    "name": "Knife Hit",
+    "directory": "knifehit",
+    "image": "icon.png"
+  },
+  {
+    "name": "Lazy Jump 3D",
+    "directory": "lazyjump3d",
+    "image": "icon.png"
+  },
+  {
+    "name": "Moto X3M Spooky",
+    "directory": "motox3m-spooky",
+    "image": "icon.png"
+  },
+  {
+    "name": "Rooftop Snipers 2",
+    "directory": "rooftopsnipers2",
+    "image": "icon.png"
+  },
+  {
+    "name": "Skibidi Toilet Attack",
+    "directory": "skibiditoiletattack",
+    "image": "logo.png"
+  },
+  {
+    "name": "Tiny Fishing",
+    "directory": "tinyfishing",
+    "image": "thumb.png"
   }
 ]
