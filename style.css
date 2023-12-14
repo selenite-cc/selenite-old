@@ -292,6 +292,17 @@ label {
   font-size: 20px;
   padding-left: 5px;
 }
+   footer a,
+footer a:visited,
+header a,
+header a:visited {
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: 2rem;
+  margin-left: 1rem;
+}
+
 .avatar {
   margin: 5px;
 }
