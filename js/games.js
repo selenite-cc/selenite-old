@@ -1,4 +1,14 @@
 $.getJSON("/games.json", function (data) {
+  if (document.readyState === "complete") {
+		loadGames(data);
+	} else {
+		document.addEventListener("DOMContentLoaded", () => {
+			loadGames(data);
+		});
+	}
+});
+
+function loadGames(data) {
   starredgames = getCookie("starred");
   if (starredgames == "") {
     starredgames = [];
@@ -47,9 +57,8 @@ $.getJSON("/games.json", function (data) {
     $("#games").append($element);
   }
   $("#games #message").remove();
-});
 
-$(document).ready(function () {
+  // starred games
   let starred;
   $(document).on("click", ".game", function (event) {
     if ($(event.target).is("img.star")) {
@@ -121,7 +130,7 @@ $(document).ready(function () {
   $(document).on("click", "#game img .star", function (event) {
     $(this).prop({ class: "material-symbols-outlined fill" });
   });
-});
+}
 
 function redirectGame(dir) {
   window.location.href = window.location.origin + "/" + dir + "/index.html";

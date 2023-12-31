@@ -1029,5 +1029,155 @@
     "name": "Tiny Fishing",
     "directory": "tinyfishing",
     "image": "thumb.png"
+  },
+  {
+    "name": "TU-95",
+    "directory": "tu95",
+    "image": "tu-95.webp"
+  },
+  {
+    "name": "TU-46",
+    "directory": "tu46",
+    "image": "tu-46.webp"
+  },
+  {
+    "name": "Russian Car Driver",
+    "directory": "russiancardriver",
+    "image": "russian-car-driver.webp"
+  },
+  {
+    "name": "Legend of Zelda - Ocarina of Time",
+    "directory": "ocarinaoftime",
+    "image": "oc.jpg"
+  },
+  {
+    "name": "Metroid: Zero Mission",
+    "directory": "metroidzeromission",
+    "image": "zero.jpeg"
+  },
+  {
+    "name": "Guilty Gear",
+    "directory": "guiltygear",
+    "image": "ggx.jpg"
+  },
+  {
+    "name": "A Dark Room",
+    "directory": "adarkroom",
+    "image": "favicon.ico"
+  },
+  {
+    "name": "Fancy Pants Adventures",
+    "directory": "fancypantsadventures",
+    "image": "fpa.webp"
+  },
+  {
+    "name": "Fancy Pants Adventures 2",
+    "directory": "fancypantsadventures2",
+    "image": "fpa2.avif"
+  },
+  {
+    "name": "Line Rider",
+    "directory": "linerider",
+    "image": "boosh.png"
+  },
+  {
+    "name": "Funny Ball Game",
+    "directory": "funnyballgame",
+    "image": "ball.jpg"
+  },
+  {
+    "name": "Henry Stickmin - Stealing the Diamond",
+    "directory": "stealingthediamond",
+    "image": "diamante.avif"
+  },
+  {
+    "name": "Henry Stickmin - Breaking the Bank",
+    "directory": "breakingthebank",
+    "image": "balling.avif"
+  },
+  {
+    "name": "Henry Stickmin - Escaping the Prison",
+    "directory": "escapingtheprison",
+    "image": "pwison.avif"
+  },
+  {
+    "name": "Henry Stickmin - Fleeing the Complex",
+    "directory": "fleeingthecomplex",
+    "image": "flee.jpg"
+  },
+  {
+    "name": "Henry Stickmin - Infiltrating the Airship",
+    "directory": "infiltratingtheairship",
+    "image": "air.avif"
+  },
+  {
+    "name": "Pandemic",
+    "directory": "pandemic",
+    "image": "sddefault.jpg"
+  },
+  {
+    "name": "Pandemic 2",
+    "directory": "pandemic2",
+    "image": "pan2.webp"
+  },
+  {
+    "name": "Age of War",
+    "directory": "ageofwar",
+    "image": "warofage.jpg"
+  },
+  {
+    "name": "Soundboard",
+    "directory": "soundboard",
+    "image": "bleep.png"
+  },
+  {
+    "name": "The Impossible Quiz",
+    "directory": "theimpossiblequiz",
+    "image": "tiq.avif"
+  },
+  {
+    "name": "2D Rocket League",
+    "directory": "2drocketleague",
+    "image": "unnamed.png"
+  },
+  {
+    "name": "Pizza Tower",
+    "directory": "pizzatower",
+    "image": "images/menubg.png"
+  },
+  {
+    "name": "Monster Tracks",
+    "directory": "monstertracks",
+    "image": "webapp/cover.jpg"
+  },
+  {
+    "name": "Totally Accurate Battle Simulator",
+    "directory": "tabs",
+    "image": "unnamed.png"
+  },
+  {
+    "name": "CSGO Case Clicker",
+    "directory": "csgoclicker",
+    "image": "images/case1.png"
+  },
+  {
+    "name": "The Final Earth 2",
+    "directory": "thefinalearth2",
+    "image": "icons/favicon.png"
+  },
+  {
+    "name": "Baldi's Basics",
+    "directory": "baldis-basics",
+    "image": "splash.png"
+  },
+  {
+    "name": "Cubefield",
+    "directory": "cubefield",
+    "image": "assets/unnamed.png"
+  },
+  {
+    "name": "Minecraft Classic",
+    "directory": "mcclassic",
+    "image": "assets/textures/previews/2.png"
   }
 ]

@@ -1,0 +1,231 @@
+
+body{
+  background: url(../assets/fieldbackground.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@font-face {
+    font-family: 'planerregular';
+    src: url('Planer-Regular-webfont.eot');
+    src: url('Planer-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/Planer-Regular-webfont.ttf') format('truetype'),
+         url('Planer-Regular-webfont.svg#planerregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+}
+
+canvas {
+  position: relative;
+  border: solid 3px white;
+  padding: 0;
+  margin: auto;
+  display: block;
+  background: url(../assets/2000px-Soccer_field_-_empty.svg.png);
+  background-size: 109.7% 107.7%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1
+}
+
+.center {
+  position: relative;
+  width: 70%;
+  margin: -5px auto;
+  text-align: center;
+  height: 60%;
+}
+
+.logo {
+  display: inline-block;
+  height: 100px;
+  width: auto;
+}
+
+.twod-logo {
+  display: inline-block;
+  position: relative;
+  top: -30px;
+  height: 35px;
+  width: auto;
+}
+
+.scoreboard {
+  position: relative;
+  top: -20px;
+  display: inline-block;
+  height: 50px;
+  width: 60px;
+  border: solid 4px black;
+  font-size: 300%;
+  text-align: center;
+  font-family: 'planerregular';
+  color: white;
+  text-shadow: 2px 2px black;;
+  padding-bottom: 10px;
+}
+
+.orange {
+  background: orange;
+  border-left: solid 2px white;
+  border-bottom: solid 2px white;
+  border-top: solid 2px white;
+}
+
+.blue {
+  background: blue;
+  border-right: solid 2px white;
+  border-bottom: solid 2px white;
+  border-top: solid 2px white;
+}
+
+.spacer {
+  width: 0px;
+  display: inline-block;
+}
+
+.logo-timer {
+  display: inline-block;
+  position: relative;
+  background: black;
+  padding: 0px 30px 0px 30px;
+  border-radius: 5%;
+}
+
+.count-down {
+  position: relative;
+  width: 324px;
+  height: 75px;
+  top: -25px;
+  border-radius: 5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: black;
+  display: inline-block;
+  color: white;
+  font-size: 400%;
+  font-family: 'planerregular';
+  margin-top: 30px;
+}
+
+.game-over {
+
+  position: absolute;
+  width: 500px;
+  height: 400px;
+  background: gray;
+  left: 50%;
+  top: 55%;
+  margin-top: -250px;
+  margin-left: -250px;
+  border-radius: 10%;
+
+}
+
+.hidden {
+  display:none;
+}
+
+.play-again {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  margin-left: -100px;
+  width: 200px;
+  background-color: yellow; /* Green */
+  /*border: none;*/
+  color: black;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  font-family: 'planerregular';
+  border-radius: 10%;
+}
+
+.winner-announce {
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  margin-left: -200px;
+  width: 400px;
+  height: 250px;
+  text-align: center;
+  font-size: 100px;
+  font-family: 'planerregular';
+}
+
+.start-button {
+  background: green;
+  width: auto;
+  position: absolute;
+  top: 20px;
+  left: 75%;
+  font-family: planerregular;
+  color: white;
+  font-size: 225%;
+  padding: 10px;
+  border: solid white 2px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.instructions {
+  font-family: planerregular;
+  position: absolute;
+  height: 200px;
+  width: 500px;
+  margin-left: -260px;
+  left: 50%;
+  top: 125px;
+  color: white;
+  background: rgba(0,0,0,.6);
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.controls {
+  font-size: 200%;
+  font-weight: bolder;
+}
+
+.car-image {
+  position: relative;
+  display: inline-block;
+  width: auto;
+}
+
+.car-image img {
+  width: 50px;
+}
+
+#orange-controls {
+  position: relative;
+  display: inline-block;
+  text-align: right;
+  width: 10%;
+}
+
+#controls-text {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 35%;
+  margin: 10px;
+  margin-top: 0px;
+}
+
+#blue-controls {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  width: 10%;
+}
+
+

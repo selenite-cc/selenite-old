@@ -15,7 +15,9 @@
     <!-- initialize my stuff -->
     <script src="/js/all.js"></script>
     <script src="/js/main.js"></script>
+<script src="/js/themes.js"></script>
     <script src="/js/cloaks.js"></script>
+    <script src="/js/themes.js"></script>
 <link rel="stylesheet" href="/themes.css" />
 <link rel="stylesheet" href="/style.css" />
 
@@ -102,12 +104,26 @@
         <button onclick="setTheme('sunset')" style="background-color: #537294; color: #fff; border: 5px solid #30719c">sunset</button>
         <button onclick="setTheme('mountains')" style="background-color: #d37f7f; color: #fff; border: 5px solid #e28a8a">mountains</button>
         <button onclick="setTheme('vaporwave')" style="background-color: #4b2d64; color: #fff; border: 5px solid #74568d">vaporwave</button>
-        <!-- <button onclick="customTheme()">custom</button>
-        one day ill add this.. maybe -->
+        <button onclick="customTheme()">custom</button>
       </div>
       <div id="customMenu" style="display: none;">
-        <p>Input Background Colors</p>
-        <input type="color" id="inputbg" value="var(--uibg)" />
+        <p>Input BG Color</p>
+        <input type="color" id="inputbg" value="#ffffff" />
+        <p>Input Border Color</p>
+        <input type="color" id="inputborder" value="#ffffff" />
+        <p>UI Background Color</p>
+        <input type="color" id="uibg" value="#ffffff" />
+        <p>Text Color</p>
+        <input type="color" id="textcolor" value="#ffffff" />
+        <p>Background</p>
+        <input type="color" id="bg" value="#ffffff" />
+        <p>or select an image (click enter to set)</p>
+        <input type="text" id="bgimg" placeholder="https://selenite.cc/" /><br />
+        <!--     --inputbg: #000000;
+    --inputborder: #000000;
+    --uibg: #000000;
+    --textcolor: #000;
+    --bg: #000000; -->
       </div>
       <br />
       <form action="javascript:setPanicMode();">

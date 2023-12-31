@@ -134,7 +134,8 @@ img {
   width: 100%;
   aspect-ratio: auto;
   user-select: none;
-  filter: drop-shadow(var(--shadow))
+  filter: drop-shadow(var(--shadow));
+  image-rendering: pixelated;
 }
 
 .img-container a {
@@ -282,7 +283,7 @@ sl-icon-button {
 
 h3#gametitle {
   font-size: 2rem;
-}
+}thumb.png
 
 .img-credits {
   height: 40vh;
@@ -296,4 +297,8 @@ label {
 }
 .avatar {
   margin: 5px;
+}
+#bgimg {
+  width: 30vw;
+  font-size: 16px;
 }
