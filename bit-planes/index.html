@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <title>Bit Planes</title>
+<link href="styles.css?d7118c4f7ffc03840b96" rel="stylesheet"></head>
+<body>
+<main>
+    <section class="welcome">
+<!--        <div class="ribbon right green">-->
+<!--            <a href="https://github.com/antonmedv/bit-planes" tabindex="-1">Fork me on GitHub</a>-->
+<!--        </div>-->
+        <h1>
+            <i class="logo"></i>
+            Bit Planes
+            <i class="logo"></i>
+        </h1>
+        <p>
+            <strong>Controls:</strong><br>
+        </p>
+        <ul>
+            <li>Arrows <kbd>↑</kbd><kbd>↓</kbd> — thrust level.</li>
+            <li>Arrows <kbd>←</kbd><kbd>→</kbd> — elevator controls.</li>
+            <li><kbd>Space</kbd> — fire a gun. <kbd>X</kbd> — deploy a missile.</li>
+            <li><kbd>C</kbd> — catapult / parachute and get new plane at the barn.</li>
+        </ul>
+
+        <form id="game">
+            <label>
+                <input type="text" name="nickname" placeholder="Nickname">
+            </label>
+            <p>
+                <strong>Game mode:</strong>
+            </p>
+            <div class="game-modes">
+                <div>
+                    <label title="Everyone against everyone."><input type="radio" name="mode" value="death-match" checked autofocus> Death match</label>
+                </div>
+                <div>
+                    <label title="Fight between teams."><input type="radio" name="mode" value="teams"> Teams</label>
+                </div>
+                <div>
+                    <label title="One on one duel."><input type="radio" name="mode" value="duel"> Duel</label>
+                </div>
+                <div>
+                    <label title="Survive with a waives of enemies."><input type="radio" name="mode" value="survival"> Survival</label>
+                </div>
+            </div>
+            <div class="action">
+                <button class="btn">‣ Start</button>
+            </div>
+        </form>
+
+        <div class="stats"></div>
+        <canvas class="demo"></canvas>
+    </section>
+</main>
+
+<div class="ui">
+    <div class="cockpit">
+        <div class="missile-capacity">
+            <div class="missile"></div>
+            <div class="missile"></div>
+        </div>
+        <div class="thrust">
+            <div class="thrust-level"></div>
+        </div>
+        <div class="ammo-capacity">
+            <div class="ammo"></div>
+            <div class="ammo"></div>
+            <div class="ammo"></div>
+            <div class="ammo"></div>
+            <div class="ammo"></div>
+            <div class="ammo"></div>
+            <div class="ammo"></div>
+            <div class="ammo"></div>
+            <div class="ammo"></div>
+            <div class="ammo"></div>
+            <div class="ammo"></div>
+            <div class="ammo"></div>
+            <div class="ammo"></div>
+            <div class="ammo"></div>
+            <div class="ammo"></div>
+        </div>
+    </div>
+    <canvas class="minimap"></canvas>
+    <div class="log"></div>
+</div>
+<canvas id="canvas"></canvas>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(94977381, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/94977381" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script type="text/javascript" src="index.js?d7118c4f7ffc03840b96"></script></body>
+</html>

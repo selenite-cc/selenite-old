@@ -1179,5 +1179,10 @@
     "name": "Minecraft Classic",
     "directory": "mcclassic",
     "image": "assets/textures/previews/2.png"
+  },
+  {
+    "name": "Bit Planes",
+    "directory": "bit-planes",
+    "image": "bitplanes.png"
   }
 ]

@@ -92,6 +92,10 @@ function copyToClipboard(text) {
 function setTheme(theme) {
 	localStorage.setItem("selenite.theme", theme);
 	document.body.setAttribute("theme", theme);
+	if(theme != "custom") {
+		document.getElementById("customMenu").style.display = "none";
+		document.body.style = "";
+	}
 }
 function setPanicMode() {
 	if (!$("#panic").val().startsWith("https")) {
@@ -99,10 +103,6 @@ function setPanicMode() {
 		return;
 	}
 	document.cookie = "panicurl=" + $("#panic").val();
-}
-function customTheme() {
-	const customMenu = document.querySelector("#customMenu");
-	customMenu.removeAttribute("display");
 }
 if (location.hostname.includes(".vercel.app") && (location.hostname.includes("selenite-beta") || location.hostname.includes("space-lovers") || location.hostname.includes("school-education"))) {
 	alert("IMPORTANT:\nVercel links will be taken offline eventually. Please move to a new link. You can find these in the Discord at discord.gg/7jyufnwJNf, or you can try a few of the ones listed\nselenite.cc\nselenite.pages.dev\nselenite.skysthelimit.dev\nall-about-science.onrender.com");
