@@ -112,7 +112,7 @@ p, a {
   font-size: 16px;
 }
 
-button, input#websubmit.submit, input[type=submit]#panic {
+button, input#websubmit.submit, input[type=submit] {
   cursor: pointer;
   background-color: var(--inputbg);
   border-color: var(--inputborder);
@@ -125,7 +125,7 @@ button, input#websubmit.submit, input[type=submit]#panic {
   margin: 10px;
 }
 
-button:hover, input#websubmit.submit:hover, input[type=submit]#panic:hover {
+button:hover, input#websubmit.submit:hover, input[type=submit]:hover {
   filter: brightness(80%);
   transform: scale(1.07);
 }

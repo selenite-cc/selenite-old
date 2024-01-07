@@ -25,21 +25,7 @@
     <!-- seo + other things -->
     <title>Settings | Selenite</title>
     <link rel="icon" href="/favicon.ico" />
-    <meta
-      name="keywords"
-      content="front-end web developer, unblocked, games, google sites, unblocked games mom, ublocked, code, coding, programmer, development, javascript, jquery, bootstrap, sass, less, git, gaming, internet, website, best, site, cool, free games"
-    />
-    <meta property="og:title" content="Welcome to Selenite." />
-    <meta property="og:site_name" content="https://selenite.cc" />
-    <meta
-      property="og:description"
-      content="Welcome to the one and only option for unblocked games. Welcome to Selenite."
-    />
-    <meta
-      name="description"
-      content="Welcome to the one and only option for unblocked games. Welcome to Selenite."
-    />
-    <meta name="author" content="selenite-cc" />
+
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
     <!-- toastify -->
@@ -53,7 +39,7 @@
             <a href="/projects.html">Games</a>
       <a href="/settings.html">Settings</a>
       <a href="/support.html">Support</a>
-      <a href="/blank.html">Open Blank</a>
+      <a id="blank" href="#">Open Blank</a>
       <a href="/about.html">About</a>
       
     </header>
@@ -130,6 +116,14 @@
         <h3 for="panic">Website URL</h3>
         <input type="text" id="panic" name="panic" placeholder="https://google.com" /><br />
         <input id="panic" class="submit" type="submit" value="Set Panic Mode" />
+      </form>
+      <form action="javascript:setPassword();">
+        <h3 for="pass">Password to access website</h3>
+        <input type="text" id="pass" name="pass" placeholder="password" /><br />
+        <p>If a teacher tries to copy the URL from your browser, it will require a password to access the website.</p>
+        <p>If you type a wrong password, you will be locked out for 10 minutes, likewise, if you type the right password, it'll work for 10 minutes.</p>
+        <input id="setPass" class="submit" type="submit" value="Set Password" />
+        <button id="delPass" onclick="delPassword()">Delete Password</button>
       </form>
     </main>
 

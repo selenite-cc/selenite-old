@@ -18,6 +18,7 @@ function check() {
 document.addEventListener("DOMContentLoaded", function () {
 	const iconSetting = document.querySelector("input#discordIcon");
 	const blockClose = document.querySelector("input#blockClose");
+	const openBlank = document.getElementById("blank");
 	if (localStorage.getItem("theme")) {
 		localStorage.setItem("selenite.theme", localStorage.getItem("theme"));
 		localStorage.removeItem("theme");
@@ -58,7 +59,19 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
-	check();
+	document.getElementById("blank").addEventListener("click", () => {
+		win = window.open();
+        win.document.body.style.margin = "0";
+        win.document.body.style.height = "100vh";
+        html =
+          `
+        <style>*{margin:0;padding:0;border:none}body,iframe{height:100vh;width:100vw}iframe{height:96vh}header{display:flex;height:4vh;justify-content:center;}button{margin-right:100px;height:100%;aspect-ratio: 1 / 1}#reload{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'%3E%3Cpath d='M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z'/%3E%3C/svg%3E");background-size:cover;}#goBack{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'%3E%3Cpath d='M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z'/%3E%3C/svg%3E");background-size:cover;}</style><script>
+        </script><header><button id=goBack></button><button id=reload></button></header><iframe id=selenite></iframe>`;
+        win.document.querySelector("html").innerHTML = html;
+        win.eval(`let selenite = document.getElementById("selenite");console.log(selenite);selenite.setAttribute("src", "${location.origin}");console.log(selenite);document.getElementById("goBack").addEventListener("click", function () {selenite.contentDocument.location.href = selenite.contentDocument.location.origin;});document.getElementById("reload").addEventListener("click", function () {selenite.contentDocument.location.href = selenite.contentDocument.location.href;})`);
+        location.href="https://google.com";
+        close();
+	})
 	checkAlert();
 });
 
@@ -104,6 +117,11 @@ function setPanicMode() {
 	}
 	document.cookie = "panicurl=" + $("#panic").val();
 }
-if (location.hostname.includes(".vercel.app") && (location.hostname.includes("selenite-beta") || location.hostname.includes("space-lovers") || location.hostname.includes("school-education"))) {
-	alert("IMPORTANT:\nVercel links will be taken offline eventually. Please move to a new link. You can find these in the Discord at discord.gg/7jyufnwJNf, or you can try a few of the ones listed\nselenite.cc\nselenite.pages.dev\nselenite.skysthelimit.dev\nall-about-science.onrender.com");
+function setPassword() {
+	localStorage.setItem("selenite.password", enc.encode(document.getElementById("pass").value));
+}
+function delPassword() {
+	location.hash = "";
+	localStorage.removeItem("selenite.passwordAtt");
+	localStorage.removeItem("selenite.password");
 }

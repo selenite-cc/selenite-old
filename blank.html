@@ -11,6 +11,7 @@
         `script><header><button id=goBack></button><button id=reload></button></header><iframe id=selenite></iframe>`;
         win.document.querySelector("html").innerHTML = html;
         win.eval(`let selenite = document.getElementById("selenite");console.log(selenite);selenite.setAttribute("src", "${location.origin}");console.log(selenite);document.getElementById("goBack").addEventListener("click", function () {selenite.contentDocument.location.href = selenite.contentDocument.location.origin;});document.getElementById("reload").addEventListener("click", function () {selenite.contentDocument.location.href = selenite.contentDocument.location.href;})`);
+        location.href="https://google.com";
         close();
     </script>
     <style>
