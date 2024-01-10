@@ -1,5 +1,11 @@
 [
   {
+    "name": "Flappy Plane",
+    "directory": "flappyplane",
+    "image": "favicon.ico",
+    "recommended": "1"
+  },
+  {
     "name": "A Dance of Fire & Ice",
     "directory": "adofai",
     "image": "icon.png",
