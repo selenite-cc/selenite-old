@@ -1,7 +1,12 @@
 [  
   {
+    "name": "Bubble Shooter",
+    "directory": "bubbleshooter/bubbleshooter.html",
+    "recommended": "1"
+  },
+  {
     "name": "Pong",
-    "directory": "pong/index.html",
+    "directory": "pong/pong.html",
     "recommended": "1"
   },
   {
