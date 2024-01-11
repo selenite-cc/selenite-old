@@ -1,4 +1,9 @@
-[
+[  
+  {
+    "name": "Pong",
+    "directory": "pong/index.html",
+    "recommended": "1"
+  },
   {
     "name": "Flappy Plane",
     "directory": "flappyplane",
