@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FLAPPY PLANE!</title>
+    <link rel="icon" href="favicon.ico" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Anonymous troll" />
+    <meta
+      name="description"
+      content="FLAPPY PLANE"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Flappy Plane, September edition" />
+    <meta
+      property="og:description"
+      content="FLAPPY PLANE OSAMA"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://github.com/irfaantx/terrorist.group/raw/main/assets/thumb.png"
+    />
+    <meta property="og:url" content="https://irfaantx.github.io/terrorist.group" />
+    <meta property="og:site_name" content="FLAPPY PLANE!" />
+    <!-- Style sheets -->
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <script type="text/javascript">
+      var switchTo5x = true;
+    </script>
+    <script type="text/javascript">
+      stLight.options({
+        publisher: "2ae97540-b48e-49c1-9d0f-e9e34df112fe",
+        doNotHash: true,
+        doNotCopy: true,
+        hashAddressBar: false,
+      });
+    </script>
+  </head>
+  <body>
+    <div id="gamecontainer">
+      <style type="text/css">
+        #legpad {
+          display: none;
+        }
+        #smallpad {
+          display: none;
+        }
+        #ip4ad {
+          display: none;
+        }
+        #hdad {
+          display: none;
+        }
+        #leftad {
+          display: none;
+          float: left;
+          padding-left: 50px;
+          padding-top: 75px;
+        }
+        #rightad {
+          display: none;
+          float: right;
+          padding-right: 50px;
+          padding-top: 75px;
+        }
+        .largetab {
+          display: none;
+        }
+        @media (orientation: portrait) and (min-width: 319px) and (max-width: 459px) {
+          #ip4ad {
+            display: block;
+          }
+        }
+        @media (orientation: portrait) and (min-width: 299px) and (max-width: 318px) {
+          #smallpad {
+            display: block;
+          }
+        }
+        @media (orientation: portrait) and (min-width: 200px) and (max-width: 298px) {
+          #legpad {
+            display: block;
+          }
+        }
+        @media (orientation: landscape) and (min-height: 600px) and (min-width: 1270px) {
+          #leftad {
+            display: block;
+          }
+          #rightad {
+            display: block;
+          }
+          #hdad {
+            display: block;
+          }
+        }
+        @media (orientation: portrait) and (min-width: 760px) {
+          .largetab {
+            display: inline-block;
+          }
+        }
+        @media (orientation: portrait) and (min-width: 460px) and (max-width: 759px) {
+          #hdad {
+            display: block;
+          }
+        }
+      </style>
+
+      <div id="gamescreen">
+        <div id="sky" class="animated">
+          <div id="flyarea">
+            <div id="ceiling" class="animated"></div>
+            <!-- This is the flying and pipe area container -->
+            <div id="player" class="bird animated"></div>
+
+            <div id="bigscore"></div>
+
+            <div id="splash"></div>
+
+            <div id="scoreboard">
+              <div id="medal"></div>
+              <div id="currentscore"></div>
+              <div id="highscore"></div>
+              <div id="replay">
+                <img src="assets/replay.png" alt="replay" />
+              </div>
+            </div>
+
+            <!-- Pipes go here! -->
+          </div>
+        </div>
+        <div id="land" class="animated"><div id="debug"></div></div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <div class="boundingbox" id="playerbox"></div>
+    <div class="boundingbox" id="pipebox"></div>
+
+    <script src="ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.transit.min.js"></script>
+    <script src="js/buzz.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
