@@ -1,5 +1,11 @@
 [    
   {
+    "name": "DOOM",
+    "image": "cover.svg",
+    "directory": "doom",
+    "recommended": "1"
+  },
+  {
     "name": "Awesome Tanks 2",
     "image": "cover.svg",
     "directory": "awesometanks2",
