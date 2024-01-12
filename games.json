@@ -1,6 +1,7 @@
 [  
   {
     "name": "Bubble Shooter",
+    "image": "cover.svg",
     "directory": "bubbleshooter/bubbleshooter.html",
     "recommended": "1"
   },
