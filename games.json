@@ -1,4 +1,10 @@
-[  
+[    
+  {
+    "name": "Awesome Tanks 2",
+    "image": "cover.svg",
+    "directory": "awesometanks2",
+    "recommended": "1"
+  },
   {
     "name": "Bubble Shooter",
     "image": "cover.svg",
