@@ -1,4 +1,10 @@
-[    
+[ 
+    {
+    "name": "Hill Climb Racing 2",
+    "image": "cover.svg",
+    "directory": "hillclimbracing2",
+    "recommended": "1"
+  },
   {
     "name": "DOOM",
     "image": "cover.svg",
