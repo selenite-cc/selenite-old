@@ -6,7 +6,8 @@
   },
   {
     "name": "Pong",
-    "directory": "pong/pong.html",
+    "directory": "pong",
+    "image": "cover.svg",
     "recommended": "1"
   },
   {
