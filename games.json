@@ -1,4 +1,16 @@
-[
+[  
+  {
+    "name": "Bubble Shooter",
+    "image": "cover.svg",
+    "directory": "bubbleshooter",
+    "recommended": "1"
+  },
+  {
+    "name": "Pong",
+    "directory": "pong",
+    "image": "cover.svg",
+    "recommended": "1"
+  },
   {
     "name": "Flappy Plane",
     "directory": "flappyplane",
