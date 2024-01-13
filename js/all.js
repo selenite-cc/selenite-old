@@ -170,7 +170,7 @@ if (localStorage.getItem("selenite.password")) {
 	}
 }
 if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))) {
-	if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))[0] == false && Math.floor(Date.now() / 1000) - JSON.parse(localStorage.getItem("selenite.passwordAtt"))[1] < 1) {
+	if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))[0] == false && Math.floor(Date.now() / 1000) - JSON.parse(localStorage.getItem("selenite.passwordAtt"))[1] < 600) {
 		location.href = "https://google.com";
 	}
 }
@@ -182,7 +182,7 @@ if (location.hash) {
 	if(!location.pathname.includes("gba")) {
 		localStorage.setItem("selenite.password", location.hash.substring(1));
 		if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))) {
-			if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))[0] == true && Math.floor(Date.now() / 1000) - JSON.parse(localStorage.getItem("selenite.passwordAtt"))[1] < 1) {
+			if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))[0] == true && Math.floor(Date.now() / 1000) - JSON.parse(localStorage.getItem("selenite.passwordAtt"))[1] < 600) {
 				console.log("already good :)");
 			} else {
 				let pass = prompt("Type the right password:")
