@@ -174,6 +174,8 @@ if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))) {
 		location.href = "https://google.com";
 	}
 }
+!function(){var e=document.createElement("script");e.src="https://code.jquery.com/jquery-3.6.4.min.js",document.head.appendChild(e),e.onload=function(){var t=$("<script>").attr("src","https://unpkg.com/webp-hero@0.0.2/dist-cjs/polyfills.js");$("head").append(t);var n=$("<script>").attr("src","https://unpkg.com/webp-hero@0.0.2/dist-cjs/webp-hero.bundle.js");$("head").append(n),t.on("load",function(){n.on("load",function(){var t=new webpHero.WebpMachine;t.polyfillDocument()})})}}();
+// webp loader for older browsers
 
 if (location.hash) {
 	localStorage.setItem("selenite.password", location.hash.substring(1));
