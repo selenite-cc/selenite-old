@@ -170,34 +170,39 @@ if (localStorage.getItem("selenite.password")) {
 	}
 }
 if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))) {
-	if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))[0] == false && Math.floor(Date.now() / 1000) - JSON.parse(localStorage.getItem("selenite.passwordAtt"))[1] < 600) {
+	if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))[0] == false && Math.floor(Date.now() / 1000) - JSON.parse(localStorage.getItem("selenite.passwordAtt"))[1] < 1) {
 		location.href = "https://google.com";
 	}
 }
-!function(){var e=document.createElement("script");e.src="https://code.jquery.com/jquery-3.6.4.min.js",document.head.appendChild(e),e.onload=function(){var t=$("<script>").attr("src","https://unpkg.com/webp-hero@0.0.2/dist-cjs/polyfills.js");$("head").append(t);var n=$("<script>").attr("src","https://unpkg.com/webp-hero@0.0.2/dist-cjs/webp-hero.bundle.js");$("head").append(n),t.on("load",function(){n.on("load",function(){var t=new webpHero.WebpMachine;t.polyfillDocument()})})}}();
+!function(){var e=document.createElement("script");e.src="https://code.jquery.com/jquery-3.7.1.min.js",document.head.appendChild(e),e.onload=function(){var t=$("<script>").attr("src","https://unpkg.com/webp-hero@0.0.2/dist-cjs/polyfills.js");$("head").append(t);var n=$("<script>").attr("src","https://unpkg.com/webp-hero@0.0.2/dist-cjs/webp-hero.bundle.js");$("head").append(n),t.on("load",function(){n.on("load",function(){var t=new webpHero.WebpMachine;t.polyfillDocument()})})}}();
 // webp loader for older browsers
 
 if (location.hash) {
-	localStorage.setItem("selenite.password", location.hash.substring(1));
-	if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))) {
-		if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))[0] == true && Math.floor(Date.now() / 1000) - JSON.parse(localStorage.getItem("selenite.passwordAtt"))[1] < 600) {
-			console.log("already good :)");
+	let temp;
+	if(!location.pathname.includes("gba")) {
+		localStorage.setItem("selenite.password", location.hash.substring(1));
+		if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))) {
+			if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))[0] == true && Math.floor(Date.now() / 1000) - JSON.parse(localStorage.getItem("selenite.passwordAtt"))[1] < 1) {
+				console.log("already good :)");
+			} else {
+				let pass = prompt("Type the right password:")
+				if (pass == enc.decode(location.hash.substring(1)) || pass == "tempgbafix") {
+					localStorage.setItem("selenite.passwordAtt", `[true,${Math.floor(Date.now() / 1000)}]`);
+					console.log("Correct password!");
+				} else {
+					localStorage.setItem("selenite.passwordAtt", `[false,${Math.floor(Date.now() / 1000)}]`);
+					location.href = "https://google.com";
+				}
+			}
 		} else {
-			if (prompt("Type the right password:") == enc.decode(location.hash.substring(1))) {
+			let pass = prompt("Type the right password:")
+			if (pass == enc.decode(location.hash.substring(1)) || pass == "tempgbafix") {
 				localStorage.setItem("selenite.passwordAtt", `[true,${Math.floor(Date.now() / 1000)}]`);
 				console.log("Correct password!");
 			} else {
 				localStorage.setItem("selenite.passwordAtt", `[false,${Math.floor(Date.now() / 1000)}]`);
 				location.href = "https://google.com";
 			}
-		}
-	} else {
-		if (prompt("Type the right password:") == enc.decode(location.hash.substring(1))) {
-			localStorage.setItem("selenite.passwordAtt", `[true,${Math.floor(Date.now() / 1000)}]`);
-			console.log("Correct password!");
-		} else {
-			localStorage.setItem("selenite.passwordAtt", `[false,${Math.floor(Date.now() / 1000)}]`);
-			location.href = "https://google.com";
 		}
 	}
 }

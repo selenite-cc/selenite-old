@@ -1220,5 +1220,20 @@
     "name": "Bit Planes",
     "directory": "bit-planes",
     "image": "bitplanes.png"
+  },
+  {
+    "name": "Snow Rider 3D",
+    "directory": "snowrider3d",
+    "image": "snow.png"
+  },
+  {
+    "name": "Dadish",
+    "directory": "dadish",
+    "image": "favicon.png"
+  },
+  {
+    "name": "Dadish 2",
+    "directory": "dadish2",
+    "image": "favicon.png"
   }
 ]
