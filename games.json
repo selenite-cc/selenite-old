@@ -1,4 +1,10 @@
-[ 
+[
+    {
+    "name": "Tube Jumpers",
+    "image": "cover.svg",
+    "directory": "tube-jumpers",
+    "recommended": "1"
+  },
     {
     "name": "Hill Climb Racing 2",
     "image": "cover.svg",
