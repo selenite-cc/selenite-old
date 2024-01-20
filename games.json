@@ -36,18 +36,6 @@
     "recommended": "1"
   }, 
     {
-    "name": "Osama Vs. Obama",
-    "image": "cover.svg",
-    "directory": "osamavsobama",
-    "recommended": "1"
-  },
-    {
-    "name": "Baghdad Bowling",
-    "image": "cover.svg",
-    "directory": "baghdad_bowling",
-    "recommended": "1"
-  },
-    {
     "name": "Yohoho.io",
     "image": "cover.svg",
     "directory": "yohoho",
