@@ -66,12 +66,12 @@
     "recommended": "1"
   },
   {
-    "name": "Online Minecraft",
+    "name": "Resent Client",
     "directory": "online-mc",
     "image": "logo.png"
   },
   {
-    "name": "Offline Minecraft",
+    "name": "Eaglercraft 1.5.2",
     "directory": "offline-mc",
     "image": "logo.png",
     "recommended": "1"
