@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Geometry Dash Lite</title>
+		<meta name="description" content="Play Geometry Dash Lite to experience new thrilling adventures. Control your character to overcome deadly obstacles and complete tricky roads to win" />
+		<meta name="title" content="Geometry Dash Lite" />
+		<meta
+			name="keywords"
+			content="Geometry Dash Lite
+" />
+		<meta
+			name="news_keywords"
+			content="Geometry Dash Lite
+" />
+		<link rel="canonical" href="https://geometrydashlite.io/" />
+		<link rel="icon" href="/rs/logo-geometry-dash-lite.png" />
+		<meta property="og:title" content="Geometry Dash Lite" itemprop="headline" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" itemprop="url" content="https://geometrydashlite.io/" />
+		<meta property="og:image" itemprop="thumbnailUrl" content="/rs/banner-geometry-dash-lite.jpg" />
+		<meta property="og:description" content="Play Geometry Dash Lite to experience new thrilling adventures. Control your character to overcome deadly obstacles and complete tricky roads to win" itemprop="description" />
+		<meta property="og:site_name" content="Geometry Dash Lite" />
+		<link rel="apple-touch-icon" href="/rs/logo-geometry-dash-lite.png" />
+		<meta name="twitter:title" content="Geometry Dash Lite" />
+		<meta name="twitter:url" content="https://geometrydashlite.io/" />
+		<meta name="twitter:image" content="/rs/banner-geometry-dash-lite.jpg" />
+		<meta name="twitter:description" content="Play Geometry Dash Lite to experience new thrilling adventures. Control your character to overcome deadly obstacles and complete tricky roads to win" />
+		<meta name="twitter:card" content="summary" />
+	</head>
+	<body>
+		<link rel="stylesheet" href="/game.css?v=1" />
+		<div id="gameContainer"></div>
+		<div id="loader">
+			<img class="logo" src="image/loading.png?v=1" />
+			<div class="spinner"></div>
+			<div class="pos_progress">
+				<div class="progress">
+					<div class="posfull"><img class="full" src="image/process_bar_back.png" /></div>
+					<div class="posbox"><img class="box_process" src="image/process_bar_front.png" /></div>
+				</div>
+			</div>
+			<script src="Build/UnityLoader.js"></script>
+			<script>
+				UnityLoader.compatibilityCheck = function (e, t, r) {
+					t();
+				};
+				var gameInstance = UnityLoader.instantiate("gameContainer", "Build/GeometryDashLife.json", { onProgress: UnityProgress });
+				function UnityProgress(gameInstance, progress) {
+					if (!gameInstance.Module) {
+						return;
+					}
+					const loader = document.querySelector("#loader");
+					if (!gameInstance.progress) {
+						const progress = document.querySelector("#loader .progress");
+						progress.style.display = "block";
+						gameInstance.progress = progress.querySelector(".full");
+						loader.querySelector(".spinner").style.display = "none";
+					}
+					gameInstance.progress.style.transform = `scaleX(${progress})`;
+					if (progress === 1 && !gameInstance.removeTimeout) {
+						gameInstance.removeTimeout = setTimeout(function () {
+							loader.style.display = "none";
+						}, 2000);
+					}
+				}
+
+				var theElement = document.getElementById("gameContainer");
+				theElement.addEventListener("mouseup", tapOrClick, false);
+				theElement.addEventListener("touchend", tapOrClick, false);
+
+				function tapOrClick(event) {
+					fullScreenAPI();
+					event.preventDefault();
+					return false;
+				}
+				function HiddenClass(instane_game) {
+					var widthPage = window.innerWidth;
+					var heightPage = window.innerHeight;
+					if (heightPage > widthPage) {
+						document.getElementById("orientation").style.display = "block";
+						document.getElementById("gameContainer").style.display = "none";
+						gameInstance.SendMessage("AudioMainController", "JSCallUnity", 0);
+					} else {
+						document.getElementById("orientation").style.display = "none";
+						document.getElementById("gameContainer").style.display = "block";
+						gameInstance.SendMessage("AudioMainController", "JSCallUnity", 1);
+					}
+				}
+				function fullScreenAPI() {
+					var ua = navigator.userAgent.toLowerCase();
+					var isAndroid = ua.indexOf("android") > -1;
+					if (isAndroid) {
+						GoFullScreen(document.documentElement);
+					}
+				}
+				function GoFullScreen(element) {
+					if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+						if (element.requestFullscreen && document.fullscreenEnabled) {
+							element.requestFullscreen();
+						} else if (element.mozRequestFullScreen) {
+							element.mozRequestFullScreen();
+						} else if (element.webkitRequestFullscreen) {
+							element.webkitRequestFullscreen();
+						} else if (element.msRequestFullscreen) {
+							element.msRequestFullscreen();
+						}
+					}
+				}
+			</script>
+			<script src="themes/geometrydashlite.io/rs/js/jquery-3.4.1.min.js"></script>
+			<script>
+				let ads_pub = "4017755729799438";
+				let ads_text_0 = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-';
+				let ads_text_1 = '"crossorigin="anonymous"><\/script><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-';
+				let ads_text_2 = '" data-ad-slot="';
+				let ads_text_3 = '"></ins>';
+				let adsindex = 0;
+				let adsindex2 = 0;
+				let FlagTimeout = 0;
+				let timeTimeout = 45000;
+				function ChangeAds1(adsindex) {}
+				function ChangeAds2(adsindex2) {
+					/*
+			if(adsindex2===1){
+				document.getElementById("Ads2").innerHTML = ads_text_0+ads_pub+ads_text_1+ads_pub+ads_text_2+'5788371856'+ads_text_3;		
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			}
+			if(adsindex2===2){
+				document.getElementById("Ads2").innerHTML = ads_text_0+ads_pub+ads_text_1+ads_pub+ads_text_2+'6909881836'+ads_text_3;		
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			}
+			if(adsindex2===3){
+				document.getElementById("Ads2").innerHTML = ads_text_0+ads_pub+ads_text_1+ads_pub+ads_text_2+'5405228475'+ads_text_3;			
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			}
+			*/
+				}
+				function ChangeFlagTimeout() {
+					FlagTimeout = 1;
+					setTimeout(function () {
+						FlagTimeout = 0;
+					}, timeTimeout);
+				}
+				ChangeAds1(adsindex);
+				ChangeAds2(adsindex2);
+				ChangeFlagTimeout();
+				function ToggleInfo() {}
+				function ShowInfo() {}
+				function HideInfo() {}
+				function UnityCallJs() {}
+				function UnityCallEndgameJs() {
+					console.log("untiy call end game");
+				}
+				function UnityCallPlayJs() {
+					console.log("untiy call Play game");
+				}
+				function UnityCallLeaderboardJs() {
+					console.log("untiy call On Leaderboard");
+				}
+				function UnityCallAgainJs() {}
+				function UnityCallBackHomeJs() {
+					console.log("untiy call backHome");
+				}
+				function UnityCallChangeDayLeaderboardJs() {
+					console.log("untiy call change day leaderboard");
+				}
+				function UnityCallCloseLeaderboardJs() {
+					console.log("untiy call close leaderboard");
+				}
+				function UnityCallPlayJs() {
+					console.log("untiy call play game");
+				}
+				function UnityCallReturnHomeJs() {
+					console.log("untiy call return home");
+				}
+				function UnityCallChooseLevelJs() {
+					console.log("untiy call choose level");
+				}
+				function UnityCallChooseCharacterJs() {
+					console.log("untiy call choose character");
+				}
+				function UnityCallChooseColorJs() {
+					console.log("untiy call choose color");
+				}
+				function UnityCallContinueJs() {
+					console.log("untiy call continue");
+				}
+				function UnityCallChangeModeJs() {
+					console.log("untiy call change mode");
+				}
+				function UnityCallPauseGameJs() {
+					console.log("untiy call pause game");
+				}
+				function UnityCallChangeLevelJs() {
+					console.log("untiy call change level");
+				}
+				function UnityCallLevelUpJs() {
+					console.log("untiy call level up");
+				}
+				var allowedDomains = ["127.0.0.1:5500"];
+
+				var referringUrl = document.referrer;
+
+				var isAllowedDomain = allowedDomains.some(function (domain) {
+					return referringUrl.includes(atob(domain));
+				});
+
+				if (true = false) {
+					window.location.href = "YOUR_REDIRECT_DOMAIN";
+				}
+			</script>
+		</div>
+	</body>
+</html>
