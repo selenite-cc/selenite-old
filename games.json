@@ -1,17 +1,5 @@
 [
     {
-    "name": "Watermelon Game",
-    "image": "cover.svg",
-    "directory": "watermelongame",
-    "recommended": "1"
-  },
-    {
-    "name": "Dadish 3",
-    "image": "cover.svg",
-    "directory": "dadish3",
-    "recommended": "1"
-  },
-    {
     "name": "Hill Climb Racing 2",
     "image": "cover.svg",
     "directory": "hillclimbracing2",
