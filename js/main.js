@@ -16,6 +16,10 @@ function check() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+	if(document.getElementById("adcontainer") && Math.random() > 0.5 || localStorage.getItem("selenite.adblock") == "true") {
+		document.getElementById("adcontainer").innerHTML = "";
+	}
+		
 	const iconSetting = document.querySelector("input#discordIcon");
 	const blockClose = document.querySelector("input#blockClose");
 	const openBlank = document.getElementById("blank");
