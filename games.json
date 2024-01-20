@@ -1,5 +1,17 @@
 [
       {
+    "name": "Minesweeper",
+    "image": "cover.svg",
+    "directory": "minesweeper",
+    "recommended": "1"
+  },
+      {
+    "name": "POOM",
+    "image": "cover.svg",
+    "directory": "poom",
+    "recommended": "1"
+  },
+      {
     "name": "Solitaire",
     "image": "cover.svg",
     "directory": "solitaire",
