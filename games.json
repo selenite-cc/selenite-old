@@ -1,4 +1,28 @@
 [
+      {
+    "name": "Solitaire",
+    "image": "cover.svg",
+    "directory": "solitaire",
+    "recommended": "1"
+  },
+      {
+    "name": "Spank the Monkey",
+    "image": "cover.svg",
+    "directory": "spankthemonkey",
+    "recommended": "1"
+  },
+      {
+    "name": "CMM Client",
+    "image": "cover.svg",
+    "directory": "cmm-client",
+    "recommended": "1"
+  },
+     {
+    "name": "Pool",
+    "image": "cover.svg",
+    "directory": "pool",
+    "recommended": "1"
+  }, 
     {
     "name": "Osama Vs. Obama",
     "image": "cover.svg",
