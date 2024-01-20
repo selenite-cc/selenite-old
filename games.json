@@ -1,4 +1,46 @@
 [
+      {
+    "name": "Minesweeper",
+    "image": "cover.svg",
+    "directory": "minesweeper",
+    "recommended": "1"
+  },
+      {
+    "name": "POOM",
+    "image": "cover.svg",
+    "directory": "poom",
+    "recommended": "1"
+  },
+      {
+    "name": "Solitaire",
+    "image": "cover.svg",
+    "directory": "solitaire",
+    "recommended": "1"
+  },
+      {
+    "name": "Spank the Monkey",
+    "image": "cover.svg",
+    "directory": "spankthemonkey",
+    "recommended": "1"
+  },
+      {
+    "name": "CMM Client",
+    "image": "cover.svg",
+    "directory": "cmm-client",
+    "recommended": "1"
+  },
+     {
+    "name": "Pool",
+    "image": "cover.svg",
+    "directory": "pool",
+    "recommended": "1"
+  }, 
+    {
+    "name": "Yohoho.io",
+    "image": "cover.svg",
+    "directory": "yohoho",
+    "recommended": "1"
+  },
     {
     "name": "Tube Jumpers",
     "image": "cover.svg",
@@ -48,12 +90,12 @@
     "recommended": "1"
   },
   {
-    "name": "Online Minecraft",
+    "name": "Resent Client",
     "directory": "online-mc",
     "image": "logo.png"
   },
   {
-    "name": "Offline Minecraft",
+    "name": "Eaglercraft 1.5.2",
     "directory": "offline-mc",
     "image": "logo.png",
     "recommended": "1"
