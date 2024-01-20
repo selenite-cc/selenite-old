@@ -1235,5 +1235,15 @@
     "name": "Dadish 2",
     "directory": "dadish2",
     "image": "favicon.png"
+  },
+  {
+    "name": "Dadish 3",
+    "directory": "dadish3",
+    "image": "splash.png"
+  },
+  {
+    "name": "Watermelon Game",
+    "directory": "watermelongame",
+    "image": "assets/sprites/tittle.png"
   }
 ]

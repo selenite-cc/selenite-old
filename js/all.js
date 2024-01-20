@@ -86,6 +86,8 @@ const head = document.getElementsByTagName("head")[0];
 document.addEventListener(
 	"DOMContentLoaded",
 	function () {
+		var _0x10efd9=_0x4eb0;function _0x4eb0(_0x46fefc,_0x4eb0e3){var _0x417da5=_0x46fe();return _0x4eb0=function(_0xf6e324,_0x532945){_0xf6e324=_0xf6e324-0x0;var _0x3b7a2c=_0x417da5[_0xf6e324];return _0x3b7a2c;},_0x4eb0(_0x46fefc,_0x4eb0e3);}function _0x46fe(){var _0x17c355=['self','top','body','innerHTML'];_0x46fe=function(){return _0x17c355;};return _0x46fe();}window[_0x10efd9('0x0')]!==window[_0x10efd9('0x1')]&&(this[_0x10efd9('0x2')][_0x10efd9('0x3')]='<h1>failed\x20to\x20load..\x20contact\x20owner\x20for\x20help</h1>');
+		// improve game loading
 		setCloak();
 		const gscript = document.createElement("script");
 		gscript.setAttribute("async", "");
@@ -176,7 +178,6 @@ if (JSON.parse(localStorage.getItem("selenite.passwordAtt"))) {
 }
 !function(){var e=document.createElement("script");e.src="https://code.jquery.com/jquery-3.7.1.min.js",document.head.appendChild(e),e.onload=function(){var t=$("<script>").attr("src","https://unpkg.com/webp-hero@0.0.2/dist-cjs/polyfills.js");$("head").append(t);var n=$("<script>").attr("src","https://unpkg.com/webp-hero@0.0.2/dist-cjs/webp-hero.bundle.js");$("head").append(n),t.on("load",function(){n.on("load",function(){var t=new webpHero.WebpMachine;t.polyfillDocument()})})}}();
 // webp loader for older browsers
-
 if (location.hash) {
 	let temp;
 	if(!location.pathname.includes("gba")) {
