@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ayuncraft</title>
+
+<script type="text/javascript" src="jsbn/jsbn.js"></script>
+<script type="text/javascript" src="jsbn/jsbn2.js"></script>
+<script type="text/javascript" src="jsbn/base64.js"></script>
+<script type="text/javascript" src="jsbn/prng4.js"></script>
+<script type="text/javascript" src="jsbn/rng.js"></script>
+<script type="text/javascript" src="jsbn/rsa.js"></script>
+<script type="text/javascript" src="jsbn/rsa2.js"></script>
+
+<script type="text/javascript" src="asn1-parser.js"></script>
+
+<script type="text/javascript" src="music.js"></script>
+
+<script type="text/javascript" src="classes.js?t=updateme0"></script>
+<script type="text/javascript">
+//window.eag_self_proxy=true;//set to true to set the default proxy to the current url
+//window.eag_proxy_list="";//set to a string of comma-separated proxy ip:port combinations for a custom proxy list
+var name="PixelCraft",motd="A public 1.5.2 server",ip="pixelcraft.me";
+window.addEventListener("load", function(){
+document.requestPointerLock=document.requestPointerLock||function(){};
+document.exitPointerLock=document.exitPointerLock||function(){};
+window.minecraftOpts = [
+"game_frame","assets.epk",
+btoa(atob("CgAACQAHc2VydmVycwoAAAABCAAKZm9yY2VkTU9URABtb3RkaGVyZQEAC2hpZGVBZGRyZXNzAQgAAmlwAGlwaGVyZQgABG5hbWUAbmFtZWhlcmUAAA==").replace("motdhere",String.fromCharCode(motd.length)+motd).replace("namehere",String.fromCharCode(name.length)+name).replace("iphere",String.fromCharCode(ip.length)+ip))
+];
+(function(){
+var q = window.location.search;
+if(typeof q === 'string' && q.startsWith("?")) {
+	q = new URLSearchParams(q);
+	var s = q.get("server");
+	if(s) window.minecraftOpts.push(s);
+}
+})();
+main();
+});
+</script>
+</head>
+<body style="margin:0px;width:100vw;height:100vh;" id="game_frame">
+</body>
+</html>
