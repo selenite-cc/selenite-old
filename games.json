@@ -1,4 +1,10 @@
 [
+    {
+    "name": "Shadow Client",
+    "image": "cover.svg",
+    "directory": "shadow",
+    "recommended": "1"
+  },
   {
     "name": "Windows XP",
     "image": "cover.svg",
