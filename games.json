@@ -1,4 +1,10 @@
 [
+            {
+    "name": "Ayuncraft 1.5.2",
+    "image": "cover.svg",
+    "directory": "ayun",
+    "recommended": "1"
+  },
       {
     "name": "Minecraft Infdev",
     "image": "cover.svg",
