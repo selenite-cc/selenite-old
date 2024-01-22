@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Tahoma";
+  src: url(https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2Ftahoma.ttf?1520032662940);
+}
+
+@font-face {
+  font-family: "Tahoma Bold";
+  font-weight: bold;
+  src: url(https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2Ftahomabd.ttf?1520032662939);
+}
+
+@font-face {
+  font-family: "Trebuchet MS";
+  src: url(https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2Ftrebuc.ttf?1520032658142);
+}
+
+@font-face {
+  font-family: "Trebuchet MS Bold";
+  font-weight: bold;
+  src: url(https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2Ftrebucbd.ttf?1520032658347);
+}
+
+@font-face {
+  font-family: "Trebuchet MS Bold Italic";
+  font-weight: bold;
+  font-style: italic;
+  src: url(https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2Ftrebucbi.ttf?1520032659151);
+}
+
+@font-face {
+  font-family: "Trebuchet MS Italic";
+  font-style: italic;
+  src: url(https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2Ftrebucit.ttf?1520032658880);
+}
+
+@font-face {
+  font-family: "PxPlus IBM VGA9";
+  src: url(https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2FPxPlus_IBM_VGA9.ttf?1520115808634);
+}
+
+@font-face {
+  font-family: "Tomo";
+  src: url(https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2Ftomo.woff2?1521568990198);
+}
+
+@font-face {
+  font-family: "px sans noveaux";
+  src: url(https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2Fpx_sans_nouveaux.ttf?1540345601242);
+}
