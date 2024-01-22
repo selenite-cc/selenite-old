@@ -1,4 +1,10 @@
 [
+  {
+    "name": "Windows XP",
+    "image": "cover.svg",
+    "directory": "xp",
+    "recommended": "1"
+  },
              {
     "name": "Dragon Client",
     "image": "cover.svg",
