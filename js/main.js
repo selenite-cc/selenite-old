@@ -16,10 +16,12 @@ function check() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-	if(document.getElementById("adcontainer") && Math.random() > 0.5 || localStorage.getItem("selenite.adblock") == "true") {
-		document.getElementById("adcontainer").innerHTML = "";
+	if(document.querySelectorAll('[id=adcontainer]')) {
+		for(let i = 0; i < document.querySelectorAll('[id=adcontainer]').length; i++) {
+			if(Math.random() < 0.5 || localStorage.getItem("selenite.adblock") == "true")
+			document.querySelectorAll('[id=adcontainer]')[i].innerHTML = "";
+		}
 	}
-		
 	const iconSetting = document.querySelector("input#discordIcon");
 	const blockClose = document.querySelector("input#blockClose");
 	const openBlank = document.getElementById("blank");
