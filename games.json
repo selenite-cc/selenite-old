@@ -1,5 +1,11 @@
 [
       {
+    "name": "Minecraft Infdev",
+    "image": "cover.svg",
+    "directory": "inf",
+    "recommended": "1"
+  },
+      {
     "name": "Minesweeper",
     "image": "cover.svg",
     "directory": "minesweeper",
