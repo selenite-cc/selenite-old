@@ -1,4 +1,10 @@
 [
+      {
+    "name": "π Client",
+    "image": "cover.svg",
+    "directory": "pi",
+    "recommended": "1"
+  },
      {
     "name": "Precision Client",
     "image": "cover.svg",
