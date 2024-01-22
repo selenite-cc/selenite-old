@@ -1,5 +1,47 @@
 [
       {
+    "name": "π Client",
+    "image": "cover.svg",
+    "directory": "pi",
+    "recommended": "1"
+  },
+     {
+    "name": "Precision Client",
+    "image": "cover.svg",
+    "directory": "pre",
+    "recommended": "1"
+  },
+    {
+    "name": "Shadow Client",
+    "image": "cover.svg",
+    "directory": "shadow",
+    "recommended": "1"
+  },
+  {
+    "name": "Windows XP",
+    "image": "cover.svg",
+    "directory": "xp",
+    "recommended": "1"
+  },
+             {
+    "name": "Dragon Client",
+    "image": "cover.svg",
+    "directory": "drag",
+    "recommended": "1"
+  },
+            {
+    "name": "Ayuncraft 1.5.2",
+    "image": "cover.svg",
+    "directory": "ayun",
+    "recommended": "1"
+  },
+      {
+    "name": "Minecraft Infdev",
+    "image": "cover.svg",
+    "directory": "inf",
+    "recommended": "1"
+  },
+      {
     "name": "Minesweeper",
     "image": "cover.svg",
     "directory": "minesweeper",

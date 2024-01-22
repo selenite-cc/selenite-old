@@ -1,0 +1,19 @@
+*, .arrow {
+  cursor: url(https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2Fdefault.cur?1522440134277), default;
+}
+
+.pointer, a {
+  cursor: url(https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2Fpointer.cur?1522440855074), pointer;
+}
+
+.text {
+  cursor: url(https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2Ftext.cur?1522441235513), text;
+}
+
+.terminal, .ui_terminal, .terminal *, textarea, input:not([type=button]):not([type=submit]) {
+  cursor: url(https://cdn.glitch.com/01d2e04f-e49d-4304-aa9e-55b9849b4cce%2Ftext.cur?1522441235513), text !important;
+}
+
+._ui_boot, ._ui_boot * {
+  cursor: none;
+}

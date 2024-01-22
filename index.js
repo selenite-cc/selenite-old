@@ -43,6 +43,13 @@ app.get('/ad', (req, res) => {
   res.sendFile(path.join(__dirname, 'ad.html'));
 });
 
+app.get('/blank', (req, res) => {
+  res.sendFile(path.join(__dirname, 'blank.html'));
+});
+app.get('/backgrounds', (req, res) => {
+  res.sendFile(path.join(__dirname, 'backgrounds.html'));
+});
+
 app.listen(port, () => {
   console.log(`Selenite is running on port ${port}`);
 });

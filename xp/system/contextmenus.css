@@ -1,0 +1,19 @@
+.contextMenu {
+  box-shadow: 0px 0px 20px -5px #000;
+  clip-path: inset(0 -20px -20px 0);
+}
+
+.contextMenuItem {
+  color: #000000;
+  background-color: transparent;
+  font-size: 11px;
+}
+
+.contextMenuItem:hover {
+  color: #ffffff;
+  background-color: #0A246A;
+}
+
+.contextMenuItem.hr {
+  border-top: 1px solid #979797;
+}
