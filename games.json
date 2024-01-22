@@ -1,4 +1,10 @@
 [
+     {
+    "name": "Precision Client",
+    "image": "cover.svg",
+    "directory": "pre",
+    "recommended": "1"
+  },
     {
     "name": "Shadow Client",
     "image": "cover.svg",
