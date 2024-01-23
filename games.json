@@ -1,4 +1,11 @@
 [
+      
+      {
+    "name": "Slope 3",
+    "image": "cover.svg",
+    "directory": "slope3",
+    "recommended": "1"
+  },
       {
     "name": "Snowball Fighter",
     "image": "cover.svg",
