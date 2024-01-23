@@ -1,5 +1,11 @@
 [
       {
+    "name": "Spacebar Clicker",
+    "image": "cover.svg",
+    "directory": "space",
+    "recommended": "1"
+  },
+      {
     "name": "π Client",
     "image": "cover.svg",
     "directory": "pi",
