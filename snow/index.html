@@ -1,0 +1,616 @@
+
+<!DOCTYPE HTML>
+<head>
+   <title>Snowball Fight</title>
+   <script src='/everypage.js'></script>
+</head>
+<body>
+   <style>
+      canvas{
+      border:1px solid black;
+      background-color: #ADD8E6;
+      display: block;
+      width: 100%;
+      height: 100vh
+      }
+      html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      }
+      body {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      }
+      .menu {
+      opacity:0.75;
+      background-color:#ccc;
+      position:fixed;
+      width:100%;
+      height:100%;
+      top:0px;
+      left:0px;
+      z-index:1000;
+      display: block;
+      text-align:center;
+      font-size: 5vh;
+      }
+      .pM {
+      opacity:0;
+      position:fixed;
+      width:100%;
+      height:100%;
+      top:0px;
+      left:0px;
+      z-index:1000;
+      display: block;
+      text-align:center;
+      font-size: 5vh;
+      }
+   </style>
+   <div id='menu' class='menu'>
+      <h2>Snowball Fight</h2>
+      <br><br><br><br>
+      <button style='font-size:15vh' onclick='chooseC()'>PLAY</button>
+      <br><br>
+      <button style='font-size:5vh' onclick='iMenu()'>Instructions</button>
+   </div>
+   <div id='customizationMenu' style='display: none;' class='menu'>
+      <button style='font-size:3vh; float:left;' onclick='mMenu()'>Back To Main Menu</button>
+      <h2>Choose Name And Color</h2>
+      <br><br>
+      <button style='font-size:4vh; color:red;' onclick='lPC()' id='lplayerColor'>Click to Change Left Player Color</button>
+      <button style='font-size:4vh; color:blue;' onclick='rPC()' id='rplayerColor'>Click to Change Right Player Color</button>
+      <br>
+      <br><br>
+      <div>
+         <div style='width: 50%; float: left;'>
+            <label>Left Player Name: </label><input type='text' style='text-align: center;' id='lPlayerName' autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
+         </div>
+         <div style='width: 50%; float: left;'>
+            <label>Right Player Name: </label><input type='text' style='text-align: center;' id='rPlayerName' autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
+         </div>
+      </div>
+      <br><br><br><br>
+      <button style='font-size:10vh' onclick='startGame()'>Start</button>
+   </div>
+   <div id='instructionM' style='display: none;' class='menu'>
+      <button style='font-size:3vh; float:left;' onclick='mMenu()'>Back To Main Menu</button>
+      <h4>Instructions</h4>
+      <h5>Controls</h5>
+      <div>
+         <div style='width: 50%; float: left; height:33vh; overflow:auto'>
+            <h5>Left Player</h5>
+            <p>Up: W</p>
+            <p>Left: A</p>
+            <p>Throw: S</p>
+            <p>Right: D</p>
+         </div>
+         <div style='width: 50%; float: left; height:33vh; overflow:auto'>
+            <h5>Right Player</h5>
+            <p>Up: Up Key</p>
+            <p>Left: Left Key</p>
+            <p>Throw: Down Key</p>
+            <p>Right: Right Key</p>
+         </div>
+      </div>
+      <h4>Ojective</h4>
+      <p>Hit your opponent 3 times</p>
+   </div>
+   <div id='winner' class='menu' style='display: none'>
+      <h1><span id='winnerName'></span> wins!</h1>
+      <button onclick='mMenu()'>Back To Main Menu</button>
+      <p><span id='lPastWinNames'></span> wins: <span id='lpastWinN'></span></p>
+      <p><span id='rPastWinNames'></span> wins: <span id='rpastWinN'></span></p>
+      <button onclick='replayGame()'>Replay</button>
+   </div>
+   <canvas id="canvas"></canvas>
+   <script>
+      var gameState = 'menu';
+      var leftPColor = 'red'
+      var rightPColor = 'blue'
+      
+      var lpastWins = 0;
+      var rpastWins = 0;
+      
+      function chooseC() {
+      document.getElementById("menu").style.display = 'none';
+      document.getElementById("instructionM").style.display = 'none';
+      document.getElementById("customizationMenu").style.display = 'block';
+      document.getElementById("winner").style.display = 'none';
+      }
+      
+      function iMenu() {
+      document.getElementById("menu").style.display = 'none';
+      document.getElementById("customizationMenu").style.display = 'none';
+      document.getElementById("instructionM").style.display = 'block';
+      document.getElementById("winner").style.display = 'none';
+      }
+      
+      function mMenu() {
+      document.getElementById("menu").style.display = 'block';
+      document.getElementById("customizationMenu").style.display = 'none';
+      document.getElementById("instructionM").style.display = 'none';
+      document.getElementById("winner").style.display = 'none';
+      }
+      
+      function wMenu() {
+      document.getElementById("menu").style.display = 'none';
+      document.getElementById("customizationMenu").style.display = 'none';
+      document.getElementById("instructionM").style.display = 'none';
+      document.getElementById("winner").style.display = 'block';
+      }
+      
+      var lpc = 2;
+      
+      function lPC() {
+       if (lpc == 2) {
+      document.getElementById("lplayerColor").style.color = 'blue';
+       }
+       if (lpc == 3) {
+      document.getElementById("lplayerColor").style.color = 'orange';
+       }
+       if (lpc == 4) {
+      document.getElementById("lplayerColor").style.color = 'green';
+       }
+       if (lpc == 5) {
+      document.getElementById("lplayerColor").style.color = 'yellow';
+       }
+       if (lpc == 6) {
+       lpc = 1;
+       document.getElementById("lplayerColor").style.color = 'red';
+       }
+       lpc++;
+      }
+      
+      var rpc = 2;
+      
+      function rPC() {
+       if (rpc == 2) {
+      document.getElementById("rplayerColor").style.color = 'red';
+       }
+       if (rpc == 3) {
+      document.getElementById("rplayerColor").style.color = 'orange';
+       }
+       if (rpc == 4) {
+      document.getElementById("rplayerColor").style.color = 'green';
+       }
+       if (rpc == 5) {
+      document.getElementById("rplayerColor").style.color = 'yellow';
+       }
+       if (rpc == 6) {
+       rpc = 1;
+       document.getElementById("rplayerColor").style.color = 'blue';
+       }
+       rpc++;
+      }
+      
+      function startGame() {
+      gameState = 'playing';
+      
+      player.x = 100;
+      player2.x = width-100;
+      
+      player.y = height - 50;
+      player2.y = height - 50;
+      
+      player.facingRight = true;
+      player.facingLeft = false;
+      
+      player2.facingRight = false;
+      player2.facingLeft = true;
+      
+      document.getElementById("menu").style.display = 'none';
+      document.getElementById("customizationMenu").style.display = 'none';
+      document.getElementById("instructionM").style.display = 'none';
+      document.getElementById("winner").style.display = 'none';
+      
+      leftPColor = document.getElementById("lplayerColor").style.color;
+      
+      rightPColor = document.getElementById("rplayerColor").style.color;
+      
+      lpastWins = 0;
+      rpastWins = 0;
+      }    
+      
+      function replayGame() {
+      gameState = 'playing';
+      player.x = 100;
+      player2.x = width-100;
+      
+      player.y = height - 50;
+      player2.y = height - 50;
+      
+      player.facingRight = true;
+      player.facingLeft = false;
+      
+      player2.facingRight = false;
+      player2.facingLeft = true;
+      
+      document.getElementById("menu").style.display = 'none';
+      document.getElementById("customizationMenu").style.display = 'none';
+      document.getElementById("instructionM").style.display = 'none';
+      document.getElementById("winner").style.display = 'none';
+      
+      leftPColor = document.getElementById("lplayerColor").style.color;
+      
+      rightPColor = document.getElementById("rplayerColor").style.color;
+      
+      player.bullets = [];
+      player2.bullets = [];
+      }
+          
+      (function () {
+          var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+          window.requestAnimationFrame = requestAnimationFrame;
+      })();
+      
+      var canvas = document.getElementById("canvas"),
+          ctx = canvas.getContext("2d"),
+          width = 500,
+          height = 200,
+          player = {
+              x: 100,
+              y: height - 15,
+              width: 10,
+              height: 20,
+              speed: 3,
+              velX: 0,
+              velY: 0,
+              jumping: false,
+              grounded: false,
+              facingRight: true,
+              facingLeft: false,
+              lastFire: Date.now(),
+              hits: 0,
+              bullets: []
+          },
+          player2 = {
+              x: width-100,
+              y: height - 15,
+              width: 10,
+              height: 20,
+              speed: 3,
+              velX: 0,
+              velY: 0,
+              jumping: false,
+              grounded: false,
+              facingRight: false,
+              facingLeft: true,
+              lastFire: Date.now(),
+              hits: 0,
+              bullets: []
+          },
+          keys = [],
+          friction = 0.8,
+          gravity = 0.3;
+      
+      var boxes = [];
+      
+      // dimensions
+      
+      //left Wall
+      boxes.push({
+          x: 0,
+          y: -100,
+          width: 10,
+          height: height+100
+      });
+      
+      //Floor
+      boxes.push({
+          x: 0,
+          y: height,
+          width: width+5,
+          height: 0
+      });
+      
+      //Top
+      boxes.push({
+          x: 0,
+          y: -45,
+          width: width,
+          height: 5
+      });
+      
+      //RIght Wall
+      boxes.push({
+          x: width-10,
+          y: -100,
+          width: 10,
+          height: height+100
+      });
+ 
+ //Bottom Left Platform
+      boxes.push({
+          x: 0,
+          y: 150,
+          width: 80,
+          height: 20
+      });
+ //Bottom Right Platform      
+      boxes.push({
+          x: width-80,
+          y: 150,
+          width: 80,
+          height: 20
+      });
+//Top Left Platform   
+      boxes.push({
+          x: 0,
+          y: 50,
+          width: 80,
+          height: 20
+      });
+//Top Right Platform   
+      boxes.push({
+          x: width-80,
+          y: 50,
+          width: 80,
+          height: 20
+      });
+//Big Middle Platform
+      boxes.push({
+          x: width-375,
+          y: height/2,
+          width: 250,
+          height: 20
+      });
+//Little Part In Middle Of Big Platform
+      boxes.push({
+          x: width/2,
+          y: height/3,
+          width: 20,
+          height: 50
+      });
+      
+      var lastFire = Date.now();
+      
+      var facingRight;
+      var facingLeft;
+      
+      canvas.width = width;
+      canvas.height = height;
+      
+      function addPlayerMovement(player, up, down, left, right) {
+          if (keys[up]) {
+              if (!player.jumping && player.grounded) {
+                  player.jumping = true;
+                  player.grounded = false;
+                  player.velY = -player.speed * 2;
+              }
+          }
+          if (keys[right]) {
+              // right arrow
+              if (player.velX < player.speed) {
+                  player.velX++;
+              }
+              player.facingRight=true;
+              player.facingLeft=false;
+          }
+          if (keys[left]) {
+              // left arrow
+              if (player.velX > -player.speed) {
+                  player.velX--;
+              }
+              player.facingRight=false;
+              player.facingLeft=true;
+          }
+      }
+      
+      function addGravityAndFriction(player) {
+      player.velX *= friction;
+      player.velY += gravity;
+      }
+      
+      function playerBoxesHit(player) {
+          player.grounded = false;
+          for (var i = 0; i < boxes.length; i++) {
+              ctx.rect(boxes[i].x, boxes[i].y, boxes[i].width, boxes[i].height);
+              
+              
+              var dir = colCheck(player, boxes[i]);
+      
+              if (dir === "l" || dir === "r") {
+                  player.velX = 0;
+                  player.jumping = false;
+                  player.grounded = false;
+              } else if (dir === "b") {
+                  player.grounded = true;
+                  player.jumping = false;
+              } else if (dir === "t") {
+                  player.velY *= -0.1;
+              }
+      
+          }
+              if(player.grounded){
+               player.velY = 0;
+          }
+          
+          player.x += player.velX;
+          player.y += player.velY;
+      }
+      
+function bulletsHitBoxes(obj) {
+          for (var i = 0; i < boxes.length; i++) {
+              ctx.rect(boxes[i].x, boxes[i].y, boxes[i].width, boxes[i].height);
+              var dir = colCheck(obj, boxes[i]);
+      
+              if (dir === "l" || dir === "r") {
+return true;
+              }
+          }
+      }
+      
+      function playerColor(player, color) {
+          ctx.fillStyle = color;
+          ctx.fillRect(player.x, player.y, player.width, player.height);
+          
+      }
+      
+      function collides(obj1, obj2) {
+        return obj1.x < obj2.x + obj2.width &&
+               obj1.x + obj1.width > obj2.x &&
+               obj1.y < obj2.y + obj2.height &&
+               obj1.y + obj1.height > obj2.y;
+      }
+      
+      function throwSnowball(obj, keycode, enemy){
+      if(keys[keycode] && Date.now() - obj.lastFire > 500){
+      
+      obj.bullets.push({
+        x: obj.x+obj.width/2,
+        y: obj.y+obj.height/4,
+        width: 5,
+        height: 5,
+        dx: obj.facingLeft ? -5 : 5
+      })
+      	obj.lastFire = Date.now();
+      }
+          ctx.fillStyle = 'white';
+      
+      obj.bullets.forEach(function (bullet) {
+        ctx.beginPath();
+        ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+        ctx.fill();
+        bullet.x += bullet.dx;
+          if (collides(bullet, enemy)) {
+      obj.hits += 1;
+      obj.bullets = [];
+      enemy.bullets = [];
+        }
+        if (bulletsHitBoxes(bullet)) {
+        
+        }
+      })
+      }
+      
+      function update() {
+      
+       if (gameState == 'playing') {
+      addPlayerMovement(player, 87, 'NA', 65, 68)
+      addPlayerMovement(player2, 38, 'NA', 37, 39)
+      }
+      
+      addGravityAndFriction(player)
+      addGravityAndFriction(player2)
+      
+          ctx.clearRect(0, 0, width, height);
+          ctx.fillStyle = "white";    
+          ctx.fill();
+          ctx.beginPath();
+      
+      if (gameState == 'playing') {
+      throwSnowball(player, 83, player2);
+      
+      throwSnowball(player2, 40, player);
+      }
+      	ctx.restore();
+      
+      playerBoxesHit(player)
+      playerBoxesHit(player2)
+      
+      playerColor(player, leftPColor)
+      playerColor(player2, rightPColor)
+      
+      if (gameState == 'playing') {
+      ctx.fillStyle = 'black';
+      ctx.font = "20px Arial";
+      ctx.fillText(document.getElementById('lPlayerName').value+" Hits: "+player.hits, 20, 20);
+      
+      ctx.fillStyle = 'black';
+      ctx.font = "20px Arial";
+      ctx.fillText(document.getElementById('rPlayerName').value+" Hits: "+player2.hits, width-150, 20);
+      }
+      
+       if (player.hits == 3 || player.hits > 2) {
+       setTimeout((function(){
+       document.getElementById('winnerName').innerHTML = document.getElementById('lPlayerName').value;
+       player.hits = 0;
+       player2.hits = 0;
+       wMenu()
+       gameState = 'menu';
+       
+       document.getElementById('lPastWinNames').innerHTML = document.getElementById('lPlayerName').value;
+       
+        document.getElementById('rPastWinNames').innerHTML = document.getElementById('rPlayerName').value;
+        lpastWins++;
+        document.getElementById('lpastWinN').innerHTML = lpastWins;
+        document.getElementById('rpastWinN').innerHTML = rpastWins;
+        }),10)
+       }
+       
+        if (player2.hits == 3 || player2.hits > 2) {
+       setTimeout((function(){
+       document.getElementById('winnerName').innerHTML = document.getElementById('rPlayerName').value;
+       player.hits = 0;
+       player2.hits = 0;
+       wMenu()
+       gameState = 'menu';
+       
+       document.getElementById('lPastWinNames').innerHTML = document.getElementById('lPlayerName').value;
+       
+        document.getElementById('rPastWinNames').innerHTML = document.getElementById('rPlayerName').value;
+        rpastWins++;
+        document.getElementById('lpastWinN').innerHTML = lpastWins;
+        document.getElementById('rpastWinN').innerHTML = rpastWins;
+        }),10)
+       }
+      
+          requestAnimationFrame(update);
+      }
+      
+      function colCheck(shapeA, shapeB) {
+          // get the vectors to check against
+          var vX = (shapeA.x + (shapeA.width / 2)) - (shapeB.x + (shapeB.width / 2)),
+              vY = (shapeA.y + (shapeA.height / 2)) - (shapeB.y + (shapeB.height / 2)),
+              // add the half widths and half heights of the objects
+              hWidths = (shapeA.width / 2) + (shapeB.width / 2),
+              hHeights = (shapeA.height / 2) + (shapeB.height / 2),
+              colDir = null;
+      
+          // if the x and y vector are less than the half width or half height, they we must be inside the object, causing a collision
+          if (Math.abs(vX) < hWidths && Math.abs(vY) < hHeights) {
+              // figures out on which side we are colliding (top, bottom, left, or right)
+              var oX = hWidths - Math.abs(vX),
+                  oY = hHeights - Math.abs(vY);
+              if (oX >= oY) {
+                  if (vY > 0) {
+                      colDir = "t";
+                      shapeA.y += oY;
+                  } else {
+                      colDir = "b";
+                      shapeA.y -= oY;
+                  }
+              } else {
+                  if (vX > 0) {
+                      colDir = "l";
+                      shapeA.x += oX;
+                  } else {
+                      colDir = "r";
+                      shapeA.x -= oX;
+                  }
+              }
+          }
+          return colDir;
+      }
+      
+      document.body.addEventListener("keydown", function (e) {
+          keys[e.keyCode] = true;
+      });
+      
+      document.body.addEventListener("keyup", function (e) {
+          keys[e.keyCode] = false;
+      });
+      
+      
+      window.addEventListener("load", function () {
+          update();
+      });
+          
+   </script>
+</body>
