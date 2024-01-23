@@ -1,5 +1,11 @@
 [
       
+{
+    "name": "Soccer Skills",
+    "image": "cover.svg",
+    "directory": "skills",
+    "recommended": "1"
+  },      
       {
     "name": "Slope 3",
     "image": "cover.svg",
